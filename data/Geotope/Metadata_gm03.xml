@@ -1,0 +1,1469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <HEADERSECTION SENDER="geocat.ch" VERSION="2.3">
+    <MODELS />
+  </HEADERSECTION>
+  <DATASECTION>
+    <GM03_2_1Comprehensive.Comprehensive BID="xw1341487a">
+      <GM03_2_1Core.Core.MD_Metadata TID="xN208052211">
+        <fileIdentifier>e7dd54e9-fc98-4e5c-b46a-694d1ba6c84e</fileIdentifier>
+        <language>de</language>
+        <characterSet>utf8</characterSet>
+        <dateStamp>2016-01-13T16:24:44</dateStamp>
+        <metadataStandardName>GM03 2+</metadataStandardName>
+        <hierarchyLevel>
+          <GM03_2_1Core.Core.MD_ScopeCode_>
+            <value>dataset</value>
+          </GM03_2_1Core.Core.MD_ScopeCode_>
+        </hierarchyLevel>
+        <distributionInfo REF="xN53071611" />
+      </GM03_2_1Core.Core.MD_Metadata>
+      <GM03_2_1Core.Core.MD_Distribution TID="xN53071611" />
+      <GM03_2_1Core.Core.MD_DistributiondistributionFormat>
+        <MD_Distribution REF="xN53071611" />
+        <distributionFormat REF="xN2143630612" />
+      </GM03_2_1Core.Core.MD_DistributiondistributionFormat>
+      <GM03_2_1Comprehensive.Comprehensive.MD_Format TID="xN2143630612">
+        <name>ESRI Shapefile</name>
+        <version>-</version>
+      </GM03_2_1Comprehensive.Comprehensive.MD_Format>
+      <GM03_2_1Comprehensive.Comprehensive.MD_DigitalTransferOptions TID="xN1545754324">
+        <MD_Distribution REF="xN53071611" />
+      </GM03_2_1Comprehensive.Comprehensive.MD_DigitalTransferOptions>
+      <GM03_2_1Core.Core.CI_OnlineResource TID="xN109832757">
+        <protocol>WWW:LINK-1.0-http--link</protocol>
+        <function>information</function>
+        <description>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>en</language>
+                <plainText>Geotope project group</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>fr</language>
+                <plainText>Groupe de Projet Géotopes</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>it</language>
+                <plainText>Gruppo del progetto geotopi</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>GE</language>
+                <plainText>Projektgruppe Geotope</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </description>
+        <linkage>
+          <GM03_2_1Core.Core.PT_FreeURL>
+            <URLGroup>
+              <GM03_2_1Core.Core.PT_URLGroup>
+                <language>en</language>
+                <plainURL>http://www.naturalsciences.ch/organisations/geosciences/projects/wg_geotopes</plainURL>
+              </GM03_2_1Core.Core.PT_URLGroup>
+              <GM03_2_1Core.Core.PT_URLGroup>
+                <language>it</language>
+                <plainURL>http://www.scienzenaturali.ch/organisations/geosciences/projects/wg_geotopes</plainURL>
+              </GM03_2_1Core.Core.PT_URLGroup>
+              <GM03_2_1Core.Core.PT_URLGroup>
+                <language>fr</language>
+                <plainURL>http://www.geotopes.ch</plainURL>
+              </GM03_2_1Core.Core.PT_URLGroup>
+              <GM03_2_1Core.Core.PT_URLGroup>
+                <language>GE</language>
+                <plainURL>http://www.geotope.ch</plainURL>
+              </GM03_2_1Core.Core.PT_URLGroup>
+            </URLGroup>
+          </GM03_2_1Core.Core.PT_FreeURL>
+        </linkage>
+        <MD_DigitalTransferOptions REF="xN1545754324" />
+      </GM03_2_1Core.Core.CI_OnlineResource>
+      <GM03_2_1Core.Core.CI_OnlineResource TID="xN145523084">
+        <protocol>WWW:DOWNLOAD-URL</protocol>
+        <function>download</function>
+        <description>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>GE</language>
+                <plainText>Download Server von geo.admin.ch</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>fr</language>
+                <plainText>Serveur de téléchargement de geo.admin.ch</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>en</language>
+                <plainText>Download server from geo.admin.ch</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>it</language>
+                <plainText>Server di download di geo.admin.ch</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </description>
+        <linkage>
+          <GM03_2_1Core.Core.PT_FreeURL>
+            <URLGroup>
+              <GM03_2_1Core.Core.PT_URLGroup>
+                <language>GE</language>
+                <plainURL>http://data.geo.admin.ch/ch.swisstopo.geologie-geotope_punkte/data.zip</plainURL>
+              </GM03_2_1Core.Core.PT_URLGroup>
+            </URLGroup>
+          </GM03_2_1Core.Core.PT_FreeURL>
+        </linkage>
+        <MD_DigitalTransferOptions REF="xN1545754324" />
+      </GM03_2_1Core.Core.CI_OnlineResource>
+      <GM03_2_1Core.Core.CI_OnlineResource TID="xN230396736">
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <function>download</function>
+        <description>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>en</language>
+                <plainText>Inventory of geotopes</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>fr</language>
+                <plainText>Inventaire des géotopes</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>it</language>
+                <plainText>Inventario dei geotopi</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>GE</language>
+                <plainText>Inventar der Geotope</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </description>
+        <linkage>
+          <GM03_2_1Core.Core.PT_FreeURL>
+            <URLGroup>
+              <GM03_2_1Core.Core.PT_URLGroup>
+                <language>en</language>
+                <plainURL>http://data.geo.admin.ch</plainURL>
+              </GM03_2_1Core.Core.PT_URLGroup>
+              <GM03_2_1Core.Core.PT_URLGroup>
+                <language>it</language>
+                <plainURL>http://data.geo.admin.ch</plainURL>
+              </GM03_2_1Core.Core.PT_URLGroup>
+              <GM03_2_1Core.Core.PT_URLGroup>
+                <language>fr</language>
+                <plainURL>http://data.geo.admin.ch</plainURL>
+              </GM03_2_1Core.Core.PT_URLGroup>
+              <GM03_2_1Core.Core.PT_URLGroup>
+                <language>RO</language>
+                <plainURL>http://data.geo.admin.ch</plainURL>
+              </GM03_2_1Core.Core.PT_URLGroup>
+              <GM03_2_1Core.Core.PT_URLGroup>
+                <language>GE</language>
+                <plainURL>http://data.geo.admin.ch</plainURL>
+              </GM03_2_1Core.Core.PT_URLGroup>
+            </URLGroup>
+          </GM03_2_1Core.Core.PT_FreeURL>
+        </linkage>
+        <MD_DigitalTransferOptions REF="xN1545754324" />
+      </GM03_2_1Core.Core.CI_OnlineResource>
+      <GM03_2_1Core.Core.CI_OnlineResource TID="xN1693695576">
+        <protocol>CHTOPO:specialised-geoportal</protocol>
+        <function>information</function>
+        <description>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>fr</language>
+                <plainText>Visiualiseur géologique</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>GE</language>
+                <plainText>Geologischer Datenviewer</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </description>
+        <linkage>
+          <GM03_2_1Core.Core.PT_FreeURL>
+            <URLGroup>
+              <GM03_2_1Core.Core.PT_URLGroup>
+                <language>fr</language>
+                <plainURL>http://map.geologieportal.ch</plainURL>
+              </GM03_2_1Core.Core.PT_URLGroup>
+              <GM03_2_1Core.Core.PT_URLGroup>
+                <language>GE</language>
+                <plainURL>http://map.geologieportal.ch</plainURL>
+              </GM03_2_1Core.Core.PT_URLGroup>
+            </URLGroup>
+          </GM03_2_1Core.Core.PT_FreeURL>
+        </linkage>
+        <MD_DigitalTransferOptions REF="xN1545754324" />
+      </GM03_2_1Core.Core.CI_OnlineResource>
+      <GM03_2_1Core.Core.MD_Metadatacontact>
+        <contact REF="xN1939485524" />
+        <MD_Metadata REF="xN208052211" />
+        <role>
+          <GM03_2_1Core.Core.CI_RoleCode_>
+            <value>pointOfContact</value>
+          </GM03_2_1Core.Core.CI_RoleCode_>
+        </role>
+      </GM03_2_1Core.Core.MD_Metadatacontact>
+      <GM03_2_1Core.Core.CI_ResponsibleParty TID="xN1939485524">
+        <individualFirstName>Milan</individualFirstName>
+        <individualLastName>Beres</individualLastName>
+        <electronicalMailAddress>
+          <GM03_2_1Core.Core.URL_>
+            <value>milan.beres@swisstopo.ch</value>
+          </GM03_2_1Core.Core.URL_>
+        </electronicalMailAddress>
+        <organisationName>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>en</language>
+                <plainText>Federal Office of Topography</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>de</language>
+                <plainText>Bundesamt für Landestopografie</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>fr</language>
+                <plainText>Office fédéral de topographie</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>it</language>
+                <plainText>Ufficio federale di topografia</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>rm</language>
+                <plainText>Bundesamt für Landestopografie</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </organisationName>
+        <positionName>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>en</language>
+                <plainText>Swiss Geological Survey</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>de</language>
+                <plainText>Landesgeologie</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>fr</language>
+                <plainText>Service géologique national</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>it</language>
+                <plainText>Servizio geologico nazionale</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>rm</language>
+                <plainText>Landesgeologie</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </positionName>
+        <organisationAcronym>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>en</language>
+                <plainText>swisstopo</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>de</language>
+                <plainText>swisstopo</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>fr</language>
+                <plainText>swisstopo</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>it</language>
+                <plainText>swisstopo</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>rm</language>
+                <plainText>swisstopo</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </organisationAcronym>
+        <linkage>
+          <GM03_2_1Core.Core.PT_FreeURL>
+            <URLGroup>
+              <GM03_2_1Core.Core.PT_URLGroup>
+                <language>en</language>
+                <plainURL>http://www.swisstopo.admin.ch/internet/swisstopo/en/home/swisstopo/org/geology.html</plainURL>
+              </GM03_2_1Core.Core.PT_URLGroup>
+              <GM03_2_1Core.Core.PT_URLGroup>
+                <language>de</language>
+                <plainURL>http://www.swisstopo.admin.ch/internet/swisstopo/de/home/swisstopo/org/geology.html</plainURL>
+              </GM03_2_1Core.Core.PT_URLGroup>
+              <GM03_2_1Core.Core.PT_URLGroup>
+                <language>fr</language>
+                <plainURL>http://www.swisstopo.admin.ch/internet/swisstopo/fr/home/swisstopo/org/geology.html</plainURL>
+              </GM03_2_1Core.Core.PT_URLGroup>
+              <GM03_2_1Core.Core.PT_URLGroup>
+                <language>it</language>
+                <plainURL>http://www.swisstopo.admin.ch/internet/swisstopo/it/home/swisstopo/org/geology.html</plainURL>
+              </GM03_2_1Core.Core.PT_URLGroup>
+              <GM03_2_1Core.Core.PT_URLGroup>
+                <language>rm</language>
+                <plainURL>http://www.swisstopo.admin.ch/internet/swisstopo/de/home/swisstopo/org/geology.html</plainURL>
+              </GM03_2_1Core.Core.PT_URLGroup>
+            </URLGroup>
+          </GM03_2_1Core.Core.PT_FreeURL>
+        </linkage>
+        <address REF="xN1389316855" />
+        <contactInfo REF="xN426833408" />
+      </GM03_2_1Core.Core.CI_ResponsibleParty>
+      <GM03_2_1Core.Core.CI_Address TID="xN1389316855">
+        <streetName>Seftigenstrasse</streetName>
+        <streetNumber>264</streetNumber>
+        <postalCode>3084</postalCode>
+        <city>Wabern</city>
+        <country>CH</country>
+      </GM03_2_1Core.Core.CI_Address>
+      <GM03_2_1Core.Core.CI_Contact TID="xN426833408" />
+      <GM03_2_1Core.Core.CI_Telephone TID="xN1262916284">
+        <number>+41 58 469 01 11</number>
+        <numberType>mainNumber</numberType>
+        <CI_ResponsibleParty REF="xN1939485524" />
+      </GM03_2_1Core.Core.CI_Telephone>
+      <GM03_2_1Core.Core.CI_Telephone TID="xN1115065323">
+        <number>+41 58 469 05 74</number>
+        <numberType>directNumber</numberType>
+        <CI_ResponsibleParty REF="xN1939485524" />
+      </GM03_2_1Core.Core.CI_Telephone>
+      <GM03_2_1Core.Core.referenceSystemInfoMD_Metadata>
+        <referenceSystemInfo REF="xw1341487aac25b1" />
+        <MD_Metadata REF="xN208052211" />
+      </GM03_2_1Core.Core.referenceSystemInfoMD_Metadata>
+      <GM03_2_1Core.Core.MD_ReferenceSystem TID="xw1341487aac25b1">
+        <referenceSystemIdentifier REF="xw1341487aac25b1b1b1" />
+      </GM03_2_1Core.Core.MD_ReferenceSystem>
+      <GM03_2_1Comprehensive.Comprehensive.RS_Identifier TID="xw1341487aac25b1b1b1">
+        <code>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>fr</language>
+                <plainText>Système de référence conformément à la carte topographique sous-jacente (CH1903)</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>de</language>
+                <plainText>Referenzsystem entsprechend der zugrundeliegenden topographischen Karte (CH1903)</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </code>
+      </GM03_2_1Comprehensive.Comprehensive.RS_Identifier>
+      <GM03_2_1Comprehensive.Comprehensive.MD_DataIdentification TID="xN2061609252">
+        <abstract>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>fr</language>
+                <plainText>Les géotopes sont des monuments naturels géoscientifiques. Certains d'entre eux, qui témoignent de l'histoire de la Terre, nous racontent l'évolution du paysage, du climat et de la vie, la genèse et la disparition des montagnes, ainsi que la formation des roches. D'autres géotopes nous révèle des processus qui se déroulent à la surface ou à l'intérieur de la Terre. Les géotopes incluent également le monde caché des cavernes et des nappes d'eau souterraine. Un dernier groupe comprend des formes actives qui modèlent le paysage, telles qu'éboulis, zones alluviales ou émergences d'eau souterraine.Les géotopes sont des portions de la géosphère (partie minérale, non vivante de la Terre) délimitées dans l'espace. Ce terme peut recouvrir une occurrence unique, ponctuelle, ou tout un pan de paysage, selon son contenu thématique. Il faut les protéger contre les actions qui portent atteinte à leur contenu, leur structure, leur forme ou leur évolution naturelle. Les géotopes d'importance nationale mentionnés ici proviennent de l'inventaire informel dressé par le groupe de travail pour la protection des géotopes suisses (Académie des sciences naturelles SCNAT). N'étant pas basé sur un recensement systématique, il ne prétend pas être exhaustif. Sources: M. Felber (1999): Inventaire des géotopes d'importance nationale. Geologia Insubrica 4/1. Reynard, E., Berger, J.-P., Constandache, M., Felber, M., Grangier, L., Häuselmann, P., Jeannin, P.-Y. &amp; Martin, S. (2012): Révision de l'inventaire des géotopes suisses: rapport final. – Geosciences, Platform of the Swiss Academy of Science.</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>en</language>
+                <plainText>Geotopes are geoscientific natural monuments. Geotopes that represent geological history show the development of the landscape, the climate and life, the formation and disappearance of mountains and the origins of rocks. Other geotopes shed light on the processes taking place on the Earth's surface and in the Earth's interior. They also include the hidden world of caves and groundwater. A final group of geotopes consists of active elements of the landscape, such as scree slopes, flood plains and groundwater springs. Geotopes are spatially limited parts of the mineral, uninhabited Earth (geosphere). Depending on their thematic content, they can be an individual occurrence in one location or an entire portion of the landscape. They must be protected against influences that can impair their substance, structure, form or natural development. The geotopes listed here are of national importance and are taken from the informal inventory of the Swiss geotope working group (Swiss Academy of Sciences SCNAT). The inventory is not based on a systematic survey and, therefore, does not claim to be complete. Sources: Felber, M. (1999): Inventar der Geotope nationaler Bedeutung. Geologia Insubrica 4/1. Reynard, E., Berger, J.-P., Constandache, M., Felber, M., Grangier, L., Häuselmann, P., Jeannin, P.-Y. &amp; Martin, S. (2012): Révision de l'inventaire des géotopes suisses: rapport final. – Geosciences, Platform of the Swiss Academy of Science.</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>it</language>
+                <plainText>I geotopi sono monumenti geoscientifici naturali. I geotopi della storia della terra sono una testimonianza dell'evoluzione del paesaggio, del clima e della vita, del divenire e della scomparsa delle montagne e della formazione delle rocce. Altri geotopi forniscono informazioni sui processi verificatisi sulla superficie terrestre o nelle viscere della terra. Essi comprendono anche il regno nascosto delle caverne e delle acque sotterranee. Un ultimo gruppo di geotopi comprende infine elementi attivi del paesaggio, come ad esempio il materiale detritico, le golene o gli affioramenti di acqua sotterranea. I geotopi sono porzioni della geosfera, la parte minerale non vivente della terra. A seconda del loro contenuto tematico, i geotopi possono indicare un singolo giacimento puntuale oppure un intero lembo di paesaggio. Devono essere protetti contro le influenze che ne deteriorano la sostanza, la struttura, la forma o lo sviluppo naturale. I geotopi d'importanza nazionale menzionati qui, provengono dall'inventario informale del Gruppo di lavoro protezione dei geotopi in Svizzera (Accademia di scienze naturali SCNAT). L'inventario non si basa su un rilevamento sistematico e non ha pertanto alcuna pretesa di esaustività. Fonti: Felber, M. (1999): Inventar der Geotope nationaler Bedeutung. Geologia Insubrica 4/1. Reynard, E., Berger, J.-P., Constandache, M., Felber, M., Grangier, L., Häuselmann, P., Jeannin, P.-Y. &amp; Martin, S. (2012): Révision de l'inventaire des géotopes suisses: rapport final. – Geosciences, Platform of the Swiss Academy of Science.</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>GE</language>
+                <plainText>Geotope sind geowissenschaftliche Naturdenkmäler. Erdgeschichtliche Geotope erzählen uns von der Entwicklung der Landschaft, des Klimas und des Lebens, vom Werden und Vergehen der Gebirge und vom Entstehen der Gesteine. Andere Geotope werfen ein Licht auf Vorgänge an der Erdoberfläche oder im Erdinnern. Sie schliessen auch das verborgene Reich der Höhlen und des Grundwassers ein. Eine letzte Gruppe von Geotopen umfasst aktive Landschaftselemente, wie z.B. Schutthalden, Flussauen oder Grundwasseraufstösse. Geotope sind räumlich begrenzte Teile der festen, unbelebten Erde (Geosphäre). Je nach ihrem thematischen Inhalt können sie ein einzelnes, punktuelles Vorkommen oder eine ganze Landschaftskammer bezeichnen. Sie sind vor Einflüssen zu bewahren, die ihre Substanz, Struktur, Form oder natürliche Weiterentwicklung beeinträchtigen. Die hier aufgeführten Geotope nationaler Bedeutung entstammen dem informellen Inventar der Arbeitsgruppe Geotope Schweiz (Akademie der Naturwissenschaften SCNAT). Das Inventar basiert nicht auf einer systematischen Erhebung und erhebt somit keinen Anspruch auf Vollständigkeit. Quellen: Felber, M. (1999): Inventar der Geotope nationaler Bedeutung. Geologia Insubrica 4/1. Reynard, E., Berger, J.-P., Constandache, M., Felber, M., Grangier, L., Häuselmann, P., Jeannin, P.-Y. &amp; Martin, S. (2012): Révision de l'inventaire des géotopes suisses: rapport final. – Geosciences, Platform of the Swiss Academy of Science.</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>RO</language>
+                <plainText>Ils geotops èn monuments natirals geoscientifics. Geotops ans infurmeschan davart il svilup da la cuntrada, dal clima e da la vita, davart la genesa e la spariziun da las muntognas e davart la furmaziun da la crappa. Auters geotops dattan in sguard sin ils process a la surfatscha u a l'intern da la terra. Els includan er il mund obscur dals cuvels e da l'aua sutterrana. In'ultima gruppa da geotops cumpiglia elements activs da la cuntrada, sco per exempel gondas, zonas umidas u lieus, nua che l'aua sutterrana cumpara a la surfatscha. Ils geotops èn parts localas da la geosfera. Tut tenor lur cuntegn tematic pon els designar in giaschament singul punctual u in'entira cuntrada. Els ston vegnir protegids cunter influenzas che disturban lur substanza, lur structura, lur furma u lur svilup natiral. Ils geotops d'impurtanza naziunala che vegnan menziunads qua figureschan en l'inventari informal da la gruppa da lavur Geotops svizzers (Academia svizra da las scienzas natiralas SCNAT). L'inventari na sa basa betg sin ina registraziun sistematica e n'è perquai betg cumplet. Funtaunas: Felber, M. (1999): Inventari dals geotops d'impurtanza naziunala. Geologia Insubrica 4/1. Reynard, E., Berger, J.-P., Constandache, M., Felber, M., Grangier, L., Häuselmann, P., Jeannin, P.-Y. &amp; Martin, S. (2012): Révision de l'inventaire des géotopes suisses: rapport final. – Geosciences, Platform of the Swiss Academy of Science.</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </abstract>
+        <purpose>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>fr</language>
+                <plainText>Inventaire des géotopes d'importance nationale</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>GE</language>
+                <plainText>Inventar der Geotope von nationaler Bedeutung</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </purpose>
+        <MD_Metadata REF="xN208052211" />
+        <citation REF="xN1448652457" />
+        <spatialRepresentationType>
+          <GM03_2_1Core.Core.MD_SpatialRepresentationTypeCode_>
+            <value>vector</value>
+          </GM03_2_1Core.Core.MD_SpatialRepresentationTypeCode_>
+        </spatialRepresentationType>
+        <language>
+          <CodeISO.LanguageCodeISO_>
+            <value>fr</value>
+          </CodeISO.LanguageCodeISO_>
+        </language>
+        <characterSet>
+          <GM03_2_1Core.Core.MD_CharacterSetCode_>
+            <value>utf8</value>
+          </GM03_2_1Core.Core.MD_CharacterSetCode_>
+        </characterSet>
+        <topicCategory>
+          <GM03_2_1Core.Core.MD_TopicCategoryCode_>
+            <value>geoscientificInformation.geoscientificInformation_Geology</value>
+          </GM03_2_1Core.Core.MD_TopicCategoryCode_>
+        </topicCategory>
+      </GM03_2_1Comprehensive.Comprehensive.MD_DataIdentification>
+      <GM03_2_1Comprehensive.Comprehensive.CI_Citation TID="xN1448652457">
+        <title>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>fr</language>
+                <plainText>Géotopes suisses</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>en</language>
+                <plainText>Geotopes in Switzerland</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>it</language>
+                <plainText>Geotopi svizzeri</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>RO</language>
+                <plainText>Geotops svizzers</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>GE</language>
+                <plainText>Geotope der Schweiz</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </title>
+        <presentationForm>
+          <GM03_2_1Comprehensive.Comprehensive.CI_PresentationFormCode_>
+            <value>mapDigital</value>
+          </GM03_2_1Comprehensive.Comprehensive.CI_PresentationFormCode_>
+        </presentationForm>
+        <alternateTitle>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>fr</language>
+                <plainText>Géotopes suisses</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>en</language>
+                <plainText>Geotopes in Switzerland</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>it</language>
+                <plainText>Geotopi svizzeri</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>RO</language>
+                <plainText>Geotops svizzers</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>GE</language>
+                <plainText>Geotope der Schweiz</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </alternateTitle>
+      </GM03_2_1Comprehensive.Comprehensive.CI_Citation>
+      <GM03_2_1Core.Core.CI_Date TID="xw1341487aac27b1b1b1b5b1">
+        <date>2012-12-31</date>
+        <dateType>publication</dateType>
+        <CI_Citation REF="xN1448652457" />
+      </GM03_2_1Core.Core.CI_Date>
+      <GM03_2_1Core.Core.MD_IdentificationpointOfContact>
+        <pointOfContact REF="xN963658656" />
+        <MD_Identification REF="xN2061609252" />
+        <role>
+          <GM03_2_1Core.Core.CI_RoleCode_>
+            <value>resourceProvider</value>
+          </GM03_2_1Core.Core.CI_RoleCode_>
+        </role>
+      </GM03_2_1Core.Core.MD_IdentificationpointOfContact>
+      <GM03_2_1Core.Core.CI_ResponsibleParty TID="xN963658656">
+        <individualFirstName>Emmanuel</individualFirstName>
+        <individualLastName>Reynard</individualLastName>
+        <electronicalMailAddress>
+          <GM03_2_1Core.Core.URL_>
+            <value>emmanuel.reynard@unil.ch</value>
+          </GM03_2_1Core.Core.URL_>
+        </electronicalMailAddress>
+        <organisationName>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>de</language>
+                <plainText>Universität Lausanne</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>fr</language>
+                <plainText>Université de Lausanne</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </organisationName>
+        <positionName>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>de</language>
+                <plainText>Institut für Geografie</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>fr</language>
+                <plainText>Institut de géographie</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </positionName>
+        <organisationAcronym>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>de</language>
+                <plainText>IGUL</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </organisationAcronym>
+        <address REF="xN881055097" />
+        <contactInfo REF="xN158209771" />
+      </GM03_2_1Core.Core.CI_ResponsibleParty>
+      <GM03_2_1Core.Core.CI_Address TID="xN881055097">
+        <addressLine>Amphipôle</addressLine>
+        <postalCode>1015</postalCode>
+        <city>Lausanne</city>
+        <country>CH</country>
+      </GM03_2_1Core.Core.CI_Address>
+      <GM03_2_1Core.Core.CI_Contact TID="xN158209771" />
+      <GM03_2_1Core.Core.CI_Telephone TID="xN1736999063">
+        <number>+41 21 692 30 65</number>
+        <numberType>directNumber</numberType>
+        <CI_ResponsibleParty REF="xN963658656" />
+      </GM03_2_1Core.Core.CI_Telephone>
+      <GM03_2_1Core.Core.MD_IdentificationpointOfContact>
+        <pointOfContact REF="xN875614951" />
+        <MD_Identification REF="xN2061609252" />
+        <role>
+          <GM03_2_1Core.Core.CI_RoleCode_>
+            <value>pointOfContact</value>
+          </GM03_2_1Core.Core.CI_RoleCode_>
+        </role>
+      </GM03_2_1Core.Core.MD_IdentificationpointOfContact>
+      <GM03_2_1Core.Core.CI_ResponsibleParty TID="xN875614951">
+        <individualFirstName>Milan</individualFirstName>
+        <individualLastName>Beres</individualLastName>
+        <electronicalMailAddress>
+          <GM03_2_1Core.Core.URL_>
+            <value>milan.beres@swisstopo.ch</value>
+          </GM03_2_1Core.Core.URL_>
+        </electronicalMailAddress>
+        <organisationName>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>en</language>
+                <plainText>Federal Office of Topography</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>de</language>
+                <plainText>Bundesamt für Landestopografie</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>fr</language>
+                <plainText>Office fédéral de topographie</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>it</language>
+                <plainText>Ufficio federale di topografia</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>rm</language>
+                <plainText>Bundesamt für Landestopografie</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </organisationName>
+        <positionName>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>en</language>
+                <plainText>Swiss Geological Survey</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>de</language>
+                <plainText>Landesgeologie</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>fr</language>
+                <plainText>Service géologique national</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>it</language>
+                <plainText>Servizio geologico nazionale</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>rm</language>
+                <plainText>Landesgeologie</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </positionName>
+        <organisationAcronym>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>en</language>
+                <plainText>swisstopo</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>de</language>
+                <plainText>swisstopo</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>fr</language>
+                <plainText>swisstopo</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>it</language>
+                <plainText>swisstopo</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>rm</language>
+                <plainText>swisstopo</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </organisationAcronym>
+        <linkage>
+          <GM03_2_1Core.Core.PT_FreeURL>
+            <URLGroup>
+              <GM03_2_1Core.Core.PT_URLGroup>
+                <language>en</language>
+                <plainURL>http://www.swisstopo.admin.ch/internet/swisstopo/en/home/swisstopo/org/geology.html</plainURL>
+              </GM03_2_1Core.Core.PT_URLGroup>
+              <GM03_2_1Core.Core.PT_URLGroup>
+                <language>de</language>
+                <plainURL>http://www.swisstopo.admin.ch/internet/swisstopo/de/home/swisstopo/org/geology.html</plainURL>
+              </GM03_2_1Core.Core.PT_URLGroup>
+              <GM03_2_1Core.Core.PT_URLGroup>
+                <language>fr</language>
+                <plainURL>http://www.swisstopo.admin.ch/internet/swisstopo/fr/home/swisstopo/org/geology.html</plainURL>
+              </GM03_2_1Core.Core.PT_URLGroup>
+              <GM03_2_1Core.Core.PT_URLGroup>
+                <language>it</language>
+                <plainURL>http://www.swisstopo.admin.ch/internet/swisstopo/it/home/swisstopo/org/geology.html</plainURL>
+              </GM03_2_1Core.Core.PT_URLGroup>
+              <GM03_2_1Core.Core.PT_URLGroup>
+                <language>rm</language>
+                <plainURL>http://www.swisstopo.admin.ch/internet/swisstopo/de/home/swisstopo/org/geology.html</plainURL>
+              </GM03_2_1Core.Core.PT_URLGroup>
+            </URLGroup>
+          </GM03_2_1Core.Core.PT_FreeURL>
+        </linkage>
+        <address REF="xN409182616" />
+        <contactInfo REF="xN826209053" />
+      </GM03_2_1Core.Core.CI_ResponsibleParty>
+      <GM03_2_1Core.Core.CI_Address TID="xN409182616">
+        <streetName>Seftigenstrasse</streetName>
+        <streetNumber>264</streetNumber>
+        <postalCode>3084</postalCode>
+        <city>Wabern</city>
+        <country>CH</country>
+      </GM03_2_1Core.Core.CI_Address>
+      <GM03_2_1Core.Core.CI_Contact TID="xN826209053" />
+      <GM03_2_1Core.Core.CI_Telephone TID="xN237569220">
+        <number>+41 58 469 01 11</number>
+        <numberType>mainNumber</numberType>
+        <CI_ResponsibleParty REF="xN875614951" />
+      </GM03_2_1Core.Core.CI_Telephone>
+      <GM03_2_1Core.Core.CI_Telephone TID="xN2107068410">
+        <number>+41 58 469 05 74</number>
+        <numberType>directNumber</numberType>
+        <CI_ResponsibleParty REF="xN875614951" />
+      </GM03_2_1Core.Core.CI_Telephone>
+      <GM03_2_1Core.Core.descriptiveKeywordsMD_Identification>
+        <descriptiveKeywords REF="xN1724139155" />
+        <MD_Identification REF="xN2061609252" />
+      </GM03_2_1Core.Core.descriptiveKeywordsMD_Identification>
+      <GM03_2_1Core.Core.MD_Keywords TID="xN1724139155">
+        <keyword>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>en</language>
+                <plainText>Geotope</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>de</language>
+                <plainText>Geotop</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>it</language>
+                <plainText>Geotopo</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>fr</language>
+                <plainText>Géotope</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>en</language>
+                <plainText>protected natural zone</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>de</language>
+                <plainText>Naturschutzzone</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>it</language>
+                <plainText>zona naturale protetta</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>fr</language>
+                <plainText>zone naturelle protégée</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>en</language>
+                <plainText>national inventory</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>de</language>
+                <plainText>nationales Inventar</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>it</language>
+                <plainText>inventario nazionale</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>fr</language>
+                <plainText>inventaire national</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>en</language>
+                <plainText>opendata.swiss</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>de</language>
+                <plainText>opendata.swiss</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>it</language>
+                <plainText>opendata.swiss</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>fr</language>
+                <plainText>opendata.swiss</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>rm</language>
+                <plainText>opendata.swiss</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </keyword>
+        <thesaurus REF="xN1994543677" />
+      </GM03_2_1Core.Core.MD_Keywords>
+      <GM03_2_1Core.Core.MD_Thesaurus TID="xN1994543677">
+        <citation REF="xN1263133392" />
+      </GM03_2_1Core.Core.MD_Thesaurus>
+      <GM03_2_1Comprehensive.Comprehensive.CI_Citation TID="xN1263133392">
+        <title>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>de</language>
+                <plainText>geocat.ch Thesaurus</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </title>
+      </GM03_2_1Comprehensive.Comprehensive.CI_Citation>
+      <GM03_2_1Core.Core.CI_Date TID="xw1341487aac27b1c11ac11b1b3b1">
+        <date>2016-02-02</date>
+        <dateType>publication</dateType>
+        <CI_Citation REF="xN1263133392" />
+      </GM03_2_1Core.Core.CI_Date>
+      <GM03_2_1Comprehensive.Comprehensive.CI_Citationidentifier>
+        <identifier REF="xN1095433788" />
+        <CI_Citation REF="xN1263133392" />
+      </GM03_2_1Comprehensive.Comprehensive.CI_Citationidentifier>
+      <GM03_2_1Core.Core.MD_Identifier TID="xN1095433788">
+        <code>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>de</language>
+                <plainText>geonetwork.thesaurus.local._none_.geocat.ch</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </code>
+      </GM03_2_1Core.Core.MD_Identifier>
+      <GM03_2_1Core.Core.descriptiveKeywordsMD_Identification>
+        <descriptiveKeywords REF="xN1554827956" />
+        <MD_Identification REF="xN2061609252" />
+      </GM03_2_1Core.Core.descriptiveKeywordsMD_Identification>
+      <GM03_2_1Core.Core.MD_Keywords TID="xN1554827956">
+        <keyword>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>en</language>
+                <plainText>Protected sites</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>de</language>
+                <plainText>Schutzgebiete</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>it</language>
+                <plainText>Siti protetti</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>fr</language>
+                <plainText>Sites protégés</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>en</language>
+                <plainText>Geology</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>de</language>
+                <plainText>Geologie</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>it</language>
+                <plainText>Geologia</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>fr</language>
+                <plainText>Géologie</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </keyword>
+        <thesaurus REF="xN1522785925" />
+      </GM03_2_1Core.Core.MD_Keywords>
+      <GM03_2_1Core.Core.MD_Thesaurus TID="xN1522785925">
+        <citation REF="xN708561234" />
+      </GM03_2_1Core.Core.MD_Thesaurus>
+      <GM03_2_1Comprehensive.Comprehensive.CI_Citation TID="xN708561234">
+        <title>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>de</language>
+                <plainText>GEMET - INSPIRE themes, version 1.0</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </title>
+      </GM03_2_1Comprehensive.Comprehensive.CI_Citation>
+      <GM03_2_1Core.Core.CI_Date TID="xw1341487aac27b1c13ab7b1b3b1">
+        <date>2008-06-01</date>
+        <dateType>publication</dateType>
+        <CI_Citation REF="xN708561234" />
+      </GM03_2_1Core.Core.CI_Date>
+      <GM03_2_1Comprehensive.Comprehensive.CI_Citationidentifier>
+        <identifier REF="xN974123355" />
+        <CI_Citation REF="xN708561234" />
+      </GM03_2_1Comprehensive.Comprehensive.CI_Citationidentifier>
+      <GM03_2_1Core.Core.MD_Identifier TID="xN974123355">
+        <code>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>de</language>
+                <plainText>geonetwork.thesaurus.external.theme.inspire-theme</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </code>
+      </GM03_2_1Core.Core.MD_Identifier>
+      <GM03_2_1Core.Core.MD_Resolution TID="xN1261923507">
+        <MD_DataIdentification REF="xN2061609252" />
+        <equivalentScale REF="xN1806452690" />
+      </GM03_2_1Core.Core.MD_Resolution>
+      <GM03_2_1Core.Core.MD_RepresentativeFraction TID="xN1806452690">
+        <denominator>25000</denominator>
+      </GM03_2_1Core.Core.MD_RepresentativeFraction>
+      <GM03_2_1Core.Core.EX_Extent TID="xN1591150276">
+        <description>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>de</language>
+                <plainText>Landeskarte 1:25'000</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>fr</language>
+                <plainText>Carte nationale 1:25'000</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>it</language>
+                <plainText>Carta nazionale 1:25'000</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>en</language>
+                <plainText>National Map 1:25'000</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </description>
+        <MD_DataIdentification REF="xN2061609252" />
+      </GM03_2_1Core.Core.EX_Extent>
+      <GM03_2_1Core.Core.EX_ExtentgeographicElement>
+        <EX_Extent REF="xN1591150276" />
+        <geographicElement REF="xN1466633621" />
+      </GM03_2_1Core.Core.EX_ExtentgeographicElement>
+      <GM03_2_1Core.Core.EX_GeographicDescription TID="xN1466633621">
+        <geographicIdentifier REF="xN872485345" />
+      </GM03_2_1Core.Core.EX_GeographicDescription>
+      <GM03_2_1Core.Core.MD_Identifier TID="xN872485345">
+        <code>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>de</language>
+                <plainText>LK25</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>fr</language>
+                <plainText>CN25</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>it</language>
+                <plainText>CN25</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>en</language>
+                <plainText>NM25</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>rm</language>
+                <plainText>CN25</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </code>
+      </GM03_2_1Core.Core.MD_Identifier>
+      <GM03_2_1Core.Core.EX_ExtentgeographicElement>
+        <EX_Extent REF="xN1591150276" />
+        <geographicElement REF="xN1089546882" />
+      </GM03_2_1Core.Core.EX_ExtentgeographicElement>
+      <GM03_2_1Core.Core.EX_BoundingPolygon TID="xN1089546882">
+        <extentTypeCode>true</extentTypeCode>
+        <polygon>
+          <SURFACE>
+            <BOUNDARY>
+              <POLYLINE>
+                <COORD>
+                  <C1>8.407</C1>
+                  <C2>47.864</C2>
+                </COORD>
+                <COORD>
+                  <C1>8.875</C1>
+                  <C2>47.86</C2>
+                </COORD>
+                <COORD>
+                  <C1>8.872</C1>
+                  <C2>47.752</C2>
+                </COORD>
+                <COORD>
+                  <C1>9.339</C1>
+                  <C2>47.745</C2>
+                </COORD>
+                <COORD>
+                  <C1>9.335</C1>
+                  <C2>47.637</C2>
+                </COORD>
+                <COORD>
+                  <C1>9.571</C1>
+                  <C2>47.714</C2>
+                </COORD>
+                <COORD>
+                  <C1>9.563</C1>
+                  <C2>47.525</C2>
+                </COORD>
+                <COORD>
+                  <C1>9.796</C1>
+                  <C2>47.521</C2>
+                </COORD>
+                <COORD>
+                  <C1>9.777</C1>
+                  <C2>47.089</C2>
+                </COORD>
+                <COORD>
+                  <C1>10.007</C1>
+                  <C2>47.084</C2>
+                </COORD>
+                <COORD>
+                  <C1>10.002</C1>
+                  <C2>46.976</C2>
+                </COORD>
+                <COORD>
+                  <C1>10.232</C1>
+                  <C2>46.971</C2>
+                </COORD>
+                <COORD>
+                  <C1>10.237</C1>
+                  <C2>47.079</C2>
+                </COORD>
+                <COORD>
+                  <C1>10.468</C1>
+                  <C2>47.073</C2>
+                </COORD>
+                <COORD>
+                  <C1>10.461</C1>
+                  <C2>46.965</C2>
+                </COORD>
+                <COORD>
+                  <C1>10.55</C1>
+                  <C2>46.963</C2>
+                </COORD>
+                <COORD>
+                  <C1>10.544</C1>
+                  <C2>46.855</C2>
+                </COORD>
+                <COORD>
+                  <C1>10.685</C1>
+                  <C2>46.851</C2>
+                </COORD>
+                <COORD>
+                  <C1>10.665</C1>
+                  <C2>46.527</C2>
+                </COORD>
+                <COORD>
+                  <C1>10.209</C1>
+                  <C2>46.54</C2>
+                </COORD>
+                <COORD>
+                  <C1>10.193</C1>
+                  <C2>46.216</C2>
+                </COORD>
+                <COORD>
+                  <C1>9.966</C1>
+                  <C2>46.221</C2>
+                </COORD>
+                <COORD>
+                  <C1>9.971</C1>
+                  <C2>46.329</C2>
+                </COORD>
+                <COORD>
+                  <C1>9.744</C1>
+                  <C2>46.334</C2>
+                </COORD>
+                <COORD>
+                  <C1>9.74</C1>
+                  <C2>46.226</C2>
+                </COORD>
+                <COORD>
+                  <C1>9.513</C1>
+                  <C2>46.23</C2>
+                </COORD>
+                <COORD>
+                  <C1>9.517</C1>
+                  <C2>46.338</C2>
+                </COORD>
+                <COORD>
+                  <C1>9.29</C1>
+                  <C2>46.342</C2>
+                </COORD>
+                <COORD>
+                  <C1>9.279</C1>
+                  <C2>46.019</C2>
+                </COORD>
+                <COORD>
+                  <C1>9.053</C1>
+                  <C2>46.022</C2>
+                </COORD>
+                <COORD>
+                  <C1>9.05</C1>
+                  <C2>45.914</C2>
+                </COORD>
+                <COORD>
+                  <C1>9.275</C1>
+                  <C2>45.911</C2>
+                </COORD>
+                <COORD>
+                  <C1>9.272</C1>
+                  <C2>45.803</C2>
+                </COORD>
+                <COORD>
+                  <C1>8.821</C1>
+                  <C2>45.809</C2>
+                </COORD>
+                <COORD>
+                  <C1>8.824</C1>
+                  <C2>45.917</C2>
+                </COORD>
+                <COORD>
+                  <C1>8.599</C1>
+                  <C2>45.92</C2>
+                </COORD>
+                <COORD>
+                  <C1>8.603</C1>
+                  <C2>46.135</C2>
+                </COORD>
+                <COORD>
+                  <C1>8.377</C1>
+                  <C2>46.138</C2>
+                </COORD>
+                <COORD>
+                  <C1>8.379</C1>
+                  <C2>46.246</C2>
+                </COORD>
+                <COORD>
+                  <C1>8.174</C1>
+                  <C2>46.247</C2>
+                </COORD>
+                <COORD>
+                  <C1>8.173</C1>
+                  <C2>46.139</C2>
+                </COORD>
+                <COORD>
+                  <C1>8.15</C1>
+                  <C2>46.139</C2>
+                </COORD>
+                <COORD>
+                  <C1>8.148</C1>
+                  <C2>45.923</C2>
+                </COORD>
+                <COORD>
+                  <C1>7.696</C1>
+                  <C2>45.925</C2>
+                </COORD>
+                <COORD>
+                  <C1>7.471</C1>
+                  <C2>45.926</C2>
+                </COORD>
+                <COORD>
+                  <C1>7.471</C1>
+                  <C2>45.818</C2>
+                </COORD>
+                <COORD>
+                  <C1>7.021</C1>
+                  <C2>45.817</C2>
+                </COORD>
+                <COORD>
+                  <C1>7.02</C1>
+                  <C2>45.925</C2>
+                </COORD>
+                <COORD>
+                  <C1>6.794</C1>
+                  <C2>45.924</C2>
+                </COORD>
+                <COORD>
+                  <C1>6.792</C1>
+                  <C2>46.14</C2>
+                </COORD>
+                <COORD>
+                  <C1>6.79</C1>
+                  <C2>46.248</C2>
+                </COORD>
+                <COORD>
+                  <C1>6.767</C1>
+                  <C2>46.247</C2>
+                </COORD>
+                <COORD>
+                  <C1>6.766</C1>
+                  <C2>46.355</C2>
+                </COORD>
+                <COORD>
+                  <C1>6.334</C1>
+                  <C2>46.352</C2>
+                </COORD>
+                <COORD>
+                  <C1>6.339</C1>
+                  <C2>46.136</C2>
+                </COORD>
+                <COORD>
+                  <C1>5.886</C1>
+                  <C2>46.131</C2>
+                </COORD>
+                <COORD>
+                  <C1>5.874</C1>
+                  <C2>46.562</C2>
+                </COORD>
+                <COORD>
+                  <C1>6.102</C1>
+                  <C2>46.565</C2>
+                </COORD>
+                <COORD>
+                  <C1>6.096</C1>
+                  <C2>46.781</C2>
+                </COORD>
+                <COORD>
+                  <C1>6.325</C1>
+                  <C2>46.784</C2>
+                </COORD>
+                <COORD>
+                  <C1>6.321</C1>
+                  <C2>47.0</C2>
+                </COORD>
+                <COORD>
+                  <C1>6.551</C1>
+                  <C2>47.002</C2>
+                </COORD>
+                <COORD>
+                  <C1>6.547</C1>
+                  <C2>47.217</C2>
+                </COORD>
+                <COORD>
+                  <C1>6.779</C1>
+                  <C2>47.219</C2>
+                </COORD>
+                <COORD>
+                  <C1>6.774</C1>
+                  <C2>47.543</C2>
+                </COORD>
+                <COORD>
+                  <C1>7.472</C1>
+                  <C2>47.545</C2>
+                </COORD>
+                <COORD>
+                  <C1>7.472</C1>
+                  <C2>47.653</C2>
+                </COORD>
+                <COORD>
+                  <C1>8.404</C1>
+                  <C2>47.649</C2>
+                </COORD>
+                <COORD>
+                  <C1>8.407</C1>
+                  <C2>47.864</C2>
+                </COORD>
+              </POLYLINE>
+            </BOUNDARY>
+          </SURFACE>
+        </polygon>
+      </GM03_2_1Core.Core.EX_BoundingPolygon>
+      <GM03_2_1Core.Core.EX_ExtentgeographicElement>
+        <EX_Extent REF="xN1591150276" />
+        <geographicElement REF="xN11045849" />
+      </GM03_2_1Core.Core.EX_ExtentgeographicElement>
+      <GM03_2_1Core.Core.EX_GeographicBoundingBox TID="xN11045849">
+        <extentTypeCode>true</extentTypeCode>
+        <northBoundLatitude>47.864</northBoundLatitude>
+        <southBoundLatitude>45.803</southBoundLatitude>
+        <eastBoundLongitude>10.685</eastBoundLongitude>
+        <westBoundLongitude>5.874</westBoundLongitude>
+      </GM03_2_1Core.Core.EX_GeographicBoundingBox>
+      <GM03_2_1Core.Core.DQ_DataQuality TID="xN258916865">
+        <MD_Metadata REF="xN208052211" />
+      </GM03_2_1Core.Core.DQ_DataQuality>
+      <GM03_2_1Core.Core.DQ_Scope TID="xN596726330">
+        <level>dataset</level>
+        <DQ_DataQuality REF="xN258916865" />
+      </GM03_2_1Core.Core.DQ_Scope>
+      <GM03_2_1Core.Core.LI_Lineage TID="xN1022192389">
+        <statement>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>fr</language>
+                <plainText>Le périmètre de chaque géotope a été numérisé au 1:25'000 (exceptionnellement au 1:100'000 pour quelques géotopes particulièrement étendus). Il s’agit d’un périmètre estimatif, établi la plupart du temps sur la base des données cartographiques à disposition, et non pas d’un relevé sur le terrain.</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>GE</language>
+                <plainText>Der Umkreis jedes Geotops ist im Massstab 1:25'000 digitalisiert worden (ausnahmsweise im Massstab 1:100'000 für einige besonders ausgedehnte Geotope). Es handelt sich um einen geschätzten Umkreis, der meistens aus der vorhandenen kartographischen Daten und nicht aus Aufnahmen im Gelände bestimmt wurde.</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </statement>
+        <DQ_DataQuality REF="xN258916865" />
+      </GM03_2_1Core.Core.LI_Lineage>
+      <GM03_2_1Comprehensive.Comprehensive.MD_MetadatalegislationInformation>
+        <MD_Metadata REF="xN208052211" />
+        <legislationInformation REF="xw1341487aac33b1" />
+      </GM03_2_1Comprehensive.Comprehensive.MD_MetadatalegislationInformation>
+      <GM03_2_1Comprehensive.Comprehensive.MD_Legislation TID="xw1341487aac33b1">
+        <country>
+          <CodeISO.CountryCodeISO_>
+            <value>CH</value>
+          </CodeISO.CountryCodeISO_>
+        </country>
+        <language>
+          <CodeISO.LanguageCodeISO_>
+            <value>de</value>
+          </CodeISO.LanguageCodeISO_>
+          <CodeISO.LanguageCodeISO_>
+            <value>fr</value>
+          </CodeISO.LanguageCodeISO_>
+          <CodeISO.LanguageCodeISO_>
+            <value>it</value>
+          </CodeISO.LanguageCodeISO_>
+        </language>
+        <legislationType>nationalDecree</legislationType>
+        <internalReference>
+          <GM03_2_1Core.Core.CharacterString_>
+            <value>510.620 510.620 510.620 510.620</value>
+          </GM03_2_1Core.Core.CharacterString_>
+        </internalReference>
+        <title REF="xN552251637" />
+      </GM03_2_1Comprehensive.Comprehensive.MD_Legislation>
+      <GM03_2_1Comprehensive.Comprehensive.CI_Citation TID="xN552251637">
+        <title>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>fr</language>
+                <plainText>Ordonnance sur la géoinformation : Annexe 1, Catalogue des géodonnées de base relevant du droit fédéral</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>it</language>
+                <plainText>Ordinanza sulla geoinformazione: Allegato 1, Catalogo dei geodati di base del diritto federale</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>GE</language>
+                <plainText>Verordnung über Geoinformation: Anhang 1, Katalog der Geobasisdaten des Bundesrechts</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </title>
+        <alternateTitle>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>fr</language>
+                <plainText>OGéo</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>it</language>
+                <plainText>OGI</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>GE</language>
+                <plainText>Geoinformationsverordnung GeoIV</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </alternateTitle>
+      </GM03_2_1Comprehensive.Comprehensive.CI_Citation>
+      <GM03_2_1Core.Core.CI_Date TID="xw1341487aac33b1c13b1b5b1">
+        <date>2008-07-01</date>
+        <dateType>publication</dateType>
+        <CI_Citation REF="xN552251637" />
+      </GM03_2_1Core.Core.CI_Date>
+      <GM03_2_1Comprehensive.Comprehensive.MD_MetadatalegislationInformation>
+        <MD_Metadata REF="xN208052211" />
+        <legislationInformation REF="xw1341487aac35b1" />
+      </GM03_2_1Comprehensive.Comprehensive.MD_MetadatalegislationInformation>
+      <GM03_2_1Comprehensive.Comprehensive.MD_Legislation TID="xw1341487aac35b1">
+        <country>
+          <CodeISO.CountryCodeISO_>
+            <value>CH</value>
+          </CodeISO.CountryCodeISO_>
+        </country>
+        <language>
+          <CodeISO.LanguageCodeISO_>
+            <value>de</value>
+          </CodeISO.LanguageCodeISO_>
+          <CodeISO.LanguageCodeISO_>
+            <value>fr</value>
+          </CodeISO.LanguageCodeISO_>
+          <CodeISO.LanguageCodeISO_>
+            <value>it</value>
+          </CodeISO.LanguageCodeISO_>
+        </language>
+        <legislationType>nationalDecree</legislationType>
+        <internalReference>
+          <GM03_2_1Core.Core.CharacterString_>
+            <value>510.624 510.624 510.624 510.624</value>
+          </GM03_2_1Core.Core.CharacterString_>
+        </internalReference>
+        <title REF="xN2089586105" />
+      </GM03_2_1Comprehensive.Comprehensive.MD_Legislation>
+      <GM03_2_1Comprehensive.Comprehensive.CI_Citation TID="xN2089586105">
+        <title>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>fr</language>
+                <plainText>Ordonnance sur la géologie nationale</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>it</language>
+                <plainText>Ordinanza sulla geologia nazionale</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>GE</language>
+                <plainText>Verordnung über die Landesgeologie</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </title>
+        <alternateTitle>
+          <GM03_2_1Core.Core.PT_FreeText>
+            <textGroup>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>fr</language>
+                <plainText>OCFG</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>it</language>
+                <plainText>OGN</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+              <GM03_2_1Core.Core.PT_Group>
+                <language>GE</language>
+                <plainText>Landesgeologieverordnung LGeolV</plainText>
+              </GM03_2_1Core.Core.PT_Group>
+            </textGroup>
+          </GM03_2_1Core.Core.PT_FreeText>
+        </alternateTitle>
+      </GM03_2_1Comprehensive.Comprehensive.CI_Citation>
+      <GM03_2_1Core.Core.CI_Date TID="xw1341487aac35b1c13b1b5b1">
+        <date>2008-07-01</date>
+        <dateType>publication</dateType>
+        <CI_Citation REF="xN2089586105" />
+      </GM03_2_1Core.Core.CI_Date>
+      <GM03_2_1Core.Core.CI_Date TID="xw1341487aac35b1c13b1b7b1">
+        <date>2008-05-21</date>
+        <dateType>creation</dateType>
+        <CI_Citation REF="xN2089586105" />
+      </GM03_2_1Core.Core.CI_Date>
+    </GM03_2_1Comprehensive.Comprehensive>
+  </DATASECTION>
+</TRANSFER>
+

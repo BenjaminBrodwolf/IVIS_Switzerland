@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmd:MD_Metadata xmlns:java="java:org.fao.geonet.util.XslUtil"
+                 xmlns:srv="http://www.isotc211.org/2005/srv"
+                 xmlns:fra="http://www.cnig.gouv.fr/2005/fra"
+                 xmlns:gco="http://www.isotc211.org/2005/gco"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xmlns:geonet="http://www.fao.org/geonetwork"
+                 xmlns:che="http://www.geocat.ch/2008/che"
+                 xmlns:gmd="http://www.isotc211.org/2005/gmd">
+   <gmd:fileIdentifier xmlns:gml="http://www.opengis.net/gml">
+      <gco:CharacterString>e7dd54e9-fc98-4e5c-b46a-694d1ba6c84e</gco:CharacterString>
+  </gmd:fileIdentifier>
+   <gmd:language xmlns:comp="http://www.geocat.ch/2003/05/gateway/GM03Comprehensive"
+                 xmlns:xalan="http://xml.apache.org/xalan"
+                 xmlns:gml="http://www.opengis.net/gml">
+      <gco:CharacterString>ger</gco:CharacterString>
+  </gmd:language>
+   <gmd:characterSet xmlns:comp="http://www.geocat.ch/2003/05/gateway/GM03Comprehensive"
+                     xmlns:xalan="http://xml.apache.org/xalan"
+                     xmlns:gml="http://www.opengis.net/gml">
+      <gmd:MD_CharacterSetCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_CharacterSetCode"
+                               codeListValue="utf8"/>
+  </gmd:characterSet>
+   <gmd:hierarchyLevel xmlns:comp="http://www.geocat.ch/2003/05/gateway/GM03Comprehensive"
+                       xmlns:xalan="http://xml.apache.org/xalan"
+                       xmlns:gml="http://www.opengis.net/gml">
+      <gmd:MD_ScopeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_ScopeCode"
+                        codeListValue="dataset"/>
+  </gmd:hierarchyLevel>
+   <gmd:contact xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml">
+      <gmd:CI_ResponsibleParty>
+         <gmd:organisationName xsi:type="gmd:PT_FreeText_PropertyType">
+            <gco:CharacterString>Bundesamt für Landestopografie</gco:CharacterString>
+            <gmd:PT_FreeText>
+               <gmd:textGroup>
+                  <gmd:LocalisedCharacterString locale="#EN">Federal Office of Topography</gmd:LocalisedCharacterString>
+               </gmd:textGroup>
+               <gmd:textGroup>
+                  <gmd:LocalisedCharacterString locale="#DE">Bundesamt für Landestopografie</gmd:LocalisedCharacterString>
+               </gmd:textGroup>
+               <gmd:textGroup>
+                  <gmd:LocalisedCharacterString locale="#FR">Office fédéral de topographie</gmd:LocalisedCharacterString>
+               </gmd:textGroup>
+               <gmd:textGroup>
+                  <gmd:LocalisedCharacterString locale="#IT">Ufficio federale di topografia</gmd:LocalisedCharacterString>
+               </gmd:textGroup>
+               <gmd:textGroup>
+                  <gmd:LocalisedCharacterString locale="#RM">Bundesamt für Landestopografie</gmd:LocalisedCharacterString>
+               </gmd:textGroup>
+            </gmd:PT_FreeText>
+         </gmd:organisationName>
+         <gmd:positionName xsi:type="gmd:PT_FreeText_PropertyType">
+            <gco:CharacterString>Landesgeologie</gco:CharacterString>
+            <gmd:PT_FreeText>
+               <gmd:textGroup>
+                  <gmd:LocalisedCharacterString locale="#EN">Swiss Geological Survey</gmd:LocalisedCharacterString>
+               </gmd:textGroup>
+               <gmd:textGroup>
+                  <gmd:LocalisedCharacterString locale="#DE">Landesgeologie</gmd:LocalisedCharacterString>
+               </gmd:textGroup>
+               <gmd:textGroup>
+                  <gmd:LocalisedCharacterString locale="#FR">Service géologique national</gmd:LocalisedCharacterString>
+               </gmd:textGroup>
+               <gmd:textGroup>
+                  <gmd:LocalisedCharacterString locale="#IT">Servizio geologico nazionale</gmd:LocalisedCharacterString>
+               </gmd:textGroup>
+               <gmd:textGroup>
+                  <gmd:LocalisedCharacterString locale="#RM">Landesgeologie</gmd:LocalisedCharacterString>
+               </gmd:textGroup>
+            </gmd:PT_FreeText>
+         </gmd:positionName>
+         <gmd:contactInfo>
+            <gmd:CI_Contact>
+               <gmd:phone>
+                  <gmd:CI_Telephone>
+                     <gmd:voice>
+                        <gco:CharacterString>+41 58 469 01 11</gco:CharacterString>
+                     </gmd:voice>
+                  </gmd:CI_Telephone>
+               </gmd:phone>
+               <gmd:address>
+                  <gmd:CI_Address>
+                     <gmd:city>
+                        <gco:CharacterString>Wabern</gco:CharacterString>
+                     </gmd:city>
+                     <gmd:postalCode>
+                        <gco:CharacterString>3084</gco:CharacterString>
+                     </gmd:postalCode>
+                     <gmd:country>
+                        <gco:CharacterString>CH</gco:CharacterString>
+                     </gmd:country>
+                     <gmd:electronicMailAddress>
+                        <gco:CharacterString>milan.beres@swisstopo.ch</gco:CharacterString>
+                     </gmd:electronicMailAddress>
+                  </gmd:CI_Address>
+               </gmd:address>
+               <gmd:onlineResource>
+                  <gmd:CI_OnlineResource>
+                     <gmd:linkage>
+                        <gmd:URL>http://www.swisstopo.admin.ch/internet/swisstopo/de/home/swisstopo/org/geology.html</gmd:URL>
+                     </gmd:linkage>
+                     <gmd:protocol>
+                        <gco:CharacterString>text/html</gco:CharacterString>
+                     </gmd:protocol>
+                  </gmd:CI_OnlineResource>
+               </gmd:onlineResource>
+            </gmd:CI_Contact>
+         </gmd:contactInfo>
+         <gmd:role>
+            <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_RoleCode"
+                             codeListValue="pointOfContact"/>
+         </gmd:role>
+      </gmd:CI_ResponsibleParty>
+   </gmd:contact>
+   <gmd:dateStamp xmlns:comp="http://www.geocat.ch/2003/05/gateway/GM03Comprehensive"
+                  xmlns:xalan="http://xml.apache.org/xalan"
+                  xmlns:gml="http://www.opengis.net/gml">
+      <gco:DateTime>2016-01-13T16:24:44</gco:DateTime>
+  </gmd:dateStamp>
+   <gmd:metadataStandardName xmlns:comp="http://www.geocat.ch/2003/05/gateway/GM03Comprehensive"
+                             xmlns:xalan="http://xml.apache.org/xalan"
+                             xmlns:gml="http://www.opengis.net/gml">
+      <gco:CharacterString>GM03 2+</gco:CharacterString>
+  </gmd:metadataStandardName>
+   <gmd:locale xmlns:comp="http://www.geocat.ch/2003/05/gateway/GM03Comprehensive"
+               xmlns:xalan="http://xml.apache.org/xalan"
+               xmlns:gml="http://www.opengis.net/gml">
+      <gmd:PT_Locale id="GE">
+         <gmd:languageCode>
+            <gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="ger"/>
+         </gmd:languageCode>
+         <gmd:characterEncoding>
+            <gmd:MD_CharacterSetCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_CharacterSetCode"
+                                     codeListValue="utf8"/>
+         </gmd:characterEncoding>
+      </gmd:PT_Locale>
+  </gmd:locale>
+   <gmd:locale xmlns:comp="http://www.geocat.ch/2003/05/gateway/GM03Comprehensive"
+               xmlns:xalan="http://xml.apache.org/xalan"
+               xmlns:gml="http://www.opengis.net/gml">
+      <gmd:PT_Locale id="FR">
+         <gmd:languageCode>
+            <gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="fre"/>
+         </gmd:languageCode>
+         <gmd:characterEncoding>
+            <gmd:MD_CharacterSetCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_CharacterSetCode"
+                                     codeListValue="utf8"/>
+         </gmd:characterEncoding>
+      </gmd:PT_Locale>
+  </gmd:locale>
+   <gmd:locale xmlns:gml="http://www.opengis.net/gml">
+      <gmd:PT_Locale id="IT">
+         <gmd:languageCode>
+            <gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="ita"/>
+         </gmd:languageCode>
+         <gmd:characterEncoding>
+            <gmd:MD_CharacterSetCode codeListValue="utf8"
+                                     codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_CharacterSetCode"/>
+         </gmd:characterEncoding>
+      </gmd:PT_Locale>
+  </gmd:locale>
+   <gmd:locale xmlns:gml="http://www.opengis.net/gml">
+      <gmd:PT_Locale id="EN">
+         <gmd:languageCode>
+            <gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="eng"/>
+         </gmd:languageCode>
+         <gmd:characterEncoding>
+            <gmd:MD_CharacterSetCode codeListValue="utf8"
+                                     codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_CharacterSetCode"/>
+         </gmd:characterEncoding>
+      </gmd:PT_Locale>
+  </gmd:locale>
+   <gmd:locale xmlns:gml="http://www.opengis.net/gml">
+      <gmd:PT_Locale id="RO">
+         <gmd:languageCode>
+            <gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="roh"/>
+         </gmd:languageCode>
+         <gmd:characterEncoding>
+            <gmd:MD_CharacterSetCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_CharacterSetCode"
+                                     codeListValue="utf8"/>
+         </gmd:characterEncoding>
+      </gmd:PT_Locale>
+  </gmd:locale>
+   <gmd:referenceSystemInfo xmlns:comp="http://www.geocat.ch/2003/05/gateway/GM03Comprehensive"
+                            xmlns:xalan="http://xml.apache.org/xalan"
+                            xmlns:gml="http://www.opengis.net/gml">
+      <gmd:MD_ReferenceSystem>
+         <gmd:referenceSystemIdentifier>
+            <gmd:RS_Identifier>
+               <gmd:code xsi:type="gmd:PT_FreeText_PropertyType">
+                  <gco:CharacterString>Referenzsystem entsprechend der zugrundeliegenden topographischen Karte (CH1903)</gco:CharacterString>
+                  <gmd:PT_FreeText>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#EN"/>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#FR">Système de référence conformément à la carte topographique sous-jacente (CH1903)</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#DE">Referenzsystem entsprechend der zugrundeliegenden topographischen Karte (CH1903)</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                  </gmd:PT_FreeText>
+               </gmd:code>
+            </gmd:RS_Identifier>
+         </gmd:referenceSystemIdentifier>
+      </gmd:MD_ReferenceSystem>
+  </gmd:referenceSystemInfo>
+   <gmd:identificationInfo xmlns:comp="http://www.geocat.ch/2003/05/gateway/GM03Comprehensive"
+                           xmlns:xalan="http://xml.apache.org/xalan"
+                           xmlns:gml="http://www.opengis.net/gml">
+      <gmd:MD_DataIdentification>
+         <gmd:citation>
+            <gmd:CI_Citation>
+               <gmd:title xsi:type="gmd:PT_FreeText_PropertyType" gco:nilReason="missing">
+                  <gco:CharacterString/>
+                  <gmd:PT_FreeText>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#FR">Géotopes suisses</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#EN">Geotopes in Switzerland</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup/>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#IT">Geotopi svizzeri</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup/>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#RO">Geotops svizzers</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#GE">Geotope der Schweiz</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                  </gmd:PT_FreeText>
+               </gmd:title>
+               <gmd:alternateTitle xsi:type="gmd:PT_FreeText_PropertyType" gco:nilReason="missing">
+                  <gco:CharacterString/>
+                  <gmd:PT_FreeText>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#FR">Géotopes suisses</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#EN">Geotopes in Switzerland</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup/>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#IT">Geotopi svizzeri</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup/>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#RO">Geotops svizzers</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#GE">Geotope der Schweiz</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                  </gmd:PT_FreeText>
+               </gmd:alternateTitle>
+               <gmd:date>
+                  <gmd:CI_Date>
+                     <gmd:date>
+                        <gco:Date>2012-12-31</gco:Date>
+                     </gmd:date>
+                     <gmd:dateType>
+                        <gmd:CI_DateTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_DateTypeCode"
+                                             codeListValue="publication"/>
+                     </gmd:dateType>
+                  </gmd:CI_Date>
+               </gmd:date>
+               <gmd:presentationForm>
+                  <gmd:CI_PresentationFormCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_PresentationFormCode"
+                                               codeListValue="mapDigital"/>
+               </gmd:presentationForm>
+            </gmd:CI_Citation>
+         </gmd:citation>
+         <gmd:abstract xsi:type="gmd:PT_FreeText_PropertyType" gco:nilReason="missing">
+            <gco:CharacterString/>
+            <gmd:PT_FreeText>
+               <gmd:textGroup>
+                  <gmd:LocalisedCharacterString locale="#FR">Les géotopes sont des monuments naturels géoscientifiques. Certains d'entre eux, qui témoignent de l'histoire de la Terre, nous racontent l'évolution du paysage, du climat et de la vie, la genèse et la disparition des montagnes, ainsi que la formation des roches. D'autres géotopes nous révèle des processus qui se déroulent à la surface ou à l'intérieur de la Terre. Les géotopes incluent également le monde caché des cavernes et des nappes d'eau souterraine. Un dernier groupe comprend des formes actives qui modèlent le paysage, telles qu'éboulis, zones alluviales ou émergences d'eau souterraine.Les géotopes sont des portions de la géosphère (partie minérale, non vivante de la Terre) délimitées dans l'espace. Ce terme peut recouvrir une occurrence unique, ponctuelle, ou tout un pan de paysage, selon son contenu thématique. Il faut les protéger contre les actions qui portent atteinte à leur contenu, leur structure, leur forme ou leur évolution naturelle. Les géotopes d'importance nationale mentionnés ici proviennent de l'inventaire informel dressé par le groupe de travail pour la protection des géotopes suisses (Académie des sciences naturelles SCNAT). N'étant pas basé sur un recensement systématique, il ne prétend pas être exhaustif. Sources: M. Felber (1999): Inventaire des géotopes d'importance nationale. Geologia Insubrica 4/1. Reynard, E., Berger, J.-P., Constandache, M., Felber, M., Grangier, L., Häuselmann, P., Jeannin, P.-Y. &amp; Martin, S. (2012): Révision de l'inventaire des géotopes suisses: rapport final. – Geosciences, Platform of the Swiss Academy of Science.</gmd:LocalisedCharacterString>
+               </gmd:textGroup>
+               <gmd:textGroup>
+                  <gmd:LocalisedCharacterString locale="#EN">Geotopes are geoscientific natural monuments. Geotopes that represent geological history show the development of the landscape, the climate and life, the formation and disappearance of mountains and the origins of rocks. Other geotopes shed light on the processes taking place on the Earth's surface and in the Earth's interior. They also include the hidden world of caves and groundwater. A final group of geotopes consists of active elements of the landscape, such as scree slopes, flood plains and groundwater springs. Geotopes are spatially limited parts of the mineral, uninhabited Earth (geosphere). Depending on their thematic content, they can be an individual occurrence in one location or an entire portion of the landscape. They must be protected against influences that can impair their substance, structure, form or natural development. The geotopes listed here are of national importance and are taken from the informal inventory of the Swiss geotope working group (Swiss Academy of Sciences SCNAT). The inventory is not based on a systematic survey and, therefore, does not claim to be complete. Sources: Felber, M. (1999): Inventar der Geotope nationaler Bedeutung. Geologia Insubrica 4/1. Reynard, E., Berger, J.-P., Constandache, M., Felber, M., Grangier, L., Häuselmann, P., Jeannin, P.-Y. &amp; Martin, S. (2012): Révision de l'inventaire des géotopes suisses: rapport final. – Geosciences, Platform of the Swiss Academy of Science.</gmd:LocalisedCharacterString>
+               </gmd:textGroup>
+               <gmd:textGroup/>
+               <gmd:textGroup>
+                  <gmd:LocalisedCharacterString locale="#IT">I geotopi sono monumenti geoscientifici naturali. I geotopi della storia della terra sono una testimonianza dell'evoluzione del paesaggio, del clima e della vita, del divenire e della scomparsa delle montagne e della formazione delle rocce. Altri geotopi forniscono informazioni sui processi verificatisi sulla superficie terrestre o nelle viscere della terra. Essi comprendono anche il regno nascosto delle caverne e delle acque sotterranee. Un ultimo gruppo di geotopi comprende infine elementi attivi del paesaggio, come ad esempio il materiale detritico, le golene o gli affioramenti di acqua sotterranea. I geotopi sono porzioni della geosfera, la parte minerale non vivente della terra. A seconda del loro contenuto tematico, i geotopi possono indicare un singolo giacimento puntuale oppure un intero lembo di paesaggio. Devono essere protetti contro le influenze che ne deteriorano la sostanza, la struttura, la forma o lo sviluppo naturale. I geotopi d'importanza nazionale menzionati qui, provengono dall'inventario informale del Gruppo di lavoro protezione dei geotopi in Svizzera (Accademia di scienze naturali SCNAT). L'inventario non si basa su un rilevamento sistematico e non ha pertanto alcuna pretesa di esaustività. Fonti: Felber, M. (1999): Inventar der Geotope nationaler Bedeutung. Geologia Insubrica 4/1. Reynard, E., Berger, J.-P., Constandache, M., Felber, M., Grangier, L., Häuselmann, P., Jeannin, P.-Y. &amp; Martin, S. (2012): Révision de l'inventaire des géotopes suisses: rapport final. – Geosciences, Platform of the Swiss Academy of Science.</gmd:LocalisedCharacterString>
+               </gmd:textGroup>
+               <gmd:textGroup/>
+               <gmd:textGroup>
+                  <gmd:LocalisedCharacterString locale="#GE">Geotope sind geowissenschaftliche Naturdenkmäler. Erdgeschichtliche Geotope erzählen uns von der Entwicklung der Landschaft, des Klimas und des Lebens, vom Werden und Vergehen der Gebirge und vom Entstehen der Gesteine. Andere Geotope werfen ein Licht auf Vorgänge an der Erdoberfläche oder im Erdinnern. Sie schliessen auch das verborgene Reich der Höhlen und des Grundwassers ein. Eine letzte Gruppe von Geotopen umfasst aktive Landschaftselemente, wie z.B. Schutthalden, Flussauen oder Grundwasseraufstösse. Geotope sind räumlich begrenzte Teile der festen, unbelebten Erde (Geosphäre). Je nach ihrem thematischen Inhalt können sie ein einzelnes, punktuelles Vorkommen oder eine ganze Landschaftskammer bezeichnen. Sie sind vor Einflüssen zu bewahren, die ihre Substanz, Struktur, Form oder natürliche Weiterentwicklung beeinträchtigen. Die hier aufgeführten Geotope nationaler Bedeutung entstammen dem informellen Inventar der Arbeitsgruppe Geotope Schweiz (Akademie der Naturwissenschaften SCNAT). Das Inventar basiert nicht auf einer systematischen Erhebung und erhebt somit keinen Anspruch auf Vollständigkeit. Quellen: Felber, M. (1999): Inventar der Geotope nationaler Bedeutung. Geologia Insubrica 4/1. Reynard, E., Berger, J.-P., Constandache, M., Felber, M., Grangier, L., Häuselmann, P., Jeannin, P.-Y. &amp; Martin, S. (2012): Révision de l'inventaire des géotopes suisses: rapport final. – Geosciences, Platform of the Swiss Academy of Science.</gmd:LocalisedCharacterString>
+               </gmd:textGroup>
+               <gmd:textGroup>
+                  <gmd:LocalisedCharacterString locale="#RO">Ils geotops èn monuments natirals geoscientifics. Geotops ans infurmeschan davart il svilup da la cuntrada, dal clima e da la vita, davart la genesa e la spariziun da las muntognas e davart la furmaziun da la crappa. Auters geotops dattan in sguard sin ils process a la surfatscha u a l'intern da la terra. Els includan er il mund obscur dals cuvels e da l'aua sutterrana. In'ultima gruppa da geotops cumpiglia elements activs da la cuntrada, sco per exempel gondas, zonas umidas u lieus, nua che l'aua sutterrana cumpara a la surfatscha. Ils geotops èn parts localas da la geosfera. Tut tenor lur cuntegn tematic pon els designar in giaschament singul punctual u in'entira cuntrada. Els ston vegnir protegids cunter influenzas che disturban lur substanza, lur structura, lur furma u lur svilup natiral. Ils geotops d'impurtanza naziunala che vegnan menziunads qua figureschan en l'inventari informal da la gruppa da lavur Geotops svizzers (Academia svizra da las scienzas natiralas SCNAT). L'inventari na sa basa betg sin ina registraziun sistematica e n'è perquai betg cumplet. Funtaunas: Felber, M. (1999): Inventari dals geotops d'impurtanza naziunala. Geologia Insubrica 4/1. Reynard, E., Berger, J.-P., Constandache, M., Felber, M., Grangier, L., Häuselmann, P., Jeannin, P.-Y. &amp; Martin, S. (2012): Révision de l'inventaire des géotopes suisses: rapport final. – Geosciences, Platform of the Swiss Academy of Science.</gmd:LocalisedCharacterString>
+               </gmd:textGroup>
+            </gmd:PT_FreeText>
+         </gmd:abstract>
+         <gmd:purpose xsi:type="gmd:PT_FreeText_PropertyType" gco:nilReason="missing">
+            <gco:CharacterString/>
+            <gmd:PT_FreeText>
+               <gmd:textGroup/>
+               <gmd:textGroup>
+                  <gmd:LocalisedCharacterString locale="#FR">Inventaire des géotopes d'importance nationale</gmd:LocalisedCharacterString>
+               </gmd:textGroup>
+               <gmd:textGroup>
+                  <gmd:LocalisedCharacterString locale="#GE">Inventar der Geotope von nationaler Bedeutung</gmd:LocalisedCharacterString>
+               </gmd:textGroup>
+            </gmd:PT_FreeText>
+         </gmd:purpose>
+         <gmd:pointOfContact xmlns:xlink="http://www.w3.org/1999/xlink">
+            <gmd:CI_ResponsibleParty>
+               <gmd:organisationName xsi:type="gmd:PT_FreeText_PropertyType">
+                  <gco:CharacterString>Universität Lausanne</gco:CharacterString>
+                  <gmd:PT_FreeText>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#DE">Universität Lausanne</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#FR">Université de Lausanne</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                  </gmd:PT_FreeText>
+               </gmd:organisationName>
+               <gmd:positionName xsi:type="gmd:PT_FreeText_PropertyType">
+                  <gco:CharacterString>Institut für Geografie</gco:CharacterString>
+                  <gmd:PT_FreeText>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#DE">Institut für Geografie</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#FR">Institut de géographie</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                  </gmd:PT_FreeText>
+               </gmd:positionName>
+               <gmd:contactInfo>
+                  <gmd:CI_Contact>
+                     <gmd:phone>
+                        <gmd:CI_Telephone/>
+                     </gmd:phone>
+                     <gmd:address>
+                        <gmd:CI_Address>
+                           <gmd:city>
+                              <gco:CharacterString>Lausanne</gco:CharacterString>
+                           </gmd:city>
+                           <gmd:postalCode>
+                              <gco:CharacterString>1015</gco:CharacterString>
+                           </gmd:postalCode>
+                           <gmd:country>
+                              <gco:CharacterString>CH</gco:CharacterString>
+                           </gmd:country>
+                           <gmd:electronicMailAddress>
+                              <gco:CharacterString>emmanuel.reynard@unil.ch</gco:CharacterString>
+                           </gmd:electronicMailAddress>
+                        </gmd:CI_Address>
+                     </gmd:address>
+                  </gmd:CI_Contact>
+               </gmd:contactInfo>
+               <gmd:role>
+                  <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_RoleCode"
+                                   codeListValue="resourceProvider"/>
+               </gmd:role>
+            </gmd:CI_ResponsibleParty>
+         </gmd:pointOfContact>
+         <gmd:pointOfContact xmlns:xlink="http://www.w3.org/1999/xlink">
+            <gmd:CI_ResponsibleParty>
+               <gmd:organisationName xsi:type="gmd:PT_FreeText_PropertyType">
+                  <gco:CharacterString>Bundesamt für Landestopografie</gco:CharacterString>
+                  <gmd:PT_FreeText>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#EN">Federal Office of Topography</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#DE">Bundesamt für Landestopografie</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#FR">Office fédéral de topographie</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#IT">Ufficio federale di topografia</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#RM">Bundesamt für Landestopografie</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                  </gmd:PT_FreeText>
+               </gmd:organisationName>
+               <gmd:positionName xsi:type="gmd:PT_FreeText_PropertyType">
+                  <gco:CharacterString>Landesgeologie</gco:CharacterString>
+                  <gmd:PT_FreeText>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#EN">Swiss Geological Survey</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#DE">Landesgeologie</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#FR">Service géologique national</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#IT">Servizio geologico nazionale</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#RM">Landesgeologie</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                  </gmd:PT_FreeText>
+               </gmd:positionName>
+               <gmd:contactInfo>
+                  <gmd:CI_Contact>
+                     <gmd:phone>
+                        <gmd:CI_Telephone>
+                           <gmd:voice>
+                              <gco:CharacterString>+41 58 469 01 11</gco:CharacterString>
+                           </gmd:voice>
+                        </gmd:CI_Telephone>
+                     </gmd:phone>
+                     <gmd:address>
+                        <gmd:CI_Address>
+                           <gmd:city>
+                              <gco:CharacterString>Wabern</gco:CharacterString>
+                           </gmd:city>
+                           <gmd:postalCode>
+                              <gco:CharacterString>3084</gco:CharacterString>
+                           </gmd:postalCode>
+                           <gmd:country>
+                              <gco:CharacterString>CH</gco:CharacterString>
+                           </gmd:country>
+                           <gmd:electronicMailAddress>
+                              <gco:CharacterString>milan.beres@swisstopo.ch</gco:CharacterString>
+                           </gmd:electronicMailAddress>
+                        </gmd:CI_Address>
+                     </gmd:address>
+                     <gmd:onlineResource>
+                        <gmd:CI_OnlineResource>
+                           <gmd:linkage>
+                              <gmd:URL>http://www.swisstopo.admin.ch/internet/swisstopo/de/home/swisstopo/org/geology.html</gmd:URL>
+                           </gmd:linkage>
+                           <gmd:protocol>
+                              <gco:CharacterString>text/html</gco:CharacterString>
+                           </gmd:protocol>
+                        </gmd:CI_OnlineResource>
+                     </gmd:onlineResource>
+                  </gmd:CI_Contact>
+               </gmd:contactInfo>
+               <gmd:role>
+                  <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_RoleCode"
+                                   codeListValue="pointOfContact"/>
+               </gmd:role>
+            </gmd:CI_ResponsibleParty>
+         </gmd:pointOfContact>
+         <gmd:descriptiveKeywords xmlns:xlink="http://www.w3.org/1999/xlink">
+            <gmd:MD_Keywords>
+               <gmd:keyword xsi:type="gmd:PT_FreeText_PropertyType">
+                  <gco:CharacterString>Geotop</gco:CharacterString>
+                  <gmd:PT_FreeText>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#EN">Geotope</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#DE">Geotop</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#IT">Geotopo</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#FR">Géotope</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#RM"/>
+                     </gmd:textGroup>
+                  </gmd:PT_FreeText>
+               </gmd:keyword>
+               <gmd:keyword xsi:type="gmd:PT_FreeText_PropertyType">
+                  <gco:CharacterString>Naturschutzzone</gco:CharacterString>
+                  <gmd:PT_FreeText>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#EN">protected natural zone</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#DE">Naturschutzzone</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#IT">zona naturale protetta</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#FR">zone naturelle protégée</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#RM"/>
+                     </gmd:textGroup>
+                  </gmd:PT_FreeText>
+               </gmd:keyword>
+               <gmd:keyword xsi:type="gmd:PT_FreeText_PropertyType">
+                  <gco:CharacterString>nationales Inventar</gco:CharacterString>
+                  <gmd:PT_FreeText>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#EN">national inventory</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#DE">nationales Inventar</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#IT">inventario nazionale</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#FR">inventaire national</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#RM"/>
+                     </gmd:textGroup>
+                  </gmd:PT_FreeText>
+               </gmd:keyword>
+               <gmd:keyword xsi:type="gmd:PT_FreeText_PropertyType">
+                  <gco:CharacterString>opendata.swiss</gco:CharacterString>
+                  <gmd:PT_FreeText>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#EN">opendata.swiss</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#DE">opendata.swiss</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#IT">opendata.swiss</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#FR">opendata.swiss</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#RM">opendata.swiss</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                  </gmd:PT_FreeText>
+               </gmd:keyword>
+               <gmd:type>
+                  <gmd:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_KeywordTypeCode"
+                                          codeListValue="_none_"/>
+               </gmd:type>
+               <gmd:thesaurusName>
+                  <gmd:CI_Citation>
+                     <gmd:title>
+                        <gco:CharacterString>geocat.ch Thesaurus</gco:CharacterString>
+                     </gmd:title>
+                     <gmd:date>
+                        <gmd:CI_Date>
+                           <gmd:date>
+                              <gco:Date>2016-02-02</gco:Date>
+                           </gmd:date>
+                           <gmd:dateType>
+                              <gmd:CI_DateTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#CI_DateTypeCode"
+                                                   codeListValue="publication"/>
+                           </gmd:dateType>
+                        </gmd:CI_Date>
+                     </gmd:date>
+                     <gmd:identifier>
+                        <gmd:MD_Identifier>
+                           <gmd:code>
+                              <gmx:Anchor xmlns:gmx="http://www.isotc211.org/2005/gmx">geonetwork.thesaurus.local._none_.geocat.ch</gmx:Anchor>
+                           </gmd:code>
+                        </gmd:MD_Identifier>
+                     </gmd:identifier>
+                  </gmd:CI_Citation>
+               </gmd:thesaurusName>
+            </gmd:MD_Keywords>
+         </gmd:descriptiveKeywords>
+         <gmd:descriptiveKeywords xmlns:xlink="http://www.w3.org/1999/xlink">
+            <gmd:MD_Keywords>
+               <gmd:keyword xsi:type="gmd:PT_FreeText_PropertyType">
+                  <gco:CharacterString>Schutzgebiete</gco:CharacterString>
+                  <gmd:PT_FreeText>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#EN">Protected sites</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#DE">Schutzgebiete</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#IT">Siti protetti</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#FR">Sites protégés</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#RM"/>
+                     </gmd:textGroup>
+                  </gmd:PT_FreeText>
+               </gmd:keyword>
+               <gmd:keyword xsi:type="gmd:PT_FreeText_PropertyType">
+                  <gco:CharacterString>Geologie</gco:CharacterString>
+                  <gmd:PT_FreeText>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#EN">Geology</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#DE">Geologie</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#IT">Geologia</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#FR">Géologie</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#RM"/>
+                     </gmd:textGroup>
+                  </gmd:PT_FreeText>
+               </gmd:keyword>
+               <gmd:type>
+                  <gmd:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_KeywordTypeCode"
+                                          codeListValue="theme"/>
+               </gmd:type>
+               <gmd:thesaurusName>
+                  <gmd:CI_Citation>
+                     <gmd:title>
+                        <gco:CharacterString>GEMET - INSPIRE themes, version 1.0</gco:CharacterString>
+                     </gmd:title>
+                     <gmd:date>
+                        <gmd:CI_Date>
+                           <gmd:date>
+                              <gco:Date>2008-06-01</gco:Date>
+                           </gmd:date>
+                           <gmd:dateType>
+                              <gmd:CI_DateTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#CI_DateTypeCode"
+                                                   codeListValue="publication"/>
+                           </gmd:dateType>
+                        </gmd:CI_Date>
+                     </gmd:date>
+                     <gmd:identifier>
+                        <gmd:MD_Identifier>
+                           <gmd:code>
+                              <gmx:Anchor xmlns:gmx="http://www.isotc211.org/2005/gmx">geonetwork.thesaurus.external.theme.inspire-theme</gmx:Anchor>
+                           </gmd:code>
+                        </gmd:MD_Identifier>
+                     </gmd:identifier>
+                  </gmd:CI_Citation>
+               </gmd:thesaurusName>
+            </gmd:MD_Keywords>
+         </gmd:descriptiveKeywords>
+         <gmd:spatialRepresentationType>
+            <gmd:MD_SpatialRepresentationTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_SpatialRepresentationTypeCode"
+                                                  codeListValue="vector"/>
+         </gmd:spatialRepresentationType>
+         <gmd:spatialResolution>
+            <gmd:MD_Resolution>
+               <gmd:equivalentScale>
+                  <gmd:MD_RepresentativeFraction>
+                     <gmd:denominator>
+                        <gco:Integer>25000</gco:Integer>
+                     </gmd:denominator>
+                  </gmd:MD_RepresentativeFraction>
+               </gmd:equivalentScale>
+            </gmd:MD_Resolution>
+         </gmd:spatialResolution>
+         <gmd:language>
+            <gco:CharacterString>fre</gco:CharacterString>
+         </gmd:language>
+         <gmd:characterSet>
+            <gmd:MD_CharacterSetCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_CharacterSetCode"
+                                     codeListValue="utf8"/>
+         </gmd:characterSet>
+         <gmd:topicCategory>
+            <gmd:MD_TopicCategoryCode>geoscientificInformation</gmd:MD_TopicCategoryCode>
+         </gmd:topicCategory>
+         <gmd:extent xmlns:xlink="http://www.w3.org/1999/xlink">
+            <gmd:EX_Extent>
+               <gmd:description xsi:type="gmd:PT_FreeText_PropertyType">
+                  <gco:CharacterString>Landeskarte 1:25'000</gco:CharacterString>
+                  <gmd:PT_FreeText>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#DE">Landeskarte 1:25'000</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#FR">Carte nationale 1:25'000</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#IT">Carta nazionale 1:25'000</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#EN">National Map 1:25'000</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                  </gmd:PT_FreeText>
+               </gmd:description>
+               <gmd:geographicElement>
+                  <gmd:EX_GeographicDescription>
+                     <gmd:geographicIdentifier>
+                        <gmd:MD_Identifier>
+                           <gmd:code xsi:type="gmd:PT_FreeText_PropertyType">
+                              <gco:CharacterString>LK25</gco:CharacterString>
+                              <gmd:PT_FreeText>
+                                 <gmd:textGroup>
+                                    <gmd:LocalisedCharacterString locale="#DE">LK25</gmd:LocalisedCharacterString>
+                                 </gmd:textGroup>
+                                 <gmd:textGroup>
+                                    <gmd:LocalisedCharacterString locale="#FR">CN25</gmd:LocalisedCharacterString>
+                                 </gmd:textGroup>
+                                 <gmd:textGroup>
+                                    <gmd:LocalisedCharacterString locale="#IT">CN25</gmd:LocalisedCharacterString>
+                                 </gmd:textGroup>
+                                 <gmd:textGroup>
+                                    <gmd:LocalisedCharacterString locale="#EN">NM25</gmd:LocalisedCharacterString>
+                                 </gmd:textGroup>
+                                 <gmd:textGroup>
+                                    <gmd:LocalisedCharacterString locale="#RM">CN25</gmd:LocalisedCharacterString>
+                                 </gmd:textGroup>
+                              </gmd:PT_FreeText>
+                           </gmd:code>
+                        </gmd:MD_Identifier>
+                     </gmd:geographicIdentifier>
+                  </gmd:EX_GeographicDescription>
+               </gmd:geographicElement>
+               <gmd:geographicElement>
+                  <gmd:EX_BoundingPolygon>
+                     <gmd:extentTypeCode>
+                        <gco:Boolean>1</gco:Boolean>
+                     </gmd:extentTypeCode>
+                     <gmd:polygon>
+                        <gml:MultiSurface gml:id="N3b2209db508548ff831b60bafd0ec3e2">
+                           <gml:surfaceMember>
+                              <gml:Polygon gml:id="N3b2209db508548ff831b60bafd0ec3e2.1">
+                                 <gml:exterior>
+                                    <gml:LinearRing>
+                                       <gml:posList>8.407 47.864 8.875 47.86 8.872 47.752 9.339 47.745 9.335 47.637 9.571 47.714 9.563 47.525 9.796 47.521 9.777 47.089 10.007 47.084 10.002 46.976 10.232 46.971 10.237 47.079 10.468 47.073 10.461 46.965 10.55 46.963 10.544 46.855 10.685 46.851 10.665 46.527 10.209 46.54 10.193 46.216 9.966 46.221 9.971 46.329 9.744 46.334 9.74 46.226 9.513 46.23 9.517 46.338 9.29 46.342 9.279 46.019 9.053 46.022 9.05 45.914 9.275 45.911 9.272 45.803 8.821 45.809 8.824 45.917 8.599 45.92 8.603 46.135 8.377 46.138 8.379 46.246 8.174 46.247 8.173 46.139 8.15 46.139 8.148 45.923 7.696 45.925 7.471 45.926 7.471 45.818 7.021 45.817 7.02 45.925 6.794 45.924 6.792 46.14 6.79 46.248 6.767 46.247 6.766 46.355 6.334 46.352 6.339 46.136 5.886 46.131 5.874 46.562 6.102 46.565 6.096 46.781 6.325 46.784 6.321 47.0 6.551 47.002 6.547 47.217 6.779 47.219 6.774 47.543 7.472 47.545 7.472 47.653 8.404 47.649 8.407 47.864</gml:posList>
+                                    </gml:LinearRing>
+                                 </gml:exterior>
+                              </gml:Polygon>
+                           </gml:surfaceMember>
+                        </gml:MultiSurface>
+                     </gmd:polygon>
+                  </gmd:EX_BoundingPolygon>
+               </gmd:geographicElement>
+               <gmd:geographicElement>
+                  <gmd:EX_GeographicBoundingBox>
+                     <gmd:extentTypeCode>
+                        <gco:Boolean>1</gco:Boolean>
+                     </gmd:extentTypeCode>
+                     <!--native coords: 480000.0,74000.0,847500.0,302000.0--><gmd:westBoundLongitude>
+                        <gco:Decimal>5.874</gco:Decimal>
+                     </gmd:westBoundLongitude>
+                     <gmd:eastBoundLongitude>
+                        <gco:Decimal>10.685</gco:Decimal>
+                     </gmd:eastBoundLongitude>
+                     <gmd:southBoundLatitude>
+                        <gco:Decimal>45.803</gco:Decimal>
+                     </gmd:southBoundLatitude>
+                     <gmd:northBoundLatitude>
+                        <gco:Decimal>47.864</gco:Decimal>
+                     </gmd:northBoundLatitude>
+                  </gmd:EX_GeographicBoundingBox>
+               </gmd:geographicElement>
+            </gmd:EX_Extent>
+         </gmd:extent>
+      </gmd:MD_DataIdentification>
+  </gmd:identificationInfo>
+   <gmd:distributionInfo xmlns:comp="http://www.geocat.ch/2003/05/gateway/GM03Comprehensive"
+                         xmlns:xalan="http://xml.apache.org/xalan"
+                         xmlns:gml="http://www.opengis.net/gml">
+      <gmd:MD_Distribution>
+         <gmd:distributionFormat xmlns:xlink="http://www.w3.org/1999/xlink">
+            <gmd:MD_Format>
+               <gmd:name>
+                  <gco:CharacterString>ESRI Shapefile</gco:CharacterString>
+               </gmd:name>
+               <gmd:version>
+                  <gco:CharacterString>-</gco:CharacterString>
+               </gmd:version>
+            </gmd:MD_Format>
+         </gmd:distributionFormat>
+         <gmd:transferOptions>
+            <gmd:MD_DigitalTransferOptions>
+               <gmd:onLine>
+                  <gmd:CI_OnlineResource>
+                     <gmd:linkage>
+                        <gmd:URL>http://www.naturalsciences.ch/organisations/geosciences/projects/wg_geotopes</gmd:URL>
+                     </gmd:linkage>
+                     <gmd:protocol>
+                        <gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString>
+                     </gmd:protocol>
+                     <gmd:description xsi:type="gmd:PT_FreeText_PropertyType" gco:nilReason="missing">
+                        <gco:CharacterString/>
+                        <gmd:PT_FreeText>
+                           <gmd:textGroup>
+                              <gmd:LocalisedCharacterString locale="#EN">Geotope project group</gmd:LocalisedCharacterString>
+                           </gmd:textGroup>
+                           <gmd:textGroup>
+                              <gmd:LocalisedCharacterString locale="#FR">Groupe de Projet Géotopes</gmd:LocalisedCharacterString>
+                           </gmd:textGroup>
+                           <gmd:textGroup/>
+                           <gmd:textGroup>
+                              <gmd:LocalisedCharacterString locale="#IT">Gruppo del progetto geotopi</gmd:LocalisedCharacterString>
+                           </gmd:textGroup>
+                           <gmd:textGroup>
+                              <gmd:LocalisedCharacterString locale="#GE">Projektgruppe Geotope</gmd:LocalisedCharacterString>
+                           </gmd:textGroup>
+                        </gmd:PT_FreeText>
+                     </gmd:description>
+                     <gmd:function>
+                        <gmd:CI_OnLineFunctionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_OnLineFunctionCode"
+                                                   codeListValue="information"/>
+                     </gmd:function>
+                  </gmd:CI_OnlineResource>
+               </gmd:onLine>
+               <gmd:onLine>
+                  <gmd:CI_OnlineResource>
+                     <gmd:linkage>
+                        <gmd:URL>http://data.geo.admin.ch/ch.swisstopo.geologie-geotope_punkte/data.zip</gmd:URL>
+                     </gmd:linkage>
+                     <gmd:protocol>
+                        <gco:CharacterString>WWW:DOWNLOAD-URL</gco:CharacterString>
+                     </gmd:protocol>
+                     <gmd:description xsi:type="gmd:PT_FreeText_PropertyType" gco:nilReason="missing">
+                        <gco:CharacterString/>
+                        <gmd:PT_FreeText>
+                           <gmd:textGroup>
+                              <gmd:LocalisedCharacterString locale="#GE">Download Server von geo.admin.ch</gmd:LocalisedCharacterString>
+                           </gmd:textGroup>
+                           <gmd:textGroup>
+                              <gmd:LocalisedCharacterString locale="#FR">Serveur de téléchargement de geo.admin.ch</gmd:LocalisedCharacterString>
+                           </gmd:textGroup>
+                           <gmd:textGroup>
+                              <gmd:LocalisedCharacterString locale="#EN">Download server from geo.admin.ch</gmd:LocalisedCharacterString>
+                           </gmd:textGroup>
+                           <gmd:textGroup>
+                              <gmd:LocalisedCharacterString locale="#IT">Server di download di geo.admin.ch</gmd:LocalisedCharacterString>
+                           </gmd:textGroup>
+                        </gmd:PT_FreeText>
+                     </gmd:description>
+                     <gmd:function>
+                        <gmd:CI_OnLineFunctionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_OnLineFunctionCode"
+                                                   codeListValue="download"/>
+                     </gmd:function>
+                  </gmd:CI_OnlineResource>
+               </gmd:onLine>
+            </gmd:MD_DigitalTransferOptions>
+         </gmd:transferOptions>
+         <gmd:transferOptions>
+            <gmd:MD_DigitalTransferOptions>
+               <gmd:onLine>
+                  <gmd:CI_OnlineResource>
+                     <gmd:linkage>
+                        <gmd:URL>http://data.geo.admin.ch</gmd:URL>
+                     </gmd:linkage>
+                     <gmd:protocol>
+                        <gco:CharacterString>WWW:DOWNLOAD-1.0-http--download</gco:CharacterString>
+                     </gmd:protocol>
+                     <gmd:description xsi:type="gmd:PT_FreeText_PropertyType" gco:nilReason="missing">
+                        <gco:CharacterString/>
+                        <gmd:PT_FreeText>
+                           <gmd:textGroup>
+                              <gmd:LocalisedCharacterString locale="#EN">Inventory of geotopes</gmd:LocalisedCharacterString>
+                           </gmd:textGroup>
+                           <gmd:textGroup>
+                              <gmd:LocalisedCharacterString locale="#FR">Inventaire des géotopes</gmd:LocalisedCharacterString>
+                           </gmd:textGroup>
+                           <gmd:textGroup/>
+                           <gmd:textGroup>
+                              <gmd:LocalisedCharacterString locale="#IT">Inventario dei geotopi</gmd:LocalisedCharacterString>
+                           </gmd:textGroup>
+                           <gmd:textGroup>
+                              <gmd:LocalisedCharacterString locale="#GE">Inventar der Geotope</gmd:LocalisedCharacterString>
+                           </gmd:textGroup>
+                        </gmd:PT_FreeText>
+                     </gmd:description>
+                     <gmd:function>
+                        <gmd:CI_OnLineFunctionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_OnLineFunctionCode"
+                                                   codeListValue="download"/>
+                     </gmd:function>
+                  </gmd:CI_OnlineResource>
+               </gmd:onLine>
+            </gmd:MD_DigitalTransferOptions>
+         </gmd:transferOptions>
+         <gmd:transferOptions>
+            <gmd:MD_DigitalTransferOptions>
+               <gmd:onLine>
+                  <gmd:CI_OnlineResource>
+                     <gmd:linkage>
+                        <gmd:URL/>
+                     </gmd:linkage>
+                     <gmd:protocol>
+                        <gco:CharacterString>CHTOPO:specialised-geoportal</gco:CharacterString>
+                     </gmd:protocol>
+                     <gmd:description xsi:type="gmd:PT_FreeText_PropertyType" gco:nilReason="missing">
+                        <gco:CharacterString/>
+                        <gmd:PT_FreeText>
+                           <gmd:textGroup/>
+                           <gmd:textGroup>
+                              <gmd:LocalisedCharacterString locale="#FR">Visiualiseur géologique</gmd:LocalisedCharacterString>
+                           </gmd:textGroup>
+                           <gmd:textGroup>
+                              <gmd:LocalisedCharacterString locale="#GE">Geologischer Datenviewer</gmd:LocalisedCharacterString>
+                           </gmd:textGroup>
+                        </gmd:PT_FreeText>
+                     </gmd:description>
+                     <gmd:function>
+                        <gmd:CI_OnLineFunctionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_OnLineFunctionCode"
+                                                   codeListValue="information"/>
+                     </gmd:function>
+                  </gmd:CI_OnlineResource>
+               </gmd:onLine>
+            </gmd:MD_DigitalTransferOptions>
+         </gmd:transferOptions>
+      </gmd:MD_Distribution>
+  </gmd:distributionInfo>
+   <gmd:dataQualityInfo xmlns:comp="http://www.geocat.ch/2003/05/gateway/GM03Comprehensive"
+                        xmlns:gmi="http://www.isotc211.org/2005/gmi"
+                        xmlns:xalan="http://xml.apache.org/xalan"
+                        xmlns:gml="http://www.opengis.net/gml">
+      <gmd:DQ_DataQuality>
+         <gmd:scope>
+            <gmd:DQ_Scope>
+               <gmd:level>
+                  <gmd:MD_ScopeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_ScopeCode"
+                                    codeListValue="dataset"/>
+               </gmd:level>
+            </gmd:DQ_Scope>
+         </gmd:scope>
+         <gmd:lineage>
+            <gmd:LI_Lineage>
+               <gmd:statement xsi:type="gmd:PT_FreeText_PropertyType" gco:nilReason="missing">
+                  <gco:CharacterString/>
+                  <gmd:PT_FreeText>
+                     <gmd:textGroup/>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#FR">Le périmètre de chaque géotope a été numérisé au 1:25'000 (exceptionnellement au 1:100'000 pour quelques géotopes particulièrement étendus). Il s’agit d’un périmètre estimatif, établi la plupart du temps sur la base des données cartographiques à disposition, et non pas d’un relevé sur le terrain.</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                     <gmd:textGroup>
+                        <gmd:LocalisedCharacterString locale="#GE">Der Umkreis jedes Geotops ist im Massstab 1:25'000 digitalisiert worden (ausnahmsweise im Massstab 1:100'000 für einige besonders ausgedehnte Geotope). Es handelt sich um einen geschätzten Umkreis, der meistens aus der vorhandenen kartographischen Daten und nicht aus Aufnahmen im Gelände bestimmt wurde.</gmd:LocalisedCharacterString>
+                     </gmd:textGroup>
+                  </gmd:PT_FreeText>
+               </gmd:statement>
+            </gmd:LI_Lineage>
+         </gmd:lineage>
+      </gmd:DQ_DataQuality>
+  </gmd:dataQualityInfo>
+</gmd:MD_Metadata>
