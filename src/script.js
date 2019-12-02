@@ -1,11 +1,6 @@
 const props = [
-    // {id: "p0", value: "flachmoor", label: 'Flachmoor', path: flachmoorSVG},
-    // {id: "p1", value: "hochmoor", label: 'Hochmoor', path: hochmoorSVG},
-    // {id: "p2", value: "amphibien", label: 'Amphibien', path: amphibsSVG},
-    // {id: "p3", value: "auen", label: 'Auen', path: auenSVG},
-    // {id: "p4", value: "geotope", label: 'Geotope', path: geotopeSVG},
-    {id: "p5", value: "trockenwiesen", label: 'Trockenwiesen', path: trockenwiesenSVG, table: trockenwiesenTable},
-    {id: "p6", value: "laichgebiete", label: 'Laichgebiete', path: laichgebieteSVG, table: laichgebieteTable},
+    {id: "p1", value: "trockenwiesen", label: 'Trockenwiesen', path: trockenwiesenSVG, table: trockenwiesenTable},
+    {id: "p2", value: "laichgebiete", label: 'Laichgebiete', path: laichgebieteSVG, table: laichgebieteTable},
 ];
 
 
@@ -85,23 +80,8 @@ const render = () => {
     const map = document.getElementById("svg");
     map.replaceWith(svg);
 
-
-    /* Test Laichegebiete */
-    const laicheTable = [];
-    laichgebieteTable.split("\n").forEach(e => laicheTable.push(tableToObject(e)));
-
-    const laiche = document.querySelector("#laichgebiete");
-    const laichePath = laiche.querySelectorAll('path');
-
-    laichePath.forEach(e => e.addEventListener('mouseenter', event => {
-       const id = event.target.id;
-
-       const getElement = laicheTable.filter( e => e.id === id );
-       console.log(getElement[0].name);
-
-    }));
-
-
+    /* Integrate the MousOver-Effect to the Datas */
+    props.forEach(e => mouseOverEffect(e));
 
     // console.log(laicheTable);
 
@@ -115,6 +95,19 @@ const tableToObject = data => {
         kanton: id.substring(0, 2),
         name: name
     }
+};
+
+const mouseOverEffect = props => {
+    const table = [];
+    props.table.split("\n").forEach(e => table.push(tableToObject(e)));
+
+    const selectElements = document.querySelector(`#${props.value}`);
+    const elementsPath = selectElements.querySelectorAll('path');
+
+    elementsPath.forEach(e => e.addEventListener('mouseenter', event => {
+        const getElement = table.filter( e => e.id === event.target.id );
+        console.log(getElement[0].name);
+    }));
 };
 
 render();
