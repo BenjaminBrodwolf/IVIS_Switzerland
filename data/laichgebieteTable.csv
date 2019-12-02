@@ -1,0 +1,1449 @@
+ObjNummer;Name;Bereich
+AG3;Zurlindeninsel;A
+AG19;Halbmond;A
+AG19;Halbmond;B
+AG21;Seematten;A
+AG96;Moos;A
+AG102;Feldenmoos;A
+AG104;Niedermoos;A
+AG120;Fischergrien;A
+AG128;Eichholz-Hegnau;A
+AG128;Eichholz-Hegnau;B
+AG129;Schwand;A
+AG129;Schwand;B
+AG139;Haldengutweiher;A
+AG139;Haldengutweiher;B
+AG149;Auschachen;A
+AG159;Lostorf;A
+AG159;Lostorf;B
+AG163;Burger Weiher;A
+AG176;Kiesgrube Egg;A
+AG176;Kiesgrube Egg;B
+AG181;Mattenplätz;A
+AG181;Mattenplätz;B
+AG183;Weiher im Tal;A
+AG183;Weiher im Tal;B
+AG201;Dickhölzli;A
+AG201;Dickhölzli;B
+AG202;Zelgli/Höll;B
+AG202;Zelgli/Höll;A
+AG203;Fischbacher Moos;A
+AG203;Fischbacher Moos;B
+AG206;Tote Reuss;A
+AG206;Tote Reuss;B
+AG208;Letzi;A
+AG233;Mättenfeld;A
+AG254;Wolfshüsli;B
+AG254;Wolfshüsli;A
+AG260;Binsenweiher;B
+AG260;Binsenweiher;A
+AG268;Steinrüti;A
+AG268;Steinrüti;B
+AG276;Kohlschwärzi;A
+AG279;Schümel;A
+AG284;Graströchni Hard;B
+AG284;Graströchni Hard;A
+AG294;Rüssmatten;B
+AG294;Rüssmatten;A
+AG303;Birristrott;B
+AG303;Birristrott;A
+AG304;Ankematt;B
+AG304;Ankematt;A
+AG305;Heuberg;B
+AG305;Heuberg;A
+AG307;Tägerhau;A
+AG307;Tägerhau;B
+AG340;Giriz;A
+AG344;Hof;A
+AG344;Hof;B
+AG348;Grossmoos;B
+AG348;Grossmoos;A
+AG349;Walisgraben;B
+AG349;Walisgraben;A
+AG350;Zopfmatt;B
+AG350;Zopfmatt;A
+AG367;Alte Reuss;A
+AG367;Alte Reuss;B
+AG368;Ägerten-Matteneich;A
+AG368;Ägerten-Matteneich;B
+AG404;Gippinger Grien;A
+AG407;Sagenmülitäli;B
+AG407;Sagenmülitäli;A
+AG416;Talweiher;B
+AG416;Talweiher;A
+AG436;Äbereich;B
+AG436;Äbereich;A
+AG439;Burgergrube;A
+AG439;Burgergrube;B
+AG440;Schmulzenchopf;A
+AG449;Oberschachen;B
+AG449;Oberschachen;A
+AG453;Birri-Weiher;A
+AG453;Birri-Weiher;B
+AG454;Schorengrindel;A
+AG459;Unterrütiweiher;A
+AG461;Sibeneichen;B
+AG461;Sibeneichen;A
+AG468;Breitsee;B
+AG468;Breitsee;A
+AG469;Wolfhöhli/Chüelespitz;A
+AG469;Wolfhöhli/Chüelespitz;B
+AG471;Haumättli;A
+AG471;Haumättli;B
+AG493;Schoren Schachen;B
+AG493;Schoren Schachen;A
+AG522;Torfmoos;A
+AG523;Egelmoos;A
+AG525;Rütermoos;B
+AG525;Rütermoos;A
+AG526;Löliweiher;B
+AG526;Löliweiher;A
+AG527;Chlosteräcker;B
+AG527;Chlosteräcker;A
+AG530;Hard;A
+AG533;Krähhübel;A
+AG534;Breiti;A
+AG569;Schachen;B
+AG569;Schachen;A
+AG582;Looweiher/Heidenloch;A
+AG582;Looweiher/Heidenloch;B
+AG613;Musital;A
+AG613;Musital;B
+AG619;Steppberg;B
+AG619;Steppberg;A
+AG620;Tannenchopf;B
+AG620;Tannenchopf;A
+AG640;Chli Rhy;A
+AG640;Chli Rhy;B
+AG644;Aarschächli;A
+AG644;Aarschächli;B
+AG655;Stockmösli;A
+AG655;Stockmösli;B
+AG667;Giriz;A
+AG667;Giriz;B
+AG668;Schnäggenmatten;B
+AG668;Schnäggenmatten;A
+AG669;Heftihof;A
+AG669;Heftihof;B
+AG671;Stille Reuss;A
+AG681;Langenmoos;B
+AG681;Langenmoos;A
+AG734;Töniweiher;B
+AG734;Töniweiher;A
+AG742;Franzosenweiher und Altes Bad;A
+AG742;Franzosenweiher und Altes Bad;B
+AG749;Kaltacker;A
+AG749;Kaltacker;B
+AG759;Wildenau;A
+AG759;Wildenau;B
+AG765;Ramoos;A
+AG765;Ramoos;B
+AG766;Ziegelmatt;B
+AG766;Ziegelmatt;A
+AG780;Schwarzrain;B
+AG780;Schwarzrain;A
+AG799;Schwarzmatt;B
+AG799;Schwarzmatt;A
+AG815;Rottenschwiler Moos;A
+AG820;Breitmoos;B
+AG820;Breitmoos;A
+AG821;Hard;A
+AG821;Hard;B
+AG843;Umiker Schachen;A
+AG881;Windischer Schachen;A
+AG881;Windischer Schachen;B
+AG882;Fröschegräbe;A
+AG882;Fröschegräbe;B
+AG910;Ägelmoos;A
+AG910;Ägelmoos;B
+AG925;Lochmatt;A
+AG925;Lochmatt;B
+AG931;Ägelsee;A
+AG931;Ägelsee;B
+AG941;Bärenmoosweiher;A
+AG941;Bärenmoosweiher;B
+AG960;Im See;A
+AG960;Im See;B
+AG2002;Butzenmoos;B
+AG2002;Butzenmoos;A
+AG2003;Bremengrien;A
+AG2003;Bremengrien;B
+AG2005;Folenweid;B
+AG2005;Folenweid;A
+AG2008;Lindimatt;A
+AG2008;Lindimatt;B
+AG2011;Eggimoos;A
+AG2011;Eggimoos;B
+AG2012;Friedgraben;B
+AG2012;Friedgraben;A
+AG2015;Bösimoos;A
+AG2015;Bösimoos;B
+AG2016;Unterzelg;B
+AG2016;Unterzelg;A
+AG2150;Zollester;B
+AG2150;Zollester;A
+AG2230;Buech/Steiacher;B
+AG2230;Buech/Steiacher;A
+AG2409;Dorfrüti;A
+AG2419;Forenmoos;B
+AG2419;Forenmoos;A
+AG2725;Maiholz;B
+AG2725;Maiholz;A
+AG2795;Feret;B
+AG2795;Feret;A
+AG2933;Weihermatthau;A
+AG2933;Weihermatthau;B
+AG3035;Ebni;B
+AG3035;Ebni;A
+AG3054;Chalofe;A
+AG3054;Chalofe;B
+AG3431;Schlaufe;A
+AG3431;Schlaufe;B
+AG3432;Foort;A
+AG3432;Foort;B
+AG3433;Eriwis;B
+AG3433;Eriwis;A
+AR1;Saumweiher;A
+AR1;Saumweiher;B
+AR44;Grub AR/Dorfweiher;A
+AR44;Grub AR/Dorfweiher;B
+AR118;Wissenbachschlucht;A
+BE10;Büeltigen-Weiher;B
+BE10;Büeltigen-Weiher;A
+BE16;Tannholz-Chatzestiel-Sibirie;A
+BE20;Grube Hardern;A
+BE20;Grube Hardern;B
+BE47;Mumenthaler Weiher;B
+BE47;Mumenthaler Weiher;A
+BE49;Vogelraupfi;B
+BE49;Vogelraupfi;A
+BE51;Bleienbacher Torfsee und Sängeli;A
+BE51;Bleienbacher Torfsee und Sängeli;B
+BE57;Schmittenweiher;A
+BE57;Schmittenweiher;B
+BE61;Alte Kiesgrube Schwarzhäusern;B
+BE61;Alte Kiesgrube Schwarzhäusern;A
+BE65;Chlyrot Weiher;A
+BE65;Chlyrot Weiher;B
+BE71;Elfenaureservat;A
+BE71;Elfenaureservat;B
+BE91;Steinbruch Ostermundigen;A
+BE91;Steinbruch Ostermundigen;B
+BE100;Sense- und Schwarzwassergraben;B
+BE100;Sense- und Schwarzwassergraben;A
+BE116;Schnydere ob Eichholz;B
+BE116;Schnydere ob Eichholz;A
+BE120;Wehrliau Muribadparkplatz;B
+BE120;Wehrliau Muribadparkplatz;A
+BE121;Mettlenweiher;A
+BE121;Mettlenweiher;B
+BE132;Leubachbucht, Wohlensee-Nordufer;A
+BE140;Lörmoos;A
+BE149;Mettmoos;A
+BE151;Kieswerk Schopsberg;B
+BE151;Kieswerk Schopsberg;A
+BE152;Widi;A
+BE152;Widi;B
+BE171;Tümpel b. Schulhaus;A
+BE171;Tümpel b. Schulhaus;B
+BE172;Kiesgrube Mettlen;A
+BE174;Tümpel bei Alter Aare Meienried;B
+BE174;Tümpel bei Alter Aare Meienried;A
+BE181;Wengimoos;A
+BE181;Wengimoos;B
+BE183;Bermoos;A
+BE183;Bermoos;B
+BE184;Ziegelei Fischermätteli;A
+BE184;Ziegelei Fischermätteli;B
+BE189;Oberburger Schachen;A
+BE199;Bärmatten;A
+BE206;Ziegeleigrube Oberburg;A
+BE223;Sessenais;B
+BE223;Sessenais;A
+BE237;Le Bain, Oversat;A
+BE240;Tourbière de la Chaux d'Abel;A
+BE254;La Marnière;B
+BE254;La Marnière;A
+BE262;Etang de Sagne;A
+BE262;Etang de Sagne;B
+BE269;Lätti Gals;B
+BE269;Lätti Gals;A
+BE274;Fanel;A
+BE281;Leuschelzmoos;A
+BE281;Leuschelzmoos;B
+BE283;Inser-Weiher;B
+BE283;Inser-Weiher;A
+BE323;Hahnenmoosbergli;A
+BE323;Hahnenmoosbergli;B
+BE332;Sumpf unterh. Station Heustrich;B
+BE332;Sumpf unterh. Station Heustrich;A
+BE337;Stirple;A
+BE337;Stirple;B
+BE341;Spittelmatte;B
+BE341;Spittelmatte;A
+BE358;Kanderauen bei Mülenen;A
+BE358;Kanderauen bei Mülenen;B
+BE372;Lütschisand;A
+BE383;Chratzera;B
+BE383;Chratzera;A
+BE397;Tümpel östl. Underläger;A
+BE397;Tümpel östl. Underläger;B
+BE403;Grosse Scheidegg;A
+BE403;Grosse Scheidegg;B
+BE524;Wyssensee;B
+BE524;Wyssensee;A
+BE534;Wengernalp Weiher;A
+BE556;Weissenau;A
+BE558;Neuenzälgau;B
+BE558;Neuenzälgau;A
+BE569;Märchligenau-Flühli;B
+BE569;Märchligenau-Flühli;A
+BE574;Kleinhöchstettenau;A
+BE584;Feuerweiher Houti;A
+BE588;Rüfenachtmoos;B
+BE588;Rüfenachtmoos;A
+BE612;Oltigenmatt-Islere-Oberruntigenau;B
+BE612;Oltigenmatt-Islere-Oberruntigenau;A
+BE618;Röselisee;A
+BE618;Röselisee;B
+BE643;Mont Girod 1;A
+BE643;Mont Girod 1;B
+BE649;Lac Vert;B
+BE649;Lac Vert;A
+BE650;Mont Girod 2;B
+BE650;Mont Girod 2;A
+BE672;La Noz, tourbière de La Sagne;A
+BE672;La Noz, tourbière de La Sagne;B
+BE678;Les Chaufours;A
+BE684;Le Châtelet;A
+BE684;Le Châtelet;B
+BE696;Grube uf der Hole;A
+BE696;Grube uf der Hole;B
+BE705;Römerareal;A
+BE705;Römerareal;B
+BE708;Reservat Gryfeberg;A
+BE710;Waldgrube Scheuren, Orpundinsel;A
+BE710;Waldgrube Scheuren, Orpundinsel;B
+BE719;Grien nordwestl. Dotzigen;A
+BE742;Ägelsee-Moor;A
+BE756;Flachmoor Oberste Gurbs;A
+BE756;Flachmoor Oberste Gurbs;B
+BE770;Weiher Hinter Richisalp;A
+BE770;Weiher Hinter Richisalp;B
+BE783;Au-Gand Kander;B
+BE783;Au-Gand Kander;A
+BE815;Juchli Käserstatt;B
+BE815;Juchli Käserstatt;A
+BE862;Weiher am Fuss der Gryde;A
+BE862;Weiher am Fuss der Gryde;B
+BE897;Weiher am Rüschbach;B
+BE897;Weiher am Rüschbach;A
+BE898;Riedgebiet Saligrabe;A
+BE898;Riedgebiet Saligrabe;B
+BE913;Lauenensee;A
+BE917;Weiher Obere Brüesche;B
+BE917;Weiher Obere Brüesche;A
+BE930;Tümpel Hornberg Läger;A
+BE930;Tümpel Hornberg Läger;B
+BE939;Weiher ob Ottenleuebad;B
+BE939;Weiher ob Ottenleuebad;A
+BE947;Fischbächen Weiher;B
+BE947;Fischbächen Weiher;A
+BE962;Waldgass-Grube;A
+BE968;Aareaue bei Belp;A
+BE973;Belpau;A
+BE998;Fischzuchtteich Gurnigelbad;B
+BE998;Fischzuchtteich Gurnigelbad;A
+BE1027;Seeli-Egg, Lochsiten;A
+BE1027;Seeli-Egg, Lochsiten;B
+BE1052;Heimbergau;B
+BE1052;Heimbergau;A
+BE1063;Schintere Lerchenfeld;A
+BE1063;Schintere Lerchenfeld;B
+BE1064;Gwattmösli;B
+BE1064;Gwattmösli;A
+BE1065;Thuner Allmend;A
+BE1081;Buechholz Weiher;A
+BE1095;Colas Grube;A
+BE1101;Erlimoos;A
+BE1101;Erlimoos;B
+BE1120;Heideweg;A
+BE1127;Muttli;B
+BE1127;Muttli;A
+BE1135;Cornez de la Mairie;B
+BE1135;Cornez de la Mairie;A
+BE1136;Vieille Birse;B
+BE1136;Vieille Birse;A
+BE1139;Biaufond;A
+BE1139;Biaufond;B
+BE1189;Weihermatt;A
+BE1189;Weihermatt;B
+BE1206;Chrümpelhütte;A
+BE1237;Chnuchelhusgrube;B
+BE1237;Chnuchelhusgrube;A
+BE1239;Hirschigraben;A
+BE1522;Stängelacher;A
+BL45;Ziegelei Oberwil;B
+BL45;Ziegelei Oberwil;A
+BL62;Buechloch;B
+BL62;Buechloch;A
+BL64;Mooswasen;A
+BL111;Talweiher;A
+BL111;Talweiher;B
+BL171;Bammertsgraben;A
+BL171;Bammertsgraben;B
+BL173;Herzogenmatt;B
+BL173;Herzogenmatt;A
+BL191;Mühlebachtal;B
+BL191;Mühlebachtal;A
+BL598;Steinbruch Andil;B
+BL598;Steinbruch Andil;A
+BL599;Steingrube Bohlberg;A
+BL599;Steingrube Bohlberg;B
+BL618;Steinbruch Arlesheim;A
+BL618;Steinbruch Arlesheim;B
+BL620;Holi Gass;B
+BL620;Holi Gass;A
+BL623;Klingenthal-Lachmatt;A
+BL623;Klingenthal-Lachmatt;B
+BS4;Eisweiher und Wiesenmatten;A
+BS4;Eisweiher und Wiesenmatten;B
+BS10;Autal;A
+BS10;Autal;B
+FR5;Les Grèves, Gletterens-Portalban;A
+FR10;La Russille, Vers les Gours;B
+FR10;La Russille, Vers les Gours;A
+FR35;Poutes Paluds;B
+FR35;Poutes Paluds;A
+FR43;Le Liti;B
+FR43;Le Liti;A
+FR52;Gros Chadoua;A
+FR52;Gros Chadoua;B
+FR53;Le Mongeron;B
+FR53;Le Mongeron;A
+FR59;Le Lity;A
+FR59;Le Lity;B
+FR88;Le Taconnet;A
+FR88;Le Taconnet;B
+FR89;Le Mouret;A
+FR89;Le Mouret;B
+FR99;La Tuilerie;B
+FR99;La Tuilerie;A
+FR100;Les Nex;A
+FR102;Les Dailles;B
+FR102;Les Dailles;A
+FR115;Sur Plan, Les Cases;B
+FR115;Sur Plan, Les Cases;A
+FR132;Auried;B
+FR132;Auried;A
+FR133;Ehemalige Kiesgrube Reben;A
+FR144;Saaneboden;A
+FR144;Saaneboden;B
+FR145;Stöckholz;B
+FR145;Stöckholz;A
+FR147;Düdingermoos;A
+FR147;Düdingermoos;B
+FR161;Rohrmoos;A
+FR166;Nümatt;A
+FR170;Entenmoos;A
+FR170;Entenmoos;B
+FR200;Rathvel;A
+FR200;Rathvel;B
+FR201;Lac des Joncs;B
+FR201;Lac des Joncs;A
+FR210;La Grève, La Grande Gouille;A
+FR211;La Grève, Autavaux, Forel;A
+FR214;Les Grèves, Cheyres sud;A
+FR215;Les Grèves, Cheyres-Font;A
+FR216;Ancienne carrière Les Saus;B
+FR216;Ancienne carrière Les Saus;A
+FR217;Pra-les-Bous;B
+FR217;Pra-les-Bous;A
+FR218;Overesses;B
+FR218;Overesses;A
+FR220;Petite Sarine;B
+FR220;Petite Sarine;A
+FR224;Pré aux Boeufs;A
+FR224;Pré aux Boeufs;B
+FR276;Vuibroye;A
+FR276;Vuibroye;B
+FR411;Krümmi;A
+FR411;Krümmi;B
+FR503;Ärgera;A
+FR541;Hinterem Horn;B
+FR541;Hinterem Horn;A
+GE5;Champs Grillet;A
+GE5;Champs Grillet;B
+GE10;Bois des Mouilles;A
+GE10;Bois des Mouilles;B
+GE11;La Petite Grave;A
+GE11;La Petite Grave;B
+GE14;Moulin de Vert;A
+GE14;Moulin de Vert;B
+GE15;Raclerets;B
+GE15;Raclerets;A
+GE19;Pointe à la Bise;A
+GE19;Pointe à la Bise;B
+GE22;Allondon;A
+GE22;Allondon;B
+GE25;Prés de Villette;B
+GE25;Prés de Villette;A
+GE26;Arales;B
+GE26;Arales;A
+GE28;Laconnex;A
+GE28;Laconnex;B
+GE29;Haute Seymaz;B
+GE29;Haute Seymaz;A
+GE30;Mategnin;B
+GE30;Mategnin;A
+GE33;Teppes de Verbois;B
+GE33;Teppes de Verbois;A
+GE36;Peney;A
+GE36;Peney;B
+GE40;Pré-Béroux;A
+GE40;Pré-Béroux;B
+GE42;Douves;B
+GE42;Douves;A
+GE43;Maison de la Forêt;B
+GE43;Maison de la Forêt;A
+GE44;Choulex;B
+GE44;Choulex;A
+GE49;Bistoquette et Paradis;B
+GE49;Bistoquette et Paradis;A
+GE50;Combes Chappuis;B
+GE50;Combes Chappuis;A
+GE59;Dolliets;B
+GE59;Dolliets;A
+GL2;Niederriet;A
+GL2;Niederriet;B
+GL17;Walenberg;A
+GL17;Walenberg;B
+GL18;Talsee;A
+GL20;Klöntalersee Nordostufer;A
+GL37;Oberblegisee;A
+GL37;Oberblegisee;B
+GL47;Feldbach;A
+GL47;Feldbach;B
+GL96;Klöntalersee Vorauen;A
+GR37;Flaz Golfweiher;A
+GR37;Flaz Golfweiher;B
+GR43;Palüds-Agnas;B
+GR43;Palüds-Agnas;A
+GR82;Cavloc;A
+GR82;Cavloc;B
+GR102;Lais da Pesch;A
+GR106;Lai da Tarasp;B
+GR106;Lai da Tarasp;A
+GR111;Duigls;A
+GR111;Duigls;B
+GR118;Plan da Chomps;B
+GR118;Plan da Chomps;A
+GR120;Craistas;A
+GR121;Ischlas da Strada;A
+GR129;Lai da Juata;B
+GR129;Lai da Juata;A
+GR140;Lai da Valpaschun;B
+GR140;Lai da Valpaschun;A
+GR141;Plaun Schumpeder;A
+GR141;Plaun Schumpeder;B
+GR143;Schler dal Podestà;A
+GR151;Rutisc Tonghi;B
+GR151;Rutisc Tonghi;A
+GR159;Crest'Ota;A
+GR251;Pian di Alne;A
+GR310;Ils Lags Alp Ramosa;A
+GR310;Ils Lags Alp Ramosa;B
+GR319;Ogna da Pardiala;A
+GR325;Plaun da Foppas;A
+GR338;Lag digl Oberst;A
+GR338;Lag digl Oberst;B
+GR339;Liger Alp Falätscha;A
+GR339;Liger Alp Falätscha;B
+GR361;Malixer Alp;A
+GR361;Malixer Alp;B
+GR386;Siechenstuden;A
+GR391;Isla;A
+GR392;Ellwald;A
+GR395;Zizerser Gumpen;A
+GR396;Girsch;A
+GR396;Girsch;B
+GR397;Bregl;B
+GR397;Bregl;A
+GR400;Dunkeläuli;A
+GR412;Länder;A
+GR442;Alp da Razen;A
+GR457;Pro Niev;B
+GR457;Pro Niev;A
+GR470;Sayser See;A
+GR470;Sayser See;B
+GR567;Punt Planet;A
+GR568;Flin;A
+GR568;Flin;B
+GR569;Lag Miert;A
+GR569;Lag Miert;B
+GR570;Tola;A
+GR570;Tola;B
+GR572;Fröschaboda Val Madris;B
+GR572;Fröschaboda Val Madris;A
+GR591;Neugüeter;A
+JU200;Les Esserts;A
+JU200;Les Esserts;B
+JU701;Sous Bâme;A
+JU701;Sous Bâme;B
+JU703;En Cortio;B
+JU703;En Cortio;A
+JU902;Le Colliard;B
+JU902;Le Colliard;A
+JU1002;Bois de Chaux;A
+JU1002;Bois de Chaux;B
+JU1400;Combe Tabeillon;B
+JU1400;Combe Tabeillon;A
+JU1405;Combe du Bez;A
+JU1405;Combe du Bez;B
+JU1406;Foradrai;B
+JU1406;Foradrai;A
+JU1600;Les Charbonnières;B
+JU1600;Les Charbonnières;A
+JU1902;Moulin de Bavelier;B
+JU1902;Moulin de Bavelier;A
+JU2400;La Réselle;A
+JU2400;La Réselle;B
+JU4200;Le Refrain-La Bouège;A
+JU4200;Le Refrain-La Bouège;B
+JU4300;Les Saignes;B
+JU4300;Les Saignes;A
+JU4806;La Sagne à Droz;B
+JU4806;La Sagne à Droz;A
+JU4900;La Vauchotte-Bois Banal;B
+JU4900;La Vauchotte-Bois Banal;A
+JU5001;Dos le Cras;A
+JU5001;Dos le Cras;B
+JU5101;Plain de Saigne;B
+JU5101;Plain de Saigne;A
+JU5412;La Goule-Le Theusseret;A
+JU5412;La Goule-Le Theusseret;B
+JU5413;La Bouège-La Goule;A
+JU5413;La Bouège-La Goule;B
+JU5600;Bois Banal-Moulin Jeannotat;B
+JU5600;Bois Banal-Moulin Jeannotat;A
+JU5606;Les Pommerats;B
+JU5606;Les Pommerats;A
+JU5701;La Gruère;B
+JU5701;La Gruère;A
+JU5702;Les Royes;A
+JU5800;Côte d'Oye;B
+JU5800;Côte d'Oye;A
+JU6400;Etangs de Vendlincourt;A
+JU6400;Etangs de Vendlincourt;B
+JU6600;Lorette;A
+JU6600;Lorette;B
+JU6604;Bellefontaine;B
+JU6604;Bellefontaine;A
+JU7000;Etang Corbat;B
+JU7000;Etang Corbat;A
+JU7500;Etangs Rougeat;A
+JU7500;Etangs Rougeat;B
+JU7501;Etangs de Bonfol;A
+JU7501;Etangs de Bonfol;B
+JU7508;Les Queues de Chats;B
+JU7508;Les Queues de Chats;A
+JU7801;Place d'armes, le Nalé;B
+JU7801;Place d'armes, le Nalé;A
+JU8101;La Coeuvatte;A
+JU8101;La Coeuvatte;B
+JU8400;Le Martinet;A
+JU8400;Le Martinet;B
+JU8700;Les Coeudres;A
+JU8700;Les Coeudres;B
+LU3;Staldenmoos;A
+LU3;Staldenmoos;B
+LU5;Schlossweiher Altishofen;B
+LU5;Schlossweiher Altishofen;A
+LU10;Hasliweiher;B
+LU10;Hasliweiher;A
+LU13;Gütschweiher;B
+LU13;Gütschweiher;A
+LU33;Uffikonermoos;A
+LU36;Hetzligermoos;A
+LU47;Chalchloch;A
+LU47;Chalchloch;B
+LU55;Risch, Rotseeried;A
+LU55;Risch, Rotseeried;B
+LU60;Ottigenbüel;A
+LU86;Riffigweiher;A
+LU86;Riffigweiher;B
+LU105;Fuchseren;A
+LU105;Fuchseren;B
+LU116;Gürmschmoos;A
+LU116;Gürmschmoos;B
+LU119;Moos;B
+LU119;Moos;A
+LU122;Mettlenmoos;B
+LU122;Mettlenmoos;A
+LU132;Hilferenmättili;A
+LU132;Hilferenmättili;B
+LU133;Naturlehrgebiet Buechwald;B
+LU133;Naturlehrgebiet Buechwald;A
+LU145;Egghütten;B
+LU145;Egghütten;A
+LU155;Unter Chlotisberg;B
+LU155;Unter Chlotisberg;A
+LU156;Unterbüel;B
+LU156;Unterbüel;A
+LU206;Nordende Baldeggersee;B
+LU206;Nordende Baldeggersee;A
+LU210;Schützenfeld-Moospünten;A
+LU213;Turbiweiher/Ronfeldweiher;A
+LU222;Gütsch/Feldhof;A
+LU222;Gütsch/Feldhof;B
+LU227;Steinibachried;A
+LU230;Burgschachen;A
+LU246;Wolermoos;A
+LU248;Hagimoos;B
+LU248;Hagimoos;A
+LU267;Schlagweiher;B
+LU267;Schlagweiher;A
+LU331;Tuetenseeli;B
+LU331;Tuetenseeli;A
+LU341;Vogelmoos;B
+LU341;Vogelmoos;A
+LU354;Moosschürweiher;A
+LU359;Chüsenrainwald;A
+LU360;Mühleweiher;A
+LU360;Mühleweiher;B
+LU398;Badhusaue-Fontanne;A
+LU408;Staudenschachen Südarm;A
+LU410;Unterallmend;B
+LU410;Unterallmend;A
+LU425;Forenwäldli;A
+LU425;Forenwäldli;B
+LU434;Steinibüelweier;A
+LU434;Steinibüelweier;B
+LU454;Wauwilermoos;B
+LU454;Wauwilermoos;A
+LU469;NE Hirsboden;B
+LU469;NE Hirsboden;A
+LU476;Hinter Roren;A
+LU486;Grueb Grossfeld;B
+LU486;Grueb Grossfeld;A
+LU491;Wagenmoos;B
+LU491;Wagenmoos;A
+LU512;Ostergau;A
+LU519;Grube Stoos Hüswil;A
+LU523;Forenmoos;A
+LU523;Forenmoos;B
+LU524;Moosweiher;A
+LU532;Chänzeli/Schachen;B
+LU532;Chänzeli/Schachen;A
+LU582;Grisigen;B
+LU582;Grisigen;A
+LU606;Wannenholz;A
+LU606;Wannenholz;B
+LU669;Lättloch;A
+LU669;Lättloch;B
+LU746;Zihlmatt Allmend;A
+LU746;Zihlmatt Allmend;B
+LU983;Buttenberg;A
+NE1;Marnière du Plan du Bois;B
+NE1;Marnière du Plan du Bois;A
+NE2;Planeyse;B
+NE2;Planeyse;A
+NE3;Merdasson;B
+NE3;Merdasson;A
+NE5;La Gare;B
+NE5;La Gare;A
+NE12;Le Pélard;B
+NE12;Le Pélard;A
+NE13;Les Eplatures;B
+NE13;Les Eplatures;A
+NE18;La Galandrure;B
+NE18;La Galandrure;A
+NE56;La Marnière d'Hauterive;A
+NE58;Le Loclat;B
+NE58;Le Loclat;A
+NE68;La Paulière;A
+NE68;La Paulière;B
+NE71;Les Sagnettes;B
+NE71;Les Sagnettes;A
+NE99;Le Foulet;A
+NE99;Le Foulet;B
+NE106;Les Goudebas;A
+NE106;Les Goudebas;B
+NE107;La Fabrique;B
+NE107;La Fabrique;A
+NE108;Pointe du Grain;A
+NE115;Vauroux;A
+NE115;Vauroux;B
+NE159;Combacervey;A
+NE159;Combacervey;B
+NE163;Bois du Devens;A
+NE163;Bois du Devens;B
+NW59;Gnappiried;B
+NW59;Gnappiried;A
+NW61;Vierwaldstättersee Hüttenort;A
+NW61;Vierwaldstättersee Hüttenort;B
+NW62;Stansstader Ried/Rotzloch;B
+NW62;Stansstader Ried/Rotzloch;A
+NW69;Chrotteseeli Obbürgen;B
+NW69;Chrotteseeli Obbürgen;A
+OW1;Schlierenrüti, Reservat Sarna;B
+OW1;Schlierenrüti, Reservat Sarna;A
+OW35;Glaubenbielen Ribihütte;B
+OW35;Glaubenbielen Ribihütte;A
+OW45;Mörlisee;A
+OW45;Mörlisee;B
+OW47;Jänzimatt;A
+OW63;Usser Allmend;A
+OW63;Usser Allmend;B
+OW78;Gerzensee, Blindseeli;A
+OW78;Gerzensee, Blindseeli;B
+OW109;Lungerer See Nordende;A
+OW109;Lungerer See Nordende;B
+OW123;Hanenriet;B
+OW123;Hanenriet;A
+OW127;Sachsler Seefeld;B
+OW127;Sachsler Seefeld;A
+OW167;Sewenseeli;A
+OW201;Ritzenmattseeli;B
+OW201;Ritzenmattseeli;A
+OW204;Obermatteggweiher;A
+OW204;Obermatteggweiher;B
+OW213;Melbach;A
+OW213;Melbach;B
+SG9;Bildweiher;A
+SG9;Bildweiher;B
+SG20;Wenigerweiher;A
+SG20;Wenigerweiher;B
+SG21;Ochsenweid;A
+SG27;Ziegelei Bruggwald;A
+SG30;Huebermoos;B
+SG30;Huebermoos;A
+SG33;Kiesgrube Schuppis;A
+SG42;Goldachtobel;A
+SG59;Schlossweiher;A
+SG59;Schlossweiher;B
+SG70;Höchstern;A
+SG94;Moosanger;A
+SG94;Moosanger;B
+SG103;Bisen;A
+SG110;Eselschwanz;B
+SG110;Eselschwanz;A
+SG113;Bodenseeriet, Altenrhein;A
+SG118;Fuchsloch-Buriet;B
+SG118;Fuchsloch-Buriet;A
+SG140;Banriet/Burst;A
+SG140;Banriet/Burst;B
+SG170;Alte Lehmgrube Hilpert;A
+SG170;Alte Lehmgrube Hilpert;B
+SG177;Wichenstein;B
+SG177;Wichenstein;A
+SG179;Spitzmäder;A
+SG179;Spitzmäder;B
+SG190;Au Büchel;B
+SG190;Au Büchel;A
+SG201;Wiesenfurt;A
+SG201;Wiesenfurt;B
+SG205;Retentionsbecken Ceres Rhein-Au;B
+SG205;Retentionsbecken Ceres Rhein-Au;A
+SG236;Burstried, Galgenmad;A
+SG236;Burstried, Galgenmad;B
+SG248;Egelsee bei Bad Forstegg;A
+SG248;Egelsee bei Bad Forstegg;B
+SG342;Kiessammler Vilters;A
+SG342;Kiessammler Vilters;B
+SG344;Kiesgrube Feerbach;A
+SG365;Baggerseen im Staffelriet;B
+SG365;Baggerseen im Staffelriet;A
+SG367;Mösli;A
+SG367;Mösli;B
+SG374;Kaltbrunnerriet;B
+SG374;Kaltbrunnerriet;A
+SG384;St. Sebastian;A
+SG384;St. Sebastian;B
+SG396;Siessenweiher;A
+SG396;Siessenweiher;B
+SG398;Briggisweiher N Auenhof;A
+SG398;Briggisweiher N Auenhof;B
+SG399;Joner Allmeind;B
+SG399;Joner Allmeind;A
+SG405;Allmeind;A
+SG496;Zuckenmattweiher;A
+SG496;Zuckenmattweiher;B
+SG506;Turpenriet;B
+SG506;Turpenriet;A
+SG515;Magdenau;B
+SG515;Magdenau;A
+SG525;Glatttal;A
+SG552;Bettenauerweier;B
+SG552;Bettenauerweier;A
+SG554;Gill-Henau Reservat;B
+SG554;Gill-Henau Reservat;A
+SG561;Hasenlooweiher;B
+SG561;Hasenlooweiher;A
+SG563;Huserfelsen, Himmelbleichi;B
+SG563;Huserfelsen, Himmelbleichi;A
+SG566;Kiesgrube Landguet;A
+SG566;Kiesgrube Landguet;B
+SG574;Ehemalige Kiesgrube Au;A
+SG587;Riet Zuzwil;A
+SG587;Riet Zuzwil;B
+SG598;Arniger Witi;A
+SG600;Espel;A
+SG603;Waffenplatz Breitfeld;A
+SG603;Waffenplatz Breitfeld;B
+SG614;Weiher NE Hohfirst;B
+SG614;Weiher NE Hohfirst;A
+SG617;School;A
+SG618;Kiesgrube Hori;A
+SG618;Kiesgrube Hori;B
+SH21;Morgetshofsee;B
+SH21;Morgetshofsee;A
+SH31;Bohnerzgruben Färberwiesli;B
+SH31;Bohnerzgruben Färberwiesli;A
+SH43;Eschheimer Weiher;A
+SH43;Eschheimer Weiher;B
+SH69;Lehmlöcher Rüti;A
+SH70;Lehmlöcher Dicki;A
+SH401;Feuchtgebiet Widen;A
+SH1501;Bachtelli/Seeli;B
+SH1501;Bachtelli/Seeli;A
+SH1901;Rohrenbüeli-Stritholz;B
+SH1901;Rohrenbüeli-Stritholz;A
+SH3201;Bohnerzgruben Chäferhölzli;A
+SH3201;Bohnerzgruben Chäferhölzli;B
+SH3902;Moos-Buck Herblingen;B
+SH3902;Moos-Buck Herblingen;A
+SH3933;Spitzwisen;A
+SH3933;Spitzwisen;B
+SH6203;Alte Biberschleife;A
+SH6203;Alte Biberschleife;B
+SH6301;Ried/Lehmgrueb Hofenacker;A
+SH6301;Ried/Lehmgrueb Hofenacker;B
+SH6401;Egelsee Degerfeld Wagenhausen;A
+SH6401;Egelsee Degerfeld Wagenhausen;B
+SH7101;Weiher Lochgraben;B
+SH7101;Weiher Lochgraben;A
+SO6;Ägertengrube;A
+SO11;Chli Aarli;A
+SO11;Chli Aarli;B
+SO44;Tümpel Stierenberg;A
+SO44;Tümpel Stierenberg;B
+SO63;Baslerweier;B
+SO63;Baslerweier;A
+SO65;Tümpel untere Erli;A
+SO65;Tümpel untere Erli;B
+SO69;Obergösger Schachen;A
+SO83;Erlenmoos, Haag;A
+SO84;Biedermannsgrube;B
+SO84;Biedermannsgrube;A
+SO96;Riedbrunnmatt;B
+SO96;Riedbrunnmatt;A
+SO117;Sumpfwiese Neuhüsli;A
+SO117;Sumpfwiese Neuhüsli;B
+SO137;Höchweidli;B
+SO137;Höchweidli;A
+SO143;Lobiseiweiher;A
+SO143;Lobiseiweiher;B
+SO177;Grenchner Witi;B
+SO177;Grenchner Witi;A
+SZ2;Breitried/Schützenried;A
+SZ3;Oberer Sihlsee Euthal;B
+SZ3;Oberer Sihlsee Euthal;A
+SZ4;Sihlsee S Schönbächli;A
+SZ4;Sihlsee S Schönbächli;B
+SZ5;Sihlsee Steinbach (Lukasrank);A
+SZ5;Sihlsee Steinbach (Lukasrank);B
+SZ7;Klosterweiher;B
+SZ7;Klosterweiher;A
+SZ10;Trachslauerweiher;B
+SZ10;Trachslauerweiher;A
+SZ30;Schindellegi;A
+SZ30;Schindellegi;B
+SZ34;Dreiwässern;B
+SZ34;Dreiwässern;A
+SZ60;Reumeren;A
+SZ60;Reumeren;B
+SZ68;Sägel, Schutt, Lauerzersee;A
+SZ72;Grosswijer;B
+SZ72;Grosswijer;A
+SZ77;Klosterried Ingenbohl;B
+SZ77;Klosterried Ingenbohl;A
+SZ131;Hinter Ibach;A
+SZ131;Hinter Ibach;B
+SZ138;Aazopf;A
+SZ152;Bätzimatt;A
+SZ152;Bätzimatt;B
+SZ171;Pfaffenhaut;B
+SZ171;Pfaffenhaut;A
+SZ179;Lauenen;A
+SZ179;Lauenen;B
+SZ180;Golfplatz Nuolen;A
+SZ180;Golfplatz Nuolen;B
+TG7;Kiesgrube Atzenholz;A
+TG34;Biessenhofer Weiher;A
+TG40;Hudelmoos;A
+TG49;Hauptwiler Weiher;A
+TG49;Hauptwiler Weiher;B
+TG62;Kiesgrube Freudenberg;A
+TG69;Langstuden Befang;A
+TG72;Wiimoos;A
+TG82;Sürch;A
+TG89;Schaarenwies/Schaarenwald;B
+TG89;Schaarenwies/Schaarenwald;A
+TG93;Bächli-Gishalde;B
+TG93;Bächli-Gishalde;A
+TG94;Riet;A
+TG104;Luggeseeli;A
+TG116;Baggersee Chasperäcker;A
+TG117;Ägelsee;A
+TG127;Allmend;A
+TG165;Mösliweiher;A
+TG165;Mösliweiher;B
+TG166;Müliweier;A
+TG166;Müliweier;B
+TG170;Barchetsee;A
+TG177;Kiesgrube Bärg;A
+TG179;Grüt-Bietenhart-Wolfsbüel;A
+TG197;Kiesweiher Weidacker;A
+TG197;Kiesweiher Weidacker;B
+TG200;Googlete;A
+TG213;Bommer Weiher;A
+TG231;Espen Riet;A
+TG231;Espen Riet;B
+TG242;Lengwiler Weiher;A
+TG244;Seeburg;B
+TG244;Seeburg;A
+TG261;Seerhein Chuehorn-Paradies;A
+TG264;Kiesgrube Wolfsbüel;A
+TG276;Bichelsee;B
+TG276;Bichelsee;A
+TG294;Lommiser Riet;A
+TG316;Ägelsee;A
+TG316;Ägelsee;B
+TG349;Grütriet;A
+TG367;Kiesgruben Neuhus-Bälisteig;A
+TG386;Bächler;A
+TG387;Grube Trubeschloo;A
+TG388;Hüttwiler Seen;B
+TG388;Hüttwiler Seen;A
+TG413;Schoren Riet;A
+TG413;Schoren Riet;B
+TG424;Ägelsee;A
+TG425;Grube Gündelhart;A
+TG429;Wolfsgrueb;A
+TG429;Wolfsgrueb;B
+TG432;Waldriet Grosswis;A
+TG438;Heeristobel;A
+TG438;Heeristobel;B
+TG440;Etzwilerriet;A
+TG443;Reservat Schule Kaltenbach;A
+TG462;Grube Moos N Weerswilen;A
+TG466;Sangen-Mülifang;B
+TG466;Sangen-Mülifang;A
+TG472;Lehmgrube Opfershofen;A
+TG488;Kiesgrube Schürliwiesen;A
+TG494;Pflanzgarten Tätsch;A
+TG498;Güttingersrüti;A
+TG506;Weierwies;B
+TG506;Weierwies;A
+TG507;Aue N Aachmündung;A
+TG508;Stockrüti;A
+TG509;Kiesgrube Buech;A
+TG537;Kiesgrube Wiel;A
+TI2;Laghetto d'Orbello;A
+TI5;Ciossa Antognini;A
+TI5;Ciossa Antognini;B
+TI8;Vigna lunga-Trebbione;A
+TI8;Vigna lunga-Trebbione;B
+TI10;Stagno di Progero;A
+TI10;Stagno di Progero;B
+TI12;Malcantone;A
+TI12;Malcantone;B
+TI16;Isola Sgraver;B
+TI16;Isola Sgraver;A
+TI19;Stagno Motto della Costa;A
+TI19;Stagno Motto della Costa;B
+TI21;Canale Demanio;B
+TI21;Canale Demanio;A
+TI34;Bolla di Loderio;A
+TI114;Cassina di Lago;A
+TI127;Belladrum;B
+TI127;Belladrum;A
+TI139;Pescicoltura Golino;A
+TI147;Lanche Al Pizzante;A
+TI147;Lanche Al Pizzante;B
+TI152;Bolle di Magadino;A
+TI152;Bolle di Magadino;B
+TI153;Barbescio-Bolletina Lunga;A
+TI158;Piano di Arbigo;A
+TI158;Piano di Arbigo;B
+TI161;Bolle di Mondrigo;A
+TI171;Stagno Paron;A
+TI171;Stagno Paron;B
+TI190;Stagno Figino-Cásoro;A
+TI190;Stagno Figino-Cásoro;B
+TI193;Cava Rivaccia;A
+TI195;Stagno Agra;B
+TI195;Stagno Agra;A
+TI199;Gola di Lago;B
+TI199;Gola di Lago;A
+TI200;Laghetto;A
+TI201;Lago di Lugano a Cantonetto;A
+TI201;Lago di Lugano a Cantonetto;B
+TI202;Cava Gere Croglio;A
+TI209;Ressiga;A
+TI211;Bosco Agnuzzo;A
+TI211;Bosco Agnuzzo;B
+TI212;Palude San Giorgio;A
+TI212;Palude San Giorgio;B
+TI215;Lago d'Origlio;A
+TI223;Pozza a est di Motto;B
+TI223;Pozza a est di Motto;A
+TI228;Bolle di S. Martino;A
+TI228;Bolle di S. Martino;B
+TI232;Stagno Avra;A
+TI233;Pozza Bosco Penz;A
+TI234;Stagni Campagna Seseglio;B
+TI234;Stagni Campagna Seseglio;A
+TI236;Pozza Moreggi Pedrinate;A
+TI238;Stagno Pra Vicc;A
+TI238;Stagno Pra Vicc;B
+TI239;Prato Grande;A
+TI241;Stagno Roggio;A
+TI243;Pra Coltello;B
+TI243;Pra Coltello;A
+TI250;Meandri del Laveggio e Colombera;A
+TI250;Meandri del Laveggio e Colombera;B
+TI252;Cava Boschi;A
+TI258;Lanche di Iragna;B
+TI258;Lanche di Iragna;A
+TI263;Stagno Campi Grandi;B
+TI263;Stagno Campi Grandi;A
+TI284;Laghetto Pianca;A
+TI285;Lago di Masnee;A
+TI306;Scairolo Vecchio;A
+TI308;Pian Gallina;A
+TI323;Lanca Saligin;A
+TI323;Lanca Saligin;B
+TI333;Campi Grandi;A
+TI334;Pozza Monzell;A
+TI335;Cava Motto Grande;A
+TI336;Valle della Motta;A
+TI336;Valle della Motta;B
+TI337;Basciocca (ovest);B
+TI337;Basciocca (ovest);A
+TI339;Stagni San Giorgio;A
+TI343;Stagno Guana;A
+TI345;Gole della Breggia;A
+TI347;Pre Murin;B
+TI347;Pre Murin;A
+TI352;Valle della Motta/Ai Prati;A
+TI362;Rompiga;A
+TI373;Santa Maria;B
+TI373;Santa Maria;A
+TI375;Delta della Maggia;A
+TI376;Vigna;A
+TI376;Vigna;B
+TI378;Torrazza-Pra Signora;B
+TI378;Torrazza-Pra Signora;A
+TI379;Dosso dell'Ora-Dosso Bello;A
+TI379;Dosso dell'Ora-Dosso Bello;B
+TI387;Canton del Marcio;A
+TI387;Canton del Marcio;B
+TI464;Ca del Boscat;A
+UR59;Bi den Seelenen;A
+UR59;Bi den Seelenen;B
+UR76;Schlossried;A
+UR77;Reussdelta;A
+UR104;Alpler See;A
+UR106;Bodenwald;A
+UR106;Bodenwald;B
+VD6;Grand Marais;B
+VD6;Grand Marais;A
+VD21;Les Grangettes;A
+VD21;Les Grangettes;B
+VD67;Les Mossières;A
+VD67;Les Mossières;B
+VD69;Borire, Corjon;A
+VD69;Borire, Corjon;B
+VD78;Les Monod;B
+VD78;Les Monod;A
+VD89;La Grève (Chabrey);A
+VD90;Les Grèves (Cudrefin);A
+VD93;Lac Coffy, Bois Ramel;B
+VD93;Lac Coffy, Bois Ramel;A
+VD100;Etang de Vigny;B
+VD100;Etang de Vigny;A
+VD101;Etang du Sépey;B
+VD101;Etang du Sépey;A
+VD124;Bois de Vaux;A
+VD124;Bois de Vaux;B
+VD133;Etang du Buron, Les Bioles;B
+VD133;Etang du Buron, Les Bioles;A
+VD140;Etang de la Scie;B
+VD140;Etang de la Scie;A
+VD142;Corcelettes;B
+VD142;Corcelettes;A
+VD145;La Combaz, L'Abbaye;A
+VD145;La Combaz, L'Abbaye;B
+VD171;Bois Pourri;A
+VD171;Bois Pourri;B
+VD177;Arborex;B
+VD177;Arborex;A
+VD213;Les Bidonnes;B
+VD213;Les Bidonnes;A
+VD224;Bois de Porte, Les Dailles;A
+VD224;Bois de Porte, Les Dailles;B
+VD225;Grand Bataillard, Marais de la Versoix;B
+VD225;Grand Bataillard, Marais de la Versoix;A
+VD229;Bois de Chênes, Lac Vert;A
+VD229;Bois de Chênes, Lac Vert;B
+VD232;Ballastière;A
+VD232;Ballastière;B
+VD244;Bois de Ban;A
+VD244;Bois de Ban;B
+VD251;Bioute, Etang d'Arnex;B
+VD251;Bioute, Etang d'Arnex;A
+VD253;Entremur;A
+VD253;Entremur;B
+VD265;Pré Bernard, Creux-de-Terre;B
+VD265;Pré Bernard, Creux-de-Terre;A
+VD274;Vy des Buissons, Creux du Lavoir;B
+VD274;Vy des Buissons, Creux du Lavoir;A
+VD275;Planches de Sergey, Chassagne;A
+VD275;Planches de Sergey, Chassagne;B
+VD286;Les Mosses de la Rogivue;A
+VD286;Les Mosses de la Rogivue;B
+VD290;Les Grèves (Chevroux);A
+VD292;Prés de Rosex;A
+VD292;Prés de Rosex;B
+VD299;Vernez-de-Chaux, La Coula;A
+VD299;Vernez-de-Chaux, La Coula;B
+VD300;Ancienne Broye;B
+VD300;Ancienne Broye;A
+VD357;Bendes;B
+VD357;Bendes;A
+VD362;Les Echelettes, La Léchère;A
+VD362;Les Echelettes, La Léchère;B
+VD366;Champ Pittet, Châble Perron;A
+VD374;Les Vernes;A
+VD374;Les Vernes;B
+VD375;Les Grèves (Yvonand);A
+VD377;Le Moulin;A
+VD377;Le Moulin;B
+VD379;Le Gottau;B
+VD379;Le Gottau;A
+VD381;Le Vursis;B
+VD381;Le Vursis;A
+VD463;Canal de la Tuilière;A
+VD463;Canal de la Tuilière;B
+VS26;Pfyn West;B
+VS26;Pfyn West;A
+VS28;Pfyn Ost, Rosensee;A
+VS50;Canal de Ceinture;B
+VS50;Canal de Ceinture;A
+VS66;Poutafontana;A
+VS75;Le Rosel;A
+VS75;Le Rosel;B
+VS120;Châtelet;A
+VS120;Châtelet;B
+VS121;Grand-Blettay;B
+VS121;Grand-Blettay;A
+VS136;Lac de Tanay;B
+VS136;Lac de Tanay;A
+VS142;Montagne de l'Au;A
+VS142;Montagne de l'Au;B
+VS269;Lac de Mont d'Orge;B
+VS269;Lac de Mont d'Orge;A
+VS349;Bonigersee;B
+VS349;Bonigersee;A
+VS417;Bettmeralp;A
+VS417;Bettmeralp;B
+VS427;Chiebodenstafel;A
+VS427;Chiebodenstafel;B
+VS432;Lüsga;A
+VS432;Lüsga;B
+VS476;Le Malévoz;B
+VS476;Le Malévoz;A
+VS477;Fontaine de la Combe;B
+VS477;Fontaine de la Combe;A
+ZG12;Rüss-Spitz;B
+ZG12;Rüss-Spitz;A
+ZG43;Binzmüli;A
+ZG43;Binzmüli;B
+ZG46;Steinhauser Weiher;B
+ZG46;Steinhauser Weiher;A
+ZH1;Eselacherried;B
+ZH1;Eselacherried;A
+ZH2;Ried beim Scheibenstand;B
+ZH2;Ried beim Scheibenstand;A
+ZH11;Mülliweiher, Weiher am Rossweg;A
+ZH11;Mülliweiher, Weiher am Rossweg;B
+ZH16;Türlersee NW-Ufer;A
+ZH33;Kiesgrube Büelhüsli;A
+ZH33;Kiesgrube Büelhüsli;B
+ZH34;Hätteliweiher Oberholz;B
+ZH34;Hätteliweiher Oberholz;A
+ZH38;Erlenhofweiher;A
+ZH38;Erlenhofweiher;B
+ZH47;Bachenbülacher Allmend/Waffenplatz;B
+ZH47;Bachenbülacher Allmend/Waffenplatz;A
+ZH53;Mülichrammweiher;A
+ZH53;Mülichrammweiher;B
+ZH71;Feuerweiher am Homberg;B
+ZH71;Feuerweiher am Homberg;A
+ZH72;Kiesgrube SW Runsberg;B
+ZH72;Kiesgrube SW Runsberg;A
+ZH76;Gruben Hard und Gubel;B
+ZH76;Gruben Hard und Gubel;A
+ZH101;Kiesgrube Egghau;B
+ZH101;Kiesgrube Egghau;A
+ZH110;Weiher und Grube bei Ribacher;B
+ZH110;Weiher und Grube bei Ribacher;A
+ZH144;Waldweiher im Oberholz/Iffertsmoos;A
+ZH144;Waldweiher im Oberholz/Iffertsmoos;B
+ZH148;Gurisee;B
+ZH148;Gurisee;A
+ZH162;Längerenweiher;B
+ZH162;Längerenweiher;A
+ZH201;Kiesgrube Garwid;A
+ZH201;Kiesgrube Garwid;B
+ZH264;Hungerseeli;B
+ZH264;Hungerseeli;A
+ZH284;Altwässer Thurspitz;B
+ZH284;Altwässer Thurspitz;A
+ZH289;Kiesgrube Buchbrunnen;A
+ZH289;Kiesgrube Buchbrunnen;B
+ZH294;Präuselen;A
+ZH294;Präuselen;B
+ZH295;Kiesgruben Ebnet;A
+ZH295;Kiesgruben Ebnet;B
+ZH310;Seewadel;A
+ZH310;Seewadel;B
+ZH322;Isert Weiher;B
+ZH322;Isert Weiher;A
+ZH342;Kiesgrube Eggholz;B
+ZH342;Kiesgrube Eggholz;A
+ZH352;Kiesgrube Ebertswil;A
+ZH352;Kiesgrube Ebertswil;B
+ZH358;Weiher Fromoos (Gerhauweiher);B
+ZH358;Weiher Fromoos (Gerhauweiher);A
+ZH367;Mittelfeld-Kiesgrube;A
+ZH367;Mittelfeld-Kiesgrube;B
+ZH403;Kiesgrube Hasel;B
+ZH403;Kiesgrube Hasel;A
+ZH444;Örmis;B
+ZH444;Örmis;A
+ZH450;Ried Schlimberg/Vogelholz;A
+ZH450;Ried Schlimberg/Vogelholz;B
+ZH458;Laichgebiet Bogen-Mesikon-Brand;A
+ZH458;Laichgebiet Bogen-Mesikon-Brand;B
+ZH468;Ried südl. Uerzlikon;B
+ZH468;Ried südl. Uerzlikon;A
+ZH469;Alter Torfstich im Hagenholz;A
+ZH469;Alter Torfstich im Hagenholz;B
+ZH476;Räubrichseen;B
+ZH476;Räubrichseen;A
+ZH485;Mördersee und Pfaffensee;A
+ZH485;Mördersee und Pfaffensee;B
+ZH487;Enteler-Weiher;A
+ZH487;Enteler-Weiher;B
+ZH496;Waldried Homberg;A
+ZH496;Waldried Homberg;B
+ZH502;Eigental, Pantliried;B
+ZH502;Eigental, Pantliried;A
+ZH506;Lehmgrube beim Gwerfihölzli;A
+ZH506;Lehmgrube beim Gwerfihölzli;B
+ZH533;Seewadelgrab;B
+ZH533;Seewadelgrab;A
+ZH548;Elliker Auen;A
+ZH548;Elliker Auen;B
+ZH555;Grischei;A
+ZH555;Grischei;B
+ZH558;Kiesgrube Hinterfeld;A
+ZH560;Biotop Süessplätz;A
+ZH560;Biotop Süessplätz;B
+ZH577;Schützenweiher;B
+ZH577;Schützenweiher;A
+ZH603;Biotop bei NOK Breite;B
+ZH603;Biotop bei NOK Breite;A
+ZH616;Glattaltlaufgebiet Schlosswinkel-Peterli-Solachten;B
+ZH616;Glattaltlaufgebiet Schlosswinkel-Peterli-Solachten;A
+ZH628;Kiesgrube Härdli;A
+ZH629;Raffoltersee;A
+ZH629;Raffoltersee;B
+ZH638;Laichgebiet Lorzespitz;B
+ZH638;Laichgebiet Lorzespitz;A
+ZH641;Leiloch-Weiher;A
+ZH680;Ried Gmeimatt;B
+ZH680;Ried Gmeimatt;A
+ZH682;Kiesgrube Mülibach;A
+ZH682;Kiesgrube Mülibach;B
+ZH694;Weiher bei Hermatswil;A
+ZH694;Weiher bei Hermatswil;B
+ZH714;Chatzensee, Chräenriet;B
+ZH714;Chatzensee, Chräenriet;A
+ZH726;Kiesgrube Rhinauer Feld und Oberboden;A
+ZH732;Kiesgrube Ebnet;A
+ZH732;Kiesgrube Ebnet;B
+ZH752;Russiker Ried;A
+ZH752;Russiker Ried;B
+ZH833;Weiher Gütighausen;A
+ZH833;Weiher Gütighausen;B
+ZH849;Truttiker Ried;B
+ZH849;Truttiker Ried;A
+ZH860;Seewädeli;A
+ZH860;Seewädeli;B
+ZH868;Torfstiche im Seewadel;A
+ZH868;Torfstiche im Seewadel;B
+ZH870;Werriker-/Glattenried;A
+ZH870;Werriker-/Glattenried;B
+ZH872;Hoperenried;B
+ZH872;Hoperenried;A
+ZH877;Grube Seefeld und Stopperweiher;A
+ZH877;Grube Seefeld und Stopperweiher;B
+ZH881;Grabenriet;A
+ZH881;Grabenriet;B
+ZH887;Kiesgrube Im Türli;B
+ZH887;Kiesgrube Im Türli;A
+ZH896;Chrutzelried, Heidenried;B
+ZH896;Chrutzelried, Heidenried;A
+ZH899;Kiesgrube Kindhausen (Blutzwies);A
+ZH899;Kiesgrube Kindhausen (Blutzwies);B
+ZH944;Wollwisli;A
+ZH944;Wollwisli;B
+ZH946;Weiher Lochrüti;A
+ZH946;Weiher Lochrüti;B
+ZH953;Kiesgrube Rüteren;A
+ZH953;Kiesgrube Rüteren;B
+ZH973;Robenhauserried;A
+ZH975;Ambitzgi-/Bönlerried;B
+ZH975;Ambitzgi-/Bönlerried;A
+ZH995;Kiesgrube Rosengarten;A
+ZH1004;Totentäli;A
+ZH1004;Totentäli;B
+ZH1013;Weiher Häsental;A
+ZH1013;Weiher Häsental;B
+ZH1015;Weiertal;A
+ZH1015;Weiertal;B
+ZH1017;Lehmgrube Dättnau;A
+ZH1037;Hänsiried;B
+ZH1037;Hänsiried;A
+ZH1205;Weiher Stigenhof;B
+ZH1205;Weiher Stigenhof;A
+ZH1210;Kiesgrube Goldbach;A
+ZH1210;Kiesgrube Goldbach;B
+ZH1211;Sandlochgrube Chomberg;A
+ZH1211;Sandlochgrube Chomberg;B
+ZH1212;Amphibienbiotope Allmend III;A
+ZH1212;Amphibienbiotope Allmend III;B
+ZH1213;Tüfi-Weiher;A
+ZH1213;Tüfi-Weiher;B
+ZH1214;Linggisee;B
+ZH1214;Linggisee;A
+ZH1252;Alte Oelerdeponie/Munimatt;A
+ZH1252;Alte Oelerdeponie/Munimatt;B
+ZH1285;Weiher N Lorzespitz;A
+ZH1285;Weiher N Lorzespitz;B
+ZH1286;Bruni;A
+ZH1286;Bruni;B
