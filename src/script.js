@@ -36,8 +36,8 @@ function drop(ev) {
     var data = ev.dataTransfer.getData('text');
     ev.target.appendChild(document.getElementById(data));
     ev.target.style.borderStyle = 'solid';
-    document.getElementById(data).style.height = "10em";
-    document.getElementById(data).style.width = "10em";
+    document.getElementById(data).style.height = "5em";
+    document.getElementById(data).style.width = "5em";
     document.getElementById(data).style.backgroundColor = randomColor;
 
     props.forEach(prop => {
