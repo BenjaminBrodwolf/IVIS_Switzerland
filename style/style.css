@@ -34,7 +34,7 @@
 .filterZone {
     height: 90vh;
     width: 48vw;
-    background-color: aliceblue;
+    background-color: #e6e9f0;
     padding: 1em;
     margin-left: 2em;
 }
@@ -52,12 +52,12 @@
     margin-left: 3em;
 }
 
-#cantons > path{
-    stroke: grey;
+#cantons > g{
+    stroke: #f6f6f6;
 }
 
-#cantons > path:hover{
-    fill: grey;
+#cantons > g:hover{
+    fill: #ffd311;
 }
 
 circle:hover{
