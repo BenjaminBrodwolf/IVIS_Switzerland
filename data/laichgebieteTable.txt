@@ -1,4 +1,3 @@
-ObjNummer;Name
 AG3;Zurlindeninsel
 AG19;Halbmond
 AG19;Halbmond
@@ -1447,3 +1446,4 @@ ZH1285;Weiher N Lorzespitz
 ZH1285;Weiher N Lorzespitz
 ZH1286;Bruni
 ZH1286;Bruni
+``

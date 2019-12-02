@@ -4,7 +4,7 @@ const props = [
     // {id: "p2", value: "amphibien", label: 'Amphibien', path: amphibsSVG},
     // {id: "p3", value: "auen", label: 'Auen', path: auenSVG},
     // {id: "p4", value: "geotope", label: 'Geotope', path: geotopeSVG},
-    // {id: "p5", value: "trockenwiesen", label: 'Trockenwiesen', path: trockenwiesenSVG},
+    {id: "p5", value: "trockenwiesen", label: 'Trockenwiesen', path: trockenwiesenSVG},
     {id: "p6", value: "laichgebiete", label: 'Laichgebiete', path: laichgebieteSVG},
 ];
 
@@ -62,10 +62,6 @@ function leaveDropzone(ev) {
 
 const render = () => {
 
-
-
-
-
     const dragfield = dom(`<div id="dragfield">`);
     const svg = dom(`<div id="svg">`);
 
@@ -98,6 +94,10 @@ const render = () => {
         console.log(event.target.id);
     })  );
 
+    const twts = trockenwiesenTable.split("\n");
+    const twtPairs = {};
+
+w
 };
 
 render();
