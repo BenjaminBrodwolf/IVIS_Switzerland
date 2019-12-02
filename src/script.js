@@ -1,3 +1,5 @@
+const canton = {path: cantonsSVG, table: cantonTable};
+
 const props = [
     {id: "p1", value: "trockenwiesen", label: 'Trockenwiesen', path: trockenwiesenSVG, table: trockenwiesenTable},
     {id: "p2", value: "laichgebiete", label: 'Laichgebiete', path: laichgebieteSVG, table: laichgebieteTable},
@@ -41,7 +43,6 @@ function drop(ev) {
             document.getElementById(data).innerHTML = prop.label;
             document.getElementById(prop.value).style.fill = randomColor;
             document.getElementById(prop.value).style.stroke = randomColor;
-            console.log(document.getElementById(prop.id.parentElement))
         }
     })
 
@@ -80,26 +81,55 @@ const render = () => {
     const map = document.getElementById("svg");
     map.replaceWith(svg);
 
+
+    cantonFocus();
+
     /* Integrate the MousOver-Effect to the Datas */
-    props.forEach(e => mouseOverEffect(e));
+    props.forEach(e => dataFocus(e));
 
     // console.log(laicheTable);
 
 };
 
-
-const tableToObject = data => {
-    const [id, name] = data.split(";");
+const cantonTableToObject = data => {
+    const [canton, name, population, area, lakearea] = data.split(";");
     return {
-        id: id,
-        kanton: id.substring(0, 2),
-        name: name
+        canton,
+        name,
+        population,
+        area,
+        lakearea
     }
 };
 
-const mouseOverEffect = props => {
+const dataTableToObject = data => {
+    const [id, name] = data.split(";");
+    return {
+        id,
+        canton: id.substring(0, 2),
+        name
+    }
+};
+
+const cantonFocus = () => {
     const table = [];
-    props.table.split("\n").forEach(e => table.push(tableToObject(e)));
+    canton.table.split("\n").forEach(e => table.push(cantonTableToObject(e)));
+    console.log(table);
+
+    const selectElements = document.querySelector(`#cantons`);
+    const elementsG = selectElements.querySelectorAll('g');
+
+    elementsG.forEach(e => e.addEventListener('click', event => {
+
+        const getElement = table.filter(e => e.name === event.target.id);
+        console.log(getElement[0].name)
+    }));
+
+};
+
+const dataFocus = props => {
+    const table = [];
+    props.table.split("\n").forEach(e => table.push(dataTableToObject(e)));
 
     const selectElements = document.querySelector(`#${props.value}`);
     const elementsPath = selectElements.querySelectorAll('path');
@@ -112,10 +142,9 @@ const mouseOverEffect = props => {
 
 const infoTitel = element => {
     document.getElementById("infoBox").innerHTML = `
-        <h3>Ort: ${ element.name } </h3>
+        <h3>Ort: ${element.name} </h3>
     
     `;
-
 
 
 };
