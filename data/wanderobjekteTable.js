@@ -1,4 +1,4 @@
-AG31;Steinbruch Jakobsberg
+const wanderobjekteTable = `AG31;Steinbruch Jakobsberg
 AG117;Tongrube Böttstein
 AG243;Kiesgrube Moortel
 AG378;Galmet
@@ -92,3 +92,4 @@ ZH712;Ziegelei Rafz
 ZH883;Kiesgrubenbiotope Zimiker Eichli-Breiti
 ZH906;Kiesgrube Härdacher
 ZH1245;Kiesgrube Fuchsloch
+`;

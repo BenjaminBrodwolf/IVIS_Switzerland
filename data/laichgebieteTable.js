@@ -1,4 +1,4 @@
-AG3;Zurlindeninsel
+const laichgebieteTable = `AG3;Zurlindeninsel
 AG19;Halbmond
 AG19;Halbmond
 AG21;Seematten
@@ -1446,4 +1446,4 @@ ZH1285;Weiher N Lorzespitz
 ZH1285;Weiher N Lorzespitz
 ZH1286;Bruni
 ZH1286;Bruni
-``
+`;

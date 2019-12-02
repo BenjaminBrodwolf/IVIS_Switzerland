@@ -4,8 +4,8 @@ const props = [
     // {id: "p2", value: "amphibien", label: 'Amphibien', path: amphibsSVG},
     // {id: "p3", value: "auen", label: 'Auen', path: auenSVG},
     // {id: "p4", value: "geotope", label: 'Geotope', path: geotopeSVG},
-    {id: "p5", value: "trockenwiesen", label: 'Trockenwiesen', path: trockenwiesenSVG},
-    {id: "p6", value: "laichgebiete", label: 'Laichgebiete', path: laichgebieteSVG},
+    {id: "p5", value: "trockenwiesen", label: 'Trockenwiesen', path: trockenwiesenSVG, table: trockenwiesenTable},
+    {id: "p6", value: "laichgebiete", label: 'Laichgebiete', path: laichgebieteSVG, table: laichgebieteTable},
 ];
 
 
@@ -86,18 +86,35 @@ const render = () => {
     map.replaceWith(svg);
 
 
-    // const laiche = document.getElementById('laichgebiete').childNodes;
+    /* Test Laichegebiete */
+    const laicheTable = [];
+    laichgebieteTable.split("\n").forEach(e => laicheTable.push(tableToObject(e)));
+
     const laiche = document.querySelector("#laichgebiete");
     const laichePath = laiche.querySelectorAll('path');
 
-    laichePath.forEach(e => e.addEventListener('mouseover', event => {
-        console.log(event.target.id);
-    })  );
+    laichePath.forEach(e => e.addEventListener('mouseenter', event => {
+       const id = event.target.id;
 
-    const twts = trockenwiesenTable.split("\n");
-    const twtPairs = {};
+       const getElement = laicheTable.filter( e => e.id === id );
+       console.log(getElement[0].name);
 
-w
+    }));
+
+
+
+    // console.log(laicheTable);
+
+};
+
+
+const tableToObject = data => {
+    const [id, name] = data.split(";");
+    return {
+        id: id,
+        kanton: id.substring(0, 2),
+        name: name
+    }
 };
 
 render();
