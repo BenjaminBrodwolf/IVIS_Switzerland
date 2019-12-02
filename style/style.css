@@ -1,0 +1,135 @@
+[draggable=true] {
+    cursor: move;
+}
+
+.segment {
+    float: left;
+    margin: 1em;
+    border-radius: 50%;
+    border: 5px solid #333;
+    width: 5em;
+    height: 5em;
+    text-align: center;
+    background: #ffd311;
+    mix-blend-mode: multiply;
+    margin-right: 5em;
+}
+
+.segment > .segment {
+    position: relative;
+    top: -3em;
+    left: 4em;
+    color: white;
+}
+
+.dropzone {
+    border-color: black;
+    border-width: 5px;
+    border-style: solid;
+    height: 90vh;
+    width: 30vw;
+    padding: 2em;
+}
+
+.filterZone {
+    height: 90vh;
+    width: 48vw;
+    background-color: aliceblue;
+    padding: 1em;
+}
+
+.properties{
+    background-color: #33336a;
+    color: white;
+    margin: 1em;
+    height: 10vh;
+    visibility: hidden;
+}
+
+.propLabel{
+    margin-top: 1em;
+    margin-left: 5em;
+}
+
+#cantons > path{
+    stroke: grey;
+}
+
+#cantons > path:hover{
+    fill: grey;
+}
+
+#amphibien{
+    fill: white;
+    visibility: hidden;
+}
+
+circle:hover{
+    fill: red;
+    stroke-width: 10px;
+}
+
+#flachmoor{
+    fill: white;
+    stroke: white;
+    stroke-width: 5px;
+    visibility: hidden;
+}
+
+#flachmoor > path:hover {
+    fill: red;
+    stroke: red;
+    stroke-width: 10px;
+}
+
+#hochmoor {
+    fill: white;
+    stroke: white;
+    stroke-width: 5px;
+    visibility: hidden;
+}
+
+#hochmoor > path:hover {
+    fill: red;
+    stroke: red;
+    stroke-width: 10px;
+}
+
+#auen {
+    fill: white;
+    stroke: white;
+    stroke-width: 5px;
+    visibility: hidden;
+}
+
+#auen > path:hover {
+    fill: red;
+    stroke: red;
+    stroke-width: 10px;
+}
+
+#geotope {
+    fill: white;
+    stroke: white;
+    stroke-width: 5px;
+    visibility: hidden;
+}
+
+#geotope > path:hover {
+    fill: red;
+    stroke: red;
+    stroke-width: 10px;
+}
+
+#trockenwiesen {
+    fill: white;
+    stroke: white;
+    stroke-width: 5px;
+    visibility: hidden;
+}
+
+#trockenwiesen > path:hover {
+    fill: red;
+    stroke: red;
+    stroke-width: 10px;
+}
