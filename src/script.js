@@ -105,10 +105,56 @@ const mouseOverEffect = props => {
     const elementsPath = selectElements.querySelectorAll('path');
 
     elementsPath.forEach(e => e.addEventListener('mouseenter', event => {
-        const getElement = table.filter( e => e.id === event.target.id );
-        console.log(getElement[0].name);
+        const getElement = table.filter(e => e.id === event.target.id);
+        infoTitel(getElement[0]);
     }));
 };
+
+const infoTitel = element => {
+    document.getElementById("infoBox").innerHTML = `
+        <h3>Ort: ${ element.name } </h3>
+    
+    `;
+
+
+
+};
+
+const createViewTable = tableData => {
+    document.getElementById("tableTitle").innerText = tableData.title;
+
+
+    const table = document.getElementById('table');
+    const tableBody = document.createElement('tbody');
+
+
+};
+
+
+const createTableHead = headInfos => `
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Kanton</th>
+                </tr>
+             </thead>
+`;
+
+const makeTableHTML = myArray => {
+    let result = "<table border=1>";
+    result += createTableHead(myArray);
+    for (var i = 0; i < myArray.length; i++) {
+        result += "<tr>";
+        for (var j = 0; j < myArray[i].length; j++) {
+            result += "<td>" + myArray[i][j] + "</td>";
+        }
+        result += "</tr>";
+    }
+    result += "</table>";
+
+    return result;
+}
 
 render();
 
