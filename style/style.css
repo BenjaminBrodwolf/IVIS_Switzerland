@@ -145,3 +145,17 @@ circle:hover{
     stroke: red;
     stroke-width: 10px;
 }
+
+
+#wanderobjekte{
+    fill: white;
+    stroke: white;
+    stroke-width: 5px;
+    visibility: hidden;
+}
+
+#wanderobjekte > path:hover {
+    fill: red;
+    stroke: red;
+    stroke-width: 10px;
+}
