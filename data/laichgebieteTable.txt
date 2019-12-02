@@ -1,4 +1,3 @@
-ObjNummer;Name
 AG3;Zurlindeninsel
 AG19;Halbmond
 AG19;Halbmond

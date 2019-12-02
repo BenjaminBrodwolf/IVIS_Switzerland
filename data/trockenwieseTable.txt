@@ -1,4 +1,3 @@
-TeilObjNum;Name
 BL2020030;Nänzligenweid
 BL2020029;Nänzligenweid
 BL2020028;Nänzligenweid
