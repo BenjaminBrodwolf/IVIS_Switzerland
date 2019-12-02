@@ -1,8 +1,8 @@
 const canton = {path: cantonsSVG, table: cantonTable};
 
 const props = [
-    {id: "p1", value: "trockenwiesen", label: 'Trockenwiesen', path: trockenwiesenSVG, table: trockenwiesenTable},
-    {id: "p2", value: "laichgebiete", label: 'Laichgebiete', path: laichgebieteSVG, table: laichgebieteTable},
+    {id: "p1", display: false, value: "trockenwiesen", label: 'Trockenwiesen', path: trockenwiesenSVG, table: trockenwiesenTable},
+    {id: "p2", display: false, value: "laichgebiete", label: 'Laichgebiete', path: laichgebieteSVG, table: laichgebieteTable},
 ];
 
 
@@ -39,6 +39,7 @@ function drop(ev) {
 
     props.forEach(prop => {
         if (data === prop.id) {
+            prop.display = true;
             document.getElementById(prop.value).style.visibility = "visible";
             document.getElementById(data).innerHTML = prop.label;
             document.getElementById(prop.value).style.fill = randomColor;
@@ -114,7 +115,6 @@ const dataTableToObject = data => {
 const cantonFocus = () => {
     const table = [];
     canton.table.split("\n").forEach(e => table.push(cantonTableToObject(e)));
-    console.log(table);
 
     const selectElements = document.querySelector(`#cantons`);
     const elementsG = selectElements.querySelectorAll('g');
@@ -122,7 +122,7 @@ const cantonFocus = () => {
     elementsG.forEach(e => e.addEventListener('click', event => {
 
         const getElement = table.filter(e => e.name === event.target.id);
-        console.log(getElement[0].name)
+        createViewList(getElement[0]);
     }));
 
 };
@@ -131,59 +131,58 @@ const dataFocus = props => {
     const table = [];
     props.table.split("\n").forEach(e => table.push(dataTableToObject(e)));
 
+    props.data = table;
+
     const selectElements = document.querySelector(`#${props.value}`);
     const elementsPath = selectElements.querySelectorAll('path');
 
     elementsPath.forEach(e => e.addEventListener('mouseenter', event => {
         const getElement = table.filter(e => e.id === event.target.id);
-        infoTitel(getElement[0]);
+        infoBox(getElement[0]);
     }));
 };
 
-const infoTitel = element => {
-    document.getElementById("infoBox").innerHTML = `
-        <h3>Ort: ${element.name} </h3>
-    
-    `;
-
-
+const infoBox = element => {
+    document.getElementById("infoBox").innerHTML = `<h3>Ort: ${element.name} </h3>`;
 };
 
-const createViewTable = tableData => {
-    document.getElementById("tableTitle").innerText = tableData.title;
-
-
-    const table = document.getElementById('table');
-    const tableBody = document.createElement('tbody');
-
-
-};
-
-
-const createTableHead = headInfos => `
-            <thead>
-                <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Kanton</th>
-                </tr>
-             </thead>
-`;
-
-const makeTableHTML = myArray => {
-    let result = "<table border=1>";
-    result += createTableHead(myArray);
-    for (var i = 0; i < myArray.length; i++) {
-        result += "<tr>";
-        for (var j = 0; j < myArray[i].length; j++) {
-            result += "<td>" + myArray[i][j] + "</td>";
+const distinct = array =>{
+    let distinctList = [];
+    for (const data of array){
+        if(!distinctList.includes(data.name)){
+            distinctList.push(data.name)
         }
-        result += "</tr>";
     }
-    result += "</table>";
+    return distinctList;
+};
+
+const createHtmlList = data =>{
+    console.log(data);
+
+    const allDisplayedData = props.filter(e => e.display).map(e => e.data);
+    console.log(allDisplayedData)
+
+    const filterList = allDisplayedData[0].filter(e => e.canton === data.canton);
+    console.log(filterList)
+
+    const distinctedList = distinct(filterList)
+    console.log(distinctedList)
+
+   let result = '<ul>';
+    distinctedList.forEach(listName => {
+        result += `<li> ${listName} </li>`;
+    });
+    result += '</ul>';
 
     return result;
-}
+};
+
+const createViewList = listData => {
+    document.getElementById("tableTitle").innerText = listData.name;
+
+    document.getElementById('table').innerHTML = createHtmlList(listData);
+};
+
 
 render();
 
