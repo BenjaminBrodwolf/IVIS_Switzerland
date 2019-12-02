@@ -6,13 +6,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style.css">
-    <script src="path/flachmoor.js"></script>
-    <script src="path/hochmoor.js"></script>
-    <script src="path/amphibs.js"></script>
     <script src="path/cantons.js"></script>
-    <script src="path/auen.js"></script>
     <script src="path/trockenwiesen.js"></script>
-    <script src="path/geotope.js"></script>
     <script src="path/laichgebiete.js"></script>
     <script src="data/trockenwieseTable.js"></script>
     <script src="data/laichgebieteTable.js"></script>
@@ -23,16 +18,19 @@
 <h1>Drag and Drop 6</h1>
 <main>
     <div class="row">
+
         <div class="col-md-2">
             <div id="dragfield">
 
             </div>
-        </div>
-        <div class="col-md-4">
+
+
             <div class="dropzone" id="zone" ondragenter="enterDropzone(event)" ondragleave="leaveDropzone(event)"
                  ondragover="allowDrop(event)" ondrop="drop(event)">
             </div>
+
         </div>
+
         <div class="col-md-6">
             <div class="filterZone">
                 <div id="svg" class="row">
@@ -40,6 +38,36 @@
                 </div>
             </div>
         </div>
+
+        <div class="col-md-4">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Kanton</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Test</td>
+                    <td>Bern</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Test</td>
+                    <td>Bern</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Test</td>
+                    <td>Bern</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
     </div>
 </main>
 <script src="src/script.js"></script>

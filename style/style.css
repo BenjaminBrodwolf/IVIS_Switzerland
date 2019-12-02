@@ -6,8 +6,8 @@
     float: left;
     border-radius: 50%;
     border: 5px solid #333;
-    width: 5em;
-    height: 5em;
+    width: 3em;
+    height: 3em;
     text-align: center;
     background: #ffd311;
     mix-blend-mode: multiply;
@@ -25,9 +25,10 @@
     border-color: black;
     border-width: 5px;
     border-style: solid;
-    height: 90vh;
-    width: 30vw;
+    height: 45vh;
+    width: 19vw;
     padding: 2em;
+    margin-top: 45vh;
 }
 
 .filterZone {
@@ -35,6 +36,7 @@
     width: 48vw;
     background-color: aliceblue;
     padding: 1em;
+    margin-left: 2em;
 }
 
 .properties{
@@ -46,8 +48,8 @@
 }
 
 .propLabel{
-    margin-top: 1em;
-    margin-left: 5em;
+    margin-top: 0.3em;
+    margin-left: 3em;
 }
 
 #cantons > path{
@@ -58,67 +60,11 @@
     fill: grey;
 }
 
-#amphibien{
-    fill: white;
-    visibility: hidden;
-}
-
 circle:hover{
     fill: red;
     stroke-width: 10px;
 }
 
-#flachmoor{
-    fill: white;
-    stroke: white;
-    stroke-width: 5px;
-    visibility: hidden;
-}
-
-#flachmoor > path:hover {
-    fill: red;
-    stroke: red;
-    stroke-width: 10px;
-}
-
-#hochmoor {
-    fill: white;
-    stroke: white;
-    stroke-width: 5px;
-    visibility: hidden;
-}
-
-#hochmoor > path:hover {
-    fill: red;
-    stroke: red;
-    stroke-width: 10px;
-}
-
-#auen {
-    fill: white;
-    stroke: white;
-    stroke-width: 5px;
-    visibility: hidden;
-}
-
-#auen > path:hover {
-    fill: red;
-    stroke: red;
-    stroke-width: 10px;
-}
-
-#geotope {
-    fill: white;
-    stroke: white;
-    stroke-width: 5px;
-    visibility: hidden;
-}
-
-#geotope > path:hover {
-    fill: red;
-    stroke: red;
-    stroke-width: 10px;
-}
 
 #trockenwiesen {
     fill: white;
