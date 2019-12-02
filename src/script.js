@@ -5,6 +5,7 @@ const props = [
     {id: "p3", value: "auen",           label: 'Auen',          path: auenSVG},
     {id: "p4", value: "geotope",        label: 'Geotope',       path: geotopeSVG},
     {id: "p5", value: "trockenwiesen",  label: 'Trockenwiesen', path: trockenwiesenSVG},
+    {id: "p6", value: "laichgebiete",   label: 'Laichgebiete',   path: laichgebieteSVG},
 ];
 
 function getRandomInt(min, max) {
