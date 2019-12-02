@@ -4,7 +4,6 @@
 
 .segment {
     float: left;
-    margin: 1em;
     border-radius: 50%;
     border: 5px solid #333;
     width: 5em;
@@ -12,7 +11,7 @@
     text-align: center;
     background: #ffd311;
     mix-blend-mode: multiply;
-    margin-right: 5em;
+    margin: 1em 5em 1em 1em;
 }
 
 .segment > .segment {
