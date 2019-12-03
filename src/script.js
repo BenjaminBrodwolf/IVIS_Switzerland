@@ -1,8 +1,24 @@
-const canton = {path: cantonsSVG, table: cantonTable};
+const canton = {path: cantonsSVG, table: cantonTable, data: undefined};
 
 const props = [
-    {id: "p1", display: false, value: "trockenwiesen", label: 'Trockenwiesen', path: trockenwiesenSVG, table: trockenwiesenTable},
-    {id: "p2", display: false, value: "laichgebiete", label: 'Laichgebiete', path: laichgebieteSVG, table: laichgebieteTable},
+    {
+        id: "p1",
+        display: false,
+        value: "trockenwiesen",
+        label: 'Trockenwiesen',
+        path: trockenwiesenSVG,
+        table: trockenwiesenTable,
+        data: undefined
+    },
+    {
+        id: "p2",
+        display: false,
+        value: "laichgebiete",
+        label: 'Laichgebiete',
+        path: laichgebieteSVG,
+        table: laichgebieteTable,
+        data: undefined
+    },
 ];
 
 
@@ -83,12 +99,10 @@ const render = () => {
     map.replaceWith(svg);
 
 
-    cantonFocus();
+    cantonINIT();
 
-    /* Integrate the MousOver-Effect to the Datas */
-    props.forEach(e => dataFocus(e));
-
-    // console.log(laicheTable);
+    /* Initialize every Data */
+    props.forEach(e => dataINIT(e));
 
 };
 
@@ -112,22 +126,28 @@ const dataTableToObject = data => {
     }
 };
 
-const cantonFocus = () => {
+const cantonINIT = () => {
     const table = [];
     canton.table.split("\n").forEach(e => table.push(cantonTableToObject(e)));
+    canton.data = table;
 
     const selectElements = document.querySelector(`#cantons`);
     const elementsG = selectElements.querySelectorAll('g');
 
+    /* Integrate the MousOver-Effect to the Cantons */
     elementsG.forEach(e => e.addEventListener('click', event => {
-
-        const getElement = table.filter(e => e.name === event.target.id);
-        createViewList(getElement[0]);
+        const cantonName = table.filter(e => e.name === event.target.id);
+        createViewList(cantonName[0]);
     }));
+};
+
+const cantonFocus = canton => {
+    console.log(canton)
+
 
 };
 
-const dataFocus = props => {
+const dataINIT = props => {
     const table = [];
     props.table.split("\n").forEach(e => table.push(dataTableToObject(e)));
 
@@ -136,51 +156,69 @@ const dataFocus = props => {
     const selectElements = document.querySelector(`#${props.value}`);
     const elementsPath = selectElements.querySelectorAll('path');
 
+    /* Integrate the MousOver-Effect to the Datas */
     elementsPath.forEach(e => e.addEventListener('mouseenter', event => {
         const getElement = table.filter(e => e.id === event.target.id);
         infoBox(getElement[0]);
     }));
 };
 
+
+
 const infoBox = element => {
     document.getElementById("infoBox").innerHTML = `<h3>Ort: ${element.name} </h3>`;
 };
 
-const distinct = array =>{
+const distinct = array => {
     let distinctList = [];
-    for (const data of array){
-        if(!distinctList.includes(data.name)){
+    array.forEach(data => {
+        if (!distinctList.includes(data.name)) {
             distinctList.push(data.name)
         }
-    }
+    });
     return distinctList;
 };
 
-const createHtmlList = data =>{
-    console.log(data);
+const createHtmlList = canton => {
 
-    const allDisplayedData = props.filter(e => e.display).map(e => e.data);
-    console.log(allDisplayedData)
+    const allVisibleData = props.filter(e => e.display);
+    const colAmount = allVisibleData.length;
 
-    const filterList = allDisplayedData[0].filter(e => e.canton === data.canton);
-    console.log(filterList)
+    let result = `<div data-spy="scroll" data-offset="0">
+                     <div class="row"> `;
 
-    const distinctedList = distinct(filterList)
-    console.log(distinctedList)
+    allVisibleData.forEach(dataSet => {
+        const filteredList = dataSet.data.filter(e => e.canton === canton.canton);
+        const distinctedList = distinct(filteredList);
 
-   let result = '<ul>';
-    distinctedList.forEach(listName => {
-        result += `<li> ${listName} </li>`;
+        result += `<div class="col-md-${12 / colAmount}"> 
+                        <table class="table table-hover">
+                            <thead>
+                                 <tr>
+                                    <th scope="col"> ${dataSet.label} </th> 
+                                </tr>
+                            </thead>
+                        <tbody>`;
+
+        distinctedList.forEach(listName => {
+            result += `<tr onmouseover='cantonFocus( "${listName}" )' >
+                          <td> ${listName} </td> 
+                       </tr>`;
+        });
+
+        result += `    </tbody>
+                      </table>
+                   </div>`;
     });
-    result += '</ul>';
 
-    return result;
+    return result += `</div>
+                    </div>`;
 };
 
-const createViewList = listData => {
-    document.getElementById("tableTitle").innerText = listData.name;
+const createViewList = canton => {
+    document.getElementById("tableTitle").innerText = canton.name;
 
-    document.getElementById('table').innerHTML = createHtmlList(listData);
+    document.getElementById('table').innerHTML = createHtmlList(canton);
 };
 
 
