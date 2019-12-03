@@ -171,7 +171,6 @@ const dataINIT = props => {
 };
 
 
-
 const infoBox = element => {
     document.getElementById("infoBox").innerHTML = `<h3>Ort: ${element.name} </h3>`;
 };
@@ -191,21 +190,22 @@ const createHtmlList = canton => {
     const allVisibleData = props.filter(e => e.display);
     const colAmount = allVisibleData.length;
 
-    let result = `<div data-spy="scroll" data-offset="0">
-                     <div class="row"> `;
+    let result = `<div class="row"> 
+                      `;
 
     allVisibleData.forEach(dataSet => {
         const filteredList = dataSet.data.filter(e => e.canton === canton.canton);
         const distinctedList = distinct(filteredList);
 
         result += `<div class="col-md-${12 / colAmount}"> 
-                        <table class="table table-hover">
-                            <thead>
-                                 <tr>
-                                    <th scope="col"> ${dataSet.label} </th> 
-                                </tr>
-                            </thead>
-                        <tbody>`;
+                        <div class="scrollable">
+                             <table class="table table-hover">
+                                 <thead>
+                                      <tr>
+                                         <th scope="col"> ${dataSet.label} </th> 
+                                     </tr>
+                                 </thead>
+                             <tbody>`;
 
         distinctedList.forEach(listName => {
             result += `<tr onmouseover='dataFocus( "${listName}" , "${dataSet.label}" )' >
@@ -215,11 +215,11 @@ const createHtmlList = canton => {
 
         result += `    </tbody>
                       </table>
+                     </div>
                    </div>`;
     });
 
-    return result += `</div>
-                    </div>`;
+    return result += `</div>`;
 };
 
 const createViewList = canton => {
