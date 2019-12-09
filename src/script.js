@@ -234,11 +234,9 @@ const render = () => {
 
 
     cantonINIT();
-
+ console.log(canton)
     /* Initialize every Data */
     props.forEach(e => dataINIT(e));
-    console.log(props);
-
 };
 
 const cantonTableToObject = data => {
@@ -314,9 +312,6 @@ const distinct = array => {
 
 
 const dataFocus = (dataPoint, datasetName) => {
-    console.log(dataPoint);
-    console.log(datasetName);
-
     const selectedDataPoint = props.filter(e => e.label === datasetName)[0].data.find(e => e.name === dataPoint);
     console.log(selectedDataPoint.id)
 
@@ -360,7 +355,7 @@ const createHtmlList = canton => {
 };
 
 const createViewList = canton => {
-    document.getElementById("tableTitle").innerText = canton.name;
+    document.getElementById("tableTitle").innerText = "Kanton: " + canton.name;
 
     document.getElementById('table').innerHTML = createHtmlList(canton);
 };
