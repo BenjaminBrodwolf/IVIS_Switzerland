@@ -9,9 +9,12 @@
     <script src="path/cantons.js"></script>
     <script src="path/trockenwiesen.js"></script>
     <script src="path/laichgebiete.js"></script>
+    <script src="path/wanderobjekte.js"></script>
     <script src="data/trockenwieseTable.js"></script>
     <script src="data/laichgebieteTable.js"></script>
     <script src="data/kantoneTable.js"></script>
+    <script src="data/wanderobjekteTable.js"></script>
+
 
 </head>
 <body>
@@ -27,7 +30,7 @@
 
 
             <div class="dropzone" id="zone" ondragenter="enterDropzone(event)" ondragleave="leaveDropzone(event)"
-                 ondragover="allowDrop(event)" ondrop="drop(event)">
+                 ondragover="allowDrop(event)" ondrop="drop(event), colorMap()">
             </div>
 
         </div>

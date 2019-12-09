@@ -19,6 +19,15 @@ const props = [
         table: laichgebieteTable,
         data: undefined
     },
+    {
+        id: "p3",
+        display: false,
+        value: "wanderobjekte",
+        label: 'Wanderobjekte',
+        path: wanderobjekteSVG,
+        table: wanderobjekteTable,
+        data: undefined
+    },
 ];
 
 
@@ -27,6 +36,29 @@ function getRandomInt(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
 }
+
+function getColorOfTemperature(amountArea, amountAll) {
+    const temperature = (amountArea / amountAll) * 100;
+
+    let color = 'rgb(255,255,255)';
+
+    if (temperature > 20 && temperature < 50){
+
+        color = 'rgb(255,186,191)';
+
+    } else if(temperature > 50 && temperature < 80){
+
+        color = 'rgb(255,116,126)';
+
+    } else if (temperature > 80 && temperature <= 100) {
+
+        color = 'rgb(255, 0, 0)';
+
+    }
+
+    return color;
+}
+
 
 const dom = innerString => {
     const tmpl = document.createElement("DIV");
@@ -63,6 +95,7 @@ function drop(ev) {
         }
     })
 
+
 }
 
 function enterDropzone(ev) {
@@ -71,6 +104,18 @@ function enterDropzone(ev) {
 
 function leaveDropzone(ev) {
     ev.target.style.borderStyle = 'solid'
+}
+
+function colorMap() {
+    const selectElements = document.querySelector(`#cantons`);
+    const elementsG = selectElements.querySelectorAll('g');
+
+    const allVisibleData = props.data.filter(e => e.display === true);
+
+    elementsG.forEach(c => {
+        c.style.fill = getColorOfTemperature(20, allVisibleData);
+        console.log(allVisibleData.length);
+    })
 }
 
 const render = () => {
@@ -161,9 +206,9 @@ const dataINIT = props => {
     props.data = table;
 
     const selectElements = document.querySelector(`#${props.value}`);
-    const elementsPath = selectElements.querySelectorAll('path');
+    const elementsPath = selectElements.querySelectorAll('path, circle');
 
-    /* Add MousOver-Listener to the Datas */
+    /* Add MouseOver-Listener to the Datas */
     elementsPath.forEach(e => e.addEventListener('mouseenter', event => {
         const getElement = table.filter(e => e.id === event.target.id);
         infoBox(getElement[0]);
@@ -190,8 +235,7 @@ const createHtmlList = canton => {
     const allVisibleData = props.filter(e => e.display);
     const colAmount = allVisibleData.length;
 
-    let result = `<div class="row"> 
-                      `;
+    let result = `<div class="row">`;
 
     allVisibleData.forEach(dataSet => {
         const filteredList = dataSet.data.filter(e => e.canton === canton.canton);
@@ -227,7 +271,6 @@ const createViewList = canton => {
 
     document.getElementById('table').innerHTML = createHtmlList(canton);
 };
-
 
 render();
 
