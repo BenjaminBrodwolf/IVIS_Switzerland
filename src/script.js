@@ -8,7 +8,36 @@ const props = [
         label: 'Trockenwiesen',
         path: trockenwiesenSVG,
         table: trockenwiesenTable,
-        data: undefined
+        data: undefined,
+        amount: undefined,
+        canton: {
+            ZH: undefined,
+            BE: undefined,
+            LU: undefined,
+            UR: undefined,
+            SZ: undefined,
+            OW: undefined,
+            NW: undefined,
+            GL: undefined,
+            ZG: undefined,
+            FR: undefined,
+            SO: undefined,
+            BS: undefined,
+            BL: undefined,
+            SH: undefined,
+            AA: undefined,
+            AI: undefined,
+            SG: undefined,
+            GR: undefined,
+            AG: undefined,
+            TG: undefined,
+            TI: undefined,
+            VD: undefined,
+            VS: undefined,
+            NE: undefined,
+            GE: undefined,
+            JU: undefined
+        }
     },
     {
         id: "p2",
@@ -17,7 +46,36 @@ const props = [
         label: 'Laichgebiete',
         path: laichgebieteSVG,
         table: laichgebieteTable,
-        data: undefined
+        data: undefined,
+        amount: undefined,
+        canton: {
+            ZH: undefined,
+            BE: undefined,
+            LU: undefined,
+            UR: undefined,
+            SZ: undefined,
+            OW: undefined,
+            NW: undefined,
+            GL: undefined,
+            ZG: undefined,
+            FR: undefined,
+            SO: undefined,
+            BS: undefined,
+            BL: undefined,
+            SH: undefined,
+            AA: undefined,
+            AI: undefined,
+            SG: undefined,
+            GR: undefined,
+            AG: undefined,
+            TG: undefined,
+            TI: undefined,
+            VD: undefined,
+            VS: undefined,
+            NE: undefined,
+            GE: undefined,
+            JU: undefined
+        }
     },
     {
         id: "p3",
@@ -26,7 +84,36 @@ const props = [
         label: 'Wanderobjekte',
         path: wanderobjekteSVG,
         table: wanderobjekteTable,
-        data: undefined
+        data: undefined,
+        amount: undefined,
+        canton: {
+            ZH: undefined,
+            BE: undefined,
+            LU: undefined,
+            UR: undefined,
+            SZ: undefined,
+            OW: undefined,
+            NW: undefined,
+            GL: undefined,
+            ZG: undefined,
+            FR: undefined,
+            SO: undefined,
+            BS: undefined,
+            BL: undefined,
+            SH: undefined,
+            AA: undefined,
+            AI: undefined,
+            SG: undefined,
+            GR: undefined,
+            AG: undefined,
+            TG: undefined,
+            TI: undefined,
+            VD: undefined,
+            VS: undefined,
+            NE: undefined,
+            GE: undefined,
+            JU: undefined
+        }
     },
 ];
 
@@ -37,27 +124,6 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-function getColorOfTemperature(amountArea, amountAll) {
-    const temperature = (amountArea / amountAll) * 100;
-
-    let color = 'rgb(255,255,255)';
-
-    if (temperature > 20 && temperature < 50){
-
-        color = 'rgb(255,186,191)';
-
-    } else if(temperature > 50 && temperature < 80){
-
-        color = 'rgb(255,116,126)';
-
-    } else if (temperature > 80 && temperature <= 100) {
-
-        color = 'rgb(255, 0, 0)';
-
-    }
-
-    return color;
-}
 
 
 const dom = innerString => {
@@ -106,15 +172,33 @@ function leaveDropzone(ev) {
     ev.target.style.borderStyle = 'solid'
 }
 
+function getColorOfTemperature(amountArea, amountAll) {
+    console.log(amountArea)
+    console.log(amountAll)
+
+    const temperature = (amountArea / amountAll);
+console.log(temperature)
+    let color = 'rgb(255,255,255)';
+
+    if (temperature > 20 && temperature < 50){
+        color = 'rgb(255,186,191)';
+    } else if(temperature > 50 && temperature < 80){
+        color = 'rgb(255,116,126)';
+    } else if (temperature > 80 && temperature <= 100) {
+        color = 'rgb(255, 0, 0)';
+    }
+    return color;
+}
+
 function colorMap() {
     const selectElements = document.querySelector(`#cantons`);
     const elementsG = selectElements.querySelectorAll('g');
 
-    const allVisibleData = props.data.filter(e => e.display === true);
-
+    const allVisibleData = props.filter(e => e.display === true);
+console.log(allVisibleData)
     elementsG.forEach(c => {
-        c.style.fill = getColorOfTemperature(20, allVisibleData);
-        console.log(allVisibleData.length);
+        console.log(c)
+        c.style.fill = getColorOfTemperature(allVisibleData[0].amount, allVisibleData[0].canton[c.id]);
     })
 }
 
@@ -148,6 +232,7 @@ const render = () => {
 
     /* Initialize every Data */
     props.forEach(e => dataINIT(e));
+    console.log(props);
 
 };
 
@@ -186,24 +271,16 @@ const cantonINIT = () => {
     }));
 };
 
-const dataFocus = (dataPoint, datasetName) => {
-    console.log(dataPoint);
-    console.log(datasetName);
-
-    const selectedDataPoint = props.filter(e => e.label === datasetName)[0].data.find(e => e.name === dataPoint);
-    console.log(selectedDataPoint.id)
-
-    document.getElementById(selectedDataPoint.id).setAttribute("style", "stroke: white");
-    // document.getElementById(selectedDataPoint.id).style.stroke = "white";
-
-
-};
-
 const dataINIT = props => {
     const table = [];
     props.table.split("\n").forEach(e => table.push(dataTableToObject(e)));
 
     props.data = table;
+
+   for(const canton in props.canton){
+        props.canton[canton] = props.data.filter(e => e.canton === canton).length;
+   }
+   props.amount = props.data.length;
 
     const selectElements = document.querySelector(`#${props.value}`);
     const elementsPath = selectElements.querySelectorAll('path, circle');
@@ -230,6 +307,18 @@ const distinct = array => {
     return distinctList;
 };
 
+
+
+const dataFocus = (dataPoint, datasetName) => {
+    console.log(dataPoint);
+    console.log(datasetName);
+
+    const selectedDataPoint = props.filter(e => e.label === datasetName)[0].data.find(e => e.name === dataPoint);
+    console.log(selectedDataPoint.id)
+
+    document.getElementById(selectedDataPoint.id).setAttribute("style", "stroke: white");
+    // document.getElementById(selectedDataPoint.id).style.stroke = "white";
+};
 const createHtmlList = canton => {
 
     const allVisibleData = props.filter(e => e.display);
