@@ -125,7 +125,6 @@ function getRandomInt(min, max) {
 }
 
 
-
 const dom = innerString => {
     const tmpl = document.createElement("DIV");
     tmpl.innerHTML = innerString;
@@ -173,16 +172,13 @@ function leaveDropzone(ev) {
 }
 
 function getColorOfTemperature(amountArea, amountAll) {
-    console.log(amountArea)
-    console.log(amountAll)
-
     const temperature = (amountArea / amountAll);
-console.log(temperature)
+    console.log(temperature)
     let color = 'rgb(255,255,255)';
 
-    if (temperature > 20 && temperature < 50){
+    if (temperature > 20 && temperature < 50) {
         color = 'rgb(255,186,191)';
-    } else if(temperature > 50 && temperature < 80){
+    } else if (temperature > 50 && temperature < 80) {
         color = 'rgb(255,116,126)';
     } else if (temperature > 80 && temperature <= 100) {
         color = 'rgb(255, 0, 0)';
@@ -195,10 +191,19 @@ function colorMap() {
     const elementsG = selectElements.querySelectorAll('g');
 
     const allVisibleData = props.filter(e => e.display === true);
-console.log(allVisibleData)
+
+    let amountArea = 0;
+    for (const data of allVisibleData) {
+        amountArea += data.amount
+    }
+
     elementsG.forEach(c => {
-        console.log(c)
-        c.style.fill = getColorOfTemperature(allVisibleData[0].amount, allVisibleData[0].canton[c.id]);
+
+        let cantonAmount = 0;
+        for (const data of allVisibleData) {
+            cantonAmount += data.canton[c.id]
+        }
+        c.style.fill = getColorOfTemperature(amountArea, cantonAmount);
     })
 }
 
@@ -277,10 +282,10 @@ const dataINIT = props => {
 
     props.data = table;
 
-   for(const canton in props.canton){
+    for (const canton in props.canton) {
         props.canton[canton] = props.data.filter(e => e.canton === canton).length;
-   }
-   props.amount = props.data.length;
+    }
+    props.amount = props.data.length;
 
     const selectElements = document.querySelector(`#${props.value}`);
     const elementsPath = selectElements.querySelectorAll('path, circle');
@@ -306,7 +311,6 @@ const distinct = array => {
     });
     return distinctList;
 };
-
 
 
 const dataFocus = (dataPoint, datasetName) => {
