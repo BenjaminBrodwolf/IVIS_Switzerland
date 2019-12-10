@@ -2,6 +2,10 @@ html, body{
     height: 100%;
 }
 
+svg:hover{
+    cursor: pointer;
+}
+
 .scrollable{
     height: 100vh;
     overflow: scroll;
@@ -66,7 +70,7 @@ html, body{
 }
 
 #cantons > g:hover{
-    fill: #ffd311;
+    fill-opacity: 50%;
 }
 
 circle:hover{

@@ -176,11 +176,11 @@ function getColorOfTemperature(amountArea, amountAll) {
     console.log(temperature)
     let color = 'rgb(255,255,255)';
 
-    if (temperature > 20 && temperature < 50) {
+    if (temperature > 5 && temperature < 30) {
         color = 'rgb(255,186,191)';
-    } else if (temperature > 50 && temperature < 80) {
+    } else if (temperature > 30 && temperature < 70) {
         color = 'rgb(255,116,126)';
-    } else if (temperature > 80 && temperature <= 100) {
+    } else if (temperature > 70 && temperature <= 100) {
         color = 'rgb(255, 0, 0)';
     }
     return color;
