@@ -153,7 +153,9 @@ function drop(ev) {
     props.forEach(prop => {
         if (data === prop.id) {
             prop.display = true;
-            document.getElementById(prop.value).style.visibility = "visible";
+            if (!document.getElementById("toggle").checked){
+                document.getElementById(prop.value).style.visibility = "visible";
+            }
             document.getElementById(data).innerHTML = prop.label;
             document.getElementById(prop.value).style.fill = randomColor;
             document.getElementById(prop.value).style.stroke = randomColor;
@@ -187,24 +189,26 @@ function getColorOfTemperature(amountArea, amountAll) {
 }
 
 function colorMap() {
-    const selectElements = document.querySelector(`#cantons`);
-    const elementsG = selectElements.querySelectorAll('g');
+    if (document.getElementById("toggle").checked) {
+        const selectElements = document.querySelector(`#cantons`);
+        const elementsG = selectElements.querySelectorAll('g');
 
-    const allVisibleData = props.filter(e => e.display === true);
+        const allVisibleData = props.filter(e => e.display === true);
 
-    let amountArea = 0;
-    for (const data of allVisibleData) {
-        amountArea += data.amount
-    }
-
-    elementsG.forEach(c => {
-
-        let cantonAmount = 0;
+        let amountArea = 0;
         for (const data of allVisibleData) {
-            cantonAmount += data.canton[c.id]
+            amountArea += data.amount
         }
-        c.style.fill = getColorOfTemperature(amountArea, cantonAmount);
-    })
+
+        elementsG.forEach(c => {
+
+            let cantonAmount = 0;
+            for (const data of allVisibleData) {
+                cantonAmount += data.canton[c.id]
+            }
+            c.style.fill = getColorOfTemperature(amountArea, cantonAmount);
+        })
+    }
 }
 
 const render = () => {
@@ -236,6 +240,7 @@ const render = () => {
     cantonINIT();
  console.log(canton)
     /* Initialize every Data */
+
     props.forEach(e => dataINIT(e));
 };
 
