@@ -20,55 +20,62 @@
 </head>
 <body>
 
-<h1>Biodiversität in der Schweiz</h1>
+<div id="header" class="row">
+    <h1>Biodiversität in der Schweiz</h1>
+</div>
 <main>
-    <div class="row">
+    <div class="container-fluid">
+        <div class="row">
 
-        <div class="col-md-2">
-            <div id="dragfield">
-
-            </div>
-
-
-            <div class="dropzone" id="zone" ondragenter="enterDropzone(event)" ondragleave="leaveDropzone(event)"
-                 ondragover="allowDrop(event)" ondrop="drop(event), colorMap()">
-            </div>
-
-        </div>
-
-        <div class="col-md-6">
-            <div class="filterZone">
-
-                <div class="row">
-                    <div class="col-md-10">
-                        <div id="infoBox"></div>
-                    </div>
-                    <div class="col-md-2">
-                        <label class="switch">
-                            <input id="toggle" type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-                </div>
-
-
-                <div id="svg" class="row">
+            <div class="col-lg-3">
+                <div id="dragfield">
 
                 </div>
 
-            </div>
-        </div>
 
-        <div class="col-md-4">
-
-            <h3 id="tableTitle"></h3>
-            <div id="table">
+                <div class="dropzone" id="zone" ondragenter="enterDropzone(event)" ondragleave="leaveDropzone(event)"
+                     ondragover="allowDrop(event)" ondrop="drop(event), colorMap()">
+                </div>
 
             </div>
-        </div>
 
+            <div class="col-lg-6">
+                <div class="filterZone">
+
+                    <div class="row">
+                        <div class="col-md-10">
+                            <div id="infoBox"></div>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="switch">
+                                <input id="toggle" type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <div id="svg" class="row">
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+
+                <h3 id="tableTitle"></h3>
+                <div id="table">
+
+                </div>
+            </div>
+
+        </div>
     </div>
 </main>
+<div id="footer" class="row">
+    <h5 id="developer">Benjamin Brodwolf und Nadia Kramer</h5>
+</div>
 <script src="src/script.js"></script>
 
 </body>

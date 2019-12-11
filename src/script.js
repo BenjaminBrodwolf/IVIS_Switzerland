@@ -146,8 +146,8 @@ function drop(ev) {
     var data = ev.dataTransfer.getData('text');
     ev.target.appendChild(document.getElementById(data));
     ev.target.style.borderStyle = 'solid';
-    document.getElementById(data).style.height = "5em";
-    document.getElementById(data).style.width = "5em";
+    document.getElementById(data).style.height = "8em";
+    document.getElementById(data).style.width = "8em";
     document.getElementById(data).style.backgroundColor = randomColor;
 
     props.forEach(prop => {
@@ -217,7 +217,9 @@ const render = () => {
     const svg = dom(`<div id="svg">`);
 
     props.forEach(prop => {
-        const propElement = dom(`<div class="segment" id="${prop.id}" draggable="true" ondragstart="drag(event)"><p class="propLabel">${prop.label}</p></div>`)
+        const propElement = dom(`<div class="segment" id="${prop.id}" draggable="true" ondragstart="drag(event)">
+                                                <p class="propLabel">${prop.label}</p>
+                                            </div>`)
         dragfield.appendChild(propElement);
     });
 
@@ -227,7 +229,7 @@ const render = () => {
     });
 
 
-    const svgTag = dom(`<svg xmlns="http://www.w3.org/2000/svg" style="width: 100%" version="1.2" baseProfile="tiny" width="800" height="507" viewBox="0 0 800 507" stroke-linecap="round" stroke-linejoin="round"> ${cantonsSVG} + ${paths} </svg>`)
+    const svgTag = dom(`<svg xmlns="http://www.w3.org/2000/svg" style="width: 100%" version="1.2" baseProfile="tiny" viewBox="0 0 800 507" stroke-linecap="round" stroke-linejoin="round"> ${cantonsSVG} + ${paths} </svg>`)
     svg.appendChild(svgTag);
 
     const properties = document.getElementById("dragfield");
@@ -238,7 +240,7 @@ const render = () => {
 
 
     cantonINIT();
- console.log(canton)
+    console.log(canton)
     /* Initialize every Data */
 
     props.forEach(e => dataINIT(e));
