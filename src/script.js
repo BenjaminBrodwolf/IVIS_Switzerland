@@ -3,7 +3,7 @@ const canton = {path: cantonsSVG, table: cantonTable, data: undefined};
 const props = [
     {
         id: "p1",
-        display: false,
+        active: false,
         value: "trockenwiesen",
         label: 'Trockenwiesen',
         path: trockenwiesenSVG,
@@ -41,7 +41,7 @@ const props = [
     },
     {
         id: "p2",
-        display: false,
+        active: false,
         value: "laichgebiete",
         label: 'Laichgebiete',
         path: laichgebieteSVG,
@@ -79,7 +79,7 @@ const props = [
     },
     {
         id: "p3",
-        display: false,
+        active: false,
         value: "wanderobjekte",
         label: 'Wanderobjekte',
         path: wanderobjekteSVG,
@@ -143,7 +143,7 @@ function allowDrop(ev) {
 function drop(ev) {
     ev.preventDefault();
     const randomColor = "rgb(" + getRandomInt(0, 255) + "," + getRandomInt(0, 255) + "," + getRandomInt(0, 255) + ")";
-    var data = ev.dataTransfer.getData('text');
+    const data = ev.dataTransfer.getData('text');
     ev.target.appendChild(document.getElementById(data));
     ev.target.style.borderStyle = 'solid';
     document.getElementById(data).style.height = "8em";
@@ -152,7 +152,7 @@ function drop(ev) {
 
     props.forEach(prop => {
         if (data === prop.id) {
-            prop.display = true;
+            prop.active = true;
             if (!document.getElementById("toggle").checked) {
                 document.getElementById(prop.value).style.visibility = "visible";
             }
@@ -191,26 +191,25 @@ function getColorOfTemperature(amountArea, amountAll) {
 }
 
 function colorMap() {
-    if (document.getElementById("toggle").checked) {
-        const selectElements = document.querySelector(`#cantons`);
-        const elementsG = selectElements.querySelectorAll('g');
+    const selectElements = document.querySelector(`#cantons`);
+    const elementsG = selectElements.querySelectorAll('g');
 
-        const allVisibleData = props.filter(e => e.display === true);
+    const allVisibleData = props.filter(e => e.active === true);
 
-        let amountArea = 0;
-        for (const data of allVisibleData) {
-            amountArea += data.amount
-        }
-
-        elementsG.forEach(c => {
-
-            let cantonAmount = 0;
-            for (const data of allVisibleData) {
-                cantonAmount += data.canton[c.id]
-            }
-            c.style.fill = getColorOfTemperature(amountArea, cantonAmount);
-        })
+    let amountArea = 0;
+    for (const data of allVisibleData) {
+        amountArea += data.amount
     }
+
+    elementsG.forEach(c => {
+
+        let cantonAmount = 0;
+        for (const data of allVisibleData) {
+            cantonAmount += data.canton[c.id]
+        }
+        c.style.fill = getColorOfTemperature(amountArea, cantonAmount);
+    })
+
 }
 
 const render = () => {
@@ -246,8 +245,23 @@ const render = () => {
     /* Initialize every Data */
 
     props.forEach(e => dataINIT(e));
+
+
+    document.getElementById("toggle").addEventListener("click", toggleVisibilty);
 };
 
+
+const toggleVisibilty = () => {
+    const value = document.getElementById("toggle").checked;
+    console.log("toggle " + value);
+
+    props.forEach(prop => {
+        if (prop.active) {
+            document.getElementById(prop.value).style.visibility = value ? "hidden" : "visible";
+        }
+    })
+
+};
 const cantonTableToObject = data => {
     const [canton, name, population, area, lakearea] = data.split(";");
     return {
@@ -329,7 +343,7 @@ const dataFocus = (dataPoint, datasetName) => {
 };
 const createHtmlList = canton => {
 
-    const allVisibleData = props.filter(e => e.display);
+    const allVisibleData = props.filter(e => e.active);
     const colAmount = allVisibleData.length;
 
     let result = `<div class="row">`;
