@@ -117,9 +117,6 @@ const props = [
     },
 ];
 
-var unusedProps = props;
-var usedProps = [];
-
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -153,17 +150,9 @@ function drop(ev) {
     document.getElementById(data).style.width = "8em";
     document.getElementById(data).style.backgroundColor = randomColor;
 
-    unusedProps.forEach(prop => {
+    props.forEach(prop => {
         if (data === prop.id) {
             prop.display = true;
-            console.log("Vor dem Drop:");
-            console.log(unusedProps);
-            console.log(usedProps);
-            usedProps.push(prop);
-            unusedProps.pop();
-            console.log("Nach dem Drop:");
-            console.log(unusedProps);
-            console.log(usedProps);
             if (!document.getElementById("toggle").checked) {
                 document.getElementById(prop.value).style.visibility = "visible";
             }
@@ -176,17 +165,6 @@ function drop(ev) {
 }
 
 function reset() {
-    console.log("Vor der Methode:");
-    console.log(unusedProps);
-    console.log(usedProps);
-    const resetElement = usedProps[usedProps.length - 1];
-    if (resetElement !== undefined) {
-        unusedProps.push(resetElement);
-        usedProps.pop();
-        console.log("Nach der Methode");
-        console.log(unusedProps);
-        console.log(usedProps);
-    }
 }
 
 function enterDropzone(ev) {
@@ -240,7 +218,7 @@ const render = () => {
     const dragfield = dom(`<div id="dragfield">`);
     const svg = dom(`<div id="svg">`);
 
-    unusedProps.forEach(prop => {
+    props.forEach(prop => {
         const propElement = dom(`<div class="segment" id="${prop.id}" draggable="true" ondragstart="drag(event)">
                                                 <p class="propLabel">${prop.label}</p>
                                             </div>`)
@@ -248,7 +226,7 @@ const render = () => {
     });
 
     let paths;
-    unusedProps.forEach(prop => {
+    props.forEach(prop => {
         paths = paths + prop.path;
     });
 
