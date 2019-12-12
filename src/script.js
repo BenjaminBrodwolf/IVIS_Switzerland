@@ -276,6 +276,16 @@ const toggleVisibilty = () => {
             document.getElementById(prop.value).style.visibility = value ? "hidden" : "visible";
         }
     })
+    if (value){
+        colorMap()
+    } else {
+        const selectElements = document.querySelector(`#cantons`);
+        const elementsG = selectElements.querySelectorAll('g');
+        elementsG.forEach(c => {
+            c.style.fill = 'rgb(0, 0, 0)';
+        })
+    }
+
 };
 
 const cantonTableToObject = data => {
