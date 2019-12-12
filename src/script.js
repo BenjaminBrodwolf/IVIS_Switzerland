@@ -1,44 +1,44 @@
 const canton = {path: cantonsSVG, table: cantonTable, data: undefined};
 
 const props = [
-    {
-        id: "p1",
-        active: false,
-        value: "trockenwiesen",
-        label: 'Trockenwiesen',
-        path: trockenwiesenSVG,
-        table: trockenwiesenTable,
-        data: undefined,
-        amount: undefined,
-        canton: {
-            ZH: undefined,
-            BE: undefined,
-            LU: undefined,
-            UR: undefined,
-            SZ: undefined,
-            OW: undefined,
-            NW: undefined,
-            GL: undefined,
-            ZG: undefined,
-            FR: undefined,
-            SO: undefined,
-            BS: undefined,
-            BL: undefined,
-            SH: undefined,
-            AA: undefined,
-            AI: undefined,
-            SG: undefined,
-            GR: undefined,
-            AG: undefined,
-            TG: undefined,
-            TI: undefined,
-            VD: undefined,
-            VS: undefined,
-            NE: undefined,
-            GE: undefined,
-            JU: undefined
-        }
-    },
+    // {
+    //     id: "p1",
+    //     active: false,
+    //     value: "trockenwiesen",
+    //     label: 'Trockenwiesen',
+    //     path: trockenwiesenSVG,
+    //     table: trockenwiesenTable,
+    //     data: undefined,
+    //     amount: undefined,
+    //     canton: {
+    //         ZH: undefined,
+    //         BE: undefined,
+    //         LU: undefined,
+    //         UR: undefined,
+    //         SZ: undefined,
+    //         OW: undefined,
+    //         NW: undefined,
+    //         GL: undefined,
+    //         ZG: undefined,
+    //         FR: undefined,
+    //         SO: undefined,
+    //         BS: undefined,
+    //         BL: undefined,
+    //         SH: undefined,
+    //         AA: undefined,
+    //         AI: undefined,
+    //         SG: undefined,
+    //         GR: undefined,
+    //         AG: undefined,
+    //         TG: undefined,
+    //         TI: undefined,
+    //         VD: undefined,
+    //         VS: undefined,
+    //         NE: undefined,
+    //         GE: undefined,
+    //         JU: undefined
+    //     }
+    // },
     {
         id: "p2",
         active: false,
@@ -76,45 +76,46 @@ const props = [
             GE: undefined,
             JU: undefined
         }
-    },
-    {
-        id: "p3",
-        active: false,
-        value: "wanderobjekte",
-        label: 'Wanderobjekte',
-        path: wanderobjekteSVG,
-        table: wanderobjekteTable,
-        data: undefined,
-        amount: undefined,
-        canton: {
-            ZH: undefined,
-            BE: undefined,
-            LU: undefined,
-            UR: undefined,
-            SZ: undefined,
-            OW: undefined,
-            NW: undefined,
-            GL: undefined,
-            ZG: undefined,
-            FR: undefined,
-            SO: undefined,
-            BS: undefined,
-            BL: undefined,
-            SH: undefined,
-            AA: undefined,
-            AI: undefined,
-            SG: undefined,
-            GR: undefined,
-            AG: undefined,
-            TG: undefined,
-            TI: undefined,
-            VD: undefined,
-            VS: undefined,
-            NE: undefined,
-            GE: undefined,
-            JU: undefined
-        }
-    },
+    }
+    // ,
+    // {
+    //     id: "p3",
+    //     active: false,
+    //     value: "wanderobjekte",
+    //     label: 'Wanderobjekte',
+    //     path: wanderobjekteSVG,
+    //     table: wanderobjekteTable,
+    //     data: undefined,
+    //     amount: undefined,
+    //     canton: {
+    //         ZH: undefined,
+    //         BE: undefined,
+    //         LU: undefined,
+    //         UR: undefined,
+    //         SZ: undefined,
+    //         OW: undefined,
+    //         NW: undefined,
+    //         GL: undefined,
+    //         ZG: undefined,
+    //         FR: undefined,
+    //         SO: undefined,
+    //         BS: undefined,
+    //         BL: undefined,
+    //         SH: undefined,
+    //         AA: undefined,
+    //         AI: undefined,
+    //         SG: undefined,
+    //         GR: undefined,
+    //         AG: undefined,
+    //         TG: undefined,
+    //         TI: undefined,
+    //         VD: undefined,
+    //         VS: undefined,
+    //         NE: undefined,
+    //         GE: undefined,
+    //         JU: undefined
+    //     }
+    // },
 ];
 
 
@@ -164,9 +165,6 @@ function drop(ev) {
     })
 }
 
-function reset() {
-}
-
 function enterDropzone(ev) {
     ev.target.style.borderStyle = 'dashed'
 }
@@ -176,16 +174,20 @@ function leaveDropzone(ev) {
 }
 
 function getColorOfTemperature(amountArea, amountAll) {
-    const temperature = (amountArea / amountAll);
+    const temperature = (100 * amountAll) / amountArea;
     console.log(temperature)
+
     let color = 'rgb(255,255,255)';
 
-    if (temperature > 5 && temperature < 30) {
-        color = 'rgb(255,186,191)';
-    } else if (temperature > 30 && temperature < 70) {
-        color = 'rgb(255,116,126)';
-    } else if (temperature > 70 && temperature <= 100) {
-        color = 'rgb(255, 0, 0)';
+    if (temperature > 0 && temperature < 3) {
+        color = 'rgb(255,160,166)';
+    } else if (temperature >= 3 && temperature < 15) {
+        color = 'rgb(255,146,102)';
+    } else if (temperature >= 15 && temperature <= 50) {
+        color = 'rgb(255,91,63)';
+    } else if (temperature > 50) {
+        color = 'rgb(255,0,0)';
+
     }
     return color;
 }
@@ -207,6 +209,8 @@ function colorMap() {
         for (const data of allVisibleData) {
             cantonAmount += data.canton[c.id]
         }
+
+        console.log(c.id + " : " + cantonAmount);
         c.style.fill = getColorOfTemperature(amountArea, cantonAmount);
     })
 
@@ -229,8 +233,11 @@ const render = () => {
         paths = paths + prop.path;
     });
 
+    const svgTag = dom(`<svg xmlns="http://www.w3.org/2000/svg" style="width: 100%" version="1.2" baseProfile="tiny" viewBox="0 0 800 507" stroke-linecap="round" stroke-linejoin="round">  
+                                            ${cantonsSVG} + ${paths} 
+                                            <circle id="visor" cx="-50" cy="-50" r="15" stroke="red" stroke-width="3"  fill="none"/>
+                                   </svg>`);
 
-    const svgTag = dom(`<svg xmlns="http://www.w3.org/2000/svg" style="width: 100%" version="1.2" baseProfile="tiny" viewBox="0 0 800 507" stroke-linecap="round" stroke-linejoin="round"> ${cantonsSVG} + ${paths} </svg>`)
     svg.appendChild(svgTag);
 
     const properties = document.getElementById("dragfield");
@@ -246,8 +253,10 @@ const render = () => {
 
     props.forEach(e => dataINIT(e));
 
-
     document.getElementById("toggle").addEventListener("click", toggleVisibilty);
+
+    const node = document.getElementById("GR37").getBBox();
+    console.log(node)
 };
 
 
@@ -260,8 +269,8 @@ const toggleVisibilty = () => {
             document.getElementById(prop.value).style.visibility = value ? "hidden" : "visible";
         }
     })
-
 };
+
 const cantonTableToObject = data => {
     const [canton, name, population, area, lakearea] = data.split(";");
     return {
@@ -272,16 +281,6 @@ const cantonTableToObject = data => {
         lakearea
     }
 };
-
-const dataTableToObject = data => {
-    const [id, name] = data.split(";");
-    return {
-        id,
-        canton: id.substring(0, 2),
-        name
-    }
-};
-
 const cantonINIT = () => {
     const table = [];
     canton.table.split("\n").forEach(e => table.push(cantonTableToObject(e)));
@@ -297,9 +296,40 @@ const cantonINIT = () => {
     }));
 };
 
+
 const dataINIT = props => {
+
+    const gTag = document.getElementById(props.value);
+    const allPath = gTag.querySelectorAll("path");
+    let pathIDs = [];
+    for (const path of allPath) {
+        pathIDs.push(path.id)
+    }
+    console.log(pathIDs)
+
     const table = [];
-    props.table.split("\n").forEach(e => table.push(dataTableToObject(e)));
+    props.table.split("\n").forEach(data => {
+        const [id, name] = data.split(";");
+
+        if (pathIDs.includes(id) && !table.some(e => e.id == id)) {
+
+            const svg = document.getElementById(id).getBBox();
+            const coord = {
+                x: svg.x,
+                y: svg.y
+            };
+
+            table.push({
+                id,
+                canton: id.substring(0, 2),
+                name,
+                coord
+            })
+
+        }
+
+    });
+    console.log(table)
 
     props.data = table;
 
@@ -323,6 +353,26 @@ const infoBox = element => {
     document.getElementById("infoBox").innerHTML = `<h3>Ort: ${element.name} </h3>`;
 };
 
+
+const dataFocus = (dataPoint, datasetName) => {
+    const selectedDataPoint = props.filter(e => e.label === datasetName)[0].data.find(e => e.name === dataPoint);
+    console.log(selectedDataPoint)
+
+    const visor = document.getElementById("visor");
+
+    console.log(visor);
+
+    visor.setAttribute("cx", selectedDataPoint.coord.x);
+    visor.setAttribute("cy", selectedDataPoint.coord.y);
+
+    console.log(selectedDataPoint.coord.x);
+    console.log(visor);
+
+
+    // document.getElementById(selectedDataPoint.id).setAttribute("style", "stroke: white");
+    // document.getElementById(selectedDataPoint.id).style.stroke = "white";
+};
+
 const distinct = array => {
     let distinctList = [];
     array.forEach(data => {
@@ -333,14 +383,6 @@ const distinct = array => {
     return distinctList;
 };
 
-
-const dataFocus = (dataPoint, datasetName) => {
-    const selectedDataPoint = props.filter(e => e.label === datasetName)[0].data.find(e => e.name === dataPoint);
-    console.log(selectedDataPoint.id)
-
-    document.getElementById(selectedDataPoint.id).setAttribute("style", "stroke: white");
-    // document.getElementById(selectedDataPoint.id).style.stroke = "white";
-};
 const createHtmlList = canton => {
 
     const allVisibleData = props.filter(e => e.active);
@@ -350,6 +392,7 @@ const createHtmlList = canton => {
 
     allVisibleData.forEach(dataSet => {
         const filteredList = dataSet.data.filter(e => e.canton === canton.canton);
+        console.log(filteredList)
         const distinctedList = distinct(filteredList);
 
         result += `<div class="col-md-${12 / colAmount}"> 
