@@ -144,32 +144,40 @@ function drop(ev) {
     ev.preventDefault();
     const randomColor = "rgb(" + getRandomInt(0, 255) + "," + getRandomInt(0, 255) + "," + getRandomInt(0, 255) + ")";
     const data = ev.dataTransfer.getData('text');
-    ev.target.appendChild(document.getElementById(data));
-    ev.target.style.borderStyle = 'solid';
-    document.getElementById(data).style.height = "8em";
-    document.getElementById(data).style.width = "8em";
-    document.getElementById(data).style.backgroundColor = randomColor;
+    if (ev.target.className === "dropzone"){
+        ev.target.appendChild(document.getElementById(data));
+        document.getElementById(data).style.backgroundColor = randomColor;
 
-    props.forEach(prop => {
-        if (data === prop.id) {
-            prop.active = true;
-            if (!document.getElementById("toggle").checked) {
-                document.getElementById(prop.value).style.visibility = "visible";
+        props.forEach(prop => {
+            if (data === prop.id) {
+                prop.active = true;
+                if (!document.getElementById("toggle").checked) {
+                    document.getElementById(prop.value).style.visibility = "visible";
+                }
+
+                document.getElementById(prop.value).style.fill = randomColor;
+                document.getElementById(prop.value).style.stroke = randomColor;
             }
-            document.getElementById(data).innerHTML = prop.label;
-            document.getElementById(data).title = prop.label;
-            document.getElementById(prop.value).style.fill = randomColor;
-            document.getElementById(prop.value).style.stroke = randomColor;
-        }
-    })
+        })
+    }
 }
 
 function enterDropzone(ev) {
-    ev.target.style.borderStyle = 'dashed'
+    if (ev.target.id === "zone") {
+        ev.target.style.borderStyle = 'dashed'
+    }
+    if (ev.target.id === "dragfield") {
+        ev.target.style.backgroundColor = '#cccfd6'
+    }
 }
 
 function leaveDropzone(ev) {
-    ev.target.style.borderStyle = 'solid'
+    if (ev.target.id === "zone") {
+        ev.target.style.borderStyle = 'solid'
+    }
+    if (ev.target.id === "dragfield") {
+        ev.target.style.backgroundColor = '#e6e9f0'
+    }
 }
 
 function getColorOfTemperature(amountArea, amountAll) {
@@ -217,13 +225,13 @@ function colorMap() {
 
 const render = () => {
 
-    const dragfield = dom(`<div id="dragfield">`);
+    const dragfield = dom(`<div id="dragfield" class="dropzone" ondragenter="enterDropzone(event)" ondragleave="leaveDropzone(event)" ondragover="allowDrop(event)" ondrop="drop(event)">`);
     const svg = dom(`<div id="svg">`);
 
     props.forEach(prop => {
         const propElement = dom(`<div class="segment" id="${prop.id}" draggable="true" ondragstart="drag(event)">
                                                 <p class="propLabel">${prop.label}</p>
-                                            </div>`)
+                                            </div>`);
         dragfield.appendChild(propElement);
     });
 

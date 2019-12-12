@@ -46,12 +46,20 @@ svg:hover{
 }
 
 .dropzone {
+    padding: 2em;
+    width: 100%;
+    display: inline-block;
+}
+
+#zone{
     border-color: black;
     border-width: 5px;
     border-style: solid;
-    padding: 1em;
-    width: 100%;
-    display: inline-block;
+}
+
+#dragfield{
+    background-color: #e6e9f0;
+    padding: 2em;
 }
 
 .filterZone {
