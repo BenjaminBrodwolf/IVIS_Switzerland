@@ -45,22 +45,23 @@ svg:hover{
     color: white;
 }
 
-.dropzone {
+.dropInZone {
     padding: 2em;
     width: 100%;
     display: inline-block;
-}
-
-#zone{
     border-color: black;
     border-width: 5px;
     border-style: solid;
 }
 
-#dragfield{
+.dropOutZone {
+    padding: 2em;
+    width: 100%;
+    display: inline-block;
     background-color: #e6e9f0;
     padding: 2em;
 }
+
 
 .filterZone {
     height: 100%;

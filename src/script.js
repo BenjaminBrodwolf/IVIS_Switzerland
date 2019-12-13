@@ -140,11 +140,11 @@ function allowDrop(ev) {
     ev.preventDefault();
 }
 
-function drop(ev) {
+function dropIn(ev) {
     ev.preventDefault();
     const randomColor = "rgb(" + getRandomInt(0, 255) + "," + getRandomInt(0, 255) + "," + getRandomInt(0, 255) + ")";
     const data = ev.dataTransfer.getData('text');
-    if (ev.target.className === "dropzone"){
+    if (ev.target.className === "dropInZone"){
         ev.target.appendChild(document.getElementById(data));
         document.getElementById(data).style.backgroundColor = randomColor;
 
@@ -157,6 +157,27 @@ function drop(ev) {
 
                 document.getElementById(prop.value).style.fill = randomColor;
                 document.getElementById(prop.value).style.stroke = randomColor;
+            }
+        })
+    }
+}
+
+function dropOut(ev) {
+    ev.preventDefault();
+    const data = ev.dataTransfer.getData('text');
+    if (ev.target.className === "dropOutZone"){
+        ev.target.appendChild(document.getElementById(data));
+        document.getElementById(data).style.backgroundColor = '#ffd311';
+
+        if (document.getElementById("toggle").checked) {
+            defaultMapColor();
+            document.getElementById("toggle").checked = false;
+        }
+
+        props.forEach(prop => {
+            if (data === prop.id) {
+                prop.active = false;
+                document.getElementById(prop.value).style.visibility = "hidden";
             }
         })
     }
@@ -220,12 +241,19 @@ function colorMap() {
         console.log(c.id + " : " + cantonAmount);
         c.style.fill = getColorOfTemperature(amountArea, cantonAmount);
     })
+}
 
+function defaultMapColor() {
+    const selectElements = document.querySelector(`#cantons`);
+    const elementsG = selectElements.querySelectorAll('g');
+    elementsG.forEach(c => {
+        c.style.fill = 'rgb(0, 0, 0)';
+    })
 }
 
 const render = () => {
 
-    const dragfield = dom(`<div id="dragfield" class="dropzone" ondragenter="enterDropzone(event)" ondragleave="leaveDropzone(event)" ondragover="allowDrop(event)" ondrop="drop(event)">`);
+    const dragfield = dom(`<div id="dragfield" class="dropOutZone" ondragenter="enterDropzone(event)" ondragleave="leaveDropzone(event)" ondragover="allowDrop(event)" ondrop="dropOut(event)">`);
     const svg = dom(`<div id="svg">`);
 
     props.forEach(prop => {
@@ -279,11 +307,7 @@ const toggleVisibilty = () => {
     if (value){
         colorMap()
     } else {
-        const selectElements = document.querySelector(`#cantons`);
-        const elementsG = selectElements.querySelectorAll('g');
-        elementsG.forEach(c => {
-            c.style.fill = 'rgb(0, 0, 0)';
-        })
+        defaultMapColor();
     }
 
 };
