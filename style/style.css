@@ -83,8 +83,14 @@ svg:hover{
     margin-left: 3em;
 }
 
+#cantons,  #laichgebiete, #trockenwiesen{
+    transition: 3s;
+}
+#visor{
+    transition: 0.5s;
+}
 #cantons > g{
-    stroke: #f6f6f6;
+    stroke: #f6c100;
 }
 
 #cantons > g:hover{
@@ -95,7 +101,10 @@ circle:hover{
     fill: red;
     stroke-width: 10px;
 }
-
+.focused{
+    background-color: aquamarine;
+    fill: aquamarine;
+}
 
 #trockenwiesen {
     fill: white;

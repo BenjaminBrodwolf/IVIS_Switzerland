@@ -117,6 +117,7 @@ const props = [
     },
 ];
 
+let focusCanton;
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -144,7 +145,7 @@ function dropIn(ev) {
     ev.preventDefault();
     const randomColor = "rgb(" + getRandomInt(0, 255) + "," + getRandomInt(0, 255) + "," + getRandomInt(0, 255) + ")";
     const data = ev.dataTransfer.getData('text');
-    if (ev.target.className === "dropInZone"){
+    if (ev.target.className === "dropInZone") {
         ev.target.appendChild(document.getElementById(data));
         document.getElementById(data).style.backgroundColor = randomColor;
 
@@ -159,13 +160,18 @@ function dropIn(ev) {
                 document.getElementById(prop.value).style.stroke = randomColor;
             }
         })
+
+        console.log("DropIn");
+        if (focusCanton) {
+            createViewList(focusCanton);
+        }
     }
 }
 
 function dropOut(ev) {
     ev.preventDefault();
     const data = ev.dataTransfer.getData('text');
-    if (ev.target.className === "dropOutZone"){
+    if (ev.target.className === "dropOutZone") {
         ev.target.appendChild(document.getElementById(data));
         document.getElementById(data).style.backgroundColor = '#ffd311';
 
@@ -180,6 +186,10 @@ function dropOut(ev) {
                 document.getElementById(prop.value).style.visibility = "hidden";
             }
         })
+        console.log("DropOut")
+        if (focusCanton) {
+            createViewList(focusCanton);
+        }
     }
 }
 
@@ -270,7 +280,7 @@ const render = () => {
 
     const svgTag = dom(`<svg xmlns="http://www.w3.org/2000/svg" style="width: 100%" version="1.2" baseProfile="tiny" viewBox="0 0 800 507" stroke-linecap="round" stroke-linejoin="round">  
                                             ${cantonsSVG} + ${paths} 
-                                            <circle id="visor" cx="-50" cy="-50" r="15" stroke="red" stroke-width="3"  fill="none"/>
+                                            <circle id="visor" cx="-50" cy="-50" r="15" stroke="red" stroke-width="3"  fill="none"  transform="translate(0,0)"/>
                                    </svg>`);
 
     svg.appendChild(svgTag);
@@ -304,7 +314,7 @@ const toggleVisibilty = () => {
             document.getElementById(prop.value).style.visibility = value ? "hidden" : "visible";
         }
     })
-    if (value){
+    if (value) {
         colorMap()
     } else {
         defaultMapColor();
@@ -437,13 +447,9 @@ const createHtmlList = canton => {
         const distinctedList = distinct(filteredList);
 
         result += `<div class="col-md-${12 / colAmount}"> 
+                <h4>${dataSet.label}</h4>
                         <div class="scrollable">
                              <table class="table table-hover">
-                                 <thead>
-                                      <tr>
-                                         <th scope="col"> ${dataSet.label} </th> 
-                                     </tr>
-                                 </thead>
                              <tbody>`;
 
         distinctedList.forEach(listName => {
@@ -462,11 +468,74 @@ const createHtmlList = canton => {
 };
 
 const createViewList = canton => {
+    focusCanton = canton;
     document.getElementById("tableTitle").innerText = "Kanton: " + canton.name;
-
     document.getElementById('table').innerHTML = createHtmlList(canton);
 };
 
 render();
 
 
+// -------- Zoom
+let scale = 3;		// maximum size to zoom to canton
+const mapWidth = 900;  // map container width
+const mapHeight = 600; // map container height
+const viewport = document.getElementById("cantons");
+let selectedCantonID;
+
+document.addEventListener('click', e => {
+    console.log(`x="${e.pageX}" y="${e.pageY}"`); // logs the mouse position
+
+    const selected = e.target;
+
+    console.log(selected);
+    if (selected.id === selectedCantonID) {
+        console.log("Go back to full Mapview");
+
+        document.getElementById(selectedCantonID).parentElement.classList.remove("focused");
+        viewport.setAttribute("transform", "scale(1.0)");
+        document.getElementById("visor").setAttribute("transform", "scale(1.0)");
+        props.forEach(e => {
+            document.getElementById(e.value).setAttribute("transform", "scale(1.0)");
+        });
+        selectedCantonID = "";
+
+    } else {
+
+        const exFocus = document.getElementById(selectedCantonID);
+        if (exFocus) exFocus.parentElement.classList.remove("focused");
+
+        // const focusedElements = document.getElementsByClassName("focused");
+        // console.log(focusedElements)
+
+        selectedCantonID = selected.id;
+
+        const xy = getBoundingBox(selected);
+
+        scale = Math.min(mapWidth / xy[1], mapHeight / xy[3], 3);
+        const tx = -xy[0] + (mapWidth - xy[1] * scale) / (2 * scale);
+        const ty = -xy[2] + (mapHeight - xy[3] * scale) / (2 * scale);
+
+        console.log(tx + '  :  ' + ty);
+        console.log(scale);
+        console.log(selectedCantonID)
+        // document.getElementById(selectedCantonID).classList.add("focused");
+        document.getElementById(selectedCantonID).parentElement.classList.add("focused");
+
+        viewport.setAttribute("transform", "scale(" + scale + ")translate(" + tx + "," + ty + ")");
+        document.getElementById("visor").setAttribute("transform", "scale(" + scale + ")translate(" + tx + "," + ty + ")");
+        props.forEach(e => {
+            document.getElementById(e.value).setAttribute("transform", "scale(" + scale + ")translate(" + tx + "," + ty + ")");
+        });
+    }
+
+});
+
+
+const getBoundingBox = element => {
+    // get x,y co-ordinates of top-left of bounding box and width and height
+    const bbox = element.getBBox();
+    const cx = bbox.x + bbox.width / 2;
+    const cy = bbox.y + bbox.height / 2;
+    return [bbox.x, bbox.width, bbox.y, bbox.height, cx, cy];
+}
