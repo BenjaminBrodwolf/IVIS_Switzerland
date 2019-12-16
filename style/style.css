@@ -13,10 +13,15 @@ main{
 
 }
 
-svg:hover{
+g:hover:not(.zooming){
     cursor: pointer;
 }
-
+.zooming g:hover{
+    cursor: zoom-in;
+}
+.focused:hover{
+    cursor: zoom-out;
+}
 .scrollable{
     height: 70vh;
     overflow: scroll;

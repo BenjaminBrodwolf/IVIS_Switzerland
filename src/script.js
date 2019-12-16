@@ -307,7 +307,6 @@ const render = () => {
 
 const toggleVisibilty = () => {
     const value = document.getElementById("toggle").checked;
-    console.log("toggle " + value);
 
     props.forEach(prop => {
         if (prop.active) {
@@ -380,7 +379,6 @@ const dataINIT = props => {
         }
 
     });
-    console.log(table)
 
     props.data = table;
 
@@ -407,18 +405,11 @@ const infoBox = element => {
 
 const dataFocus = (dataPoint, datasetName) => {
     const selectedDataPoint = props.filter(e => e.label === datasetName)[0].data.find(e => e.name === dataPoint);
-    console.log(selectedDataPoint)
 
     const visor = document.getElementById("visor");
 
-    console.log(visor);
-
     visor.setAttribute("cx", selectedDataPoint.coord.x);
     visor.setAttribute("cy", selectedDataPoint.coord.y);
-
-    console.log(selectedDataPoint.coord.x);
-    console.log(visor);
-
 
     // document.getElementById(selectedDataPoint.id).setAttribute("style", "stroke: white");
     // document.getElementById(selectedDataPoint.id).style.stroke = "white";
@@ -476,60 +467,68 @@ const createViewList = canton => {
 render();
 
 
-// -------- Zoom
+// -------- Zoom ---------
+let zoomstate = false;
+const zooming = () => {
+    zoomstate = !zoomstate;
+    console.log(zoomstate);
+
+    if (zoomstate) {
+        document.getElementById("svg").classList.add("zooming")
+    } else {
+        document.getElementById("svg").classList.remove("zooming")
+
+    }
+};
+
+
 let scale = 3;		// maximum size to zoom to canton
 const mapWidth = 900;  // map container width
 const mapHeight = 600; // map container height
 const viewport = document.getElementById("cantons");
 let selectedCantonID;
 
-document.addEventListener('click', e => {
-    console.log(`x="${e.pageX}" y="${e.pageY}"`); // logs the mouse position
 
-    const selected = e.target;
+    document.addEventListener('click', e => {
+        if (zoomstate) {
+        console.log(`x="${e.pageX}" y="${e.pageY}"`); // logs the mouse position
 
-    console.log(selected);
-    if (selected.id === selectedCantonID) {
-        console.log("Go back to full Mapview");
+        const selected = e.target;
+        console.log(selected);
 
-        document.getElementById(selectedCantonID).parentElement.classList.remove("focused");
-        viewport.setAttribute("transform", "scale(1.0)");
-        document.getElementById("visor").setAttribute("transform", "scale(1.0)");
-        props.forEach(e => {
-            document.getElementById(e.value).setAttribute("transform", "scale(1.0)");
-        });
-        selectedCantonID = "";
+        if (selected.id === selectedCantonID) {
+            const exFocus = document.getElementById(selectedCantonID);
+            if (exFocus) exFocus.parentElement.classList.remove("focused");
 
-    } else {
+            viewport.setAttribute("transform", "scale(1.0)");
+            document.getElementById("visor").setAttribute("transform", "scale(1.0)");
+            props.forEach(e => {
+                document.getElementById(e.value).setAttribute("transform", "scale(1.0)");
+            });
+            selectedCantonID = "";
 
-        const exFocus = document.getElementById(selectedCantonID);
-        if (exFocus) exFocus.parentElement.classList.remove("focused");
+        } else {
 
-        // const focusedElements = document.getElementsByClassName("focused");
-        // console.log(focusedElements)
+            const exFocus = document.getElementById(selectedCantonID);
+            if (exFocus) exFocus.parentElement.classList.remove("focused");
 
-        selectedCantonID = selected.id;
+            selectedCantonID = selected.id;
 
-        const xy = getBoundingBox(selected);
+            const xy = getBoundingBox(selected);
+            scale = Math.min(mapWidth / xy[1], mapHeight / xy[3], 3);
+            const tx = -xy[0] + (mapWidth - xy[1] * scale) / (2 * scale);
+            const ty = -xy[2] + (mapHeight - xy[3] * scale) / (2 * scale);
 
-        scale = Math.min(mapWidth / xy[1], mapHeight / xy[3], 3);
-        const tx = -xy[0] + (mapWidth - xy[1] * scale) / (2 * scale);
-        const ty = -xy[2] + (mapHeight - xy[3] * scale) / (2 * scale);
+            document.getElementById(selectedCantonID).parentElement.classList.add("focused");
 
-        console.log(tx + '  :  ' + ty);
-        console.log(scale);
-        console.log(selectedCantonID)
-        // document.getElementById(selectedCantonID).classList.add("focused");
-        document.getElementById(selectedCantonID).parentElement.classList.add("focused");
-
-        viewport.setAttribute("transform", "scale(" + scale + ")translate(" + tx + "," + ty + ")");
-        document.getElementById("visor").setAttribute("transform", "scale(" + scale + ")translate(" + tx + "," + ty + ")");
-        props.forEach(e => {
-            document.getElementById(e.value).setAttribute("transform", "scale(" + scale + ")translate(" + tx + "," + ty + ")");
-        });
-    }
-
-});
+            viewport.setAttribute("transform", "scale(" + scale + ")translate(" + tx + "," + ty + ")");
+            document.getElementById("visor").setAttribute("transform", "scale(" + scale + ")translate(" + tx + "," + ty + ")");
+            props.forEach(e => {
+                document.getElementById(e.value).setAttribute("transform", "scale(" + scale + ")translate(" + tx + "," + ty + ")");
+            });
+        }
+        }
+    });
 
 
 const getBoundingBox = element => {
