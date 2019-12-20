@@ -1,27 +1,27 @@
 // KUERZEL;NAME;EINWOHNERZ;KANTONSFLA;SEE_FLAECH
-const cantonTable = `ZH;Zürich;1504346;172894;6811
-BE;Bern;1031126;595952;11897
-LU;Luzern;406506;149352;6438
-UR;Uri;36299;107654;1922
-SZ;Schwyz;157301;90788;5654
-OW;Obwalden;37575;49058;996
-NW;Nidwalden;42969;27585;3450
-GL;Glarus;40349;68531;461
-ZG;Zug;125421;23873;3158
-FR;Fribourg;315074;167142;7818
-SO;Solothurn;271432;79045;0
-BS;Basel-Stadt;193908;3695;0
-BL;Basel-Landschaft;287023;51767;0
-SH;Schaffhausen;81351;29842;27
-AA;Appenzell Ausserrhoden;55178;24284;0
-AI;Appenzell Innerrhoden;16105;17248;0
-SG;St. Gallen;504686;202820;7720
-GR;Graubünden;197888;710530;0
-AG;Aargau;670988;140380;870
-TG;Thurgau;273801;99433;13121
-TI;Ticino;353709;281216;7147
-VD;Vaud;793129;321201;39097
-VS;Valais;341463;522463;1060
-NE;Neuchâtel;177964;80216;8542
-GE;Genève;495249;28249;3669
-JU;Jura;73290;83851;0`;
+const cantonTable = `ZH;Zürich;1
+BE;Bern;2
+LU;Luzern;3
+UR;Uri;36299;4
+SZ;Schwyz;5
+OW;Obwalden;6
+NW;Nidwalden;7
+GL;Glarus;8
+ZG;Zug;9
+FR;Fribourg;10
+SO;Solothurn;11
+BS;Basel-Stadt;12
+BL;Basel-Landschaft;13
+SH;Schaffhausen;14
+AA;Appenzell Ausserrhoden;15
+AI;Appenzell Innerrhoden;16
+SG;St. Gallen;17
+GR;Graubünden;18
+AG;Aargau;19
+TG;Thurgau;20
+TI;Ticino;21
+VD;Vaud;22
+VS;Valais;23
+NE;Neuchâtel;24
+GE;Genève;25
+JU;Jura;26`;

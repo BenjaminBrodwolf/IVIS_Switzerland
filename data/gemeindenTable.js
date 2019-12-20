@@ -1,0 +1,2362 @@
+const gemeindenTable = `Scuol;18
+Glarus Süd;8
+Zernez;18
+Surses;18
+Lac Léman (VD);22
+Bagnes;23
+Davos;18
+Bregaglia;18
+Anniviers;23
+Zermatt;23
+Innertkirchen;2
+Klosters-Serneus;18
+Evolène;23
+Blenio;21
+Guttannen;2
+Val Müstair;18
+Poschiavo;18
+Bergün Filisur;18
+Lavizzara;21
+Vals;18
+Fieschertal;23
+Muotathal;5
+Grindelwald;2
+Lumnezia;18
+Orsières;23
+Mesocco;18
+Lauterbrunnen;2
+Bellinzona;21
+Obergoms;23
+Arosa;18
+Glarus Nord;8
+Safiental;18
+Cevio;21
+Valsot;18
+Naters;23
+Silenen;4
+Mels;17
+S-chanf;18
+Rheinwald;18
+Medel (Lucmagn);18
+Kandersteg;2
+Tujetsch;18
+Ilanz/Glion;18
+Faido;21
+Diemtigen;2
+Goms;23
+Pfäfers;17
+Reichenbach im Kandertal;2
+Val-de-Travers;24
+Val-de-Ruz;24
+Lenk;2
+Saanen;2
+Pontresina;18
+Château-d'Oex;22
+Bodensee (TG);20
+Val-de-Charmey;10
+Maggia;21
+Saas-Almagell;23
+Einsiedeln;5
+Flühli;3
+Hérémence;23
+Escholzmatt-Marbach;3
+Onsernone;21
+Göschenen;4
+Glarus;8
+Sumvitg;18
+Le Chenit;22
+Wassen;4
+Serravalle;21
+Breil/Brigels;18
+Bex;22
+Airolo;21
+Albula/Alvra;18
+Avers;18
+Nesslau;17
+Wolfenschiessen;7
+Kerns;6
+Zürich;1
+Simplon;23
+Disentis/Mustér;18
+Blatten;23
+Bourg-Saint-Pierre;23
+St. Niklaus;23
+Lugano;21
+Adelboden;2
+Wildhaus-Alt St. Johann;17
+Riviera;21
+Zwischbergen;23
+Nendaz;23
+Giswil;6
+Conthey;23
+Lac de Neuchâtel (NE);24
+Luzein;18
+Gurtnellen;4
+Unterschächen;4
+Realp;4
+Boltigen;2
+Sarnen;6
+Quinto;21
+Bedretto;21
+Flums;17
+Ferrera;18
+Engelberg;6
+Quarten;17
+Zweisimmen;2
+Frutigen;2
+Haute-Sorne;26
+Savièse;23
+Obersaxen Mundaun;18
+Winterthur;1
+Leukerbad;23
+Plaffeien;10
+Gambarogno;21
+Binn;23
+Ormont-Dessous;22
+Sils im Engadin/Segl;18
+Samedan;18
+La Punt-Chamues-ch;18
+Gsteig;2
+Andermatt;4
+Trub;2
+Acquarossa;21
+Clos du Doubs;26
+Isenthal;4
+Schiers;18
+Ormont-Dessus;22
+St. Stephan;2
+Eggiwil;2
+Haut-Intyamon;10
+Crans-Montana;23
+Ollon;22
+Sumiswald;2
+Erstfeld;4
+Biasca;21
+Rossa;18
+Täsch;23
+Grengiols;23
+Lauenen;2
+Liddes;23
+Schwende;16
+Sachseln;6
+Rüschegg;2
+Lavertezzo;21
+Zuoz;18
+Alpnach;6
+Samnaun;18
+Entlebuch;3
+Zürichsee (ZH);1
+La Chaux-de-Fonds;24
+Sigriswil;2
+Ayent;23
+Jaun;10
+Leuk;23
+Guggisberg;2
+Eschenbach (SG);17
+Estavayer;10
+Grabs;17
+Randa;23
+Salvan;23
+Centovalli;21
+Schwyz;5
+Bürglen (UR);4
+Trun;18
+Arzier-Le Muids;22
+Visperterminen;23
+Bern;2
+Wattwil;17
+Habkern;2
+Köniz;2
+Lostallo;18
+Mosnang;17
+Flims;18
+Samedan;18
+Oberems;23
+Innerthal;5
+Seewis im Prättigau;18
+Neckertal;17
+Walenstadt;17
+Rougemont;22
+Churwalden;18
+Brione (Verzasca);21
+Arth;5
+Langnau im Emmental;2
+Urnäsch;15
+Evionnaz;23
+Brienz (BE);2
+Châtel-Saint-Denis;10
+Thunersee;2
+Amden;17
+Ried-Brig;23
+Trin;18
+Attinghausen;4
+Val Terbi;26
+Bodensee (SG);17
+Lungern;6
+Unteriberg;5
+Soazza;18
+Andeer;18
+Brusio;18
+Oberwil im Simmental;2
+Domleschg;18
+Ruswil;3
+Schwarzenburg;2
+Silvaplana;18
+Ebnat-Kappel;17
+Mont-Noble;23
+Campo (Vallemaggia);21
+Grüsch;18
+Trimmis;18
+Kirchberg (SG);17
+Vaz/Obervaz;18
+Beromünster;3
+La Grande-Béroche;24
+Spiringen;4
+Schaffhausen;14
+La Brévine;24
+Wartau;17
+Hasliberg;2
+Sennwald;17
+Willisau;3
+Haute-Ajoie;26
+Rüte;16
+Tamins;18
+Meiringen;2
+Lac de Neuchâtel (VD);22
+Hasle (LU);3
+Saas-Fee;23
+Schänis;17
+Trient;23
+Sainte-Croix;22
+St. Gallen;17
+Schwarzenberg;3
+Val-d'Illiez;23
+Bielersee (BE);2
+Personico;21
+Champéry;23
+Roveredo (GR);18
+Schüpfheim;3
+Eisten;23
+Fully;23
+Luthern;3
+Calanca;18
+Brig-Glis;23
+Sonogno;21
+Martigny-Combe;23
+Romoos;3
+Lausanne;22
+Saint-Martin (VS);23
+Troistorrents;23
+Röthenbach im Emmental;2
+Erlenbach im Simmental;2
+Schangnau;2
+Capriasca;21
+Wohlen bei Bern;2
+Gibloux;10
+Oberägeri;9
+Küssnacht (SZ);5
+Monteceneri;21
+Wädenswil;1
+Mümliswil-Ramiswil;11
+Ernen;23
+Hospental;4
+Sion;23
+Sufers;18
+Oberriet (SG);17
+Turtmann-Unterems;23
+Gommiswald;17
+Vouvry;23
+Montanaire;22
+Montreux;22
+Bas-Intyamon;10
+Furna;18
+Oberiberg;5
+Beckenried;7
+Illnau-Effretikon;1
+Därstetten;2
+Zug;9
+Vilters-Wangs;17
+Le Lieu;22
+Chamoson;23
+Maienfeld;18
+Kandergrund;2
+Mendrisio;21
+Villeneuve (VD);22
+Rüeggisberg;2
+Fraubrunnen;2
+L'Abbaye;22
+Provence;22
+Saignelégier;26
+Laax;18
+Schattenhalb;2
+Rapperswil-Jona;17
+Waldkirch;17
+Hergiswil bei Willisau;3
+Cazis;18
+Altstätten;17
+Luzern;3
+La Baroche;26
+Aeschi bei Spiez;2
+Horgen;1
+Düdingen;10
+Fischingen;20
+Raron;23
+Menznau;3
+Sevelen;17
+Fischenthal;1
+Saas-Balen;23
+Collombey-Muraz;23
+Riggisberg;2
+Brienzersee;2
+Ergisch;23
+Bauma;1
+Semsales;10
+Beatenberg;2
+Baltschieder;23
+Schübelbach;5
+Les Verrières;24
+Grono;18
+Bettmeralp;23
+St. Moritz;18
+Emmetten;7
+Malters;3
+Uster;1
+Gruyères;10
+Wynigen;2
+Chur;18
+Vorderthal;5
+Ferden;23
+Tschiertschen-Praden;18
+Untervaz;18
+Menzingen;9
+Gossau (SG);17
+Frauenfeld;20
+Avegno Gordevio;21
+Kriens;3
+Reiden;3
+Leytron;23
+Unterägeri;9
+Nods;2
+Hitzkirch;3
+Triesen;
+Neuenkirch;3
+Mühleberg;2
+Grenchen;11
+Montricher;22
+Frasco;21
+Jenaz;18
+Rochefort;24
+Belmont-Broye;10
+Lac de Neuchâtel (VD);22
+Casti-Wergenstein;18
+La Sagne;24
+Plateau de Diesse;2
+Breggia;21
+Bad Ragaz;17
+Fideris;18
+Weggis;3
+Wald (ZH);1
+Turbenthal;1
+Herisau;15
+Bière;22
+Kemmental;20
+Martigny;23
+Valbroye;22
+Baar;9
+Tramelan;2
+Vechigen;2
+Icogne;23
+Saas-Grund;23
+Gonten;16
+Les Bois;26
+Tschappina;18
+Oron;22
+Court;2
+Altendorf;5
+Zillis-Reischen;18
+Elgg;1
+Chalais;23
+Mont-Vully;10
+Saint-Gingolph;23
+Grandvillard;10
+Saint-Cergue;22
+Domat/Ems;18
+Payerne;22
+Homburg;20
+La Roche;10
+Hundwil;15
+Celerina/Schlarigna;18
+Vuisternens-devant-Romont;10
+Stammheim;1
+Petit-Val;2
+Riddes;23
+Vogorno;21
+Ins;2
+Dagmersellen;3
+Bulle;10
+Basel;12
+Péry-La Heutte;2
+Sonvilier;2
+Gersau;5
+Hohenrain;3
+Brissago;21
+Morschach;5
+Rossinière;22
+Belp;2
+Saxon;23
+Vallorbe;22
+Madiswil;2
+Le Locle;24
+Bever;18
+Triesenberg;
+Gampel-Bratsch;23
+Basse-Allaine;26
+Risch;9
+Alpthal;5
+Puidoux;22
+Finhaut;23
+Rothenthurm;5
+Beinwil (SO);11
+Bever;18
+Spiringen;4
+Buchegg;11
+Rapperswil (BE);2
+Baulmes;22
+Falera;18
+Wimmis;2
+Cheyres-Châbles;10
+Hinwil;1
+Gams;17
+Courtelary;2
+Bäretswil;1
+Heimiswil;2
+Signau;2
+Triengen;3
+Unterbäch;23
+Alto Malcantone;21
+Corbeyrier;22
+Bosco/Gurin;21
+Murten;10
+Delémont;26
+Iseltwald;2
+Hasle bei Burgdorf;2
+Courtepin;10
+Bütschwil-Ganterschwil;17
+Neuenegg;2
+Lantsch/Lenz;18
+Eriz;2
+Schleitheim;14
+Orvin;2
+Mettauertal;19
+Thun;2
+Courrendlin;26
+Arbedo-Castione;21
+Gais;15
+Biel/Bienne;2
+Lauperswil;2
+Lützelflüh;2
+Wilchingen;14
+Worb;2
+Vionnaz;23
+Vully-les-Lacs;22
+Saint-Imier;2
+Seedorf (BE);2
+Wil (SG);17
+Bassins;22
+Grône;23
+Freienbach;5
+Horw;3
+Ardon;23
+Le Noirmont;26
+Emmen;3
+Sins;19
+Siviriez;10
+Hemberg;17
+Oberried am Brienzersee;2
+Cerentino;21
+Monthey;23
+Fontenais;26
+Aadorf;20
+Thayngen;14
+Sisikon;4
+Schüpfen;2
+Mont-la-Ville;22
+Courroux;26
+Grosswangen;3
+Moutier;2
+Pfäffikon;1
+Giornico;21
+Avenches;22
+Selzach;11
+Krauchthal;2
+Saxeten;2
+Chavornay;22
+Kloten;1
+Arbaz;23
+San Vittore;18
+Wiesendangen;1
+Sierre;23
+Cham;9
+Riederalp;23
+Amriswil;20
+Satigny;25
+Seelisberg;4
+Bussnang;20
+Gimel;22
+Sâles;10
+Möhlin;19
+Valbirse;2
+Beringen;14
+Hünenberg;9
+Termen;23
+Kaltbrunn;17
+Murgenthal;19
+Leysin;22
+Haldenstein;18
+Le Mouret;10
+Egnach;20
+Forel (Lavaux);22
+Courgenay;26
+Conters im Prättigau;18
+Genève;25
+Gossau (ZH);1
+Montfaucon;26
+Cugnasco-Gerra;21
+Seedorf (UR);4
+Liestal;13
+Les Ponts-de-Martel;24
+Plasselb;10
+Neuchâtel;24
+Kaisten;19
+Kallnach;2
+Schlatt-Haslen;16
+Neunkirch;14
+Pleigne;26
+Vollèges;23
+Oberbüren;17
+Ennetbürgen;7
+Horrenbach-Buchen;2
+Sembrancher;23
+Pfaffnau;3
+Corgémont;2
+Hüttwilen;20
+Jorat-Menthue;22
+Niedergesteln;23
+Cugnasco-Gerra;21
+Merishausen;14
+Törbel;23
+Montagny (FR);10
+Feusisberg;5
+Schwellbrunn;15
+Sattel;5
+Römerswil;3
+Niederbipp;2
+La Chaux-du-Milieu;24
+Huttwil;2
+Gränichen;19
+Langenthal;2
+Walkringen;2
+Rüderswil;2
+Wigoltingen;20
+Stansstad;7
+Hergiswil (NW);7
+Utzenstorf;2
+Appenzell;16
+Bullet;22
+Prato (Leventina);21
+Wetzikon (ZH);1
+Seeberg;2
+Boudry;24
+St. Antoni;10
+Spiez;2
+Buttisholz;3
+Gündlischwand;2
+Ingenbohl;5
+Muttenz;13
+Delley-Portalban;10
+La Rippe;22
+Bolligen;2
+Benken (SG);17
+Oberdiessbach;2
+Wängi;20
+Aigle;22
+Niederhelfenschwil;17
+Schattdorf;4
+Kleinlützel;11
+Seewen;11
+Herbetswil;11
+Villeret;2
+L'Isle;22
+Oberdorf (NW);7
+Alterswil;10
+Ueberstorf;10
+Brot-Plamboz;24
+Bülach;1
+Blonay;22
+Rheinfelden;19
+Savigny;22
+Gurmels;10
+Trachselwald;2
+Buchs (SG);17
+Walchwil;9
+Schaan;
+Niederbüren;17
+Werthenstein;3
+Münsingen;2
+Flüelen;4
+St. Ursen;10
+Balsthal;11
+Le Cerneux-Péquignot;24
+Langenbruck;13
+Trubschachen;2
+Moudon;22
+Basadingen-Schlattingen;20
+Thundorf;20
+Burgdorf;2
+Albinen;23
+Schlatt (TG);20
+Cudrefin;22
+Blumenstein;2
+Bözberg;19
+Laupersdorf;11
+Rothenburg;3
+Weinfelden;20
+Villorsonnens;10
+Dallenwil;7
+Ersigen;2
+Buchholterberg;2
+Hallau;14
+Schötz;3
+Teufen (AR);15
+Isérables;23
+Bodensee (TG);20
+Gryon;22
+Saint-Légier-La Chiésaz;22
+Versoix;25
+Mathon;18
+Tuggen;5
+Grossaffoltern;2
+Bönigen;2
+Port-Valais;23
+Neftenbach;1
+Rüegsau;2
+Saint-Brais;26
+Ausserberg;23
+Cama;18
+Sonceboz-Sombeval;2
+Ennetmoos;7
+Ursy;10
+Saint-Maurice;23
+Wiler (Lötschen);23
+Nottwil;3
+Lyss;2
+Tavannes;2
+Maur;1
+Porrentruy;26
+Cortébert;2
+Radelfingen;2
+Bowil;2
+Regensdorf;1
+Kirchdorf (BE);2
+Dalpe;21
+Wattenwil;2
+Egg;1
+Uzwil;17
+Laufenburg;19
+Amlikon-Bissegg;20
+Affeltrangen;20
+Bonaduz;18
+Bösingen;10
+Wolhusen;3
+Vérossaz;23
+Scharans;18
+Tévenon;22
+Staldenried;23
+Grächen;23
+Stocken-Höfen;2
+Russikon;1
+Lavey-Morcles;22
+La Ferrière;2
+Dürrenroth;2
+Marthalen;1
+Lütisburg;17
+Eischoll;23
+Oberuzwil;17
+Fläsch;18
+Volketswil;1
+Steg-Hohtenn;23
+Uesslingen-Buch;20
+Unterseen;2
+Lens;23
+Degersheim;17
+Bellwald;23
+Hägendorf;11
+Meggen;3
+Zell (LU);3
+Saicourt;2
+Leuggern;19
+Herdern;20
+Bure;26
+Brittnau;19
+Les Genevez (JU);26
+Dübendorf;1
+Hausen am Albis;1
+Bonfol;26
+Courtételle;26
+Bourrignon;26
+Yverdon-les-Bains;22
+Merenschwand;19
+Ramsen;14
+Schmitten (FR);10
+Soubey;26
+Cormoret;2
+Sauge;2
+La Verrerie;10
+Bürchen;23
+Yvonand;22
+Felsberg;18
+Embd;23
+Rhäzüns;18
+Steffisburg;2
+Wald (BE);2
+Echichens;22
+Wünnewil-Flamatt;10
+Galgenen;5
+Lostorf;11
+Linden;2
+Locarno;21
+Eschenbach (LU);3
+Visp;23
+Wilderswil;2
+Vaulion;22
+Pfyn;20
+Berg (TG);20
+Ossingen;1
+Bovernier;23
+Vex;23
+Mettmenstetten;1
+Welschenrohr;11
+Zell (ZH);1
+Hittnau;1
+Bernex;25
+Aedermannsdorf;11
+Stadel;1
+Apples;22
+Oftringen;19
+Isone;21
+La Côte-aux-Fées;24
+Varen;23
+Weisslingen;1
+Konolfingen;2
+Embrach;1
+Lengnau (AG);19
+Oberhelfenschwil;17
+Gaiserwald;17
+Renan (BE);2
+Büren an der Aare;2
+Beggingen;14
+Ettiswil;3
+Dorénaz;23
+Gingins;22
+Densbüren;19
+Lignières;24
+Hauptwil-Gottshaus;20
+Wohlen (AG);19
+Develier;26
+Baden;19
+Liesberg;13
+Schongau;3
+Rümlang;1
+Oberbalm;2
+Lajoux (JU);26
+Sirnach;20
+Küsnacht (ZH);1
+Boécourt;26
+Muri (AG);19
+Aarau;19
+Lucens;22
+Saint-George;22
+Birwinken;20
+Kerzers;10
+Biberist;11
+Schinznach;19
+Lütschental;2
+Lac Léman (VD);22
+Wäldi;20
+Ufhusen;3
+Zihlschlacht-Sitterdorf;20
+Collonges;23
+Yvorne;22
+Bettlach;11
+Erlen;20
+Hombrechtikon;1
+Mergoscia;21
+Ascona;21
+Corcelles-près-Payerne;22
+Wuppenau;20
+Ochlenberg;2
+Oensingen;11
+Orbe;22
+Buochs;7
+Roggwil (TG);20
+Stallikon;1
+Lindau;1
+Eschenz;20
+Marchissy;22
+Pont-en-Ogoz;10
+Hauterive (FR);10
+Bichelsee-Balterswil;20
+Kirchlindach;2
+Meilen;1
+Villmergen;19
+Oberdorf (SO);11
+Endingen;19
+Glattfelden;1
+Küttigen;19
+Messen;11
+Montilliez;22
+Hauteville;10
+Rothrist;19
+Rickenbach (LU);3
+Steinen;5
+Castel San Pietro;21
+Wagenhausen;20
+Boswil;19
+Vitznau;3
+Wittenbach;17
+Les Planchettes;24
+Bürglen (TG);20
+Wyssachen;2
+Kippel;23
+Le Bémont (JU);26
+Sempach;3
+Oberburg;2
+Coeuve;26
+Bubikon;1
+Hüttlingen;20
+Wichtrach;2
+Terre di Pedemonte;21
+Bischofszell;20
+Kreuzlingen;20
+Tägerwilen;20
+Reichenburg;5
+Les Brenets;24
+Affoltern im Emmental;2
+Olten;11
+Flawil;17
+Gänsbrunnen;11
+Birmensdorf (ZH);1
+Treyvaux;10
+Locarno;21
+Malans;18
+Laufen;13
+Misery-Courtion;10
+Concise;22
+Zeiningen;19
+Salgesch;23
+Bremgarten (AG);19
+Neunforn;20
+Jussy;25
+Schmitten (GR);18
+Eriswil;2
+Jegenstorf;2
+Lenzburg;19
+Beinwil (Freiamt);19
+Niederhasli;1
+Reutigen;2
+Matzendorf;11
+Wittnau;19
+Diepoldsau;17
+Villigen;19
+Riemenstalden;5
+Rue;10
+Bärschwil;11
+Twann-Tüscherz;2
+Eptingen;13
+Buseno;18
+Vaduz;
+Pampigny;22
+Jorat-Mézières;22
+Stans;7
+Zofingen;19
+Fiesch;23
+Magden;19
+Zizers;18
+Wangen (SZ);5
+Jonschwil;17
+Mollens (VD);22
+Valsot;18
+Kappelen;2
+Muriaux;26
+Illgau;5
+Oberkirch;3
+Kradolf-Schönenberg;20
+Rothenfluh;13
+Schönholzerswilen;20
+Romont (FR);10
+Landquart;18
+Riehen;12
+Langrickenbach;20
+Les Breuleux;26
+Bubendorf;13
+Corbières;10
+Pratteln;13
+Goumoëns;22
+Collonge-Bellerive;25
+Rafz;1
+Lignerolle;22
+Suhr;19
+Alle;26
+Wettingen;19
+Affoltern am Albis;1
+Chéserex;22
+Wildberg;1
+Oberthal;2
+Jenins;18
+Gampelen;2
+Stalden (VS);23
+Ermatingen;20
+Vuadens;10
+Cornol;26
+Vétroz;23
+Arni (BE);2
+Guttet-Feschel;23
+Noville;22
+Leissigen;2
+Balzers;
+Seengen;19
+Chardonne;22
+Muolen;17
+Inwil;3
+Nunningen;11
+Le Landeron;24
+La Brillaz;10
+Hochdorf;3
+Kleinandelfingen;1
+Les Montets;10
+Leuzigen;2
+Melchnau;2
+Landiswil;2
+Oberembrach;1
+Meikirch;2
+Dürnten;1
+Buch am Irchel;1
+Mezzovico-Vira;21
+Altdorf (UR);4
+Grandcour;22
+Bätterkinden;2
+Torny;10
+Uetendorf;2
+Flaach;1
+Gipf-Oberfrick;19
+Vordemwald;19
+Vaulruz;10
+Lumino;21
+Diessenhofen;20
+Röschenz;13
+Rüti (ZH);1
+Nürensdorf;1
+Broc;10
+Brienzwiler;2
+Trogen;15
+Arisdorf;13
+Märstetten;20
+Frick;19
+Thusis;18
+Meyrin;25
+Galmiz;10
+Thalheim (AG);19
+Aarwangen;2
+Cugy (FR);10
+Pohlern;2
+Erlinsbach (AG);19
+Mörschwil;17
+Rances;22
+Herzogenbuchsee;2
+Le Mont-sur-Lausanne;22
+Saint-Martin (FR);10
+Gelterkinden;13
+Essertines-sur-Yverdon;22
+Knutwil;3
+Attalens;10
+Gontenschwil;19
+Mervelier;26
+Gachnang;20
+Inden;23
+Lac de Neuchâtel (VD);22
+Thal;17
+Ebikon;3
+Thunstetten;2
+Bourg-en-Lavaux;22
+Diegten;13
+Seon;19
+Berolle;22
+Enges;24
+Weiach;1
+Le Flon;10
+Trüllikon;1
+Güttingen;20
+Yens;22
+Wölflinswil;19
+Crémines;2
+Reinach (AG);19
+Fehraltorf;1
+Sargans;17
+Longirod;22
+Rain;3
+Siblingen;14
+Brislach;13
+Oberkulm;19
+Gondiswil;2
+Steinmaur;1
+Oberbuchsiten;11
+Aubonne;22
+Würenlingen;19
+Stein (AR);15
+Juriens;22
+Bavois;22
+Oberegg;16
+Dietikon;1
+Rüthi (SG);17
+Santa Maria in Calanca;18
+Frauenkappelen;2
+Fribourg;10
+Sils im Domleschg;18
+Losone;21
+Reigoldswil;13
+Meierskappel;3
+Eich;3
+Wila;1
+Lauerz;5
+Ronco sopra Ascona;21
+Ursenbach;2
+Braunau;20
+Oberlangenegg;2
+Vendlincourt;26
+Bachs;1
+Heitenried;10
+Sulgen;20
+Saillon;23
+Roches (BE);2
+Eglisau;1
+Ballaigues;22
+Kirchberg (BE);2
+Champvent;22
+Bassersdorf;1
+Boncourt;26
+Würenlos;19
+Donneloye;22
+Eschen;
+Herrliberg;1
+Zuoz;18
+Grandfontaine;26
+Vuarrens;22
+Zuzwil (SG);17
+Schlatt (ZH);1
+Rheinau;1
+Wil (ZH);1
+Staffelbach;19
+Mézières (FR);10
+Saint-Blaise;24
+Eggersriet;17
+Sissach;13
+Allschwil;13
+Häggenschwil;17
+Lengwil;20
+Kölliken;19
+Romanshorn;20
+Unterkulm;19
+Ringgenberg (BE);2
+Belfaux;10
+Erlinsbach (SO);11
+Milvignes;24
+Buus;13
+Minusio;21
+Münchenbuchsee;2
+Lac de Joux;22
+Steckborn;20
+Grüningen;1
+Hofstetten bei Brienz;2
+Gansingen;19
+Anières;25
+Ballwil;3
+Rüttenen;11
+Müllheim;20
+Sorens;10
+Valbroye;22
+Langnau am Albis;1
+Root;3
+Schmiedrued;19
+Aristau;19
+Lommis;20
+Dardagny;25
+Spreitenbach;19
+Stäfa;1
+Kestenholz;11
+Cressier (NE);24
+Perrefitte;2
+Auw;19
+Mörel-Filet;23
+Kienberg;11
+Lutry;22
+Arogno;21
+Metzerlen-Mariastein;11
+Oberbipp;2
+Ballens;22
+Lupfig;19
+Seehof;2
+Tafers;10
+Madulain;18
+Freienstein-Teufen;1
+Zuzgen;19
+Cadenazzo;21
+Obersiggenthal;19
+Pieterlen;2
+Hochwald;11
+Surpierre;10
+Altstätten;17
+Waldenburg;13
+Grono;18
+Gland;22
+Marsens;10
+Greifensee;1
+Sarmenstorf;19
+Cossonay;22
+Wikon;3
+Untersiggenthal;19
+Bargen (SH);14
+Ebersecken;3
+Schneisingen;19
+Lac de Morat (VD);22
+Oberglatt;1
+Reconvilier;2
+Grandval;2
+Courtedoux;26
+Estavayer;10
+Warth-Weiningen;20
+Oberhof;19
+Speicher;15
+Turtmann-Unterems;23
+Lohn (GR);18
+Läufelfingen;13
+Küblis;18
+Hagenbuch;1
+Saint-Livres;22
+Winkel;1
+Movelier;26
+Elsau;1
+Fischbach;3
+Reitnau;19
+Hohentannen;20
+Neuhausen am Rheinfall;14
+Landquart;18
+Dägerlen;1
+Céligny;25
+Corcelles-le-Jorat;22
+Aarberg;2
+Neuheim;9
+Wangen-Brüttisellen;1
+Kappel am Albis;1
+Aeugst am Albis;1
+Zeglingen;13
+Hemishofen;14
+Saint-Aubin (FR);10
+Oberwil (BL);13
+Madulain;18
+Walterswil (BE);2
+Remigen;19
+Bargen (BE);2
+Saulcy;26
+Fontaines-sur-Grandson;22
+Zollikon;1
+Grandson;22
+Gals;2
+Roggwil (BE);2
+Ziefen;13
+Ferenbalm;2
+Münchwilen (TG);20
+Lüsslingen-Nennigkofen;11
+Gerzensee;2
+Birmenstorf (AG);19
+Fahy;26
+Adliswil;1
+Gilly;22
+Riaz;10
+Holderbank (SO);11
+Hägglingen;19
+Marly;10
+Schenkon;3
+Corippo;21
+Riva San Vitale;21
+La Sarraz;22
+Altikon;1
+Vernier;25
+Raperswilen;20
+Matzingen;20
+Therwil;13
+Villarzel;22
+Attiswil;2
+Agarn;23
+Büsingen am Hochrhein;
+Muri bei Bern;2
+Arnex-sur-Orbe;22
+Brienzwiler;2
+Deitingen;11
+Balzers;
+Schaan;
+Trimbach;11
+Maladers;18
+Charrat;23
+Urdorf;1
+Seuzach;1
+Zeneggen;23
+Ried bei Kerzers;10
+Büsserach;11
+Obfelden;1
+Uznach;17
+Richterswil;1
+Thierachern;2
+Burgistein;2
+Bonvillars;22
+Hofstetten-Flüh;11
+Soyhières;26
+Wiedlisbach;2
+Mauren;
+Le Châtelard;10
+Heiden;15
+Collina d'Oro;21
+Cologny;25
+Bonstetten;1
+Erschwil;11
+Böttstein;19
+Lengnau (BE);2
+Aesch (BL);13
+Felben-Wellhausen;20
+Ruggell;
+Fey;22
+Bretzwil;13
+Rechthalten;10
+Lauwil;13
+Ehrendingen;19
+Hornussen;19
+Mönchaltorf;1
+Niedermuhlern;2
+Bauen;4
+Schlossrued;19
+Corminboeuf;10
+Mauensee;3
+Münchenstein;13
+Urtenen-Schönbühl;2
+Oltingen;13
+Champoz;2
+Schlierbach;3
+Schnottwil;11
+Oberentfelden;19
+Riedholz;11
+Otelfingen;1
+Neuendorf;11
+Untereggen;17
+Cuarnens;22
+Gächlingen;14
+Blauen;13
+Wegenstetten;19
+Tegerfelden;19
+Gletterens;10
+Tobel-Tägerschen;20
+Rorschacherberg;17
+Uerkheim;19
+Villars-le-Terroir;22
+Eiken;19
+Froideville;22
+Wengi;2
+Dinhard;1
+Schwanden bei Brienz;2
+Les Enfers;26
+Schupfart;19
+Hellikon;19
+Hildisrieden;3
+St. Silvester;10
+Les Clées;22
+Gsteigwiler;2
+Muhen;19
+Romont (BE);2
+Berg am Irchel;1
+Walzenhausen;15
+Adligenswil;3
+Romainmôtier-Envy;22
+Reinach (BL);13
+Wangen bei Olten;11
+La Sonnaz;10
+Walperswil;2
+Meinier;25
+Wintersingen;13
+Essertines-sur-Rolle;22
+Gordola;21
+Egerkingen;11
+Doppleschwand;3
+Lucens;22
+Wolfhalden;15
+Ormalingen;13
+Grosshöchstetten;2
+Koppigen;2
+Arlesheim;13
+Därligen;2
+Döttingen;19
+Steinerberg;5
+Rubigen;2
+Sagogn;18
+Noréaz;10
+Sorvilier;2
+Collex-Bossy;25
+Bottens;22
+Wolfwil;11
+Zeihen;19
+Meisterschwanden;19
+St. Margrethen;17
+Zunzgen;13
+Effingen;19
+Niederweningen;1
+Vullierens;22
+Löhningen;14
+Wald (AR);15
+Thusis;18
+Unterlangenegg;2
+Breitenbach;11
+Nyon;22
+Corcelles (BE);2
+La Neuveville;2
+Veytaux;22
+Altbüron;3
+Dittingen;13
+Waldstatt;15
+Hindelbank;2
+Corsier-sur-Vevey;22
+Altnau;20
+Oberwil bei Büren;2
+La Chaux (Cossonay);22
+Andelfingen;1
+Rehetobel;15
+Klingnau;19
+Fahrni;2
+Roggenburg;13
+Moiry;22
+Echallens;22
+Linescio;21
+Suchy;22
+Massongex;23
+Vulliens;22
+Brüttelen;2
+Möriken-Wildegg;19
+Triesenberg;
+Brütten;1
+Schlieren;1
+Mathod;22
+Eschert;2
+Grossdietwil;3
+Cronay;22
+Adlikon;1
+Alchenstorf;2
+Salenstein;20
+Sant'Antonino;21
+Bennwil;13
+Hedingen;1
+Commugny;22
+Wollerau;5
+Balgach;17
+Bad Zurzach;19
+Homberg;2
+Rifferswil;1
+Rüti bei Büren;2
+Veyrier;25
+Bodio;21
+Monthey;23
+Geuensee;3
+Knonau;1
+Belmont-sur-Yverdon;22
+Rohrbachgraben;2
+Roche (VD);22
+Cheiry;10
+Thalheim an der Thur;1
+Wallisellen;1
+Bioggio;21
+Leibstadt;19
+Courchapoix;26
+Menziken;19
+Fällanden;1
+Moosseedorf;2
+Arch;2
+Stettfurt;20
+Brugg;19
+Bellevue;25
+Valeyres-sous-Rances;22
+Nuglar-St. Pantaleon;11
+Diessbach bei Büren;2
+Schafisheim;19
+Luzern;3
+Ettingen;13
+Servion;22
+Châtonnaye;10
+Andwil (SG);17
+Egliswil;19
+Laufen-Uhwiesen;1
+Solothurn;11
+Schöftland;19
+Subingen;11
+Pregny-Chambésy;25
+Herznach;19
+Büren (SO);11
+Udligenswil;3
+Eschlikon;20
+Lotzwil;2
+Rupperswil;19
+Autigny;10
+Oberdorf (BL);13
+Roggliswil;3
+Brusino Arsizio;21
+Courchavon;26
+Hochfelden;1
+Arconciel;10
+Stüsslingen;11
+Stabio;21
+Niederwil (AG);19
+Premier;22
+Oetwil am See;1
+Prangins;22
+Hefenhofen;20
+Gettnau;3
+Stein am Rhein;14
+Sursee;3
+Lyssach;2
+Eggerberg;23
+Oberhallau;14
+Neerach;1
+Dulliken;11
+Strengelbach;19
+Rickenbach (ZH);1
+Himmelried;11
+Hölstein;13
+Oberhünigen;2
+Arbon;20
+Krattigen;2
+Safenwil;19
+Gempen;11
+Schmerikon;17
+Fläsch;18
+Ostermundigen;2
+Pollegio;21
+Bergdietikon;19
+Muriaux;26
+Wenslingen;13
+Ponthaux;10
+Dürrenäsch;19
+Remaufens;10
+Cheseaux-Noréaz;22
+Hettlingen;1
+Pully;22
+Oulens-sous-Echallens;22
+Dielsdorf;1
+Duggingen;13
+Plan-les-Ouates;25
+Heimenhausen;2
+Buchs (ZH);1
+Avry;10
+Gretzenbach;11
+Dörflingen;14
+Bister;23
+Eclépens;22
+Zetzwil;19
+Aesch (LU);3
+Bitsch;23
+L'Abergement;22
+Dornach;11
+Bünzen;19
+Trélex;22
+Fisibach;19
+Pailly;22
+Altishofen;3
+Beinwil am See;19
+Lommiswil;11
+Meltingen;11
+Villnachern;19
+Weesen;17
+Ecublens (VD);22
+Prez-vers-Noréaz;10
+Jonen;19
+Bleienbach;2
+Ermensee;3
+Burtigny;22
+Auenstein;19
+Schleinikon;1
+Penthéréaz;22
+Grancy;22
+Damphreux;26
+Benken (ZH);1
+Gebenstorf;19
+Derendingen;11
+Berneck;17
+Safnern;2
+Pomy;22
+Ependes (FR);10
+Rovio;21
+Estavayer;10
+Bühler;15
+Vernayaz;23
+Opfikon;1
+Lausen;13
+Villaz-Saint-Pierre;10
+Schelten;2
+Dorf;1
+Orny;22
+Heiligenschwendi;2
+Mandach;19
+Saint-Prex;22
+Birrwil;19
+Neyruz (FR);10
+Mühlau;19
+Daillens;22
+Mauborget;22
+Rüdlingen;14
+Siglistorf;19
+Pont-la-Ville;10
+Siselen;2
+Härkingen;11
+Thalwil;1
+Lully (FR);10
+Crissier;22
+Molondin;22
+Dietwil;19
+Niederbuchsiten;11
+Zumikon;1
+Villars-sur-Glâne;10
+Balm bei Günsberg;11
+Agiez;22
+Münsterlingen;20
+Mammern;20
+Gollion;22
+Bretonnières;22
+Eichberg;17
+Heimberg;2
+Däniken;11
+La Folliaz;10
+Lüscherz;2
+Niederhünigen;2
+Lax;23
+Wahlen;13
+Zäziwil;2
+Zollikofen;2
+Chancy;25
+Vufflens-la-Ville;22
+Neuenhof;19
+Oberrüti;19
+Berikon;19
+La Tène;24
+Weiningen (ZH);1
+Melano;21
+Büron;3
+Hauenstein-Ifenthal;11
+Tenero-Contra;21
+Rodersdorf;11
+Oberwil-Lieli;19
+Chiasso;21
+Assens;22
+Grolley;10
+Buchs (AG);19
+Châtillon (JU);26
+Genthod;25
+Bellach;11
+Morcote;21
+Günsberg;11
+Oberegg;16
+Torricella-Taverne;21
+Greppen;3
+Aesch (ZH);1
+Veltheim (AG);19
+Novazzano;21
+Wangen an der Aare;2
+Giffers;10
+Schönengrund;15
+Melide;21
+Lufingen;1
+Avusy;25
+Chavannes-sur-Moudon;22
+Onnens (VD);22
+Rumisberg;2
+La Praz;22
+Kappel (SO);11
+Ueken;19
+Miglieglia;21
+Bottenwil;19
+Lugnez;26
+Beurnevésin;26
+Maisprach;13
+Wynau;2
+Vuiteboeuf;22
+Iffwil;2
+Pierrafortscha;10
+Fislisbach;19
+Birr;19
+Steinhausen;9
+Ottenbach;1
+Obermumpf;19
+Ellikon an der Thur;1
+Poliez-Pittet;22
+Brügg;2
+Fahrwangen;19
+Bardonnex;25
+Reute (AR);15
+Pfungen;1
+Rünenberg;13
+Cottens (FR);10
+Curtilles;22
+Montherod;22
+Oberweningen;1
+Bellikon;19
+Etoy;22
+Buchberg;14
+Russin;25
+Hüntwangen;1
+Windisch;19
+Hermance;25
+Kaiseraugst;19
+Rudolfstetten-Friedlisberg;19
+Billens-Hennens;10
+Künten;19
+Pfeffingen;13
+Toffen;2
+Ecublens (FR);10
+Müntschemier;2
+Mellingen;19
+Lohn (SH);14
+Genolier;22
+Corcelles-Cormondrèche;24
+Ependes (VD);22
+Bussigny;22
+Zufikon;19
+Buchrain;3
+Wisen (SO);11
+Founex;22
+Höri;1
+Schluein;18
+Begnins;22
+Full-Reuenthal;19
+Bannwil;2
+Lancy;25
+Hermenches;22
+Gamprin;
+Männedorf;1
+Kriechenwil;2
+Giez;22
+Riniken;19
+Echarlens;10
+Treiten;2
+Cornaux;24
+Othmarsingen;19
+Stetten (SH);14
+Goldach;17
+Amsoldingen;2
+Presinge;25
+Ropraz;22
+Maschwanden;1
+Loveresse;2
+Kiesen;2
+Donat;18
+Tenniken;13
+Saillon;23
+Rümligen;2
+Caslano;21
+Au (SG);17
+Zuchwil;11
+Auswil;2
+Füllinsdorf;13
+Avully;25
+Zwingen;13
+Frenkendorf;13
+Cheseaux-sur-Lausanne;22
+Jens;2
+Drei Höfe;11
+Epalinges;22
+Buttwil;19
+Vinelz;2
+Cuarny;22
+Thörigen;2
+Wallbach;19
+Waltenschwil;19
+Teuffenthal (BE);2
+Botterens;10
+Gurzelen;2
+Luterbach;11
+Dällikon;1
+Steinach;17
+Forst-Längenbühl;2
+Rottenschwil;19
+Le Pâquier (FR);10
+Unterlunkhofen;19
+Fulenbach;11
+Lohn-Ammannsegg;11
+Walterswil (SO);11
+Kesswil;20
+Granges (Veveyse);10
+Binningen;13
+Grimisuat;23
+La Folliaz;10
+Pompaples;22
+Kehrsatz;2
+Rorbas;1
+Lüterkofen-Ichertswil;11
+Vandoeuvres;25
+Uebeschi;2
+Fiez;22
+Lausanne;22
+Stetten (AG);19
+Aarburg;19
+Truttikon;1
+Niederdorf;13
+Meinisberg;2
+Rebstein;17
+Ponte Capriasca;21
+Croglio;21
+Wohlenschwil;19
+Cartigny;25
+Maracon;22
+Ménières;10
+Le Grand-Saconnex;25
+Marbach (SG);17
+Flerden;18
+Uitikon;1
+Oeschgen;19
+Uttwil;20
+Täuffelen;2
+Kirchleerau;19
+Lachen;5
+Novaggio;21
+Urmein;18
+Niedergösgen;11
+Bachenbülach;1
+Crans-près-Céligny;22
+Mont-Tramelan;2
+Oberrohrdorf;19
+Corsier (GE);25
+Massonnens;10
+Bioley-Magnoux;22
+Saules (BE);2
+Démoret;22
+Interlaken;2
+Bercher;22
+Bettwil;19
+Dietlikon;1
+Morlon;10
+Dotzigen;2
+Elfingen;19
+Widnau;17
+Sommeri;20
+Grub (AR);15
+Olsberg;19
+Bofflens;22
+Ittigen;2
+Masein;18
+Orzens;22
+Villars-le-Comte;22
+Egolzwil;3
+Croy;22
+Rüfenach;19
+Cressier (FR);10
+Suscévaz;22
+Biezwil;11
+Wileroltigen;2
+Schwadernau;2
+Trasadingen;14
+Chêne-Bougeries;25
+Laupen;2
+Abtwil;19
+Niederried bei Interlaken;2
+Montpreveyres;22
+Saint-Barthélemy (VD);22
+Bossonnens;10
+Biel-Benken;13
+Duillier;22
+Biberstein;19
+Fétigny;10
+Rohrbach;2
+Koblenz;19
+Corcelles-près-Concise;22
+La Chaux-des-Breuleux;26
+Orges;22
+Schöfflisdorf;1
+Lampenberg;13
+Lavigny;22
+Chavannes-le-Chêne;22
+Büttenhardt;14
+Freienwil;19
+Granges-Paccot;10
+Nuvilly;10
+Rütschelen;2
+Häfelfingen;13
+Senarclens;22
+Orpund;2
+Boppelsen;1
+Castaneda;18
+Givrins;22
+Bözen;19
+Wasterkingen;1
+Cademario;21
+Anwil;13
+Mönthal;19
+Winznau;11
+Chénens;10
+Rietheim;19
+Bettenhausen;2
+Gunzgen;11
+Champagne;22
+Oeschenbach;2
+Bournens;22
+Choulex;25
+Obersteckholz;2
+Sullens;22
+Aclens;22
+Seftigen;2
+Chevilly;22
+Dottikon;19
+Saint-Léonard;23
+Remetschwil;19
+Echandens;22
+Rüeggisberg;2
+Penthalaz;22
+Mont-sur-Rolle;22
+Bettwiesen;20
+Matten bei Interlaken;2
+Penthaz;22
+Morges;22
+Brione sopra Minusio;21
+Laconnex;25
+Wiler bei Utzenstorf;2
+Thônex;25
+Aeschi (SO);11
+Belprahon;2
+Moosleerau;19
+Allmendingen;2
+Uttigen;2
+Astano;21
+Buch (SH);14
+Bellmund;2
+Schwarzhäusern;2
+Trey;22
+Mattstetten;2
+Etagnières;22
+Seegräben;1
+Wettswil am Albis;1
+Valangin;24
+Wislikofen;19
+Leutwil;19
+Bettens;22
+Lussery-Villars;22
+Cortaillod;24
+Nebikon;3
+Dintikon;19
+Lonay;22
+Schönenwerd;11
+Titterten;13
+Saubraz;22
+Evilard;2
+Bissone;21
+Vaduz;
+Farnern;2
+Humlikon;1
+Morrens (VD);22
+Nenzlingen;13
+Zullwil;11
+Obergösgen;11
+Büetigen;2
+Tentlingen;10
+Niederglatt;1
+Oppens;22
+Biglen;2
+Staufen;19
+Berlingen;20
+Sutz-Lattrigen;2
+Teufenthal (AG);19
+Finsterhennen;2
+Seltisberg;13
+Schellenberg;
+Chessel;22
+Rebévelier;2
+Alberswil;3
+Hirschthal;19
+Faoug;22
+Montagny-près-Yverdon;22
+Hendschiken;19
+Wachseldorn;2
+Vallon;10
+Stettlen;2
+Chevroux;22
+Mägenwil;19
+Lovatens;22
+Zuzwil (BE);2
+Arboldswil;13
+Uetikon am See;1
+Givisiez;10
+Mies;22
+Grandevent;22
+Planken;
+Troinex;25
+Corserey;10
+Schaan;
+Boulens;22
+Hermrigen;2
+Epsach;2
+Peseux;24
+Ogens;22
+Oppligen;2
+Hemmiken;13
+Courgevaux;10
+Grossdietwil;3
+Inkwil;2
+Arni (AG);19
+Bursins;22
+Etziken;11
+Recherswil;11
+Ursins;22
+Monteggio;21
+Unterengstringen;1
+Niederrohrdorf;19
+Kernenried;2
+Niederlenz;19
+Ederswiler;26
+Grangettes;10
+Denens;22
+Lützelflüh;2
+Grellingen;13
+Tägerig;19
+Tschugg;2
+Gy;25
+La Tour-de-Peilz;22
+Geltwil;19
+Vucherens;22
+Hunzenschwil;19
+Oberlunkhofen;19
+Brünisried;10
+Mutrux;22
+Murten;10
+Dompierre (VD);22
+Wittinsburg;13
+Hausen (AG);19
+Volken;1
+Rovray;22
+Ammerswil;19
+Mülligen;19
+Graben;2
+Boussens;22
+Ferreyres;22
+Mumpf;19
+Itingen;13
+Bussy-sur-Moudon;22
+Bioley-Orjulaz;22
+Missy;22
+Lupsingen;13
+Rothenbrunnen;18
+Le Vaud;22
+Fräschels;10
+Flumenthal;11
+Rekingen (AG);19
+Grindel;11
+Treytorrens (Payerne);22
+Montcherand;22
+Walliswil bei Wangen;2
+Fischbach-Göslikon;19
+Häutligen;2
+Vugelles-La Mothe;22
+Bussy-Chardonney;22
+Lüterswil-Gächliwil;11
+Saint-Oyens;22
+Champtauroz;22
+Pura;21
+Villars-sous-Yens;22
+Dizy;22
+Agno;21
+Henggart;1
+Kleinbösingen;10
+Birrhard;19
+Bottmingen;13
+Bühl;2
+Wauwil;3
+Freimettigen;2
+Renens (VD);22
+Mötschwil;2
+Soral;25
+Rümikon;19
+Rüschlikon;1
+Altwis;3
+Aire-la-Ville;25
+Mühlethurnen;2
+Matran;10
+Wangenried;2
+Perroy;22
+Coinsins;22
+Cugy (VD);22
+Bremblens;22
+Rickenbach (BL);13
+Erlenbach (ZH);1
+Dättlikon;1
+Romanel-sur-Lausanne;22
+Comunanza Cadenazzo/Monteceneri;21
+Unterentfelden;19
+Valeyres-sous-Ursins;22
+Sessa;21
+Bretigny-sur-Morrens;22
+Dänikon;1
+Diemerswil;2
+Busswil bei Melchnau;2
+Holziken;19
+Erlach;2
+Chamblon;22
+Chavannes-de-Bogis;22
+Burg im Leimental;13
+Ulmiz;10
+San Vittore;18
+Stein (AG);19
+Mex (VD);22
+Lichtensteig;17
+Baldingen;19
+Büttikon;19
+Onex;25
+Hilterfingen;2
+Niederönz;2
+Oberrieden;1
+Boniswil;19
+Dierikon;3
+Confignon;25
+Schwaderloch;19
+Berg (SG);17
+Oetwil an der Limmat;1
+Rolle;22
+Herbligen;2
+Boningen;11
+Rickenbach (SO);11
+Worben;2
+Bäriswil;2
+Studen (BE);2
+Rüdtligen-Alchenflüh;2
+Oberhofen am Thunersee;2
+Salmsach;20
+Dachsen;1
+Horrenbach-Buchen;2
+Mellikon;19
+Féchy;22
+Carouge (GE);25
+Kallern;19
+Puplinge;25
+Witterswil;11
+Luins;22
+Belmont-sur-Lausanne;22
+Chavannes-le-Veyron;22
+Campione d'Italia;
+Horriwil;11
+Höchstetten;2
+Schwerzenbach;1
+Widen;19
+Henniez;22
+Allaman;22
+Böbikon;19
+Aranno;21
+Kilchberg (ZH);1
+Staatswald Galm;10
+Miège;23
+Grens;22
+Perly-Certoux;25
+Balerna;21
+Syens;22
+Sisseln;19
+Birsfelden;13
+Feldbrunnen-St. Niklaus;11
+Muntelier;10
+Venthône;23
+Sévaz;10
+Feuerthalen;1
+Bedigliora;21
+Münchenwiler;2
+Greng;10
+Münchwilen (AG);19
+Eggenwil;19
+Coldrerio;21
+Zwieselberg;2
+Port;2
+Wolfisberg;2
+Bogis-Bossey;22
+Vico Morcote;21
+Uezwil;19
+Rumendingen;2
+Bottighofen;20
+Killwangen;19
+Flurlingen;1
+Fiez;22
+Lützelflüh;2
+Vevey;22
+Oekingen;11
+Sévery;22
+Eysins;22
+Besenbüren;19
+Regensberg;1
+Manno;21
+Cottens (VD);22
+Tecknau;13
+Mettembert;26
+Mirchel;2
+Lussy-sur-Morges;22
+Holderbank (AG);19
+Merzligen;2
+Böckten;13
+Rümlingen;13
+Valeyres-sous-Montagny;22
+Greifensee;1
+Morbio Inferiore;21
+Thürnen;13
+Wilen (TG);20
+Ramlinsburg;13
+Baltschieder;23
+Rohr (SO);11
+Bettingen;12
+Habsburg;19
+Rheineck;17
+Prilly;22
+Paradiso;21
+Montet (Glâne);10
+Brenzikofen;2
+Lac de Neuchâtel (BE);2
+Rennaz;22
+Hallwil;19
+Jegenstorf;2
+Curio;21
+Willadingen;2
+Jongny;22
+Deisswil bei Münchenbuchsee;2
+Aegerten;2
+Mörigen;2
+Oberengstringen;1
+Hauterive (NE);24
+Chexbres;22
+Vufflens-le-Château;22
+Chavannes-des-Bois;22
+Bolken;11
+Ennetbaden;19
+Chêne-Pâquier;22
+Scheuren;2
+Vaux-sur-Morges;22
+Buchillon;22
+Treycovagnes;22
+Origlio;21
+Matten bei Interlaken;2
+Comano;21
+Novalles;22
+Kaufdorf;2
+Lully (VD);22
+Arnex-sur-Nyon;22
+Aefligen;2
+Châtel-sur-Montsalvens;10
+Crassier;22
+Chapelle (Glâne);10
+Rongellen;18
+Reisiswil;2
+Rueyres;22
+Buckten;13
+Bodensee (TG);20
+Tübach;17
+Borex;22
+Chippis;23
+Langendorf;11
+Liedertswil;13
+Signy-Avenex;22
+Orselina;21
+Jouxtens-Mézery;22
+Geroldswil;1
+Auboranges;10
+Zielebach;2
+Bremgarten bei Bern;2
+Ipsach;2
+Schinznach-Bad;19
+Rossemaison;26
+Bedano;21
+Préverenges;22
+Planken;
+Coppet;22
+Lamone;21
+Gurbrü;2
+Saint-Sulpice (VD);22
+Gerlafingen;11
+Meyriez;10
+Halten;11
+Starrkirch-Wil;11
+Hagneck;2
+Prévonloup;22
+Monthey;23
+Prévondavaux;10
+Eppenberg-Wöschnau;11
+Tannay;22
+Lohnstorf;2
+Crésuz;10
+Rorschach;17
+Ligerz;2
+Balzers;
+Bursinel;22
+Ponte Capriasca;21
+Bougy-Villars;22
+Romanel-sur-Morges;22
+Magliaso;21
+Murten;10
+Horn;20
+Hitzkirch;3
+Nusshof;13
+Flerden;18
+Muzzano;21
+Gempenach;10
+Bättwil;11
+Islisberg;19
+Essertes;22
+Aeschi (SO);11
+Denges;22
+Augst;13
+Dully;22
+Villars-Sainte-Croix;22
+Hersberg;13
+Chavannes-près-Renens;22
+Vacallo;21
+Kilchberg (BL);13
+Tolochenaz;22
+Hüttikon;1
+Unterramsern;11
+Rickenbach (TG);20
+Porza;21
+Brunegg;19
+Vich;22
+Maroggia;21
+Turgi;19
+Nidau;2
+Obergerlafingen;11
+Vernate;21
+Schwendibach;2
+Känerkinden;13
+Hellsau;2
+Fehren;11
+Walliswil bei Niederbipp;2
+Sergey;22
+Wiggiswil;2
+Lutzenberg;15
+Diepflingen;13
+Veyras;23
+Gamprin;
+Villarsel-sur-Marly;10
+Vezia;21
+Berken;2
+Eschen;
+Gurmels;10
+Hubersdorf;11
+Schönenbuch;13
+Giebenach;13
+Fürstenau;18
+Jaberg;2
+Ferenbalm;2
+Châtillon (FR);10
+Dozwil;20
+Lalden;23
+Rüti bei Lyssach;2
+Chêne-Bourg;25
+Canobbio;21
+Oberburg;2
+Honau;3
+Kirchenthurnen;2
+Oberburg;2
+Reverolle;22
+Heimiswil;2
+Wiliberg;19
+Twann-Tüscherz;2
+Leimbach (AG);19
+Veysonnaz;23
+Kriegstetten;11
+Vaduz;
+Vinzel;22
+Tartegnin;22
+Rossenges;22
+Gisikon;3
+Corseaux;22
+Zug;9
+Vaduz;
+Cureglia;21
+Hüniken;11
+Ferpicloz;10
+Clarmont;22
+Clavaleyres;2
+Berg (SG);17
+Kammersrohr;11
+Burg (AG);19
+Mezzovico-Vira;21
+Lavertezzo;21
+Neggio;21
+Chigny;22
+Saint-Saphorin (Lavaux);22
+Villars-Epeney;22
+Sorengo;21
+Lutzenberg;15
+Muralto;21
+Cadempino;21
+Savosa;21
+Massagno;21
+Baden;19
+Buchberg;14
+Gravesano;21
+Erlach;2
+Entlebuch;3
+Meienried;2
+Céligny;25
+Grancia;21
+Curio;21
+Ponte Tresa;21
+Degersheim;17
+Senèdes;10
+Bielersee (NE);24
+Mauraz;22
+Paudex;22
+Ferrera;18
+Echarlens;10
+Wittenbach;17
+Olsberg;19
+Glattfelden;1
+Monthey;23
+Mont-Tramelan;2
+Gottlieben;20
+Liddes;23
+Kaiserstuhl;19
+Mönchaltorf;1
+Rivaz;22
+Croy;22
+Ebersecken;3
+Bichelsee-Balterswil;20
+Brissago;21
+Grossdietwil;3
+Buchberg;14
+Planken;
+Vaduz;
+Saint-Brais;26
+Schaan;
+Ropraz;22
+Vaduz;
+Häggenschwil;17
+Schaan;
+Bedigliora;21
+Comunanza Capriasca/Lugano;21
+Gampelen;2
+Häggenschwil;17
+Maienfeld;18
+Les Enfers;26
+Vaduz;
+Capriasca;21
+Planken;
+Planken;
+La Tène;24
+Turgi;19
+Würenlos;19
+Hersberg;13
+Eschenz;20
+Tenero-Contra;21
+Montagny (FR);10
+Olsberg;19
+Schlatt-Haslen;16
+Oberegg;16
+`

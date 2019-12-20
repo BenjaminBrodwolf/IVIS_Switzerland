@@ -1,27 +1,21 @@
 html, body{
     width: 100%;
-    height: 100%;
 }
 
 main{
     margin-top: 7%;
     width: 100%;
-    height: 100%;
+    padding-bottom: 2%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
 
 }
 
-g:hover:not(.zooming){
+svg:hover{
     cursor: pointer;
 }
-.zooming g:hover{
-    cursor: zoom-in;
-}
-.focused:hover{
-    cursor: zoom-out;
-}
+
 .scrollable{
     height: 70vh;
     overflow: scroll;
@@ -47,26 +41,16 @@ g:hover:not(.zooming){
     position: relative;
     top: -3em;
     left: 4em;
-    color: white;
 }
 
-.dropInZone {
-    padding: 2em;
-    width: 100%;
-    display: inline-block;
+.dropzone {
     border-color: black;
     border-width: 5px;
     border-style: solid;
-}
-
-.dropOutZone {
-    padding: 2em;
+    padding: 1em;
     width: 100%;
     display: inline-block;
-    background-color: #e6e9f0;
-    padding: 2em;
 }
-
 
 .filterZone {
     height: 100%;
@@ -88,67 +72,30 @@ g:hover:not(.zooming){
     margin-left: 3em;
 }
 
-#cantons,  #laichgebiete, #trockenwiesen{
+#cantons{
     transition: 3s;
+    visibility: hidden;
 }
-#visor{
-    transition: 0.5s;
-}
+
 #cantons > g{
-    stroke: #f6c100;
+    stroke: #f6f6f6;
 }
 
 #cantons > g:hover{
     fill-opacity: 50%;
 }
 
-circle:hover{
-    fill: red;
-    stroke-width: 10px;
-}
-.focused{
-    background-color: aquamarine;
-    fill: aquamarine;
+#gemeinden{
+    transition: 3s;
 }
 
-#trockenwiesen {
-    fill: white;
-    stroke: white;
-    stroke-width: 5px;
-    visibility: hidden;
+#gemeinden > path{
+    stroke: #f6f6f6;
+    stroke-width: 0.5px;
 }
 
-#trockenwiesen > path:hover {
-    fill: red;
-    stroke: red;
-    stroke-width: 10px;
-}
-
-#laichgebiete{
-    fill: white;
-    stroke: white;
-    stroke-width: 5px;
-    visibility: hidden;
-}
-
-#laichgebiete > path:hover {
-    fill: red;
-    stroke: red;
-    stroke-width: 10px;
-}
-
-
-#wanderobjekte{
-    fill: white;
-    stroke: white;
-    stroke-width: 5px;
-    visibility: hidden;
-}
-
-#wanderobjekte > path:hover {
-    fill: red;
-    stroke: red;
-    stroke-width: 10px;
+#gemeinden > path:hover{
+    fill-opacity: 50%;
 }
 
 
@@ -167,7 +114,6 @@ circle:hover{
     background-color: #ffd311;
     padding: 1% 2% 1% 2%;
     text-align: right;
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -177,3 +123,14 @@ circle:hover{
     text-align: right;
 }
 
+#resetSelButton{
+    visibility: hidden;
+}
+
+#dragfield{
+    height: 35vh;
+}
+
+.lake{
+    fill: #91c7ff;
+}

@@ -1,130 +1,31 @@
 const canton = {path: cantonsSVG, table: cantonTable, data: undefined};
 
-const props = [
+const gemeinden = {path: gemeindenSVG, table: gemeindenTable, data: undefined};
+
+const propsG = [
     {
         id: "p1",
         active: false,
-        value: "trockenwiesen",
-        label: 'Trockenwiesen',
-        path: trockenwiesenSVG,
-        table: trockenwiesenTable,
+        value: {first: 500, second: 1000},
+        label: 'Population',
+        table: population,
         data: undefined,
         amount: undefined,
-        canton: {
-            ZH: undefined,
-            BE: undefined,
-            LU: undefined,
-            UR: undefined,
-            SZ: undefined,
-            OW: undefined,
-            NW: undefined,
-            GL: undefined,
-            ZG: undefined,
-            FR: undefined,
-            SO: undefined,
-            BS: undefined,
-            BL: undefined,
-            SH: undefined,
-            AA: undefined,
-            AI: undefined,
-            SG: undefined,
-            GR: undefined,
-            AG: undefined,
-            TG: undefined,
-            TI: undefined,
-            VD: undefined,
-            VS: undefined,
-            NE: undefined,
-            GE: undefined,
-            JU: undefined
-        }
+        gemeinde: {}
     },
     {
         id: "p2",
         active: false,
-        value: "laichgebiete",
-        label: 'Laichgebiete',
-        path: laichgebieteSVG,
-        table: laichgebieteTable,
+        value: {first: 28.0, second: 40.0},
+        label: 'Age1',
+        table: age1,
         data: undefined,
         amount: undefined,
-        canton: {
-            ZH: undefined,
-            BE: undefined,
-            LU: undefined,
-            UR: undefined,
-            SZ: undefined,
-            OW: undefined,
-            NW: undefined,
-            GL: undefined,
-            ZG: undefined,
-            FR: undefined,
-            SO: undefined,
-            BS: undefined,
-            BL: undefined,
-            SH: undefined,
-            AA: undefined,
-            AI: undefined,
-            SG: undefined,
-            GR: undefined,
-            AG: undefined,
-            TG: undefined,
-            TI: undefined,
-            VD: undefined,
-            VS: undefined,
-            NE: undefined,
-            GE: undefined,
-            JU: undefined
-        }
-    },
-    {
-        id: "p3",
-        active: false,
-        value: "wanderobjekte",
-        label: 'Wanderobjekte',
-        path: wanderobjekteSVG,
-        table: wanderobjekteTable,
-        data: undefined,
-        amount: undefined,
-        canton: {
-            ZH: undefined,
-            BE: undefined,
-            LU: undefined,
-            UR: undefined,
-            SZ: undefined,
-            OW: undefined,
-            NW: undefined,
-            GL: undefined,
-            ZG: undefined,
-            FR: undefined,
-            SO: undefined,
-            BS: undefined,
-            BL: undefined,
-            SH: undefined,
-            AA: undefined,
-            AI: undefined,
-            SG: undefined,
-            GR: undefined,
-            AG: undefined,
-            TG: undefined,
-            TI: undefined,
-            VD: undefined,
-            VS: undefined,
-            NE: undefined,
-            GE: undefined,
-            JU: undefined
-        }
+        gemeinde: {}
     },
 ];
 
-let focusCanton;
-
-function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min;
-}
-
+let focusedSegment = null;
 
 const dom = innerString => {
     const tmpl = document.createElement("DIV");
@@ -141,146 +42,218 @@ function allowDrop(ev) {
     ev.preventDefault();
 }
 
-function dropIn(ev) {
-    ev.preventDefault();
-    const randomColor = "rgb(" + getRandomInt(0, 255) + "," + getRandomInt(0, 255) + "," + getRandomInt(0, 255) + ")";
-    const data = ev.dataTransfer.getData('text');
-    if (ev.target.className === "dropInZone") {
-        ev.target.appendChild(document.getElementById(data));
-        document.getElementById(data).style.backgroundColor = randomColor;
-
-        props.forEach(prop => {
-            if (data === prop.id) {
-                prop.active = true;
-                if (!document.getElementById("toggle").checked) {
-                    document.getElementById(prop.value).style.visibility = "visible";
-                }
-
-                document.getElementById(prop.value).style.fill = randomColor;
-                document.getElementById(prop.value).style.stroke = randomColor;
-            }
-        })
-
-        console.log("DropIn");
-        if (focusCanton) {
-            createViewList(focusCanton);
-        }
-    }
-}
-
-function dropOut(ev) {
+function drop(ev) {
     ev.preventDefault();
     const data = ev.dataTransfer.getData('text');
-    if (ev.target.className === "dropOutZone") {
-        ev.target.appendChild(document.getElementById(data));
-        document.getElementById(data).style.backgroundColor = '#ffd311';
+    ev.target.appendChild(document.getElementById(data));
+    ev.target.style.borderStyle = 'solid';
+    document.getElementById(data).style.height = "8em";
+    document.getElementById(data).style.width = "8em";
 
-        if (document.getElementById("toggle").checked) {
-            defaultMapColor();
-            document.getElementById("toggle").checked = false;
+    propsG.forEach(prop => {
+        if (data === prop.id) {
+            prop.active = true;
+            document.getElementById(data).innerHTML = prop.label;
+            document.getElementById(data).title = prop.label;
+            console.log(prop.data)
         }
+    });
 
-        props.forEach(prop => {
-            if (data === prop.id) {
-                prop.active = false;
-                document.getElementById(prop.value).style.visibility = "hidden";
-            }
-        })
-        console.log("DropOut")
-        if (focusCanton) {
-            createViewList(focusCanton);
-        }
-    }
+    //colorMapCanton();
+    colorMapGemeinden();
+    createHtmlList();
 }
 
 function enterDropzone(ev) {
-    if (ev.target.id === "zone") {
-        ev.target.style.borderStyle = 'dashed'
-    }
-    if (ev.target.id === "dragfield") {
-        ev.target.style.backgroundColor = '#cccfd6'
-    }
+    ev.target.style.borderStyle = 'dashed'
 }
 
 function leaveDropzone(ev) {
-    if (ev.target.id === "zone") {
-        ev.target.style.borderStyle = 'solid'
-    }
-    if (ev.target.id === "dragfield") {
-        ev.target.style.backgroundColor = '#e6e9f0'
-    }
+    ev.target.style.borderStyle = 'solid'
 }
 
-function getColorOfTemperature(amountArea, amountAll) {
-    const temperature = (100 * amountAll) / amountArea;
-    console.log(temperature)
-
-    let color = 'rgb(255,255,255)';
-
-    if (temperature > 0 && temperature < 3) {
-        color = 'rgb(255,160,166)';
-    } else if (temperature >= 3 && temperature < 15) {
-        color = 'rgb(255,146,102)';
-    } else if (temperature >= 15 && temperature <= 50) {
-        color = 'rgb(255,91,63)';
-    } else if (temperature > 50) {
-        color = 'rgb(255,0,0)';
-
-    }
-    return color;
-}
-
-function colorMap() {
-    const selectElements = document.querySelector(`#cantons`);
-    const elementsG = selectElements.querySelectorAll('g');
-
-    const allVisibleData = props.filter(e => e.active === true);
-
-    let amountArea = 0;
-    for (const data of allVisibleData) {
-        amountArea += data.amount
-    }
-
-    elementsG.forEach(c => {
-
-        let cantonAmount = 0;
-        for (const data of allVisibleData) {
-            cantonAmount += data.canton[c.id]
+function resetAll() {
+    propsG.forEach(p => {
+        if (p.active) {
+            putItBack(p.id);
+            p.active = false;
         }
-
-        console.log(c.id + " : " + cantonAmount);
-        c.style.fill = getColorOfTemperature(amountArea, cantonAmount);
     })
 }
 
-function defaultMapColor() {
-    const selectElements = document.querySelector(`#cantons`);
-    const elementsG = selectElements.querySelectorAll('g');
+function resetSelected() {
+    putItBack(focusedSegment.id);
+    propsG.find(p => p.id === focusedSegment.id).active = false;
+    focusedSegment = null;
+    document.getElementById("resetSelButton").style.visibility = 'hidden';
+}
+
+function select(element) {
+    if (propsG.find(p => p.id === element.id).active) {
+        document.getElementById("resetSelButton").style.visibility = 'visible';
+        propsG.forEach(p => {
+            focusedSegment = element;
+            if (focusedSegment.id === p.id) {
+                if (checkElementIntersection(focusedSegment).operator === false){
+                    document.getElementById(p.id).style.borderColor = "rgb(255,0,0)";
+                }
+                else {
+                    document.getElementById(p.id).style.borderColor = "rgb(255,0,0)";
+                    document.getElementById(focusedSegment.firstElementChild.id).style.borderColor = "rgb(255,0,0)";
+                }
+            } else {
+                document.getElementById(p.id).style.borderColor = "rgb(0,0,0)";
+            }
+        })
+    }
+}
+
+function putItBack(node) {
+    const dragfield = document.getElementById("dragfield");
+    const segment = document.getElementById(node);
+
+    for (let i = 0; i < segment.children.length; i++) {
+        dragfield.appendChild(segment.children[i]);
+    }
+
+    dragfield.appendChild(segment);
+    segment.style.height = "3em";
+    segment.style.width = "3em";
+    segment.style.backgroundColor = '#ffd311';
+    segment.style.borderColor = 'rgb(0, 0, 0)';
+    segment.innerHTML = "";
+    const propLabel = dom(`<p class="propLabel">${segment.title}</p>`);
+    segment.appendChild(propLabel)
+    //colorMapCanton();
+    colorMapGemeinden();
+    createHtmlList();
+}
+
+/*
+Sammelt die Objekte mit den Operatore und Elementen in einer Liste
+*/
+function getPreconditions() {
+    const filterBox = document.getElementById("zone");
+    let listWithPrecondition = []
+
+    for (let i = 0; i < filterBox.children.length; i++) {
+        listWithPrecondition.push({
+            filterOperator: checkElementIntersection(filterBox.children[i]).operator,
+            filterProperty: checkElementIntersection(filterBox.children[i]).element,
+        });
+    }
+
+    return listWithPrecondition;
+}
+
+/*
+Es wird getestet ob es ein UND-Operator (true) oder ODER-Operator ist (false) und speichert dieser
+boolean mit dem Element zusammen in ein Objekt
+ */
+function checkElementIntersection(element) {
+    if (element.firstElementChild === null) {
+        return {
+            operator: false,
+            element: orOperation(element)
+        }
+    }
+    return {
+        operator: true,
+        element: andOperation(element, element.firstElementChild)
+    }
+}
+
+/*
+Getter Methoden
+ */
+function andOperation(firstElement, secondElement) {
+    return {
+        firstElement: firstElement.title,
+        secondElement: secondElement.title,
+    };
+}
+
+function orOperation(element) {
+    return element.title
+}
+
+function colorMapGemeinden() {
+    const selectElements = document.querySelector(`#gemeinden`);
+    const elementsG = selectElements.querySelectorAll('path');
+    elementsG.forEach(c => c.style.fill = 'rgb(0, 0, 0)');
+    const coloredGemeinden = searchGemeindenWithPrecondition();
+    coloredGemeinden.forEach(c => {
+        c.style.fill = 'rgb(255,0,0)';
+    })
+}
+
+/*
+Gibt Liste zurück von Kantonen die eingefärbt werden
+ */
+function searchGemeindenWithPrecondition() {
+    const selectElements = document.querySelector(`#gemeinden`);
+    const elementsG = selectElements.querySelectorAll('path');
+
+    const gemeindenWithPrecondition = [];
+
     elementsG.forEach(c => {
-        c.style.fill = 'rgb(0, 0, 0)';
-    })
+        if (checkGemeinde(c)) {
+            gemeindenWithPrecondition.push(c);
+        }
+    });
+
+    return gemeindenWithPrecondition;
 }
+
+
+/*
+Testet einen einzelnen Kanton, ob er die Bedingung erfüllt
+ */
+function checkGemeinde(checkedGemeinde) {
+    let fulfillPrecondition = false;
+    const preconditions = getPreconditions();
+
+    preconditions.forEach(pc => {
+        if (pc.filterOperator) {
+            const prop1 = propsG.find(p => p.label === pc.filterProperty.firstElement);
+            if (prop1.data.find(p => p.gemeinde === checkedGemeinde.id  && (prop1.value.first < p.value && prop1.value.second > p.value))) {
+                const prop2 = propsG.find(p => p.label === pc.filterProperty.secondElement);
+                if (prop2.data.find(p => p.gemeinde === checkedGemeinde.id  && (prop2.value.first < p.value && prop2.value.second > p.value))) {
+                    fulfillPrecondition = true;
+                }
+
+            } else {
+                fulfillPrecondition = false
+            }
+        } else {
+            const prop = propsG.find(p => p.label === pc.filterProperty);
+
+            if (prop.data.find(p => p.gemeinde === checkedGemeinde.id && (prop.value.first < p.value && prop.value.second > p.value))) {
+                fulfillPrecondition = true;
+            } else {
+                fulfillPrecondition = false
+            }
+
+        }
+    });
+    return fulfillPrecondition;
+}
+
 
 const render = () => {
 
-    const dragfield = dom(`<div id="dragfield" class="dropOutZone" ondragenter="enterDropzone(event)" ondragleave="leaveDropzone(event)" ondragover="allowDrop(event)" ondrop="dropOut(event)">`);
+    const dragfield = dom(`<div class="scrollable"  id="dragfield">`);
     const svg = dom(`<div id="svg">`);
 
-    props.forEach(prop => {
-        const propElement = dom(`<div class="segment" id="${prop.id}" draggable="true" ondragstart="drag(event)">
+    propsG.forEach(prop => {
+        const propElement = dom(`<div class="segment" id="${prop.id}" draggable="true" onclick="select(this)" ondragstart="drag(event)">
                                                 <p class="propLabel">${prop.label}</p>
-                                            </div>`);
+                                            </div>`)
         dragfield.appendChild(propElement);
     });
 
-    let paths;
-    props.forEach(prop => {
-        paths = paths + prop.path;
-    });
-
     const svgTag = dom(`<svg xmlns="http://www.w3.org/2000/svg" style="width: 100%" version="1.2" baseProfile="tiny" viewBox="0 0 800 507" stroke-linecap="round" stroke-linejoin="round">  
-                                            ${cantonsSVG} + ${paths} 
-                                            <circle id="visor" cx="-50" cy="-50" r="15" stroke="red" stroke-width="3"  fill="none"  transform="translate(0,0)"/>
+                                            ${gemeindenSVG} + ${cantonsSVG}
                                    </svg>`);
 
     svg.appendChild(svgTag);
@@ -293,45 +266,44 @@ const render = () => {
 
 
     cantonINIT();
-    console.log(canton)
+    gemeindeINIT();
     /* Initialize every Data */
 
-    props.forEach(e => dataINIT(e));
-
-    document.getElementById("toggle").addEventListener("click", toggleVisibilty);
-
-    const node = document.getElementById("GR37").getBBox();
-    console.log(node)
-
-};
-
-
-const toggleVisibilty = () => {
-    const value = document.getElementById("toggle").checked;
-
-    props.forEach(prop => {
-        if (prop.active) {
-            document.getElementById(prop.value).style.visibility = value ? "hidden" : "visible";
-        }
-    })
-    if (value) {
-        colorMap()
-    } else {
-        defaultMapColor();
-    }
+    propsG.forEach(e => dataINITGemeinden(e))
 
 };
 
 const cantonTableToObject = data => {
-    const [canton, name, population, area, lakearea] = data.split(";");
+    const [canton, name, nr] = data.split(";");
     return {
         canton,
         name,
-        population,
-        area,
-        lakearea
+        nr,
     }
 };
+
+const gemeindeTableToObject = data => {
+    const [name, cantonNr] = data.split(";");
+    return {
+        name,
+        cantonNr,
+    }
+};
+
+const gemeindeINIT = () => {
+    const table = [];
+    canton.table.split("\n").forEach(e => table.push(gemeindeTableToObject(e)));
+    canton.data = table;
+
+    const selectElements = document.querySelector(`#gemeinden`);
+    const elementsG = selectElements.querySelectorAll('path');
+
+    /* Add MouseOver-Listener to the Gemeinden */
+    elementsG.forEach(e => e.addEventListener('mouseover', event => {
+        document.getElementById("infoBox").innerText = e.id;
+    }));
+};
+
 const cantonINIT = () => {
     const table = [];
     canton.table.split("\n").forEach(e => table.push(cantonTableToObject(e)));
@@ -343,136 +315,72 @@ const cantonINIT = () => {
     /* Add MouseClick-Listener to the Cantons */
     elementsG.forEach(e => e.addEventListener('click', event => {
         const cantonName = table.filter(e => e.name === event.target.id);
-        createViewList(cantonName[0]);
     }));
 };
 
-
-const dataINIT = props => {
-
-    const gTag = document.getElementById(props.value);
-    const allPath = gTag.querySelectorAll("path");
-    let pathIDs = [];
-    for (const path of allPath) {
-        pathIDs.push(path.id)
-    }
-    console.log(pathIDs)
-
+const dataINITCanton = props => {
     const table = [];
     props.table.split("\n").forEach(data => {
         const [id, name] = data.split(";");
-
-        if (pathIDs.includes(id) && !table.some(e => e.id == id)) {
-
-            const svg = document.getElementById(id).getBBox();
-            const coord = {
-                x: svg.x,
-                y: svg.y
-            };
-
             table.push({
                 id,
                 canton: id.substring(0, 2),
                 name,
-                coord
             })
-
-        }
-
     });
-
     props.data = table;
 
     for (const canton in props.canton) {
         props.canton[canton] = props.data.filter(e => e.canton === canton).length;
     }
     props.amount = props.data.length;
-
-    const selectElements = document.querySelector(`#${props.value}`);
-    const elementsPath = selectElements.querySelectorAll('path, circle');
-
-    /* Add MouseOver-Listener to the Datas */
-    elementsPath.forEach(e => e.addEventListener('mouseenter', event => {
-        const getElement = table.filter(e => e.id === event.target.id);
-        infoBox(getElement[0]);
-    }));
 };
 
-
-const infoBox = element => {
-    document.getElementById("infoBox").innerHTML = `<h3>Ort: ${element.name} </h3>`;
-};
-
-
-const dataFocus = (dataPoint, datasetName) => {
-    const selectedDataPoint = props.filter(e => e.label === datasetName)[0].data.find(e => e.name === dataPoint);
-
-    const visor = document.getElementById("visor");
-
-    visor.setAttribute("cx", selectedDataPoint.coord.x);
-    visor.setAttribute("cy", selectedDataPoint.coord.y);
-
-    // document.getElementById(selectedDataPoint.id).setAttribute("style", "stroke: white");
-    // document.getElementById(selectedDataPoint.id).style.stroke = "white";
-};
-
-const distinct = array => {
-    let distinctList = [];
-    array.forEach(data => {
-        if (!distinctList.includes(data.name)) {
-            distinctList.push(data.name)
-        }
+const dataINITGemeinden = props => {
+    const table = [];
+    props.table.split("\n").forEach(data => {
+        const [gemeinde, value] = data.split(";");
+        table.push({
+            gemeinde,
+            value,
+        })
     });
-    return distinctList;
+    props.data = table;
 };
 
-const createHtmlList = canton => {
 
-    const allVisibleData = props.filter(e => e.active);
-    const colAmount = allVisibleData.length;
+function createHtmlList() {
 
-    let result = `<div class="row">`;
+    const foundGemeinden = searchGemeindenWithPrecondition();
 
-    allVisibleData.forEach(dataSet => {
-        const filteredList = dataSet.data.filter(e => e.canton === canton.canton);
-        console.log(filteredList)
-        const distinctedList = distinct(filteredList);
-
-        result += `<div class="col-md-${12 / colAmount}"> 
-                <h4>${dataSet.label}</h4>
-                        <div class="scrollable">
+    let result = `         <div class="scrollable">
                              <table class="table table-hover">
+                                 <thead>
+                                      <tr>
+                                         <th scope="col">Gefundene Orte: ${foundGemeinden.length}</th> 
+                                     </tr>
+                                 </thead>
                              <tbody>`;
 
-        distinctedList.forEach(listName => {
-            result += `<tr onmouseover='dataFocus( "${listName}" , "${dataSet.label}" )' >
-                          <td> ${listName} </td> 
-                       </tr>`;
-        });
 
-        result += `    </tbody>
-                      </table>
-                     </div>
-                   </div>`;
+    foundGemeinden.forEach(c => {
+        result += `<tr>
+                          <td> ${c.id} </td> 
+                       </tr>`;
     });
 
-    return result += `</div>`;
-};
+    result += `    </tbody>
+                      </table>
+                   </div>`;
 
-const createViewList = canton => {
-    focusCanton = canton;
-    document.getElementById("tableTitle").innerText = "Kanton: " + canton.name;
-    document.getElementById('table').innerHTML = createHtmlList(canton);
-};
-
+    document.getElementById('table').innerHTML = result;
+}
 render();
-
 
 // -------- Zoom ---------
 let zoomstate = false;
 const zooming = () => {
     zoomstate = !zoomstate;
-    console.log(zoomstate);
 
     if (zoomstate) {
         document.getElementById("svg").classList.add("zooming")
@@ -487,25 +395,21 @@ let scale = 3;		// maximum size to zoom to canton
 const mapWidth = 900;  // map container width
 const mapHeight = 600; // map container height
 const viewport = document.getElementById("cantons");
+const gemeindenViewport = document.getElementById("gemeinden");
 let selectedCantonID;
 
 
 document.addEventListener('click', e => {
-        if (zoomstate) {
-        console.log(`x="${e.pageX}" y="${e.pageY}"`); // logs the mouse position
+    if (zoomstate) {
 
         const selected = e.target;
-        console.log(selected);
 
         if (selected.id === selectedCantonID) {
             const exFocus = document.getElementById(selectedCantonID);
             if (exFocus) exFocus.parentElement.classList.remove("focused");
 
             viewport.setAttribute("transform", "scale(1.0)");
-            document.getElementById("visor").setAttribute("transform", "scale(1.0)");
-            props.forEach(e => {
-                document.getElementById(e.value).setAttribute("transform", "scale(1.0)");
-            });
+            gemeindenViewport.setAttribute("transform", "scale(1.0)");
             selectedCantonID = "";
 
         } else {
@@ -523,14 +427,10 @@ document.addEventListener('click', e => {
             document.getElementById(selectedCantonID).parentElement.classList.add("focused");
 
             viewport.setAttribute("transform", "scale(" + scale + ")translate(" + tx + "," + ty + ")");
-            document.getElementById("visor").setAttribute("transform", "scale(" + scale + ")translate(" + tx + "," + ty + ")");
-            props.forEach(e => {
-                document.getElementById(e.value).setAttribute("transform", "scale(" + scale + ")translate(" + tx + "," + ty + ")");
-            });
+            gemeindenViewport.setAttribute("transform", "scale(" + scale + ")translate(" + tx + "," + ty + ")");
         }
-        }
-    });
-
+    }
+});
 
 const getBoundingBox = element => {
     // get x,y co-ordinates of top-left of bounding box and width and height
@@ -539,3 +439,8 @@ const getBoundingBox = element => {
     const cy = bbox.y + bbox.height / 2;
     return [bbox.x, bbox.width, bbox.y, bbox.height, cx, cy];
 }
+
+
+
+
+
