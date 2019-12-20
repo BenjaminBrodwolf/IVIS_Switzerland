@@ -302,6 +302,7 @@ const render = () => {
 
     const node = document.getElementById("GR37").getBBox();
     console.log(node)
+
 };
 
 
@@ -489,7 +490,7 @@ const viewport = document.getElementById("cantons");
 let selectedCantonID;
 
 
-    document.addEventListener('click', e => {
+document.addEventListener('click', e => {
         if (zoomstate) {
         console.log(`x="${e.pageX}" y="${e.pageY}"`); // logs the mouse position
 
