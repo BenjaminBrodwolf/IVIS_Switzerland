@@ -1,4 +1,4 @@
-const age1 = `Aeugst am Albis;19.6
+const age0_19 = `Aeugst am Albis;19.6
 Affoltern am Albis;20.8
 Bonstetten;23.8
 Hausen am Albis;22.7

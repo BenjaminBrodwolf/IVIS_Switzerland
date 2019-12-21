@@ -110,15 +110,15 @@ svg:hover{
 
 }
 
-#footer{
+#footer {
     background-color: #ffd311;
     padding: 1% 2% 1% 2%;
     text-align: right;
     left: 0;
     bottom: 0;
     width: 100%;
-}
 
+}
 #developer{
     text-align: right;
 }
