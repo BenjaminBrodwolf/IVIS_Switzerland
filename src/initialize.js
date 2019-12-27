@@ -2,8 +2,28 @@ const canton = {path: cantonsSVG, table: cantonTable, data: undefined};
 const gemeinden = {path: gemeindenSVG, table: gemeindenTable, data: undefined};
 
 const toAnalyseData = [
-    {label: 'Population', table: population, valueType: "amount"},
-    {label: 'Age1', table: age0_19, valueType: "percent"}
+    {label: 'Bevölkerung',                  table: population,              valueType: "amount"},
+    {label: 'Alter1',                       table: age0_19,                 valueType: "percent"},
+    {label: 'Alter2',                       table: age20_64,                valueType: "percent"},
+    {label: 'Alter3',                       table: age20_64,                valueType: "percent"},
+    {label: 'Landwirtschaft',               table: agriculture,             valueType: "percent"},
+    {label: 'Fläche',                       table: area,                    valueType: "km2"},
+    {label: 'Haushaltsgrösse',              table: average_household_size,  valueType: "amount"},
+    {label: 'Geburtenziffer',               table: birth,                   valueType: "percent"},
+    {label: 'Sterbeziffer',                 table: death,                   valueType: "percent"},
+    {label: 'Scheidungsziffer',             table: divorce,                 valueType: "percent"},
+    {label: 'Beschäftigte',                 table: employee,                valueType: "amount"},
+    {label: 'Ausländer',                    table: foreigner,               valueType: "percent"},
+    {label: 'Wald',                         table: forest,                  valueType: "percent"},
+    {label: 'Haushalte',                    table: household,               valueType: "amount"},
+    {label: 'Heiratsziffer',                table: marriage,                valueType: "percent"},
+    {label: 'Bevölkerungsdichte',           table: population_density,      valueType: "amount"},
+    {label: 'Bevölkerungsveränderungen',    table: population_mutation,     valueType: "percent"},
+    {label: 'Sektor1',                      table: sektor_1,                valueType: "amount"},
+    {label: 'Sektor2',                      table: sektor_2,                valueType: "amount"},
+    {label: 'Sektor3',                      table: sektor_3,                valueType: "amount"},
+    {label: 'Siedlungsfläche',              table: settlement_area,         valueType: "percent"},
+    {label: 'Solzialhilfe',                 table: socialcare,              valueType: "rate"}
 ];
 
 const propsGemeindeObject = {

@@ -1,0 +1,2212 @@
+const area = `Aeugst am Albis;7.9
+Affoltern am Albis;10.5
+Bonstetten;7.4
+Hausen am Albis;13.6
+Hedingen;6.6
+Kappel am Albis;7.8
+Knonau;6.5
+Maschwanden;4.7
+Mettmenstetten;13.1
+Obfelden;7.6
+Ottenbach;5.0
+Rifferswil;6.6
+Stallikon;12.0
+Wettswil am Albis;3.8
+Adlikon;6.6
+Benken (ZH);5.7
+Berg am Irchel;7.0
+Buch am Irchel;10.2
+Dachsen;2.7
+Dorf;5.5
+Feuerthalen;2.5
+Flaach;10.2
+Flurlingen;2.4
+Andelfingen;6.7
+Henggart;3.0
+Humlikon;3.7
+Kleinandelfingen;10.3
+Laufen-Uhwiesen;6.3
+Marthalen;14.2
+Ossingen;13.1
+Rheinau;8.9
+Thalheim an der Thur;6.5
+Trüllikon;9.6
+Truttikon;4.4
+Volken;3.3
+Bachenbülach;4.3
+Bassersdorf;9.0
+Bülach;16.1
+Dietlikon;4.2
+Eglisau;9.1
+Embrach;12.7
+Freienstein-Teufen;8.3
+Glattfelden;12.3
+Hochfelden;6.2
+Höri;4.8
+Hüntwangen;4.9
+Kloten;19.3
+Lufingen;5.2
+Nürensdorf;10.1
+Oberembrach;10.2
+Opfikon;5.6
+Rafz;10.7
+Rorbas;4.5
+Wallisellen;6.5
+Wasterkingen;3.9
+Wil (ZH);9.0
+Winkel;8.1
+Bachs;9.2
+Boppelsen;3.9
+Buchs (ZH);5.9
+Dällikon;4.5
+Dänikon;2.8
+Dielsdorf;5.9
+Hüttikon;1.6
+Neerach;6.0
+Niederglatt;3.6
+Niederhasli;11.3
+Niederweningen;6.9
+Oberglatt;8.3
+Oberweningen;4.9
+Otelfingen;7.2
+Regensberg;2.4
+Regensdorf;14.6
+Rümlang;12.4
+Schleinikon;5.7
+Schöfflisdorf;4.0
+Stadel;12.9
+Steinmaur;9.5
+Weiach;9.6
+Bäretswil;22.2
+Bubikon;11.6
+Dürnten;10.2
+Fischenthal;30.2
+Gossau (ZH);18.3
+Grüningen;8.8
+Hinwil;22.3
+Rüti (ZH);10.1
+Seegräben;3.8
+Wald (ZH);25.3
+Wetzikon (ZH);16.7
+Adliswil;7.8
+Kilchberg (ZH);2.6
+Langnau am Albis;8.7
+Oberrieden;2.8
+Richterswil;7.5
+Rüschlikon;2.9
+Thalwil;5.5
+Erlenbach (ZH);3.0
+Herrliberg;9.0
+Hombrechtikon;12.2
+Küsnacht (ZH);12.3
+Männedorf;4.8
+Meilen;11.9
+Oetwil am See;6.1
+Stäfa;8.6
+Uetikon am See;3.5
+Zumikon;5.5
+Zollikon;7.9
+Fehraltorf;9.5
+Hittnau;13.0
+Lindau;11.9
+Pfäffikon;19.5
+Russikon;14.3
+Weisslingen;12.8
+Wila;9.4
+Wildberg;10.5
+Dübendorf;13.6
+Egg;14.5
+Fällanden;6.4
+Greifensee;2.3
+Maur;14.8
+Mönchaltorf;7.6
+Schwerzenbach;2.6
+Uster;28.5
+Volketswil;14.0
+Wangen-Brüttisellen;7.9
+Altikon;7.7
+Brütten;6.7
+Dägerlen;8.0
+Dättlikon;2.9
+Dinhard;7.1
+Ellikon an der Thur;5.0
+Elsau;8.0
+Hagenbuch;8.2
+Hettlingen;5.8
+Neftenbach;15.1
+Pfungen;5.0
+Rickenbach (ZH);6.1
+Schlatt (ZH);9.0
+Seuzach;7.6
+Turbenthal;25.1
+Winterthur;68.1
+Zell (ZH);13.0
+Aesch (ZH);5.2
+Birmensdorf (ZH);11.4
+Dietikon;9.3
+Geroldswil;1.9
+Oberengstringen;2.1
+Oetwil an der Limmat;2.8
+Schlieren;6.5
+Uitikon;4.4
+Unterengstringen;3.4
+Urdorf;7.6
+Weiningen (ZH);5.4
+Zürich;87.9
+Stammheim;24.0
+Wädenswil;35.6
+Elgg;24.4
+Horgen;30.8
+Illnau-Effretikon;32.9
+Bauma;29.5
+Wiesendangen;19.1
+Aarberg;7.9
+Bargen (BE);7.9
+Grossaffoltern;15.1
+Kallnach;18.0
+Kappelen;10.9
+Lyss;14.9
+Meikirch;10.2
+Radelfingen;14.7
+Rapperswil (BE);22.6
+Schüpfen;19.9
+Seedorf (BE);20.9
+Aarwangen;9.9
+Auswil;4.6
+Bannwil;4.7
+Bleienbach;5.7
+Busswil bei Melchnau;2.9
+Gondiswil;9.4
+Langenthal;17.2
+Lotzwil;6.2
+Madiswil;23.2
+Melchnau;10.4
+Obersteckholz;3.9
+Oeschenbach;3.9
+Reisiswil;2.0
+Roggwil (BE);7.8
+Rohrbach;4.1
+Rohrbachgraben;6.5
+Rütschelen;4.0
+Schwarzhäusern;3.8
+Thunstetten;9.7
+Ursenbach;9.2
+Wynau;5.1
+Bern;51.6
+Bolligen;16.6
+Bremgarten bei Bern;1.9
+Kirchlindach;11.9
+Köniz;51.1
+Muri bei Bern;7.6
+Oberbalm;12.3
+Stettlen;3.5
+Vechigen;24.9
+Wohlen bei Bern;36.3
+Zollikofen;5.4
+Ittigen;4.2
+Ostermundigen;6.0
+Biel/Bienne;21.2
+Evilard;3.7
+Arch;6.4
+Büetigen;3.6
+Büren an der Aare;12.6
+Diessbach bei Büren;6.3
+Dotzigen;4.2
+Lengnau (BE);7.4
+Leuzigen;10.3
+Meienried;0.7
+Meinisberg;4.4
+Oberwil bei Büren;6.8
+Pieterlen;8.4
+Rüti bei Büren;6.5
+Wengi;7.1
+Aefligen;2.1
+Alchenstorf;6.6
+Bäriswil;2.8
+Burgdorf;15.6
+Ersigen;15.5
+Hasle bei Burgdorf;21.9
+Heimiswil;23.3
+Hellsau;1.5
+Hindelbank;6.8
+Höchstetten;2.6
+Kernenried;3.3
+Kirchberg (BE);9.0
+Koppigen;6.9
+Krauchthal;19.4
+Lyssach;6.0
+Mötschwil;2.9
+Oberburg;14.1
+Rüdtligen-Alchenflüh;2.7
+Rumendingen;2.5
+Rüti bei Lyssach;1.3
+Willadingen;2.2
+Wynigen;28.3
+Corgémont;17.7
+Cormoret;13.5
+Cortébert;14.8
+Courtelary;22.1
+La Ferrière;14.2
+Mont-Tramelan;4.7
+Orvin;21.6
+Renan (BE);12.6
+Romont (BE);6.9
+Saint-Imier;20.8
+Sonceboz-Sombeval;14.9
+Sonvilier;23.8
+Tramelan;24.8
+Villeret;16.3
+Sauge;13.5
+Péry-La Heutte;23.8
+Brüttelen;6.6
+Erlach;3.4
+Finsterhennen;3.6
+Gals;7.9
+Gampelen;10.6
+Ins;23.9
+Lüscherz;5.4
+Müntschemier;4.9
+Siselen;5.5
+Treiten;4.7
+Tschugg;3.3
+Vinelz;4.6
+Bätterkinden;10.1
+Deisswil bei Münchenbuchsee;2.1
+Diemerswil;2.8
+Fraubrunnen;32.0
+Jegenstorf;13.5
+Iffwil;5.1
+Mattstetten;3.8
+Moosseedorf;6.4
+Münchenbuchsee;8.8
+Urtenen-Schönbühl;7.2
+Utzenstorf;17.0
+Wiggiswil;1.5
+Wiler bei Utzenstorf;3.8
+Zielebach;1.9
+Zuzwil (BE);3.5
+Adelboden;87.6
+Aeschi bei Spiez;30.9
+Frutigen;72.3
+Kandergrund;32.1
+Kandersteg;134.4
+Krattigen;6.0
+Reichenbach im Kandertal;125.8
+Beatenberg;29.2
+Bönigen;15.1
+Brienz (BE);48.1
+Brienzwiler;17.6
+Därligen;6.9
+Grindelwald;171.3
+Gsteigwiler;7.0
+Gündlischwand;16.8
+Habkern;51.0
+Hofstetten bei Brienz;8.7
+Interlaken;4.3
+Iseltwald;21.9
+Lauterbrunnen;164.2
+Leissigen;10.4
+Lütschental;12.3
+Matten bei Interlaken;6.0
+Niederried bei Interlaken;4.3
+Oberried am Brienzersee;20.2
+Ringgenberg (BE);8.7
+Saxeten;19.1
+Schwanden bei Brienz;7.0
+Unterseen;14.0
+Wilderswil;13.5
+Arni (BE);10.4
+Biglen;3.6
+Bowil;14.7
+Brenzikofen;2.2
+Freimettigen;3.0
+Grosshöchstetten;7.0
+Häutligen;3.1
+Herbligen;2.7
+Kiesen;4.7
+Konolfingen;12.7
+Landiswil;10.3
+Linden;13.3
+Mirchel;2.4
+Münsingen;15.8
+Niederhünigen;5.4
+Oberdiessbach;16.5
+Oberthal;10.6
+Oppligen;3.4
+Rubigen;6.9
+Walkringen;17.2
+Worb;21.1
+Zäziwil;5.4
+Oberhünigen;6.0
+Allmendingen;3.8
+Wichtrach;11.6
+Clavaleyres;1.0
+Ferenbalm;9.2
+Frauenkappelen;9.3
+Gurbrü;1.9
+Kriechenwil;4.8
+Laupen;4.1
+Mühleberg;26.3
+Münchenwiler;2.5
+Neuenegg;21.9
+Wileroltigen;4.1
+Belprahon;3.8
+Champoz;7.2
+Corcelles (BE);6.8
+Court;24.6
+Crémines;9.5
+Eschert;6.6
+Grandval;8.2
+Loveresse;4.7
+Moutier;19.7
+Perrefitte;8.6
+Reconvilier;8.2
+Roches (BE);9.0
+Saicourt;13.8
+Saules (BE);4.3
+Schelten;5.5
+Seehof;8.4
+Sorvilier;6.9
+Tavannes;14.8
+Rebévelier;3.5
+Petit-Val;23.8
+Valbirse;18.7
+La Neuveville;6.8
+Nods;26.6
+Plateau de Diesse;25.6
+Aegerten;2.2
+Bellmund;3.8
+Brügg;5.0
+Bühl;3.0
+Epsach;3.4
+Hagneck;1.9
+Hermrigen;3.5
+Jens;4.6
+Ipsach;1.9
+Ligerz;1.8
+Merzligen;2.3
+Mörigen;2.2
+Nidau;1.5
+Orpund;3.9
+Port;2.4
+Safnern;5.6
+Scheuren;2.1
+Schwadernau;4.1
+Studen (BE);2.8
+Sutz-Lattrigen;3.6
+Täuffelen;4.3
+Walperswil;7.0
+Worben;2.7
+Twann-Tüscherz;12.3
+Därstetten;32.9
+Diemtigen;130.0
+Erlenbach im Simmental;36.7
+Oberwil im Simmental;45.9
+Reutigen;11.3
+Spiez;16.7
+Wimmis;22.3
+Stocken-Höfen;14.2
+Guttannen;200.8
+Hasliberg;41.8
+Innertkirchen;236.5
+Meiringen;40.7
+Schattenhalb;31.6
+Boltigen;77.1
+Lenk;123.0
+St. Stephan;60.9
+Zweisimmen;73.1
+Gsteig;62.4
+Lauenen;58.5
+Saanen;120.1
+Guggisberg;55.0
+Rüschegg;57.3
+Schwarzenburg;44.9
+Belp;23.3
+Burgistein;7.5
+Gerzensee;7.8
+Gurzelen;4.5
+Jaberg;1.3
+Kaufdorf;2.1
+Kehrsatz;4.5
+Kirchdorf (BE);14.7
+Kirchenthurnen;1.2
+Lohnstorf;1.8
+Mühlethurnen;2.9
+Niedermuhlern;7.2
+Riggisberg;29.9
+Rüeggisberg;35.8
+Rümligen;4.7
+Seftigen;3.9
+Toffen;4.9
+Uttigen;3.8
+Wattenwil;14.5
+Wald (BE);13.3
+Eggiwil;60.3
+Langnau im Emmental;48.4
+Lauperswil;21.2
+Röthenbach im Emmental;36.8
+Rüderswil;17.2
+Schangnau;36.5
+Signau;22.2
+Trub;62.0
+Trubschachen;15.7
+Amsoldingen;4.7
+Blumenstein;15.5
+Buchholterberg;15.3
+Eriz;21.8
+Fahrni;6.7
+Heiligenschwendi;5.5
+Heimberg;5.4
+Hilterfingen;2.8
+Homberg;6.5
+Horrenbach-Buchen;20.4
+Oberhofen am Thunersee;2.8
+Oberlangenegg;9.1
+Pohlern;9.9
+Schwendibach;1.5
+Sigriswil;55.3
+Steffisburg;13.4
+Teuffenthal (BE);4.6
+Thierachern;7.5
+Thun;21.6
+Uebeschi;4.4
+Uetendorf;10.2
+Unterlangenegg;6.8
+Wachseldorn;3.5
+Zwieselberg;2.4
+Forst-Längenbühl;4.5
+Affoltern im Emmental;11.4
+Dürrenroth;14.1
+Eriswil;11.3
+Huttwil;17.3
+Lützelflüh;26.9
+Rüegsau;15.0
+Sumiswald;59.4
+Trachselwald;16.0
+Walterswil (BE);7.9
+Wyssachen;11.7
+Attiswil;7.7
+Berken;1.4
+Bettenhausen;4.0
+Farnern;3.7
+Graben;3.2
+Heimenhausen;5.8
+Herzogenbuchsee;9.8
+Inkwil;3.4
+Niederbipp;17.4
+Niederönz;2.8
+Oberbipp;8.5
+Ochlenberg;12.1
+Rumisberg;5.1
+Seeberg;16.9
+Thörigen;4.6
+Walliswil bei Niederbipp;1.5
+Walliswil bei Wangen;3.1
+Wangen an der Aare;5.2
+Wangenried;2.9
+Wiedlisbach;7.5
+Wolfisberg;2.5
+Doppleschwand;7.0
+Entlebuch;57.0
+Flühli;108.1
+Hasle (LU);40.3
+Romoos;37.4
+Schüpfheim;38.4
+Werthenstein;15.7
+Escholzmatt-Marbach;106.3
+Aesch (LU);4.6
+Altwis;2.9
+Ballwil;8.8
+Emmen;20.4
+Ermensee;5.7
+Eschenbach (LU);13.2
+Hitzkirch;24.6
+Hochdorf;9.6
+Hohenrain;23.3
+Inwil;10.3
+Rain;9.4
+Römerswil;16.7
+Rothenburg;15.5
+Schongau;12.4
+Adligenswil;7.0
+Buchrain;4.8
+Dierikon;2.8
+Ebikon;9.7
+Gisikon;1.1
+Greppen;3.3
+Honau;1.2
+Horw;12.9
+Kriens;27.3
+Luzern;29.1
+Malters;28.6
+Meggen;7.3
+Meierskappel;6.8
+Root;8.7
+Schwarzenberg;39.3
+Udligenswil;6.2
+Vitznau;8.9
+Weggis;11.8
+Beromünster;42.2
+Büron;5.4
+Buttisholz;16.7
+Eich;5.9
+Geuensee;6.4
+Grosswangen;19.7
+Hildisrieden;7.0
+Knutwil;9.7
+Mauensee;7.2
+Neuenkirch;25.5
+Nottwil;10.3
+Oberkirch;9.1
+Rickenbach (LU);11.8
+Ruswil;45.3
+Schenkon;6.8
+Schlierbach;7.2
+Sempach;8.9
+Sursee;5.8
+Triengen;22.1
+Wolhusen;14.3
+Alberswil;3.6
+Altbüron;6.7
+Altishofen;5.7
+Dagmersellen;23.9
+Ebersecken;8.6
+Egolzwil;4.2
+Ettiswil;12.5
+Fischbach;8.0
+Gettnau;6.1
+Grossdietwil;10.2
+Hergiswil bei Willisau;31.3
+Luthern;37.8
+Menznau;30.4
+Nebikon;3.7
+Pfaffnau;17.7
+Reiden;27.0
+Roggliswil;6.2
+Schötz;15.3
+Ufhusen;12.2
+Wauwil;2.9
+Wikon;8.3
+Zell (LU);13.9
+Willisau;41.2
+Altdorf (UR);10.2
+Andermatt;62.2
+Attinghausen;46.9
+Bauen;3.8
+Bürglen (UR);53.1
+Erstfeld;59.1
+Flüelen;12.4
+Göschenen;104.1
+Gurtnellen;83.4
+Hospental;35.1
+Isenthal;61.0
+Realp;77.8
+Schattdorf;16.3
+Seedorf (UR);15.5
+Seelisberg;13.2
+Silenen;144.8
+Sisikon;16.4
+Spiringen;64.7
+Unterschächen;80.2
+Wassen;96.9
+Einsiedeln;99.0
+Gersau;14.4
+Feusisberg;17.5
+Freienbach;13.8
+Wollerau;6.4
+Küssnacht (SZ);29.5
+Altendorf;20.5
+Galgenen;13.2
+Innerthal;50.2
+Lachen;2.4
+Reichenburg;11.5
+Schübelbach;29.0
+Tuggen;13.6
+Vorderthal;28.0
+Wangen (SZ);8.4
+Alpthal;22.9
+Arth;42.0
+Illgau;11.0
+Ingenbohl;13.4
+Lauerz;9.2
+Morschach;20.9
+Muotathal;172.2
+Oberiberg;33.2
+Riemenstalden;11.2
+Rothenthurm;22.8
+Sattel;17.4
+Schwyz;53.1
+Steinen;11.8
+Steinerberg;7.0
+Unteriberg;46.5
+Alpnach;53.8
+Engelberg;74.9
+Giswil;85.9
+Kerns;92.6
+Lungern;46.5
+Sachseln;53.9
+Sarnen;73.2
+Beckenried;24.3
+Buochs;9.9
+Dallenwil;15.5
+Emmetten;25.0
+Ennetbürgen;9.4
+Ennetmoos;14.1
+Hergiswil (NW);14.3
+Oberdorf (NW);16.1
+Stans;11.1
+Stansstad;9.1
+Wolfenschiessen;92.6
+Glarus Nord;147.1
+Glarus Süd;430.2
+Glarus;103.6
+Baar;24.8
+Cham;17.8
+Hünenberg;18.4
+Menzingen;27.5
+Neuheim;7.9
+Oberägeri;30.0
+Risch;14.8
+Steinhausen;5.0
+Unterägeri;25.7
+Walchwil;13.5
+Zug;21.7
+Châtillon (FR);1.3
+Cheiry;6.5
+Cugy (FR);9.9
+Fétigny;4.1
+Gletterens;2.6
+Lully (FR);5.4
+Ménières;4.4
+Montagny (FR);17.5
+Nuvilly;4.0
+Prévondavaux;1.8
+Saint-Aubin (FR);7.9
+Sévaz;2.5
+Surpierre;8.3
+Vallon;3.5
+Les Montets;10.3
+Delley-Portalban;6.9
+Belmont-Broye;25.8
+Estavayer;40.2
+Cheyres-Châbles;9.8
+Auboranges;1.9
+Billens-Hennens;4.9
+Chapelle (Glâne);2.0
+Le Châtelard;7.5
+Châtonnaye;6.3
+Ecublens (FR);4.9
+Grangettes;3.4
+Massonnens;4.3
+Mézières (FR);9.0
+Montet (Glâne);2.2
+Romont (FR);10.9
+Rue;11.3
+Siviriez;20.3
+Ursy;14.8
+Villaz-Saint-Pierre;5.5
+Vuisternens-devant-Romont;24.0
+Villorsonnens;15.5
+Torny;10.2
+La Folliaz;9.9
+Haut-Intyamon;60.4
+Pont-en-Ogoz;10.1
+Botterens;4.2
+Broc;10.1
+Bulle;23.9
+Châtel-sur-Montsalvens;2.0
+Corbières;9.7
+Crésuz;1.8
+Echarlens;4.6
+Grandvillard;24.2
+Gruyères;28.5
+Hauteville;10.5
+Jaun;55.2
+Marsens;7.8
+Morlon;2.6
+Le Pâquier (FR);4.5
+Pont-la-Ville;4.4
+Riaz;7.8
+La Roche;24.0
+Sâles;18.8
+Sorens;8.7
+Vaulruz;10.1
+Vuadens;10.4
+Bas-Intyamon;33.3
+Val-de-Charmey;112.1
+Arconciel;6.1
+Autigny;6.2
+Avry;5.8
+Belfaux;8.9
+Chénens;3.9
+Corminboeuf;7.3
+Corserey;3.5
+Cottens (FR);5.0
+Ependes (FR);5.6
+Ferpicloz;1.0
+Fribourg;9.3
+Givisiez;3.5
+Granges-Paccot;4.0
+Grolley;5.4
+Marly;7.7
+Matran;2.9
+Neyruz (FR);5.6
+Noréaz;6.9
+Pierrafortscha;5.1
+Ponthaux;5.9
+Le Mouret;18.6
+Prez-vers-Noréaz;5.7
+Senèdes;0.5
+Treyvaux;11.4
+Villars-sur-Glâne;5.5
+Villarsel-sur-Marly;1.4
+Hauterive (FR);11.9
+La Brillaz;10.3
+La Sonnaz;6.9
+Gibloux;36.1
+Courgevaux;3.4
+Courtepin;21.9
+Cressier (FR);4.2
+Fräschels;3.1
+Galmiz;9.0
+Gempenach;1.6
+Greng;1.0
+Gurmels;17.3
+Kerzers;12.3
+Kleinbösingen;3.0
+Meyriez;0.3
+Misery-Courtion;11.4
+Muntelier;1.1
+Murten;24.7
+Ried bei Kerzers;7.5
+Ulmiz;2.9
+Mont-Vully;17.5
+Alterswil;16.2
+Brünisried;3.3
+Düdingen;30.8
+Giffers;5.2
+Bösingen;14.3
+Heitenried;9.1
+Plaffeien;66.6
+Plasselb;18.2
+Rechthalten;7.3
+St. Antoni;16.8
+St. Silvester;7.0
+St. Ursen;15.7
+Schmitten (FR);13.5
+Tafers;8.4
+Tentlingen;3.7
+Ueberstorf;16.1
+Wünnewil-Flamatt;13.3
+Attalens;9.8
+Bossonnens;4.1
+Châtel-Saint-Denis;47.9
+Granges (Veveyse);4.5
+Remaufens;5.9
+Saint-Martin (FR);9.8
+Semsales;29.4
+Le Flon;9.6
+La Verrerie;13.5
+Egerkingen;6.9
+Härkingen;5.5
+Kestenholz;8.6
+Neuendorf;7.1
+Niederbuchsiten;5.5
+Oberbuchsiten;9.4
+Oensingen;12.1
+Wolfwil;6.9
+Aedermannsdorf;12.9
+Balsthal;15.7
+Gänsbrunnen;11.4
+Herbetswil;16.3
+Holderbank (SO);7.8
+Laupersdorf;15.6
+Matzendorf;11.3
+Mümliswil-Ramiswil;35.4
+Welschenrohr;13.0
+Biezwil;4.2
+Lüterkofen-Ichertswil;4.4
+Lüterswil-Gächliwil;3.1
+Messen;11.9
+Schnottwil;7.2
+Unterramsern;1.5
+Lüsslingen-Nennigkofen;7.8
+Buchegg;22.7
+Bättwil;1.7
+Büren (SO);6.2
+Dornach;5.7
+Gempen;6.0
+Hochwald;8.3
+Hofstetten-Flüh;7.5
+Metzerlen-Mariastein;8.5
+Nuglar-St. Pantaleon;6.4
+Rodersdorf;5.3
+Seewen;16.4
+Witterswil;2.6
+Hauenstein-Ifenthal;5.3
+Kienberg;8.6
+Lostorf;13.3
+Niedergösgen;4.3
+Obergösgen;3.6
+Rohr (SO);2.2
+Stüsslingen;6.1
+Trimbach;7.6
+Winznau;4.0
+Wisen (SO);4.8
+Erlinsbach (SO);8.9
+Aeschi (SO);5.4
+Biberist;12.2
+Bolken;2.1
+Deitingen;7.6
+Derendingen;5.7
+Etziken;3.4
+Gerlafingen;1.9
+Halten;1.9
+Horriwil;2.6
+Hüniken;1.0
+Kriegstetten;1.1
+Lohn-Ammannsegg;4.5
+Luterbach;4.6
+Obergerlafingen;1.5
+Oekingen;2.4
+Recherswil;3.3
+Subingen;6.2
+Zuchwil;4.7
+Drei Höfe;4.6
+Balm bei Günsberg;5.5
+Bellach;5.3
+Bettlach;12.2
+Feldbrunnen-St. Niklaus;2.5
+Flumenthal;3.1
+Grenchen;26.0
+Günsberg;5.3
+Hubersdorf;1.4
+Kammersrohr;0.9
+Langendorf;2.0
+Lommiswil;5.8
+Oberdorf (SO);11.9
+Riedholz;7.2
+Rüttenen;8.8
+Selzach;19.5
+Boningen;2.8
+Däniken;5.5
+Dulliken;6.0
+Eppenberg-Wöschnau;1.8
+Fulenbach;4.5
+Gretzenbach;5.8
+Gunzgen;3.9
+Hägendorf;13.9
+Kappel (SO);5.1
+Olten;11.5
+Rickenbach (SO);2.8
+Schönenwerd;3.7
+Starrkirch-Wil;1.8
+Walterswil (SO);4.5
+Wangen bei Olten;7.0
+Solothurn;6.3
+Bärschwil;11.2
+Beinwil (SO);22.7
+Breitenbach;6.8
+Büsserach;7.5
+Erschwil;7.5
+Fehren;1.5
+Grindel;3.1
+Himmelried;6.1
+Kleinlützel;16.3
+Meltingen;5.8
+Nunningen;10.3
+Zullwil;3.7
+Basel;23.9
+Bettingen;2.2
+Riehen;10.9
+Aesch (BL);7.4
+Allschwil;8.9
+Arlesheim;7.0
+Biel-Benken;4.1
+Binningen;4.5
+Birsfelden;2.6
+Bottmingen;3.0
+Ettingen;6.4
+Münchenstein;7.2
+Muttenz;16.6
+Oberwil (BL);7.9
+Pfeffingen;4.9
+Reinach (BL);6.9
+Schönenbuch;1.3
+Therwil;7.7
+Blauen;7.1
+Brislach;9.4
+Burg im Leimental;2.9
+Dittingen;6.7
+Duggingen;5.9
+Grellingen;3.3
+Laufen;11.4
+Liesberg;12.5
+Nenzlingen;3.7
+Roggenburg;6.7
+Röschenz;10.0
+Wahlen;5.4
+Zwingen;4.6
+Arisdorf;10.0
+Augst;1.6
+Bubendorf;10.9
+Frenkendorf;4.6
+Füllinsdorf;4.6
+Giebenach;1.3
+Hersberg;1.7
+Lausen;5.5
+Liestal;18.2
+Lupsingen;3.1
+Pratteln;10.7
+Ramlinsburg;2.3
+Seltisberg;3.5
+Ziefen;7.8
+Anwil;3.9
+Böckten;2.3
+Buckten;2.0
+Buus;8.9
+Diepflingen;1.4
+Gelterkinden;9.8
+Häfelfingen;4.0
+Hemmiken;3.4
+Itingen;3.1
+Känerkinden;1.4
+Kilchberg (BL);1.6
+Läufelfingen;8.1
+Maisprach;5.0
+Nusshof;1.7
+Oltingen;7.2
+Ormalingen;6.9
+Rickenbach (BL);2.9
+Rothenfluh;10.9
+Rümlingen;2.3
+Rünenberg;5.0
+Sissach;8.9
+Tecknau;2.4
+Tenniken;4.7
+Thürnen;2.3
+Wenslingen;5.9
+Wintersingen;7.0
+Wittinsburg;3.2
+Zeglingen;7.9
+Zunzgen;6.9
+Arboldswil;3.5
+Bennwil;6.6
+Bretzwil;7.4
+Diegten;9.6
+Eptingen;11.2
+Hölstein;6.0
+Lampenberg;4.0
+Langenbruck;15.7
+Lauwil;7.3
+Liedertswil;1.9
+Niederdorf;4.4
+Oberdorf (BL);6.3
+Reigoldswil;9.2
+Titterten;3.7
+Waldenburg;8.3
+Gächlingen;7.2
+Löhningen;6.9
+Neunkirch;17.9
+Büttenhardt;4.0
+Dörflingen;5.8
+Lohn (SH);4.9
+Stetten (SH);4.7
+Thayngen;20.0
+Bargen (SH);8.3
+Beringen;18.7
+Buchberg;5.9
+Merishausen;17.5
+Neuhausen am Rheinfall;8.0
+Rüdlingen;5.5
+Schaffhausen;41.9
+Beggingen;12.6
+Schleitheim;21.5
+Siblingen;9.4
+Buch (SH);3.8
+Hemishofen;7.9
+Ramsen;13.5
+Stein am Rhein;5.8
+Hallau;15.3
+Oberhallau;6.0
+Trasadingen;4.1
+Wilchingen;21.2
+Herisau;25.2
+Hundwil;24.2
+Schönengrund;5.2
+Schwellbrunn;17.4
+Stein (AR);9.3
+Urnäsch;48.1
+Waldstatt;6.7
+Bühler;5.6
+Gais;21.2
+Speicher;8.2
+Teufen (AR);15.3
+Trogen;10.0
+Grub (AR);4.2
+Heiden;7.5
+Lutzenberg;2.3
+Rehetobel;6.7
+Reute (AR);5.0
+Wald (AR);6.8
+Walzenhausen;7.0
+Wolfhalden;7.0
+Appenzell;16.9
+Gonten;24.8
+Rüte;40.8
+Schlatt-Haslen;17.9
+Schwende;57.5
+Oberegg;14.6
+Häggenschwil;9.1
+Muolen;10.4
+St. Gallen;39.3
+Wittenbach;12.2
+Berg (SG);3.8
+Eggersriet;8.9
+Goldach;4.7
+Mörschwil;9.9
+Rorschach;1.8
+Rorschacherberg;7.1
+Steinach;4.5
+Tübach;2.0
+Untereggen;7.1
+Au (SG);4.7
+Balgach;6.6
+Berneck;5.6
+Diepoldsau;11.2
+Rheineck;2.2
+St. Margrethen;6.9
+Thal;9.6
+Widnau;4.2
+Altstätten;39.6
+Eichberg;5.5
+Marbach (SG);4.4
+Oberriet (SG);34.6
+Rebstein;4.4
+Rüthi (SG);9.3
+Buchs (SG);15.9
+Gams;22.3
+Grabs;54.7
+Sennwald;41.6
+Sevelen;30.3
+Wartau;41.8
+Bad Ragaz;25.4
+Flums;75.2
+Mels;139.2
+Pfäfers;128.4
+Quarten;61.7
+Sargans;9.5
+Vilters-Wangs;32.7
+Walenstadt;45.7
+Amden;43.0
+Benken (SG);16.5
+Kaltbrunn;18.6
+Schänis;39.9
+Weesen;5.4
+Schmerikon;4.1
+Uznach;7.6
+Rapperswil-Jona;22.1
+Gommiswald;33.7
+Eschenbach (SG);54.9
+Ebnat-Kappel;43.5
+Wildhaus-Alt St. Johann;87.5
+Nesslau;92.6
+Hemberg;20.2
+Lichtensteig;2.8
+Oberhelfenschwil;12.7
+Neckertal;49.0
+Wattwil;51.2
+Kirchberg (SG);42.6
+Lütisburg;14.1
+Mosnang;50.6
+Bütschwil-Ganterschwil;21.9
+Degersheim;14.5
+Flawil;11.5
+Jonschwil;11.1
+Oberuzwil;14.1
+Uzwil;14.5
+Niederbüren;15.8
+Niederhelfenschwil;16.4
+Oberbüren;17.8
+Zuzwil (SG);9.0
+Wil (SG);20.8
+Andwil (SG);6.3
+Gaiserwald;12.6
+Gossau (SG);27.4
+Waldkirch;31.4
+Vaz/Obervaz;42.5
+Lantsch/Lenz;21.8
+Schmitten (GR);11.3
+Albula/Alvra;94.0
+Surses;323.8
+Bergün Filisur;190.2
+Brusio;46.3
+Poschiavo;191.0
+Falera;22.4
+Laax;31.7
+Sagogn;7.0
+Schluein;4.8
+Vals;175.5
+Lumnezia;165.4
+Ilanz/Glion;133.4
+Fürstenau;1.3
+Rothenbrunnen;3.1
+Scharans;14.3
+Sils im Domleschg;9.3
+Cazis;31.2
+Flerden;6.1
+Masein;4.2
+Thusis;16.8
+Tschappina;24.7
+Urmein;4.3
+Safiental;151.4
+Domleschg;46.0
+Avers;93.1
+Sufers;34.6
+Andeer;46.4
+Casti-Wergenstein;25.6
+Donat;4.7
+Lohn (GR);8.1
+Mathon;15.1
+Rongellen;2.0
+Zillis-Reischen;24.5
+Ferrera;75.4
+Rheinwald;137.0
+Bonaduz;14.5
+Domat/Ems;24.3
+Rhäzüns;13.3
+Felsberg;13.4
+Flims;50.5
+Tamins;40.7
+Trin;47.2
+Zernez;344.0
+Samnaun;56.2
+Scuol;438.8
+Valsot;159.1
+Bever;45.7
+Celerina/Schlarigna;24.1
+Madulain;16.4
+Pontresina;118.2
+La Punt-Chamues-ch;63.2
+Samedan;114.0
+St. Moritz;28.7
+S-chanf;138.0
+Sils im Engadin/Segl;63.6
+Silvaplana;44.7
+Zuoz;65.6
+Bregaglia;251.4
+Buseno;11.3
+Castaneda;3.9
+Rossa;58.9
+Santa Maria in Calanca;9.3
+Lostallo;50.9
+Mesocco;164.8
+Soazza;46.4
+Cama;15.1
+Grono;37.1
+Roveredo (GR);38.8
+San Vittore;22.0
+Calanca;37.7
+Val Müstair;198.6
+Davos;284.0
+Fideris;25.3
+Furna;33.3
+Jenaz;26.0
+Klosters-Serneus;219.9
+Conters im Prättigau;18.4
+Küblis;8.1
+Luzein;83.8
+Chur;28.0
+Churwalden;48.6
+Arosa;154.7
+Maladers;7.6
+Tschiertschen-Praden;27.8
+Haldenstein;18.5
+Trimmis;42.9
+Untervaz;27.7
+Zizers;11.0
+Fläsch;20.0
+Jenins;10.5
+Maienfeld;32.4
+Malans;11.4
+Landquart;18.9
+Grüsch;43.3
+Schiers;61.7
+Seewis im Prättigau;49.6
+Breil/Brigels;96.6
+Disentis/Mustér;91.1
+Medel (Lucmagn);136.2
+Sumvitg;101.8
+Tujetsch;133.9
+Trun;51.9
+Obersaxen Mundaun;70.3
+Aarau;12.4
+Biberstein;4.1
+Buchs (AG);5.3
+Densbüren;12.6
+Erlinsbach (AG);9.9
+Gränichen;17.3
+Hirschthal;3.5
+Küttigen;11.9
+Muhen;7.0
+Oberentfelden;7.2
+Suhr;10.6
+Unterentfelden;2.9
+Baden;13.2
+Bellikon;4.9
+Bergdietikon;6.1
+Birmenstorf (AG);7.8
+Ennetbaden;2.1
+Fislisbach;5.1
+Freienwil;4.0
+Gebenstorf;5.7
+Killwangen;2.4
+Künten;4.9
+Mägenwil;3.5
+Mellingen;4.8
+Neuenhof;5.4
+Niederrohrdorf;3.3
+Oberrohrdorf;4.3
+Obersiggenthal;8.4
+Remetschwil;3.9
+Spreitenbach;8.6
+Stetten (AG);4.5
+Turgi;1.5
+Untersiggenthal;8.3
+Wettingen;10.6
+Wohlenschwil;4.4
+Würenlingen;9.4
+Würenlos;9.0
+Ehrendingen;7.3
+Arni (AG);3.5
+Berikon;5.4
+Bremgarten (AG);11.3
+Büttikon;2.8
+Dottikon;3.9
+Eggenwil;2.5
+Fischbach-Göslikon;3.1
+Hägglingen;7.8
+Jonen;5.7
+Niederwil (AG);6.1
+Oberlunkhofen;3.3
+Oberwil-Lieli;5.4
+Rudolfstetten-Friedlisberg;4.9
+Sarmenstorf;8.3
+Tägerig;3.3
+Uezwil;2.5
+Unterlunkhofen;4.5
+Villmergen;12.0
+Widen;2.6
+Wohlen (AG);12.5
+Zufikon;4.8
+Islisberg;1.6
+Auenstein;5.7
+Birr;5.1
+Birrhard;3.0
+Bözen;3.9
+Brugg;6.3
+Effingen;6.8
+Elfingen;4.2
+Habsburg;2.2
+Hausen (AG);3.2
+Lupfig;8.5
+Mandach;5.6
+Mönthal;3.9
+Mülligen;3.2
+Remigen;7.9
+Riniken;4.8
+Rüfenach;4.2
+Schinznach-Bad;1.9
+Thalheim (AG);9.9
+Veltheim (AG);5.2
+Villigen;11.2
+Villnachern;5.7
+Windisch;4.9
+Bözberg;15.6
+Schinznach;12.2
+Beinwil am See;3.8
+Birrwil;3.5
+Burg (AG);0.9
+Dürrenäsch;5.9
+Gontenschwil;9.8
+Holziken;2.9
+Leimbach (AG);1.1
+Leutwil;3.8
+Menziken;6.4
+Oberkulm;9.4
+Reinach (AG);9.6
+Schlossrued;7.3
+Schmiedrued;8.6
+Schöftland;6.2
+Teufenthal (AG);3.6
+Unterkulm;8.9
+Zetzwil;5.8
+Eiken;7.0
+Frick;10.0
+Gansingen;8.8
+Gipf-Oberfrick;10.2
+Herznach;6.2
+Hornussen;7.3
+Kaisten;18.1
+Laufenburg;14.5
+Münchwilen (AG);2.5
+Oberhof;8.2
+Oeschgen;4.4
+Schwaderloch;2.8
+Sisseln;2.6
+Ueken;5.1
+Wittnau;11.2
+Wölflinswil;9.5
+Zeihen;6.9
+Mettauertal;21.6
+Ammerswil;3.2
+Boniswil;2.4
+Brunegg;1.5
+Dintikon;3.7
+Egliswil;6.3
+Fahrwangen;4.0
+Hallwil;2.2
+Hendschiken;3.5
+Holderbank (AG);2.3
+Hunzenschwil;3.3
+Lenzburg;11.4
+Meisterschwanden;4.3
+Möriken-Wildegg;6.6
+Niederlenz;3.3
+Othmarsingen;4.7
+Rupperswil;6.2
+Schafisheim;6.3
+Seengen;9.6
+Seon;9.6
+Staufen;3.5
+Abtwil;4.1
+Aristau;8.7
+Auw;8.6
+Beinwil (Freiamt);11.3
+Besenbüren;2.3
+Bettwil;4.3
+Boswil;11.8
+Bünzen;5.8
+Buttwil;4.6
+Dietwil;5.6
+Geltwil;3.3
+Kallern;2.7
+Merenschwand;13.5
+Mühlau;5.5
+Muri (AG);12.3
+Oberrüti;5.4
+Rottenschwil;4.5
+Sins;20.3
+Waltenschwil;4.6
+Hellikon;7.1
+Kaiseraugst;4.9
+Magden;11.0
+Möhlin;18.8
+Mumpf;3.2
+Obermumpf;5.0
+Olsberg;4.6
+Rheinfelden;16.1
+Schupfart;7.0
+Stein (AG);2.8
+Wallbach;4.5
+Wegenstetten;7.1
+Zeiningen;11.3
+Zuzgen;8.4
+Aarburg;4.4
+Bottenwil;5.1
+Brittnau;13.7
+Kirchleerau;4.4
+Kölliken;8.8
+Moosleerau;3.9
+Murgenthal;18.6
+Oftringen;12.9
+Reitnau;8.0
+Rothrist;11.8
+Safenwil;6.0
+Staffelbach;9.0
+Strengelbach;6.1
+Uerkheim;7.1
+Vordemwald;10.1
+Wiliberg;1.2
+Zofingen;11.1
+Baldingen;2.8
+Böbikon;2.6
+Böttstein;7.5
+Döttingen;7.0
+Endingen;11.9
+Fisibach;5.7
+Full-Reuenthal;4.9
+Kaiserstuhl;0.3
+Klingnau;6.7
+Koblenz;4.1
+Leibstadt;6.4
+Lengnau (AG);12.6
+Leuggern;13.7
+Mellikon;2.7
+Rekingen (AG);3.1
+Rietheim;3.9
+Rümikon;2.9
+Schneisingen;8.3
+Siglistorf;5.6
+Tegerfelden;7.1
+Wislikofen;3.7
+Bad Zurzach;6.6
+Arbon;6.0
+Dozwil;1.3
+Egnach;18.5
+Hefenhofen;6.2
+Horn;1.8
+Kesswil;4.4
+Roggwil (TG);11.9
+Romanshorn;8.7
+Salmsach;2.6
+Sommeri;4.2
+Uttwil;4.4
+Amriswil;19.0
+Bischofszell;11.6
+Erlen;12.2
+Hauptwil-Gottshaus;12.5
+Hohentannen;8.0
+Kradolf-Schönenberg;10.9
+Sulgen;9.1
+Zihlschlacht-Sitterdorf;12.2
+Basadingen-Schlattingen;15.6
+Diessenhofen;10.0
+Schlatt (TG);15.5
+Aadorf;19.9
+Felben-Wellhausen;7.4
+Frauenfeld;27.4
+Gachnang;9.8
+Hüttlingen;11.7
+Matzingen;7.7
+Neunforn;11.4
+Stettfurt;6.3
+Thundorf;15.6
+Uesslingen-Buch;14.0
+Warth-Weiningen;8.2
+Altnau;6.7
+Bottighofen;2.4
+Ermatingen;10.4
+Gottlieben;0.4
+Güttingen;9.6
+Kemmental;25.1
+Kreuzlingen;11.5
+Langrickenbach;10.9
+Lengwil;8.8
+Münsterlingen;5.5
+Tägerwilen;11.6
+Wäldi;12.2
+Affeltrangen;14.4
+Bettwiesen;3.9
+Bichelsee-Balterswil;12.1
+Braunau;9.2
+Eschlikon;6.2
+Fischingen;30.7
+Lommis;8.6
+Münchwilen (TG);7.8
+Rickenbach (TG);1.6
+Schönholzerswilen;11.0
+Sirnach;12.4
+Tobel-Tägerschen;7.1
+Wängi;16.5
+Wilen (TG);2.3
+Wuppenau;12.1
+Berlingen;3.6
+Eschenz;12.0
+Herdern;13.7
+Homburg;24.2
+Hüttwilen;17.6
+Mammern;5.5
+Müllheim;8.8
+Pfyn;13.1
+Raperswilen;7.7
+Salenstein;6.5
+Steckborn;8.8
+Wagenhausen;11.8
+Amlikon-Bissegg;14.4
+Berg (TG);13.2
+Birwinken;12.3
+Bürglen (TG);11.7
+Bussnang;18.9
+Märstetten;9.9
+Weinfelden;15.5
+Wigoltingen;17.2
+Arbedo-Castione;21.3
+Bellinzona;164.8
+Cadenazzo;8.4
+Isone;12.9
+Lumino;10.0
+Sant'Antonino;6.6
+Acquarossa;61.6
+Blenio;202.2
+Serravalle;96.9
+Airolo;94.4
+Bedretto;75.2
+Bodio;6.4
+Dalpe;14.5
+Faido;132.5
+Giornico;19.5
+Personico;39.1
+Pollegio;5.9
+Prato (Leventina);16.9
+Quinto;75.2
+Ascona;5.0
+Brione (Verzasca);48.5
+Brione sopra Minusio;3.8
+Brissago;17.8
+Corippo;7.7
+Frasco;25.8
+Gordola;7.0
+Lavertezzo;58.1
+Locarno;18.7
+Losone;9.5
+Mergoscia;12.2
+Minusio;5.9
+Muralto;0.6
+Orselina;2.0
+Ronco sopra Ascona;5.0
+Sonogno;37.6
+Tenero-Contra;3.7
+Vogorno;23.9
+Onsernone;107.4
+Cugnasco-Gerra;35.8
+Agno;2.5
+Aranno;2.7
+Arogno;8.5
+Astano;3.8
+Bedano;1.9
+Bedigliora;2.5
+Bioggio;6.5
+Bissone;1.9
+Brusino Arsizio;4.1
+Cademario;3.9
+Cadempino;0.8
+Canobbio;1.3
+Caslano;2.8
+Comano;2.0
+Croglio;4.4
+Cureglia;1.1
+Curio;2.9
+Grancia;0.6
+Gravesano;0.6
+Lamone;1.9
+Lugano;75.9
+Magliaso;1.1
+Manno;2.4
+Maroggia;1.0
+Massagno;0.8
+Melano;4.7
+Melide;1.6
+Mezzovico-Vira;10.2
+Miglieglia;5.1
+Monteggio;3.4
+Morcote;2.8
+Muzzano;1.6
+Neggio;0.9
+Novaggio;4.4
+Origlio;2.1
+Paradiso;0.9
+Ponte Capriasca;6.2
+Ponte Tresa;0.4
+Porza;1.6
+Pura;3.1
+Rovio;5.5
+Savosa;0.7
+Sessa;2.9
+Sorengo;0.9
+Capriasca;36.3
+Torricella-Taverne;5.2
+Vernate;1.5
+Vezia;1.4
+Vico Morcote;1.9
+Collina d'Oro;6.1
+Alto Malcantone;22.0
+Monteceneri;37.0
+Balerna;2.6
+Castel San Pietro;11.8
+Chiasso;5.3
+Coldrerio;2.5
+Mendrisio;32.0
+Morbio Inferiore;2.3
+Novazzano;5.2
+Riva San Vitale;5.9
+Stabio;6.2
+Vacallo;1.6
+Breggia;25.5
+Biasca;59.1
+Riviera;86.2
+Bosco/Gurin;22.1
+Campo (Vallemaggia);43.3
+Cerentino;20.1
+Cevio;151.3
+Linescio;6.6
+Maggia;111.1
+Lavizzara;187.5
+Avegno Gordevio;27.3
+Terre di Pedemonte;11.4
+Centovalli;51.4
+Gambarogno;51.6
+Aigle;16.5
+Bex;96.6
+Chessel;3.5
+Corbeyrier;22.0
+Gryon;15.2
+Lavey-Morcles;14.2
+Leysin;18.5
+Noville;10.4
+Ollon;59.5
+Ormont-Dessous;64.1
+Ormont-Dessus;61.6
+Rennaz;2.2
+Roche (VD);6.4
+Villeneuve (VD);32.0
+Yvorne;12.2
+Apples;12.9
+Aubonne;9.4
+Ballens;8.4
+Berolle;9.6
+Bière;25.0
+Bougy-Villars;1.8
+Féchy;2.7
+Gimel;18.9
+Longirod;9.5
+Marchissy;11.9
+Mollens (VD);11.1
+Montherod;5.0
+Saint-George;12.3
+Saint-Livres;8.1
+Saint-Oyens;3.0
+Saubraz;3.7
+Avenches;19.4
+Cudrefin;15.6
+Faoug;3.5
+Vully-les-Lacs;20.9
+Bettens;3.8
+Bournens;3.9
+Boussens;3.2
+La Chaux (Cossonay);6.8
+Chavannes-le-Veyron;2.7
+Chevilly;3.8
+Cossonay;8.2
+Cottens (VD);2.4
+Cuarnens;7.1
+Daillens;5.5
+Dizy;3.1
+Eclépens;5.8
+Ferreyres;3.2
+Gollion;5.5
+Grancy;5.6
+L'Isle;16.3
+Lussery-Villars;3.7
+Mauraz;0.5
+Mex (VD);2.9
+Moiry;6.7
+Mont-la-Ville;19.8
+Montricher;26.0
+Orny;5.5
+Pampigny;11.1
+Penthalaz;3.9
+Penthaz;3.9
+Pompaples;4.4
+La Sarraz;7.8
+Senarclens;4.0
+Sévery;2.4
+Sullens;3.9
+Vufflens-la-Ville;5.4
+Assens;5.3
+Bercher;4.2
+Bioley-Orjulaz;3.1
+Bottens;6.9
+Bretigny-sur-Morrens;2.8
+Cugy (VD);2.9
+Echallens;6.7
+Essertines-sur-Yverdon;9.8
+Etagnières;3.8
+Fey;7.4
+Froideville;7.0
+Morrens (VD);3.7
+Oulens-sous-Echallens;5.9
+Pailly;5.8
+Penthéréaz;5.7
+Poliez-Pittet;5.0
+Rueyres;2.0
+Saint-Barthélemy (VD);4.1
+Villars-le-Terroir;7.1
+Vuarrens;9.0
+Montilliez;11.8
+Goumoëns;10.7
+Bonvillars;7.5
+Bullet;16.9
+Champagne;3.9
+Concise;11.4
+Corcelles-près-Concise;4.1
+Fiez;6.8
+Fontaines-sur-Grandson;7.9
+Giez;4.8
+Grandevent;3.4
+Grandson;7.9
+Mauborget;5.5
+Mutrux;3.2
+Novalles;2.0
+Onnens (VD);5.1
+Provence;31.9
+Sainte-Croix;39.4
+Tévenon;14.3
+Belmont-sur-Lausanne;2.6
+Cheseaux-sur-Lausanne;4.6
+Crissier;5.5
+Epalinges;4.6
+Jouxtens-Mézery;1.9
+Lausanne;41.4
+Le Mont-sur-Lausanne;9.7
+Paudex;0.5
+Prilly;2.2
+Pully;5.9
+Renens (VD);3.0
+Romanel-sur-Lausanne;2.9
+Chexbres;2.2
+Forel (Lavaux);18.5
+Lutry;8.4
+Puidoux;22.8
+Rivaz;0.3
+Saint-Saphorin (Lavaux);0.9
+Savigny;16.1
+Bourg-en-Lavaux;9.7
+Aclens;3.9
+Bremblens;2.9
+Buchillon;2.1
+Bussigny;4.8
+Bussy-Chardonney;3.1
+Chavannes-près-Renens;1.7
+Chigny;0.9
+Clarmont;1.0
+Denens;3.3
+Denges;1.7
+Echandens;3.9
+Echichens;13.3
+Ecublens (VD);5.7
+Etoy;4.9
+Lavigny;4.0
+Lonay;3.7
+Lully (VD);2.1
+Lussy-sur-Morges;2.4
+Morges;3.9
+Préverenges;1.9
+Reverolle;1.2
+Romanel-sur-Morges;1.7
+Saint-Prex;5.5
+Saint-Sulpice (VD);1.8
+Tolochenaz;1.6
+Vaux-sur-Morges;2.1
+Villars-Sainte-Croix;1.7
+Villars-sous-Yens;3.1
+Vufflens-le-Château;2.2
+Vullierens;6.8
+Yens;9.5
+Boulens;3.4
+Bussy-sur-Moudon;3.1
+Chavannes-sur-Moudon;5.2
+Curtilles;5.0
+Dompierre (VD);3.3
+Hermenches;4.8
+Lovatens;3.5
+Lucens;19.3
+Moudon;15.7
+Ogens;3.4
+Prévonloup;1.8
+Rossenges;1.1
+Syens;2.5
+Villars-le-Comte;4.2
+Vucherens;3.3
+Montanaire;33.5
+Arnex-sur-Nyon;2.1
+Arzier-Le Muids;51.9
+Bassins;20.9
+Begnins;4.8
+Bogis-Bossey;2.4
+Borex;2.0
+Chavannes-de-Bogis;2.9
+Chavannes-des-Bois;2.1
+Chéserex;10.5
+Coinsins;3.0
+Commugny;6.5
+Coppet;1.9
+Crans-près-Céligny;4.3
+Crassier;2.0
+Duillier;4.1
+Eysins;2.4
+Founex;4.8
+Genolier;4.8
+Gingins;12.6
+Givrins;3.9
+Gland;8.4
+Grens;2.6
+Mies;3.5
+Nyon;6.9
+Prangins;6.1
+La Rippe;16.6
+Saint-Cergue;24.3
+Signy-Avenex;1.9
+Tannay;1.8
+Trélex;5.9
+Le Vaud;3.1
+Vich;1.5
+L'Abergement;5.8
+Agiez;5.5
+Arnex-sur-Orbe;7.6
+Ballaigues;9.1
+Baulmes;22.5
+Bavois;9.3
+Bofflens;4.2
+Bretonnières;5.5
+Chavornay;19.2
+Les Clées;7.0
+Croy;4.5
+Juriens;9.3
+Lignerolle;10.6
+Montcherand;3.0
+Orbe;12.1
+La Praz;5.1
+Premier;6.1
+Rances;9.9
+Romainmôtier-Envy;7.0
+Sergey;1.5
+Valeyres-sous-Rances;6.4
+Vallorbe;23.2
+Vaulion;13.2
+Vuiteboeuf;5.1
+Corcelles-le-Jorat;7.9
+Essertes;1.7
+Maracon;4.4
+Montpreveyres;4.2
+Ropraz;4.8
+Servion;6.3
+Vulliens;6.7
+Jorat-Menthue;17.7
+Oron;24.6
+Jorat-Mézières;11.1
+Champtauroz;3.0
+Chevroux;3.4
+Corcelles-près-Payerne;12.1
+Grandcour;10.2
+Henniez;2.6
+Missy;3.1
+Payerne;24.2
+Trey;3.8
+Treytorrens (Payerne);3.1
+Villarzel;7.7
+Valbroye;33.5
+Château-d'Oex;113.6
+Rossinière;23.4
+Rougemont;48.6
+Allaman;2.6
+Bursinel;1.8
+Bursins;3.4
+Burtigny;5.7
+Dully;1.6
+Essertines-sur-Rolle;7.0
+Gilly;7.7
+Luins;2.6
+Mont-sur-Rolle;3.9
+Perroy;2.9
+Rolle;2.7
+Tartegnin;1.1
+Vinzel;1.1
+L'Abbaye;31.9
+Le Chenit;99.2
+Le Lieu;32.5
+Blonay;16.1
+Chardonne;10.3
+Corseaux;1.1
+Corsier-sur-Vevey;6.7
+Jongny;2.2
+Montreux;33.5
+Saint-Légier-La Chiésaz;15.2
+La Tour-de-Peilz;3.3
+Vevey;2.4
+Veytaux;6.8
+Belmont-sur-Yverdon;6.5
+Bioley-Magnoux;4.3
+Chamblon;2.9
+Champvent;9.0
+Chavannes-le-Chêne;4.0
+Chêne-Pâquier;2.1
+Cheseaux-Noréaz;5.9
+Cronay;6.6
+Cuarny;4.6
+Démoret;4.3
+Donneloye;9.0
+Ependes (VD);4.8
+Mathod;6.6
+Molondin;5.5
+Montagny-près-Yverdon;3.5
+Oppens;3.6
+Orges;4.1
+Orzens;4.2
+Pomy;5.6
+Rovray;3.2
+Suchy;6.7
+Suscévaz;4.2
+Treycovagnes;2.1
+Ursins;3.4
+Valeyres-sous-Montagny;2.3
+Valeyres-sous-Ursins;2.9
+Villars-Epeney;0.9
+Vugelles-La Mothe;3.1
+Yverdon-les-Bains;13.5
+Yvonand;13.3
+Brig-Glis;37.7
+Eggerberg;6.1
+Naters;147.4
+Ried-Brig;47.6
+Simplon;91.1
+Termen;18.7
+Zwischbergen;85.9
+Ardon;20.3
+Chamoson;32.5
+Conthey;85.0
+Nendaz;85.9
+Vétroz;10.4
+Bagnes;284.1
+Bourg-Saint-Pierre;89.8
+Liddes;58.7
+Orsières;164.9
+Sembrancher;17.7
+Vollèges;17.8
+Bellwald;14.0
+Binn;65.1
+Ernen;35.4
+Fiesch;11.0
+Fieschertal;172.9
+Lax;5.4
+Obergoms;155.9
+Goms;129.0
+Ayent;55.1
+Evolène;209.8
+Hérémence;107.5
+Saint-Martin (VS);36.9
+Vex;13.1
+Mont-Noble;43.9
+Agarn;7.6
+Albinen;15.6
+Ergisch;29.5
+Inden;9.8
+Leuk;55.1
+Leukerbad;67.3
+Oberems;50.2
+Salgesch;11.4
+Varen;12.8
+Guttet-Feschel;10.4
+Gampel-Bratsch;23.1
+Turtmann-Unterems;42.5
+Bovernier;13.1
+Charrat;7.6
+Fully;37.9
+Isérables;15.3
+Leytron;26.9
+Martigny;24.9
+Martigny-Combe;37.5
+Riddes;23.9
+Saillon;13.7
+Saxon;23.2
+Trient;39.6
+Champéry;38.9
+Collombey-Muraz;29.7
+Monthey;28.7
+Port-Valais;14.4
+Saint-Gingolph;14.5
+Troistorrents;36.9
+Val-d'Illiez;39.3
+Vionnaz;21.0
+Vouvry;33.5
+Bister;5.8
+Bitsch;5.9
+Grengiols;58.5
+Riederalp;19.0
+Ausserberg;15.0
+Blatten;90.5
+Bürchen;13.4
+Eischoll;14.1
+Ferden;27.9
+Kippel;11.7
+Niedergesteln;17.7
+Raron;30.3
+Unterbäch;22.1
+Wiler (Lötschen);14.9
+Mörel-Filet;8.5
+Steg-Hohtenn;14.0
+Bettmeralp;28.8
+Collonges;12.2
+Dorénaz;12.5
+Evionnaz;48.1
+Finhaut;22.8
+Massongex;6.6
+Saint-Maurice;14.9
+Salvan;53.4
+Vernayaz;5.6
+Vérossaz;14.4
+Chalais;24.4
+Chippis;2.0
+Grône;20.3
+Icogne;25.0
+Lens;14.0
+Miège;2.5
+Saint-Léonard;3.9
+Sierre;19.2
+Venthône;2.5
+Veyras;1.4
+Anniviers;243.4
+Crans-Montana;59.6
+Arbaz;19.3
+Grimisuat;4.4
+Savièse;71.1
+Sion;34.8
+Veysonnaz;1.2
+Baltschieder;31.3
+Eisten;37.9
+Embd;13.4
+Grächen;14.3
+Lalden;1.3
+Randa;54.4
+Saas-Almagell;110.5
+Saas-Balen;30.3
+Saas-Fee;40.3
+Saas-Grund;24.8
+St. Niklaus;89.3
+Stalden (VS);10.6
+Staldenried;14.2
+Täsch;58.7
+Törbel;17.6
+Visp;13.2
+Visperterminen;51.6
+Zeneggen;7.6
+Zermatt;242.9
+Boudry;16.8
+Corcelles-Cormondrèche;4.8
+Cortaillod;3.7
+Peseux;3.4
+Rochefort;25.8
+Milvignes;8.8
+La Grande Béroche;42.1
+La Chaux-de-Fonds;55.7
+Les Planchettes;11.7
+La Sagne;25.6
+Les Brenets;11.5
+La Brévine;41.9
+Brot-Plamboz;16.2
+Le Cerneux-Péquignot;15.7
+La Chaux-du-Milieu;17.4
+Le Locle;23.1
+Les Ponts-de-Martel;18.1
+Cornaux;4.7
+Cressier (NE);8.6
+Enges;9.6
+Hauterive (NE);2.2
+Le Landeron;10.2
+Lignières;12.5
+Neuchâtel;18.0
+Saint-Blaise;8.9
+La Tène;5.3
+Valangin;3.8
+Val-de-Ruz;124.4
+La Côte-aux-Fées;12.9
+Les Verrières;28.9
+Val-de-Travers;124.6
+Aire-la-Ville;2.9
+Anières;3.8
+Avully;4.7
+Avusy;5.2
+Bardonnex;5.0
+Bellevue;4.4
+Bernex;13.0
+Carouge (GE);2.7
+Cartigny;4.4
+Céligny;4.7
+Chancy;5.4
+Chêne-Bougeries;4.1
+Chêne-Bourg;1.3
+Choulex;3.9
+Collex-Bossy;6.9
+Collonge-Bellerive;6.2
+Cologny;3.7
+Confignon;2.8
+Corsier (GE);2.8
+Dardagny;8.6
+Genève;15.9
+Genthod;2.8
+Le Grand-Saconnex;4.4
+Gy;3.2
+Hermance;1.5
+Jussy;11.4
+Laconnex;3.8
+Lancy;4.8
+Meinier;6.9
+Meyrin;9.9
+Onex;2.8
+Perly-Certoux;2.6
+Plan-les-Ouates;5.8
+Pregny-Chambésy;3.3
+Presinge;4.7
+Puplinge;2.7
+Russin;4.9
+Satigny;18.9
+Soral;2.9
+Thônex;3.8
+Troinex;3.5
+Vandoeuvres;4.4
+Vernier;7.7
+Versoix;10.5
+Veyrier;6.5
+Boécourt;12.3
+Bourrignon;13.5
+Châtillon (JU);5.3
+Courchapoix;6.4
+Courrendlin;21.5
+Courroux;19.8
+Courtételle;13.6
+Delémont;22.0
+Develier;12.4
+Ederswiler;3.3
+Mervelier;9.8
+Mettembert;2.4
+Movelier;8.1
+Pleigne;17.8
+Rossemaison;1.9
+Saulcy;7.9
+Soyhières;7.5
+Haute-Sorne;71.1
+Val Terbi;46.7
+Le Bémont (JU);11.7
+Les Bois;24.7
+Les Breuleux;10.8
+La Chaux-des-Breuleux;4.1
+Les Enfers;7.1
+Les Genevez (JU);13.6
+Lajoux (JU);12.4
+Montfaucon;18.2
+Muriaux;16.9
+Le Noirmont;20.4
+Saignelégier;31.8
+Saint-Brais;15.1
+Soubey;13.5
+Alle;10.7
+Beurnevésin;5.1
+Boncourt;9.0
+Bonfol;13.6
+Bure;13.7
+Coeuve;11.6
+Cornol;10.5
+Courchavon;6.2
+Courgenay;18.4
+Courtedoux;8.1
+Damphreux;5.7
+Fahy;7.8
+Fontenais;20.0
+Grandfontaine;9.0
+Lugnez;5.1
+Porrentruy;14.8
+Vendlincourt;9.2
+Basse-Allaine;23.0
+Clos du Doubs;61.8
+Haute-Ajoie;40.9
+La Baroche;31.1`
