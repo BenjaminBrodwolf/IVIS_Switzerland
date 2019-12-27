@@ -2,28 +2,28 @@ const canton = {path: cantonsSVG, table: cantonTable, data: undefined};
 const gemeinden = {path: gemeindenSVG, table: gemeindenTable, data: undefined};
 
 const toAnalyseData = [
-    {label: 'Bevölkerung',                  table: population,              valueType: "amount"},
-    {label: 'Alter1',                       table: age0_19,                 valueType: "percent"},
-    {label: 'Alter2',                       table: age20_64,                valueType: "percent"},
-    {label: 'Alter3',                       table: age20_64,                valueType: "percent"},
-    {label: 'Landwirtschaft',               table: agriculture,             valueType: "percent"},
-    {label: 'Fläche',                       table: area,                    valueType: "km2"},
-    {label: 'Haushaltsgrösse',              table: average_household_size,  valueType: "amount"},
-    {label: 'Geburtenziffer',               table: birth,                   valueType: "percent"},
-    {label: 'Sterbeziffer',                 table: death,                   valueType: "percent"},
-    {label: 'Scheidungsziffer',             table: divorce,                 valueType: "percent"},
-    {label: 'Beschäftigte',                 table: employee,                valueType: "amount"},
-    {label: 'Ausländer',                    table: foreigner,               valueType: "percent"},
-    {label: 'Wald',                         table: forest,                  valueType: "percent"},
-    {label: 'Haushalte',                    table: household,               valueType: "amount"},
-    {label: 'Heiratsziffer',                table: marriage,                valueType: "percent"},
-    {label: 'Bevölkerungsdichte',           table: population_density,      valueType: "amount"},
-    {label: 'Bevölkerungsveränderungen',    table: population_mutation,     valueType: "percent"},
-    {label: 'Sektor1',                      table: sektor_1,                valueType: "amount"},
-    {label: 'Sektor2',                      table: sektor_2,                valueType: "amount"},
-    {label: 'Sektor3',                      table: sektor_3,                valueType: "amount"},
-    {label: 'Siedlungsfläche',              table: settlement_area,         valueType: "percent"},
-    {label: 'Solzialhilfe',                 table: socialcare,              valueType: "rate"}
+    {label: 'Bevölkerung',                  table: population,              valueType: "amount",        description: "Anzahl Einwohner"},
+    {label: 'Alter1',                       table: age0_19,                 valueType: "percent",       description: "Altersverteilung in % der 0-19 jährigen"},
+    {label: 'Alter2',                       table: age20_64,                valueType: "percent",       description: "Altersverteilung in % der 20-64 jährigen"},
+    {label: 'Alter3',                       table: age20_64,                valueType: "percent",       description: "Altersverteilung in % der 64 und mehr jährigen"},
+    {label: 'Landwirtschaft',               table: agriculture,             valueType: "percent",       description: "Landwirtschaftsfläche in %"},
+    {label: 'Fläche',                       table: area,                    valueType: "km2",           description: "Gesamtfläche in km2"},
+    {label: 'Haushaltsgrösse',              table: average_household_size,  valueType: "amount",        description: "Durchschnittliche Haushaltsgrösse in Personen"},
+    {label: 'Geburtenziffer',               table: birth,                   valueType: "percent",       description: "Bevölkerungsbewegung in % - Rohe Geburtenziffer"},
+    {label: 'Sterbeziffer',                 table: death,                   valueType: "percent",       description: "Bevölkerungsbewegung in % - Rohe Sterbeziffer"},
+    {label: 'Scheidungsziffer',             table: divorce,                 valueType: "percent",       description: "Bevölkerungsbewegung in % - Rohe Scheidungsziffer"},
+    {label: 'Beschäftigte',                 table: employee,                valueType: "amount",        description: "Beschäftigte total"},
+    {label: 'Ausländer',                    table: foreigner,               valueType: "percent",       description: "Ausländer in %"},
+    {label: 'Wald',                         table: forest,                  valueType: "percent",       description: "Wald und Gehölze in %"},
+    {label: 'Haushalte',                    table: household,               valueType: "amount",        description: "Anzahl Privathaushalte"},
+    {label: 'Heiratsziffer',                table: marriage,                valueType: "percent",       description: "Bevölkerungsbewegung in % - Rohe Heiratsziffer"},
+    {label: 'Bevölkerungsdichte',           table: population_density,      valueType: "amount",        description: "Bevölkerungsdichte pro km2"},
+    {label: 'Bevölkerungsveränderungen',    table: population_mutation,     valueType: "percent",       description: "Veränderung der Einwohner in %"},
+    {label: 'Sektor1',                      table: sektor_1,                valueType: "amount",        description: "Beschäftigte im 1. Sektor"},
+    {label: 'Sektor2',                      table: sektor_2,                valueType: "amount",        description: "Beschäftigte im 2. Sektor"},
+    {label: 'Sektor3',                      table: sektor_3,                valueType: "amount",        description: "Beschäftigte im 3. Sektor"},
+    {label: 'Siedlungsfläche',              table: settlement_area,         valueType: "percent",       description: "Siedlungsfläche in %"},
+    {label: 'Solzialhilfe',                 table: socialcare,              valueType: "rate",          description: "Sozialhilfequote"}
 ];
 
 const propsGemeindeObject = {
@@ -129,6 +129,7 @@ const dataINITGemeinden = prop => {
         id: "p" + propID++,
         active: false,
         label: prop.label,
+        description: prop.description,
         data: table,
         amount: table.length,
         gemeinde: {},
@@ -148,7 +149,6 @@ const dom = innerString => {
 
 const initializeData = () => {
 
-
     /* Initialize every Data */
 
     toAnalyseData.forEach(e => dataINITGemeinden(e))
@@ -157,7 +157,7 @@ const initializeData = () => {
     const svg = dom(`<div id="svg">`);
 
     propsG.forEach(prop => {
-        const propElement = dom(`<div class="segment" id="${prop.id}" draggable="true" onclick="select(this)" ondragstart="drag(event)">
+        const propElement = dom(`<div class="segment" id="${prop.id}" title="${prop.description}" draggable="true" onclick="select(this)" ondragstart="drag(event)">
                                                 <p class="propLabel">${prop.label}</p>
                                             </div>`)
         dragfield.appendChild(propElement);
