@@ -6,138 +6,144 @@ const toAnalyseData = [
         label: 'Einwohner',
         category: "Bevölkerung",
         table: population,
-        valueType: "amount",
+        dataType: "amount",
         description: "Anzahl Einwohner"
     },
     {
         label: 'Alter1',
         category: "Altersverteilung",
         table: age0_19,
-        valueType: "percent",
+        dataType: "percent",
         description: "Altersverteilung in % der 0-19 jährigen"
     },
     {
         label: 'Alter2',
         category: "Altersverteilung",
         table: age20_64,
-        valueType: "percent",
+        dataType: "percent",
         description: "Altersverteilung in % der 20-64 jährigen"
     },
     {
         label: 'Alter3',
         category: "Altersverteilung",
         table: age20_64,
-        valueType: "percent",
+        dataType: "percent",
         description: "Altersverteilung in % der 64 und mehr jährigen"
     },
     {
         label: 'Landwirtschaft',
         category: "Fläche",
         table: agriculture,
-        valueType: "percent",
+        dataType: "percent",
         description: "Landwirtschaftsfläche in %"
     },
-    {label: 'Gesamtfläche', category: "Fläche", table: area, valueType: "km2", description: "Gesamtfläche in km2"},
+    {label: 'Gesamtfläche', category: "Fläche", table: area, dataType: "km2", description: "Gesamtfläche in km2"},
     {
         label: 'Haushaltsgrösse',
         category: "Haushalte",
         table: average_household_size,
-        valueType: "amount",
+        dataType: "amount",
         description: "Durchschnittliche Haushaltsgrösse in Personen"
     },
     {
         label: 'Geburtenziffer',
         category: "Bevölkerungsbewegung",
         table: birth,
-        valueType: "percent",
+        dataType: "percent",
         description: "Bevölkerungsbewegung in % - Rohe Geburtenziffer"
     },
     {
         label: 'Sterbeziffer',
         category: "Bevölkerungsbewegung",
         table: death,
-        valueType: "percent",
+        dataType: "percent",
         description: "Bevölkerungsbewegung in % - Rohe Sterbeziffer"
     },
     {
         label: 'Scheidungsziffer',
         category: "Bevölkerungsbewegung",
         table: divorce,
-        valueType: "percent",
+        dataType: "percent",
         description: "Bevölkerungsbewegung in % - Rohe Scheidungsziffer"
     },
     {
         label: 'Beschäftigte',
         category: "Wirtschaft",
         table: employee,
-        valueType: "amount",
+        dataType: "amount",
         description: "Beschäftigte total"
     },
     {
         label: 'Ausländer',
         category: "Bevölkerung",
         table: foreigner,
-        valueType: "percent",
+        dataType: "percent",
         description: "Ausländer in %"
     },
-    {label: 'Wald', category: "Fläche", table: forest, valueType: "percent", description: "Wald und Gehölze in %"},
+    {label: 'Wald', category: "Fläche", table: forest, dataType: "%", description: "Wald und Gehölze in %"},
     {
         label: 'Haushalte',
         category: "Haushalte",
         table: household,
-        valueType: "amount",
+        dataType: "amount",
         description: "Anzahl Privathaushalte"
     },
     {
         label: 'Heiratsziffer',
         category: "Bevölkerungsbewegung",
         table: marriage,
-        valueType: "percent",
+        dataType: "percent",
         description: "Bevölkerungsbewegung in % - Rohe Heiratsziffer"
     },
     {
         label: 'Bevölkerungsdichte',
         category: "Bevölkerung",
         table: population_density,
-        valueType: "amount",
+        dataType: "amount",
         description: "Bevölkerungsdichte pro km2"
     },
     {
         label: 'Bevölkerungsveränderungen',
         category: "Bevölkerung",
         table: population_mutation,
-        valueType: "percent",
+        dataType: "percent",
         description: "Veränderung der Einwohner in %"
     },
     {
         label: 'Sektor1',
         category: "Wirtschaft",
         table: sektor_1,
-        valueType: "amount",
+        dataType: "amount",
         description: "Beschäftigte im 1. Sektor"
     },
     {
         label: 'Sektor2',
         category: "Wirtschaft",
         table: sektor_2,
-        valueType: "amount",
+        dataType: "amount",
         description: "Beschäftigte im 2. Sektor"
     },
     {
         label: 'Sektor3',
         category: "Wirtschaft",
         table: sektor_3,
-        valueType: "amount",
+        dataType: "amount",
         description: "Beschäftigte im 3. Sektor"
     },
     {
         label: 'Siedlungsfläche',
         category: "Fläche",
         table: settlement_area,
-        valueType: "percent",
+        dataType: "percent",
         description: "Siedlungsfläche in %"
     },
-    {label: 'Solzialhilfe', category: "Soziales", table: socialcare, valueType: "rate", description: "Sozialhilfequote"}
+    {
+        label: 'Solzialhilfe',
+        category: "Soziales",
+        table: socialcare,
+        dataType: "rate",
+        description: "Sozialhilfequote"
+    }
 ];
 
 const propsGemeindeObject = {
@@ -220,26 +226,23 @@ let propID = 1;
 const dataINITGemeinden = prop => {
     const table = [];
     const values = [];
-    let max = 0, min = Number.MAX_VALUE;
+    // let max = 0, min = Number.MAX_VALUE;
     prop.table.split("\n").forEach(data => {
         const [gemeinde, value] = data.split(";");
         table.push({
             gemeinde,
             value,
-        })
-        if (value > max) max = value;
-        if (value < min) min = value;
-        values.push(parseFloat(value));
+        });
+        if (!isNaN(parseFloat(value))) {
+            values.push(parseFloat(value));
+        }
     });
 
-    // const max = Number.MAX_VALUE;
-    // const min = values.reduce( (a,b) => Math.min(a,b) );
-
-    //console.log(max);
-    //console.log(min);
+    const max = values.reduce((a, b) => Math.max(a, b));
+    const min = values.reduce((a, b) => Math.min(a, b));
 
     propsG.push({
-        id: "p" + propID++,
+        id: "p" + (propID++),
         active: false,
         label: prop.label,
         category: prop.category,
@@ -247,9 +250,9 @@ const dataINITGemeinden = prop => {
         data: table,
         amount: table.length,
         gemeinde: {},
-        valueTye: prop.valueType,
-        maxmin: {max: undefined, min: undefined},
-        value: {first: undefined, second: undefined}
+        dataType: prop.dataType,
+        boundaries: {min: min, max: max},
+        value: {low: min, high: max}
     });
 
     //console.log(propsG)
@@ -288,16 +291,30 @@ const initializeData = () => {
     const dragfield = dom(`<div id="dragfield" class="scrollable">`);
     const svg = dom(`<div id="svg">`);
 
+    console.log(propsG)
+
     getCategories().forEach(c => {
         const categoryElement = dom(`<button class="collapsible">${c}</button>`);
         const contentElement = dom(`<div class="content" id="${c}"></div>`)
 
         propsG.forEach(prop => {
             if (prop.category === c) {
-                const propElement = dom(`<div class="segment" id="${prop.id}" title="${prop.description}" draggable="true" onclick="select(this)" ondragstart="drag(event)">
-                                                            <p class="propLabel">${prop.label}</p>
-                                                    </div>`);
-                contentElement.appendChild(propElement);
+                const propElement = `
+                                                 <div style="display: flex; box-sizing: border-box;"> 
+                                                    <div style="flex: 20%;">
+                                                        <div class="segment" id="${prop.id}" title="${prop.description}" draggable="true" onclick="select(this)" ondragstart="drag(event)">
+                                                                <p class="propLabel">${prop.label}</p>
+                                                                
+                                                        </div>  
+                                                    </div>
+                                                    <div style="flex: 80%; align-content: flex-end">
+                                                        ${setDomSlider(prop.boundaries.max, prop.boundaries.min, prop.dataType)}
+                                                    </div>
+                                                 </div>   
+                                        `;
+                contentElement.insertAdjacentHTML("beforeend", propElement);
+
+                // contentElement.appendChild(dom(setDomSlider));
             }
         });
         addCollapse(categoryElement);

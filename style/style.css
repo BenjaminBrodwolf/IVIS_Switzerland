@@ -1,4 +1,6 @@
 html, body{
+    margin: 0;
+    padding: 0;
     width: 100%;
 }
 
@@ -43,6 +45,7 @@ svg:hover{
     background: #ffd311;
     mix-blend-mode: multiply;
     margin: 1em 10em 1em 1em;
+
 }
 
 .segment > .segment {

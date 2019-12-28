@@ -1,5 +1,5 @@
 const population_density = `Aeugst am Albis;245
-Affoltern am Albis;1'147
+Affoltern am Albis;1147
 Bonstetten;742
 Hausen am Albis;269
 Hedingen;566
@@ -11,14 +11,14 @@ Obfelden;710
 Ottenbach;512
 Rifferswil;169
 Stallikon;309
-Wettswil am Albis;1'356
+Wettswil am Albis;1356
 Adlikon;101
 Benken (ZH);152
 Berg am Irchel;80
 Buch am Irchel;95
 Dachsen;717
 Dorf;124
-Feuerthalen;1'468
+Feuerthalen;1468
 Flaach;137
 Flurlingen;598
 Andelfingen;328
@@ -34,9 +34,9 @@ Trüllikon;111
 Truttikon;108
 Volken;107
 Bachenbülach;955
-Bassersdorf;1'291
-Bülach;1'236
-Dietlikon;1'812
+Bassersdorf;1291
+Bülach;1236
+Dietlikon;1812
 Eglisau;573
 Embrach;743
 Freienstein-Teufen;283
@@ -44,33 +44,33 @@ Glattfelden;422
 Hochfelden;313
 Höri;572
 Hüntwangen;209
-Kloten;1'007
+Kloten;1007
 Lufingen;460
 Nürensdorf;559
 Oberembrach;103
-Opfikon;3'574
+Opfikon;3574
 Rafz;420
 Rorbas;640
-Wallisellen;2'483
+Wallisellen;2483
 Wasterkingen;145
 Wil (ZH);157
 Winkel;560
 Bachs;65
 Boppelsen;347
-Buchs (ZH);1'081
+Buchs (ZH);1081
 Dällikon;913
 Dänikon;655
-Dielsdorf;1'016
+Dielsdorf;1016
 Hüttikon;585
 Neerach;522
-Niederglatt;1'375
+Niederglatt;1375
 Niederhasli;814
 Niederweningen;443
 Oberglatt;847
 Oberweningen;365
 Otelfingen;397
 Regensberg;200
-Regensdorf;1'253
+Regensdorf;1253
 Rümlang;642
 Schleinikon;130
 Schöfflisdorf;350
@@ -84,28 +84,28 @@ Fischenthal;83
 Gossau (ZH);546
 Grüningen;385
 Hinwil;503
-Rüti (ZH);1'208
+Rüti (ZH);1208
 Seegräben;382
 Wald (ZH);388
-Wetzikon (ZH);1'458
-Adliswil;2'420
-Kilchberg (ZH);3'283
+Wetzikon (ZH);1458
+Adliswil;2420
+Kilchberg (ZH);3283
 Langnau am Albis;869
-Oberrieden;1'824
-Richterswil;1'787
-Rüschlikon;1'998
-Thalwil;3'247
-Erlenbach (ZH);1'929
+Oberrieden;1824
+Richterswil;1787
+Rüschlikon;1998
+Thalwil;3247
+Erlenbach (ZH);1929
 Herrliberg;702
 Hombrechtikon;708
-Küsnacht (ZH);1'158
-Männedorf;2'297
-Meilen;1'172
+Küsnacht (ZH);1158
+Männedorf;2297
+Meilen;1172
 Oetwil am See;779
-Stäfa;1'680
-Uetikon am See;1'781
+Stäfa;1680
+Uetikon am See;1781
 Zumikon;938
-Zollikon;1'654
+Zollikon;1654
 Fehraltorf;678
 Hittnau;281
 Lindau;471
@@ -114,15 +114,15 @@ Russikon;307
 Weisslingen;258
 Wila;215
 Wildberg;95
-Dübendorf;2'066
+Dübendorf;2066
 Egg;582
-Fällanden;1'349
-Greifensee;2'359
+Fällanden;1349
+Greifensee;2359
 Maur;689
 Mönchaltorf;492
-Schwerzenbach;1'944
-Uster;1'212
-Volketswil;1'331
+Schwerzenbach;1944
+Uster;1212
+Volketswil;1331
 Wangen-Brüttisellen;995
 Altikon;88
 Brütten;306
@@ -139,20 +139,20 @@ Rickenbach (ZH);444
 Schlatt (ZH);82
 Seuzach;967
 Turbenthal;189
-Winterthur;1'629
+Winterthur;1629
 Zell (ZH);458
 Aesch (ZH);257
 Birmensdorf (ZH);562
-Dietikon;2'899
-Geroldswil;2'561
-Oberengstringen;3'079
+Dietikon;2899
+Geroldswil;2561
+Oberengstringen;3079
 Oetwil an der Limmat;895
-Schlieren;2'847
+Schlieren;2847
 Uitikon;969
-Unterengstringen;1'139
-Urdorf;1'291
+Unterengstringen;1139
+Urdorf;1291
 Weiningen (ZH);888
-Zürich;4'654
+Zürich;4654
 Stammheim;115
 Wädenswil;688
 Elgg;202
@@ -165,7 +165,7 @@ Bargen (BE);128
 Grossaffoltern;201
 Kallnach;123
 Kappelen;128
-Lyss;1'004
+Lyss;1004
 Meikirch;244
 Radelfingen;86
 Rapperswil (BE);118
@@ -192,20 +192,20 @@ Schwarzhäusern;136
 Thunstetten;344
 Ursenbach;99
 Wynau;321
-Bern;2'592
+Bern;2592
 Bolligen;378
-Bremgarten bei Bern;2'326
+Bremgarten bei Bern;2326
 Kirchlindach;251
 Köniz;814
-Muri bei Bern;1'711
+Muri bei Bern;1711
 Oberbalm;70
 Stettlen;887
 Vechigen;211
 Wohlen bei Bern;254
-Zollikofen;1'914
-Ittigen;2'699
-Ostermundigen;2'944
-Biel/Bienne;2'579
+Zollikofen;1914
+Ittigen;2699
+Ostermundigen;2944
+Biel/Bienne;2579
 Evilard;713
 Arch;247
 Büetigen;238
@@ -223,7 +223,7 @@ Wengi;87
 Aefligen;535
 Alchenstorf;88
 Bäriswil;390
-Burgdorf;1'046
+Burgdorf;1046
 Ersigen;134
 Hasle bei Burgdorf;153
 Heimiswil;69
@@ -278,7 +278,7 @@ Jegenstorf;422
 Iffwil;88
 Mattstetten;151
 Moosseedorf;645
-Münchenbuchsee;1'144
+Münchenbuchsee;1144
 Urtenen-Schönbühl;865
 Utzenstorf;254
 Wiggiswil;71
@@ -302,7 +302,7 @@ Gsteigwiler;58
 Gündlischwand;19
 Habkern;13
 Hofstetten bei Brienz;61
-Interlaken;1'310
+Interlaken;1310
 Iseltwald;20
 Lauterbrunnen;14
 Leissigen;104
@@ -382,17 +382,17 @@ Epsach;95
 Hagneck;222
 Hermrigen;92
 Jens;145
-Ipsach;2'103
+Ipsach;2103
 Ligerz;316
 Merzligen;174
 Mörigen;413
-Nidau;4'491
+Nidau;4491
 Orpund;689
-Port;1'473
+Port;1473
 Safnern;339
 Scheuren;212
 Schwadernau;162
-Studen (BE);1'201
+Studen (BE);1201
 Sutz-Lattrigen;387
 Täuffelen;646
 Walperswil;145
@@ -456,8 +456,8 @@ Buchholterberg;101
 Eriz;22
 Fahrni;118
 Heiligenschwendi;123
-Heimberg;1'244
-Hilterfingen;1'449
+Heimberg;1244
+Hilterfingen;1449
 Homberg;80
 Horrenbach-Buchen;11
 Oberhofen am Thunersee;891
@@ -465,10 +465,10 @@ Oberlangenegg;52
 Pohlern;26
 Schwendibach;167
 Sigriswil;86
-Steffisburg;1'187
+Steffisburg;1187
 Teuffenthal (BE);36
 Thierachern;319
-Thun;2'028
+Thun;2028
 Uebeschi;155
 Uetendorf;585
 Unterlangenegg;145
@@ -517,11 +517,11 @@ Escholzmatt-Marbach;41
 Aesch (LU);261
 Altwis;149
 Ballwil;318
-Emmen;1'506
+Emmen;1506
 Ermensee;173
 Eschenbach (LU);272
 Hitzkirch;211
-Hochdorf;1'020
+Hochdorf;1020
 Hohenrain;107
 Inwil;248
 Rain;294
@@ -529,15 +529,15 @@ Römerswil;107
 Rothenburg;489
 Schongau;84
 Adligenswil;764
-Buchrain;1'274
+Buchrain;1274
 Dierikon;541
-Ebikon;1'398
-Gisikon;1'232
+Ebikon;1398
+Gisikon;1232
 Greppen;324
 Honau;313
-Horw;1'082
+Horw;1082
 Kriens;989
-Luzern;2'797
+Luzern;2797
 Malters;253
 Meggen;982
 Meierskappel;201
@@ -563,7 +563,7 @@ Ruswil;152
 Schenkon;425
 Schlierbach;122
 Sempach;463
-Sursee;1'698
+Sursee;1698
 Triengen;211
 Wolhusen;306
 Alberswil;185
@@ -612,13 +612,13 @@ Wassen;4
 Einsiedeln;157
 Gersau;159
 Feusisberg;301
-Freienbach;1'179
-Wollerau;1'127
+Freienbach;1179
+Wollerau;1127
 Küssnacht (SZ);437
 Altendorf;339
 Galgenen;394
 Innerthal;4
-Lachen;3'546
+Lachen;3546
 Reichenburg;315
 Schübelbach;316
 Tuggen;246
@@ -667,10 +667,10 @@ Menzingen;164
 Neuheim;283
 Oberägeri;202
 Risch;708
-Steinhausen;1'959
+Steinhausen;1959
 Unterägeri;339
 Walchwil;267
-Zug;1'396
+Zug;1396
 Châtillon (FR);355
 Cheiry;64
 Cugy (FR);175
@@ -744,11 +744,11 @@ Corserey;123
 Cottens (FR);301
 Ependes (FR);198
 Ferpicloz;277
-Fribourg;4'151
+Fribourg;4151
 Givisiez;925
 Granges-Paccot;924
 Grolley;365
-Marly;1'062
+Marly;1062
 Matran;523
 Neyruz (FR);469
 Noréaz;101
@@ -758,7 +758,7 @@ Le Mouret;169
 Prez-vers-Noréaz;195
 Senèdes;310
 Treyvaux;127
-Villars-sur-Glâne;2'211
+Villars-sur-Glâne;2211
 Villarsel-sur-Marly;61
 Hauterive (FR);210
 La Brillaz;197
@@ -774,7 +774,7 @@ Greng;182
 Gurmels;247
 Kerzers;409
 Kleinbösingen;217
-Meyriez;1'691
+Meyriez;1691
 Misery-Courtion;172
 Muntelier;884
 Murten;333
@@ -834,7 +834,7 @@ Lüsslingen-Nennigkofen;135
 Buchegg;113
 Bättwil;702
 Büren (SO);167
-Dornach;1'155
+Dornach;1155
 Gempen;147
 Hochwald;156
 Hofstetten-Flüh;413
@@ -858,20 +858,20 @@ Aeschi (SO);223
 Biberist;690
 Bolken;281
 Deitingen;294
-Derendingen;1'144
+Derendingen;1144
 Etziken;258
-Gerlafingen;2'766
+Gerlafingen;2766
 Halten;471
 Horriwil;330
 Hüniken;124
-Kriegstetten;1'154
+Kriegstetten;1154
 Lohn-Ammannsegg;626
 Luterbach;771
 Obergerlafingen;770
 Oekingen;349
 Recherswil;586
 Subingen;507
-Zuchwil;1'917
+Zuchwil;1917
 Drei Höfe;161
 Balm bei Günsberg;37
 Bellach;997
@@ -882,7 +882,7 @@ Grenchen;658
 Günsberg;222
 Hubersdorf;550
 Kammersrohr;31
-Langendorf;1'934
+Langendorf;1934
 Lommiswil;265
 Oberdorf (SO);143
 Riedholz;325
@@ -897,13 +897,13 @@ Gretzenbach;469
 Gunzgen;420
 Hägendorf;362
 Kappel (SO);625
-Olten;1'600
+Olten;1600
 Rickenbach (SO);349
-Schönenwerd;1'321
+Schönenwerd;1321
 Starrkirch-Wil;915
 Walterswil (SO);156
 Wangen bei Olten;732
-Solothurn;2'660
+Solothurn;2660
 Bärschwil;73
 Beinwil (SO);12
 Breitenbach;566
@@ -916,24 +916,24 @@ Kleinlützel;76
 Meltingen;112
 Nunningen;184
 Zullwil;185
-Basel;7'191
+Basel;7191
 Bettingen;516
-Riehen;1'954
-Aesch (BL);1'383
-Allschwil;2'352
-Arlesheim;1'328
+Riehen;1954
+Aesch (BL);1383
+Allschwil;2352
+Arlesheim;1328
 Biel-Benken;832
-Binningen;3'493
-Birsfelden;4'131
-Bottmingen;2'205
+Binningen;3493
+Birsfelden;4131
+Bottmingen;2205
 Ettingen;816
-Münchenstein;1'697
-Muttenz;1'069
-Oberwil (BL);1'422
+Münchenstein;1697
+Muttenz;1069
+Oberwil (BL);1422
 Pfeffingen;482
-Reinach (BL);2'747
-Schönenbuch;1'026
-Therwil;1'299
+Reinach (BL);2747
+Schönenbuch;1026
+Therwil;1299
 Blauen;97
 Brislach;174
 Burg im Leimental;92
@@ -950,14 +950,14 @@ Zwingen;507
 Arisdorf;163
 Augst;613
 Bubendorf;402
-Frenkendorf;1'410
+Frenkendorf;1410
 Füllinsdorf;968
 Giebenach;769
 Hersberg;186
 Lausen;924
 Liestal;785
 Lupsingen;457
-Pratteln;1'532
+Pratteln;1532
 Ramlinsburg;332
 Seltisberg;368
 Ziefen;201
@@ -1017,7 +1017,7 @@ Bargen (SH);37
 Beringen;249
 Buchberg;148
 Merishausen;48
-Neuhausen am Rheinfall;1'307
+Neuhausen am Rheinfall;1307
 Rüdlingen;136
 Schaffhausen;868
 Beggingen;39
@@ -1059,30 +1059,30 @@ Schwende;38
 Oberegg;131
 Häggenschwil;147
 Muolen;116
-St. Gallen;1'918
+St. Gallen;1918
 Wittenbach;802
 Berg (SG);219
 Eggersriet;256
-Goldach;1'921
+Goldach;1921
 Mörschwil;364
-Rorschach;5'291
-Rorschacherberg;1'012
+Rorschach;5291
+Rorschacherberg;1012
 Steinach;800
 Tübach;718
 Untereggen;148
-Au (SG);1'639
+Au (SG);1639
 Balgach;713
 Berneck;704
 Diepoldsau;578
-Rheineck;1'584
+Rheineck;1584
 St. Margrethen;857
 Thal;672
-Widnau;2'269
+Widnau;2269
 Altstätten;293
 Eichberg;280
 Marbach (SG);469
 Oberriet (SG);255
-Rebstein;1'025
+Rebstein;1025
 Rüthi (SG);253
 Buchs (SG);791
 Gams;153
@@ -1105,7 +1105,7 @@ Schänis;96
 Weesen;305
 Schmerikon;897
 Uznach;840
-Rapperswil-Jona;1'212
+Rapperswil-Jona;1212
 Gommiswald;151
 Eschenbach (SG);173
 Ebnat-Kappel;115
@@ -1129,7 +1129,7 @@ Niederbüren;96
 Niederhelfenschwil;190
 Oberbüren;244
 Zuzwil (SG);534
-Wil (SG);1'142
+Wil (SG);1142
 Andwil (SG);309
 Gaiserwald;663
 Gossau (SG);661
@@ -1216,7 +1216,7 @@ Klosters-Serneus;20
 Conters im Prättigau;12
 Küblis;105
 Luzein;19
-Chur;1'247
+Chur;1247
 Churwalden;41
 Arosa;21
 Maladers;67
@@ -1240,40 +1240,40 @@ Sumvitg;12
 Tujetsch;9
 Trun;23
 Obersaxen Mundaun;16
-Aarau;1'724
+Aarau;1724
 Biberstein;387
-Buchs (AG);1'489
+Buchs (AG);1489
 Densbüren;58
 Erlinsbach (AG);420
 Gränichen;447
 Hirschthal;446
 Küttigen;512
 Muhen;550
-Oberentfelden;1'133
+Oberentfelden;1133
 Suhr;956
-Unterentfelden;1'427
-Baden;1'456
+Unterentfelden;1427
+Baden;1456
 Bellikon;313
 Bergdietikon;476
 Birmenstorf (AG);381
-Ennetbaden;1'657
-Fislisbach;1'098
+Ennetbaden;1657
+Fislisbach;1098
 Freienwil;260
 Gebenstorf;931
 Killwangen;853
 Künten;357
 Mägenwil;608
-Mellingen;1'128
-Neuenhof;1'623
-Niederrohrdorf;1'209
+Mellingen;1128
+Neuenhof;1623
+Niederrohrdorf;1209
 Oberrohrdorf;959
-Obersiggenthal;1'025
+Obersiggenthal;1025
 Remetschwil;535
-Spreitenbach;1'371
+Spreitenbach;1371
 Stetten (AG);503
-Turgi;1'904
+Turgi;1904
 Untersiggenthal;872
-Wettingen;1'955
+Wettingen;1955
 Wohlenschwil;354
 Würenlingen;497
 Würenlos;708
@@ -1296,19 +1296,19 @@ Tägerig;462
 Uezwil;194
 Unterlunkhofen;308
 Villmergen;615
-Widen;1'400
-Wohlen (AG);1'288
+Widen;1400
+Wohlen (AG);1288
 Zufikon;925
 Islisberg;372
 Auenstein;277
 Birr;884
 Birrhard;235
 Bözen;185
-Brugg;1'750
+Brugg;1750
 Effingen;87
 Elfingen;69
 Habsburg;194
-Hausen (AG);1'119
+Hausen (AG);1119
 Lupfig;359
 Mandach;60
 Mönthal;100
@@ -1321,12 +1321,12 @@ Thalheim (AG);84
 Veltheim (AG);274
 Villigen;186
 Villnachern;287
-Windisch;1'559
+Windisch;1559
 Bözberg;101
 Schinznach;181
 Beinwil am See;829
 Birrwil;344
-Burg (AG);1'091
+Burg (AG);1091
 Dürrenäsch;209
 Gontenschwil;218
 Holziken;469
@@ -1368,11 +1368,11 @@ Fahrwangen;513
 Hallwil;402
 Hendschiken;349
 Holderbank (AG);522
-Hunzenschwil;1'235
+Hunzenschwil;1235
 Lenzburg;899
 Meisterschwanden;691
 Möriken-Wildegg;663
-Niederlenz;1'434
+Niederlenz;1434
 Othmarsingen;590
 Rupperswil;880
 Schafisheim;478
@@ -1399,7 +1399,7 @@ Rottenschwil;182
 Sins;212
 Waltenschwil;634
 Hellikon;111
-Kaiseraugst;1'140
+Kaiseraugst;1140
 Magden;356
 Möhlin;586
 Mumpf;460
@@ -1407,19 +1407,19 @@ Obermumpf;209
 Olsberg;78
 Rheinfelden;831
 Schupfart;118
-Stein (AG);1'136
+Stein (AG);1136
 Wallbach;435
 Wegenstetten;151
 Zeiningen;201
 Zuzgen;105
-Aarburg;1'829
+Aarburg;1829
 Bottenwil;155
 Brittnau;285
 Kirchleerau;196
 Kölliken;488
 Moosleerau;243
 Murgenthal;156
-Oftringen;1'059
+Oftringen;1059
 Reitnau;196
 Rothrist;753
 Safenwil;634
@@ -1428,7 +1428,7 @@ Strengelbach;799
 Uerkheim;190
 Vordemwald;192
 Wiliberg;140
-Zofingen;1'043
+Zofingen;1043
 Baldingen;93
 Böbikon;67
 Böttstein;536
@@ -1436,7 +1436,7 @@ Döttingen;562
 Endingen;216
 Fisibach;83
 Full-Reuenthal;182
-Kaiserstuhl;1'322
+Kaiserstuhl;1322
 Klingnau;517
 Koblenz;410
 Leibstadt;202
@@ -1451,14 +1451,14 @@ Siglistorf;114
 Tegerfelden;169
 Wislikofen;90
 Bad Zurzach;651
-Arbon;2'423
+Arbon;2423
 Dozwil;543
 Egnach;255
 Hefenhofen;196
-Horn;1'583
+Horn;1583
 Kesswil;224
 Roggwil (TG);255
-Romanshorn;1'256
+Romanshorn;1256
 Salmsach;526
 Sommeri;134
 Uttwil;427
@@ -1487,10 +1487,10 @@ Warth-Weiningen;160
 Altnau;328
 Bottighofen;900
 Ermatingen;323
-Gottlieben;1'097
+Gottlieben;1097
 Güttingen;168
 Kemmental;100
-Kreuzlingen;1'896
+Kreuzlingen;1896
 Langrickenbach;121
 Lengwil;193
 Münsterlingen;632
@@ -1504,12 +1504,12 @@ Eschlikon;693
 Fischingen;88
 Lommis;142
 Münchwilen (TG);711
-Rickenbach (TG);1'756
+Rickenbach (TG);1756
 Schönholzerswilen;77
 Sirnach;625
 Tobel-Tägerschen;225
 Wängi;284
-Wilen (TG);1'113
+Wilen (TG);1113
 Wuppenau;93
 Berlingen;252
 Eschenz;147
@@ -1536,7 +1536,7 @@ Bellinzona;263
 Cadenazzo;350
 Isone;29
 Lumino;146
-Sant'Antonino;384
+SantAntonino;384
 Acquarossa;30
 Blenio;9
 Serravalle;21
@@ -1550,7 +1550,7 @@ Personico;9
 Pollegio;126
 Prato (Leventina);25
 Quinto;14
-Ascona;1'118
+Ascona;1118
 Brione (Verzasca);4
 Brione sopra Minusio;128
 Brissago;99
@@ -1561,8 +1561,8 @@ Lavertezzo;23
 Locarno;857
 Losone;715
 Mergoscia;18
-Minusio;1'233
-Muralto;4'598
+Minusio;1233
+Muralto;4598
 Orselina;379
 Ronco sopra Ascona;121
 Sonogno;2
@@ -1570,7 +1570,7 @@ Tenero-Contra;842
 Vogorno;12
 Onsernone;7
 Cugnasco-Gerra;80
-Agno;1'792
+Agno;1792
 Aranno;145
 Arogno;119
 Astano;80
@@ -1580,23 +1580,23 @@ Bioggio;413
 Bissone;498
 Brusino Arsizio;117
 Cademario;201
-Cadempino;1'983
-Canobbio;1'653
-Caslano;1'525
+Cadempino;1983
+Canobbio;1653
+Caslano;1525
 Comano;986
 Croglio;195
-Cureglia;1'308
+Cureglia;1308
 Curio;198
 Grancia;844
-Gravesano;1'861
+Gravesano;1861
 Lamone;957
 Lugano;836
-Magliaso;1'461
+Magliaso;1461
 Manno;565
 Maroggia;683
-Massagno;8'470
+Massagno;8470
 Melano;316
-Melide;1'081
+Melide;1081
 Mezzovico-Vira;122
 Miglieglia;61
 Monteggio;265
@@ -1605,33 +1605,33 @@ Muzzano;521
 Neggio;356
 Novaggio;191
 Origlio;707
-Paradiso;4'656
+Paradiso;4656
 Ponte Capriasca;306
-Ponte Tresa;1'893
-Porza;1'013
+Ponte Tresa;1893
+Porza;1013
 Pura;449
 Rovio;150
-Savosa;3'014
+Savosa;3014
 Sessa;237
-Sorengo;2'093
+Sorengo;2093
 Capriasca;183
 Torricella-Taverne;582
 Vernate;386
-Vezia;1'401
+Vezia;1401
 Vico Morcote;194
-Collina d'Oro;799
+Collina dOro;799
 Alto Malcantone;64
 Monteceneri;125
-Balerna;1'322
+Balerna;1322
 Castel San Pietro;180
-Chiasso;1'529
-Coldrerio;1'190
+Chiasso;1529
+Coldrerio;1190
 Mendrisio;469
-Morbio Inferiore;2'023
+Morbio Inferiore;2023
 Novazzano;452
 Riva San Vitale;430
 Stabio;751
-Vacallo;2'063
+Vacallo;2063
 Breggia;80
 Biasca;104
 Riviera;48
@@ -1696,7 +1696,7 @@ Eclépens;188
 Ferreyres;102
 Gollion;168
 Grancy;71
-L'Isle;62
+LIsle;62
 Lussery-Villars;123
 Mauraz;120
 Mex (VD);254
@@ -1752,51 +1752,51 @@ Onnens (VD);93
 Provence;12
 Sainte-Croix;125
 Tévenon;59
-Belmont-sur-Lausanne;1'379
+Belmont-sur-Lausanne;1379
 Cheseaux-sur-Lausanne;951
-Crissier;1'461
-Epalinges;2'038
+Crissier;1461
+Epalinges;2038
 Jouxtens-Mézery;761
-Lausanne;3'357
+Lausanne;3357
 Le Mont-sur-Lausanne;826
-Paudex;3'022
-Prilly;5'505
-Pully;3'099
-Renens (VD);7'131
-Romanel-sur-Lausanne;1'145
-Chexbres;1'049
+Paudex;3022
+Prilly;5505
+Pully;3099
+Renens (VD);7131
+Romanel-sur-Lausanne;1145
+Chexbres;1049
 Forel (Lavaux);113
-Lutry;1'180
+Lutry;1180
 Puidoux;127
-Rivaz;1'135
+Rivaz;1135
 Saint-Saphorin (Lavaux);444
 Savigny;209
 Bourg-en-Lavaux;548
 Aclens;139
 Bremblens;188
 Buchillon;305
-Bussigny;1'797
+Bussigny;1797
 Bussy-Chardonney;122
-Chavannes-près-Renens;4'636
+Chavannes-près-Renens;4636
 Chigny;380
 Clarmont;185
 Denens;235
 Denges;974
 Echandens;712
 Echichens;204
-Ecublens (VD);2'183
+Ecublens (VD);2183
 Etoy;593
 Lavigny;253
 Lonay;670
 Lully (VD);387
 Lussy-sur-Morges;285
-Morges;4'135
-Préverenges;2'827
+Morges;4135
+Préverenges;2827
 Reverolle;324
 Romanel-sur-Morges;266
-Saint-Prex;1'026
-Saint-Sulpice (VD);2'424
-Tolochenaz;1'182
+Saint-Prex;1026
+Saint-Sulpice (VD);2424
+Tolochenaz;1182
 Vaux-sur-Morges;95
 Villars-Sainte-Croix;566
 Villars-sous-Yens;202
@@ -1830,7 +1830,7 @@ Chavannes-des-Bois;454
 Chéserex;115
 Coinsins;166
 Commugny;436
-Coppet;1'686
+Coppet;1686
 Crans-près-Céligny;506
 Crassier;568
 Duillier;263
@@ -1839,10 +1839,10 @@ Founex;792
 Genolier;399
 Gingins;96
 Givrins;250
-Gland;1'572
+Gland;1572
 Grens;149
 Mies;594
-Nyon;3'020
+Nyon;3020
 Prangins;671
 La Rippe;70
 Saint-Cergue;105
@@ -1851,7 +1851,7 @@ Tannay;881
 Trélex;243
 Le Vaud;410
 Vich;659
-L'Abergement;41
+LAbergement;41
 Agiez;58
 Arnex-sur-Orbe;84
 Ballaigues;121
@@ -1896,7 +1896,7 @@ Trey;71
 Treytorrens (Payerne);40
 Villarzel;54
 Valbroye;90
-Château-d'Oex;30
+Château-dOex;30
 Rossinière;23
 Rougemont;18
 Allaman;168
@@ -1909,21 +1909,21 @@ Gilly;169
 Luins;227
 Mont-sur-Rolle;702
 Perroy;518
-Rolle;2'269
+Rolle;2269
 Tartegnin;216
 Vinzel;336
-L'Abbaye;47
+LAbbaye;47
 Le Chenit;46
 Le Lieu;27
 Blonay;385
 Chardonne;282
-Corseaux;2'129
+Corseaux;2129
 Corsier-sur-Vevey;505
 Jongny;718
 Montreux;795
 Saint-Légier-La Chiésaz;340
-La Tour-de-Peilz;3'605
-Vevey;8'261
+La Tour-de-Peilz;3605
+Vevey;8261
 Veytaux;128
 Belmont-sur-Yverdon;59
 Bioley-Magnoux;52
@@ -1953,7 +1953,7 @@ Valeyres-sous-Montagny;309
 Valeyres-sous-Ursins;83
 Villars-Epeney;123
 Vugelles-La Mothe;40
-Yverdon-les-Bains;2'226
+Yverdon-les-Bains;2226
 Yvonand;250
 Brig-Glis;348
 Eggerberg;56
@@ -2016,7 +2016,7 @@ Monthey;612
 Port-Valais;278
 Saint-Gingolph;67
 Troistorrents;125
-Val-d'Illiez;48
+Val-dIlliez;48
 Vionnaz;126
 Vouvry;123
 Bister;6
@@ -2054,7 +2054,7 @@ Miège;527
 Saint-Léonard;595
 Sierre;881
 Venthône;506
-Veyras;1'272
+Veyras;1272
 Anniviers;11
 Crans-Montana;177
 Arbaz;65
@@ -2083,10 +2083,10 @@ Zeneggen;37
 Zermatt;23
 Boudry;365
 Corcelles-Cormondrèche;977
-Cortaillod;1'297
-Peseux;1'713
+Cortaillod;1297
+Peseux;1713
 Rochefort;49
-Milvignes;1'026
+Milvignes;1026
 La Grande Béroche;213
 La Chaux-de-Fonds;693
 Les Planchettes;17
@@ -2101,10 +2101,10 @@ Les Ponts-de-Martel;70
 Cornaux;335
 Cressier (NE);219
 Enges;29
-Hauterive (NE);1'244
+Hauterive (NE);1244
 Le Landeron;452
 Lignières;76
-Neuchâtel;1'859
+Neuchâtel;1859
 Saint-Blaise;365
 La Tène;936
 Valangin;134
@@ -2119,44 +2119,44 @@ Avusy;277
 Bardonnex;443
 Bellevue;762
 Bernex;773
-Carouge (GE);8'273
+Carouge (GE);8273
 Cartigny;218
 Céligny;169
 Chancy;314
-Chêne-Bougeries;2'865
-Chêne-Bourg;6'803
+Chêne-Bougeries;2865
+Chêne-Bourg;6803
 Choulex;294
 Collex-Bossy;245
-Collonge-Bellerive;1'328
-Cologny;1'511
-Confignon;1'667
+Collonge-Bellerive;1328
+Cologny;1511
+Confignon;1667
 Corsier (GE);756
 Dardagny;216
-Genève;12'597
+Genève;12597
 Genthod;968
-Le Grand-Saconnex;2'770
+Le Grand-Saconnex;2770
 Gy;146
 Hermance;719
 Jussy;114
 Laconnex;178
-Lancy;6'696
+Lancy;6696
 Meinier;308
-Meyrin;2'429
-Onex;6'729
-Perly-Certoux;1'210
-Plan-les-Ouates;1'829
-Pregny-Chambésy;1'225
+Meyrin;2429
+Onex;6729
+Perly-Certoux;1210
+Plan-les-Ouates;1829
+Pregny-Chambésy;1225
 Presinge;146
 Puplinge;910
 Russin;112
 Satigny;217
 Soral;280
-Thônex;3'689
+Thônex;3689
 Troinex;703
 Vandoeuvres;567
-Vernier;4'569
-Versoix;1'269
-Veyrier;1'775
+Vernier;4569
+Versoix;1269
+Veyrier;1775
 Boécourt;74
 Bourrignon;19
 Châtillon (JU);91

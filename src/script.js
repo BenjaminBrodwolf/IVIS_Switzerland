@@ -160,6 +160,24 @@ function searchGemeindenWithPrecondition() {
 
 
 /*
+Sammelt die Objekte mit den Operatore und Elementen in einer Liste
+*/
+function getPreconditions() {
+    const filterBox = document.getElementById("zone");
+    let listWithPrecondition = []
+
+    for (let i = 0; i < filterBox.children.length; i++) {
+        listWithPrecondition.push({
+            filterOperator: checkElementIntersection(filterBox.children[i]).operator,
+            filterProperty: checkElementIntersection(filterBox.children[i]).element,
+        });
+    }
+
+    console.log(listWithPrecondition)
+    return listWithPrecondition;
+}
+
+/*
 Testet einen einzelnen Kanton, ob er die Bedingung erfüllt
  */
 function checkGemeinde(checkedGemeinde) {
