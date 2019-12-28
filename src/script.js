@@ -11,6 +11,7 @@ let focusedSegment = null;
 
 function resetSelected() {
     putItBack(focusedSegment.id);
+    //putItBack(focusedSegment.id.firstChild);
     propsG.find(p => p.id === focusedSegment.id).active = false;
     focusedSegment = null;
     document.getElementById("resetSelButton").style.visibility = 'hidden';
@@ -22,10 +23,9 @@ function select(element) {
         propsG.forEach(p => {
             focusedSegment = element;
             if (focusedSegment.id === p.id) {
-                if (checkElementIntersection(focusedSegment).operator === false){
+                if (checkElementIntersection(focusedSegment).operator === false) {
                     document.getElementById(p.id).style.borderColor = "rgb(255,0,0)";
-                }
-                else {
+                } else {
                     document.getElementById(p.id).style.borderColor = "rgb(255,0,0)";
                     document.getElementById(focusedSegment.firstElementChild.id).style.borderColor = "rgb(255,0,0)";
                 }
@@ -37,7 +37,32 @@ function select(element) {
 }
 
 function putItBack(node) {
-    const dragfield = document.getElementById("dragfield");
+    const content = propsG.find(p => p.id === node);
+    console.log(node)
+    if (node) {
+        console.log(content.category);
+        const contentField = document.getElementById(content.category);
+        const segment = document.getElementById(node);
+
+        for (let i = 0; i < segment.children.length; i++) {
+            contentField.appendChild(segment.children[i]);
+        }
+
+        contentField.appendChild(segment);
+        segment.style.height = "3em";
+        segment.style.width = "3em";
+        segment.style.backgroundColor = '#ffd311';
+        segment.style.borderColor = 'rgb(0, 0, 0)';
+        segment.innerHTML = "";
+        const propLabel = dom(`<p class="propLabel">${segment.title}</p>`);
+        segment.appendChild(propLabel)
+        //colorMapCanton();
+        colorMapGemeinden();
+        createHtmlList();
+    }
+
+
+    /*const dragfield = document.getElementById("dragfield");
     const segment = document.getElementById(node);
 
     for (let i = 0; i < segment.children.length; i++) {
@@ -54,7 +79,7 @@ function putItBack(node) {
     segment.appendChild(propLabel)
     //colorMapCanton();
     colorMapGemeinden();
-    createHtmlList();
+    createHtmlList();*/
 }
 
 /*
@@ -144,9 +169,9 @@ function checkGemeinde(checkedGemeinde) {
     preconditions.forEach(pc => {
         if (pc.filterOperator) {
             const prop1 = propsG.find(p => p.label === pc.filterProperty.firstElement);
-            if (prop1.data.find(p => p.gemeinde === checkedGemeinde.id  && (prop1.value.first < p.value && prop1.value.second > p.value))) {
+            if (prop1.data.find(p => p.gemeinde === checkedGemeinde.id && (prop1.value.first < p.value && prop1.value.second > p.value))) {
                 const prop2 = propsG.find(p => p.label === pc.filterProperty.secondElement);
-                if (prop2.data.find(p => p.gemeinde === checkedGemeinde.id  && (prop2.value.first < p.value && prop2.value.second > p.value))) {
+                if (prop2.data.find(p => p.gemeinde === checkedGemeinde.id && (prop2.value.first < p.value && prop2.value.second > p.value))) {
                     fulfillPrecondition = true;
                 }
 
@@ -166,7 +191,6 @@ function checkGemeinde(checkedGemeinde) {
     });
     return fulfillPrecondition;
 }
-
 
 
 function createHtmlList() {
@@ -195,6 +219,8 @@ function createHtmlList() {
 
     document.getElementById('table').innerHTML = result;
 }
+
+
 
 
 

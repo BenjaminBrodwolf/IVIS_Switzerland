@@ -20,7 +20,6 @@ function drop(ev) {
             prop.active = true;
             document.getElementById(data).innerHTML = prop.label;
             document.getElementById(data).title = prop.label;
-            console.log(prop.data)
         }
     });
 

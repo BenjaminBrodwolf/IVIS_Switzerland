@@ -1,0 +1,9 @@
+.gitignore
+.idea/$PRODUCT_WORKSPACE_FILE$
+.idea/.gitignore
+.idea/encodings.xml
+.idea/ivispro_biodiversity.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
