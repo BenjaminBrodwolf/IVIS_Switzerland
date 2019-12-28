@@ -183,6 +183,8 @@ const gemeindeTableToObject = data => {
         cantonNr,
     }
 };
+
+let selectedGemeinde;
 const gemeindeINIT = () => {
     const table = [];
     gemeinden.table.split("\n").forEach(e => table.push(gemeindeTableToObject(e)));
@@ -194,6 +196,17 @@ const gemeindeINIT = () => {
     /* Add MouseOver-Listener to the Gemeinden */
     elementsG.forEach(e => e.addEventListener('mouseover', event => {
         document.getElementById("infoBox").innerText = e.id;
+    }));
+
+    elementsG.forEach(e => e.addEventListener('click', event => {
+        if (selectedGemeinde){
+            selectedGemeinde.style.fill = 'rgb(0,0,0)';
+        }
+        if (zoomstate){
+            selectedGemeinde = e;
+            selectedGemeinde.style.fill = '#ffd311';
+        }
+
     }));
 };
 
@@ -302,10 +315,10 @@ const initializeData = () => {
         });
         addCollapse(categoryElement);
         dragfield.appendChild(categoryElement);
-        dragfield.appendChild(contentElement)
+        dragfield.appendChild(contentElement);
     })
 
-    const svgTag = dom(`<svg xmlns="http://www.w3.org/2000/svg" style="width: 100%" version="1.2" baseProfile="tiny" viewBox="0 0 800 507" stroke-linecap="round" stroke-linejoin="round">  
+    const svgTag = dom(`<svg id="svg" xmlns="http://www.w3.org/2000/svg" style="width: 100%" version="1.2" baseProfile="tiny" viewBox="0 0 800 507" stroke-linecap="round" stroke-linejoin="round">  
                                             ${gemeindenSVG} + ${cantonsSVG}
                                    </svg>`);
 

@@ -1,5 +1,3 @@
-
-
 // -------- Zoom ---------
 let zoomstate = false;
 
@@ -10,6 +8,7 @@ const zooming = () => {
         document.getElementById("svg").classList.add("zooming")
     } else {
         document.getElementById("svg").classList.remove("zooming")
+        selectedGemeinde.style.fill = 'rgb(0,0,0)'
     }
 };
 
