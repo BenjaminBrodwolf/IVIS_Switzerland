@@ -1,19 +1,21 @@
-const setDomSlider = (max, min , valuetype) =>
-                                                    `<div class='multi-range' min="0" max="100" style="--width:150px; --low:0%; --high:100%">
+const percentSign = valuetype => (valuetype === "percent") ? "%" : "";
+
+
+const setDomSlider = (max, min , valuetype, id) =>  `<div class='multi-range' propID='${id}' valuetype='${valuetype}' min="0" max="100" style="--width:150px; --low:0%; --high:100%">
                                                         <div class="range-bg"></div>
                                                         <span class="fst-value">${min}</span>
-                                                        <input type='range' value='0' level="low" oninput='setValue(this, ${valuetype})'/>
+                                                        <input type='range' value='0' level="low" oninput='setValue(this)'/>
                                                         <span class="snd-value">${max}</span>
-                                                        <input type='range' value='100' level="high" oninput='setValue(this, ${valuetype})'/>
+                                                        <input type='range' value='100' level="high" oninput='setValue(this)'/>
                                                         <div class='min-max'>
-                                                            <span>${min}${valuetype}</span>
-                                                            <span>${max}${valuetype}</span>
+                                                            <span>${min}${percentSign(valuetype)}</span>
+                                                            <span>${max}${percentSign(valuetype)}</span>
                                                         </div>
                                                     </div>`;
 
 
-const setValue = (input, valueType) => {
-    console.log(valueType)
+const setValue = (input) => {
+
     const masterNode = input.parentNode;
     const firstInput = masterNode.childNodes[5];
     const secondInput = masterNode.childNodes[9];
@@ -28,18 +30,28 @@ const setValue = (input, valueType) => {
     masterNode.style.setProperty(`--${input.getAttribute("level")}`, input.value + "%");
 
     // Tooltip
+    const valueType = masterNode.getAttribute("valuetype");
+    console.log(valueType)
+
     const fstTooltip = masterNode.childNodes[3];
     const sndTooltip = masterNode.childNodes[7];
     if (fstTooltip.nextElementSibling.getAttribute("level") === "low") {
-        fstTooltip.innerText = fstTooltip.nextElementSibling.value + valueType;
-        sndTooltip.innerText = sndTooltip.nextElementSibling.value + valueType;
+        fstTooltip.innerText = fstTooltip.nextElementSibling.value + "%";
+        sndTooltip.innerText = sndTooltip.nextElementSibling.value + "%";
     } else {
-        fstTooltip.innerText = sndTooltip.nextElementSibling.value + valueType;
-        sndTooltip.innerText = fstTooltip.nextElementSibling.value + valueType;
+        fstTooltip.innerText = sndTooltip.nextElementSibling.value + "%";
+        sndTooltip.innerText = fstTooltip.nextElementSibling.value + "%";
     }
 
     setTooltipPosition(masterNode, fstTooltip, low, "--first");
     setTooltipPosition(masterNode, sndTooltip, high, "--second");
+
+    const id = masterNode.getAttribute("propID");
+     const prop = propsG.find(prop => prop.id === id);
+    prop.value.low = low;
+    prop.value.high = high;
+    console.log(prop)
+
 }
 
 const setTooltipPosition = (masterNode, tooltip, level, propertyName) => {

@@ -308,7 +308,7 @@ const initializeData = () => {
                                                         </div>  
                                                     </div>
                                                     <div style="flex: 80%; align-content: flex-end">
-                                                        ${setDomSlider(prop.boundaries.max, prop.boundaries.min, prop.dataType)}
+                                                        ${setDomSlider(prop.boundaries.max, prop.boundaries.min, prop.dataType, prop.id)}
                                                     </div>
                                                  </div>   
                                         `;
