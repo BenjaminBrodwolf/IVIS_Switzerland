@@ -10,22 +10,22 @@ function allowDrop(ev) {
 function drop(ev) {
     ev.preventDefault();
     const data = ev.dataTransfer.getData('text');
-    ev.target.appendChild(document.getElementById(data));
+    const segment = document.getElementById(data);
+    ev.target.appendChild(segment);
     ev.target.style.borderStyle = 'solid';
-    document.getElementById(data).style.height = "8em";
-    document.getElementById(data).style.width = "8em";
+    segment.style.height = "8em";
+    segment.style.width = "8em";
 
     propsG.forEach(prop => {
         if (data === prop.id) {
             prop.active = true;
-            document.getElementById(data).innerHTML = prop.label;
-            document.getElementById(data).title = prop.label;
+            segment.innerHTML = prop.label;
+            segment.title = prop.label;
         }
     });
 
     //colorMapCanton();
     colorMapGemeinden();
-    createHtmlList();
 }
 
 function enterDropzone(ev) {

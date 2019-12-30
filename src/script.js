@@ -59,9 +59,9 @@ function putItBack(node) {
         segment.innerHTML = "";
         const propLabel = dom(`<p class="propLabel">${segment.title}</p>`);
         segment.appendChild(propLabel)
-        //colorMapCanton();
+
+
         colorMapGemeinden();
-        createHtmlList();
     }
 
 
@@ -126,6 +126,8 @@ function colorMapGemeinden() {
     gemeindeWithPrecondition.forEach(c => {
         c.style.fill = 'rgb(255,0,0)';
     })
+
+    createHtmlList();
 }
 /*
 Sammelt die Objekte mit den Operatore und Elementen in einer Liste
@@ -141,7 +143,6 @@ function getPreconditions() {
         });
     }
 
-    console.log(listWithPrecondition)
     return listWithPrecondition;
 }
 /*
@@ -170,10 +171,12 @@ Testet einen einzelnen Kanton, ob er die Bedingung erfüllt
 function checkGemeinde(checkedGemeinde, preconditions) {
     let fulfillPrecondition = false;
 
+    console.log("checkGemeinde ---------------")
     preconditions.forEach(pc => {
         if (pc.filterOperator) {
+
+
             const prop1 = propsG.find(p => p.label === pc.filterProperty.firstElement);
-            console.log(prop1)
             if (prop1.data.find(p => p.gemeinde === checkedGemeinde.id && (prop1.value.low < p.value && prop1.value.high > p.value))) {
                 const prop2 = propsG.find(p => p.label === pc.filterProperty.secondElement);
                 if (prop2.data.find(p => p.gemeinde === checkedGemeinde.id && (prop2.value.low < p.value && prop2.value.high > p.value))) {
@@ -186,7 +189,7 @@ function checkGemeinde(checkedGemeinde, preconditions) {
         } else {
             const prop = propsG.find(p => p.label === pc.filterProperty);
 
-            if (prop.data.find(p => p.gemeinde === checkedGemeinde.id && (prop.value.low < p.value && prop.value.high > p.value))) {
+            if (prop.data.find(p => p.gemeinde === checkedGemeinde.id && (prop.value.low <= p.value && prop.value.high >= p.value))) {
                 fulfillPrecondition = true;
             } else {
                 fulfillPrecondition = false
