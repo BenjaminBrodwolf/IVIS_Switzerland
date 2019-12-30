@@ -36,7 +36,7 @@ const getCurrentValue = (valueType, low, high) => {
     }
 };
 
-const setDomSlider = (max, min, valuetype, id) => `<div class='range-slider' propID='${id}' valuetype='${valuetype}' min='${min}' max='${max}' style="--width:200px; --low:0%; --high:100%">
+const setDomSlider = (max, min, valuetype, id) => `<div class='range-slider' propID='${id}' valuetype='${valuetype}' min='${min}' max='${max}' style="--width:250px; --low:0%; --high:100%">
                                                         <div class="range-bg"></div>
                                                         <span class="fst-value">${min}</span>
                                                         <input type='range' step="0.1" value='0' level="low" oninput='setValue(this)'/>
@@ -91,33 +91,10 @@ const setValue = (input) => {
 
     const valueType = masterNode.getAttribute("valuetype");
 
-    // let valueSign = "";
-    // if (valueType === "float") {
-    //
-    //     fstTooltip.innerText = low.split(".")[0];
-    //     sndTooltip.innerText = high.split(".")[0];
-    //
-    // } else {
-    //
-    //
-    //     switch (valueType) {
-    //         case "percent":
-    //             valueSign = "%";
-    //             break;
-    //         case "km2":
-    //             valueSign = "km&#178;";
-    //             break;
-    //     }
-    //
-    //     fstTooltip.innerText = low + valueSign;
-    //     sndTooltip.innerText = high + valueSign;
-    // }
-
     const currentValue = getCurrentValue(valueType, low, high)
 
-
-    console.log(currentValue.low())
-    console.log(currentValue.high())
+    console.log(currentValue.low());
+    console.log(currentValue.high());
 
     fstTooltip.innerText = currentValue.low();
     sndTooltip.innerText = currentValue.high();
@@ -128,6 +105,8 @@ const setValue = (input) => {
 
     masterNode.parentElement.previousElementSibling.innerText = currentValue.low() + " bis " + currentValue.high();
 
+    prop.value.low = low;
+    prop.value.high = high;
 };
 
 const setTooltipPosition = (masterNode, tooltip, level, propertyName) => {
