@@ -1,3 +1,6 @@
+let gemeindeWithPrecondition = [];
+
+
 function resetAll() {
     propsG.forEach(p => {
         if (p.active) {
@@ -82,22 +85,7 @@ function putItBack(node) {
     createHtmlList();*/
 }
 
-/*
-Sammelt die Objekte mit den Operatore und Elementen in einer Liste
-*/
-function getPreconditions() {
-    const filterBox = document.getElementById("zone");
-    let listWithPrecondition = []
 
-    for (let i = 0; i < filterBox.children.length; i++) {
-        listWithPrecondition.push({
-            filterOperator: checkElementIntersection(filterBox.children[i]).operator,
-            filterProperty: checkElementIntersection(filterBox.children[i]).element,
-        });
-    }
-
-    return listWithPrecondition;
-}
 
 /*
 Es wird getestet ob es ein UND-Operator (true) oder ODER-Operator ist (false) und speichert dieser
@@ -134,31 +122,11 @@ function colorMapGemeinden() {
     const selectElements = document.querySelector(`#gemeinden`);
     const elementsG = selectElements.querySelectorAll('path');
     elementsG.forEach(c => c.style.fill = 'rgb(0, 0, 0)');
-    const coloredGemeinden = searchGemeindenWithPrecondition();
-    coloredGemeinden.forEach(c => {
+    gemeindeWithPrecondition = searchGemeindenWithPrecondition();
+    gemeindeWithPrecondition.forEach(c => {
         c.style.fill = 'rgb(255,0,0)';
     })
 }
-
-/*
-Gibt Liste zurück von Kantonen die eingefärbt werden
- */
-function searchGemeindenWithPrecondition() {
-    const selectElements = document.querySelector(`#gemeinden`);
-    const elementsG = selectElements.querySelectorAll('path');
-
-    const gemeindenWithPrecondition = [];
-
-    elementsG.forEach(c => {
-        if (checkGemeinde(c)) {
-            gemeindenWithPrecondition.push(c);
-        }
-    });
-
-    return gemeindenWithPrecondition;
-}
-
-
 /*
 Sammelt die Objekte mit den Operatore und Elementen in einer Liste
 */
@@ -176,17 +144,36 @@ function getPreconditions() {
     console.log(listWithPrecondition)
     return listWithPrecondition;
 }
+/*
+Gibt Liste zurück von Kantonen die eingefärbt werden
+ */
+function searchGemeindenWithPrecondition() {
+    const selectElements = document.querySelector(`#gemeinden`);
+    const elementsG = selectElements.querySelectorAll('path');
+
+    const gemeindenWithPrecondition = [];
+    const preconditions = getPreconditions();
+
+    elementsG.forEach(c => {
+        if (checkGemeinde(c, preconditions)) {
+            gemeindenWithPrecondition.push(c);
+        }
+    });
+
+    return gemeindenWithPrecondition;
+}
+
 
 /*
 Testet einen einzelnen Kanton, ob er die Bedingung erfüllt
  */
-function checkGemeinde(checkedGemeinde) {
+function checkGemeinde(checkedGemeinde, preconditions) {
     let fulfillPrecondition = false;
-    const preconditions = getPreconditions();
 
     preconditions.forEach(pc => {
         if (pc.filterOperator) {
             const prop1 = propsG.find(p => p.label === pc.filterProperty.firstElement);
+            console.log(prop1)
             if (prop1.data.find(p => p.gemeinde === checkedGemeinde.id && (prop1.value.low < p.value && prop1.value.high > p.value))) {
                 const prop2 = propsG.find(p => p.label === pc.filterProperty.secondElement);
                 if (prop2.data.find(p => p.gemeinde === checkedGemeinde.id && (prop2.value.low < p.value && prop2.value.high > p.value))) {
@@ -213,19 +200,17 @@ function checkGemeinde(checkedGemeinde) {
 
 function createHtmlList() {
 
-    const foundGemeinden = searchGemeindenWithPrecondition();
-
     let result = `         <div class="scrollable">
                              <table class="table table-hover">
                                  <thead>
                                       <tr>
-                                         <th scope="col">Gefundene Orte: ${foundGemeinden.length}</th> 
+                                         <th scope="col">Gefundene Orte: ${gemeindeWithPrecondition.length}</th> 
                                      </tr>
                                  </thead>
                              <tbody>`;
 
 
-    foundGemeinden.forEach(c => {
+    gemeindeWithPrecondition.forEach(c => {
         result += `<tr>
                           <td> ${c.id} </td> 
                        </tr>`;
