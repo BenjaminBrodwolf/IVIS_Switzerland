@@ -3,7 +3,7 @@
     --second: 0;
 }
 
-.multi-range, .multi-range * {
+.range-slider, .range-slider * {
     margin-top: 0.7em;
     box-sizing: border-box;
     padding: 0;
@@ -11,7 +11,7 @@
     z-index: 0;
 }
 
-.multi-range .min-max {
+.range-slider .min-max {
     pointer-events: none;
     width: var(--width);
     display: flex;
@@ -30,7 +30,7 @@
     border-radius: 15px;
 }
 
-.multi-range input[type=range] {
+.range-slider input[type=range] {
     width: var(--width);
     height: 0px;
     position: absolute;
@@ -41,7 +41,7 @@
 }
 
 
-/*.multi-range::after {*/
+/*.range-slider::after {*/
 /*    pointer-events: none;*/
 /*    position: absolute;*/
 /*    content: attr(style);*/
@@ -55,7 +55,7 @@
 /*}*/
 
 
-.multi-range::before {
+.range-slider::before {
     pointer-events: none;
     margin: 27px 0 0;
     z-index: 0;
@@ -74,16 +74,16 @@
     transparent 0) no-repeat 0 15% / 100% 30%;
 }
 
-.multi-range input[type=range]:focus {
+.range-slider input[type=range]:focus {
     outline: none;
 }
 
-.multi-ranger > input[type=range]::-webkit-slider-runnable-track {
+.range-sliderr > input[type=range]::-webkit-slider-runnable-track {
     -webkit-appearance: none;
     height: 0px;
 }
 
-.multi-range input[type=range]::-webkit-slider-thumb {
+.range-slider input[type=range]::-webkit-slider-thumb {
     transform: translateY(30px);
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5), 0 0 2px rgba(13, 13, 13, 0.5);
     border: 0 solid #000000;
@@ -96,7 +96,7 @@
     margin-top: -8.5px;
 }
 
-.multi-range .fst-value {
+.range-slider .fst-value {
     border-radius: 5px;
     pointer-events: none;
     position: absolute;
@@ -107,7 +107,7 @@
     left: var(--first);
 }
 
-.multi-range .snd-value {
+.range-slider .snd-value {
     border-radius: 5px;
     pointer-events: none;
     position: absolute;
@@ -118,8 +118,8 @@
     left: var(--second);
 }
 
-.multi-range .fst-value:after,
-.multi-range .snd-value:after {
+.range-slider .fst-value:after,
+.range-slider .snd-value:after {
     top: 100%;
     content: "";
     height: 0;

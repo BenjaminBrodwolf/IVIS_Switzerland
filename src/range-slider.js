@@ -1,12 +1,47 @@
 const percentSign = valuetype => (valuetype === "percent") ? "%" : "";
 
+const getCurrentValue = (valueType, low, high) => {
 
-const setDomSlider = (max, min , valuetype, id) =>  `<div class='multi-range' propID='${id}' valuetype='${valuetype}' min='${min}' max='${max}' style="--width:150px; --low:0%; --high:100%">
+    console.log(typeof low)
+
+    let lowResult = "";
+    let highResult = "";
+
+    if (valueType === "float") {
+
+        lowResult = low.split(".")[0];
+        highResult = high.split(".")[0];
+
+    } else {
+
+        switch (valueType) {
+            case "percent":
+                lowResult = low + "%";
+                highResult = high + "%";
+                break;
+            case "km2":
+                lowResult = low + "km&#178;";
+                highResult = high + "km&#178;";
+                break;
+
+            default:
+                lowResult = low.split(".")[0] + "";
+                highResult = high.split(".")[0] + "";
+        }
+    }
+
+    return {
+        low: () => lowResult,
+        high: () => highResult
+    }
+};
+
+const setDomSlider = (max, min, valuetype, id) => `<div class='range-slider' propID='${id}' valuetype='${valuetype}' min='${min}' max='${max}' style="--width:200px; --low:0%; --high:100%">
                                                         <div class="range-bg"></div>
                                                         <span class="fst-value">${min}</span>
-                                                        <input type='range' value='0' level="low" oninput='setValue(this)'/>
+                                                        <input type='range' step="0.1" value='0' level="low" oninput='setValue(this)'/>
                                                         <span class="snd-value">${max}</span>
-                                                        <input type='range' value='100' level="high" oninput='setValue(this)'/>
+                                                        <input type='range' step="0.1" value='100' level="high" oninput='setValue(this)'/>
                                                         <div class='min-max'>
                                                             <span>${min}${percentSign(valuetype)}</span>
                                                             <span>${max}${percentSign(valuetype)}</span>
@@ -15,14 +50,13 @@ const setDomSlider = (max, min , valuetype, id) =>  `<div class='multi-range' pr
 
 
 const setValue = (input) => {
-
     const masterNode = input.parentNode;
     const firstInput = masterNode.childNodes[5];
     const secondInput = masterNode.childNodes[9];
-    const low = parseInt(masterNode.style.getPropertyValue("--low").split("%")[0], 10);
-    const high = parseInt(masterNode.style.getPropertyValue("--high").split("%")[0], 10);
-    // console.log(low + " -- " + high)
-    if (high <= low) {
+    let styleLow = parseInt(masterNode.style.getPropertyValue("--low").split("%")[0], 10);
+    let styleHigh = parseInt(masterNode.style.getPropertyValue("--high").split("%")[0], 10);
+    console.log(styleLow + " -- " + styleHigh)
+    if (styleHigh <= styleLow) {
         const temp = firstInput.getAttribute("level");
         firstInput.setAttribute("level", secondInput.getAttribute("level"));
         secondInput.setAttribute("level", temp);
@@ -30,58 +64,69 @@ const setValue = (input) => {
     masterNode.style.setProperty(`--${input.getAttribute("level")}`, input.value + "%");
 
 
-
     // set the correct value for data-filtering
     const id = masterNode.getAttribute("propID");
     const prop = propsG.find(prop => prop.id === id);
 
-    const difference = parseInt(masterNode.getAttribute("min"), 10);
-    const max = parseInt(masterNode.getAttribute("max"), 10) - difference;
+    const difference = parseFloat(masterNode.getAttribute("min"));
+    const max = parseFloat(masterNode.getAttribute("max")) - difference;
 
-    console.log("test max : " + parseInt(masterNode.getAttribute("max"),10) )
+    console.log("test max : " + parseInt(masterNode.getAttribute("max"), 10))
     console.log("difference: " + difference)
     console.log("max: " + max)
 
+    styleLow = parseInt(masterNode.style.getPropertyValue("--low").split("%")[0], 10);
+    styleHigh = parseInt(masterNode.style.getPropertyValue("--high").split("%")[0], 10);
+    let low = ((styleLow === 0) ? difference : (styleLow / 100 * max) + difference).toFixed(1);
+    let high = ((styleHigh / 100 * max) + difference).toFixed(1);
 
-    prop.value.low = (low === 0) ? difference : (low / 100 * max) + difference ;
-    prop.value.high = (high / 100 * max) + difference;
-
-    console.log("name: " + prop.label)
-    console.log("low: " + prop.value.low)
-    console.log("high: " + prop.value.high)
-
+    // console.log("name: " + prop.label)
+    // console.log("low: " + low)
+    // console.log("high: " + high)
 
 
     // Tooltip
-    const valueType = masterNode.getAttribute("valuetype");
-    console.log(valueType)
-
     const fstTooltip = masterNode.childNodes[3];
     const sndTooltip = masterNode.childNodes[7];
-    if (fstTooltip.nextElementSibling.getAttribute("level") === "low") {
-        if (valueType === "percent"){
-            fstTooltip.innerText = fstTooltip.nextElementSibling.value + "%";
-            sndTooltip.innerText = sndTooltip.nextElementSibling.value + "%";
-        } else {
-            fstTooltip.innerText = Math.round( prop.value.low );
-            sndTooltip.innerText = Math.round( prop.value.high );
-        }
 
-    } else {
-        if (valueType === "percent"){
-            fstTooltip.innerText = sndTooltip.nextElementSibling.value + "%";
-            sndTooltip.innerText = fstTooltip.nextElementSibling.value + "%";
-        } else {
-            fstTooltip.innerText = Math.round( prop.value.high );
-            sndTooltip.innerText = Math.round( prop.value.low );
-        }
+    const valueType = masterNode.getAttribute("valuetype");
 
-    }
+    // let valueSign = "";
+    // if (valueType === "float") {
+    //
+    //     fstTooltip.innerText = low.split(".")[0];
+    //     sndTooltip.innerText = high.split(".")[0];
+    //
+    // } else {
+    //
+    //
+    //     switch (valueType) {
+    //         case "percent":
+    //             valueSign = "%";
+    //             break;
+    //         case "km2":
+    //             valueSign = "km&#178;";
+    //             break;
+    //     }
+    //
+    //     fstTooltip.innerText = low + valueSign;
+    //     sndTooltip.innerText = high + valueSign;
+    // }
 
-    setTooltipPosition(masterNode, fstTooltip, low, "--first");
-    setTooltipPosition(masterNode, sndTooltip, high, "--second");
+    const currentValue = getCurrentValue(valueType, low, high)
 
-    document.getElementById("slider-button").innerText= Math.round( prop.value.low ) + " bis " + Math.round( prop.value.high );
+
+    console.log(currentValue.low())
+    console.log(currentValue.high())
+
+    fstTooltip.innerText = currentValue.low();
+    sndTooltip.innerText = currentValue.high();
+
+    setTooltipPosition(masterNode, fstTooltip, styleLow, "--first");
+    setTooltipPosition(masterNode, sndTooltip, styleHigh, "--second");
+
+
+    masterNode.parentElement.previousElementSibling.innerText = currentValue.low() + " bis " + currentValue.high();
 
 };
 

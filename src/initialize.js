@@ -6,7 +6,7 @@ const toAnalyseData = [
         label: 'Einwohner',
         category: "Bevölkerung",
         table: population,
-        dataType: "amount",
+        dataType: "integer",
         description: "Anzahl Einwohner"
     },
     {
@@ -37,12 +37,17 @@ const toAnalyseData = [
         dataType: "percent",
         description: "Landwirtschaftsfläche in %"
     },
-    {label: 'Gesamtfläche', category: "Fläche", table: area, dataType: "km2", description: "Gesamtfläche in km2"},
+    {
+        label: 'Gesamtfläche',
+        category: "Fläche",
+        table: area,
+        dataType: "km2",
+        description: "Gesamtfläche in km2"},
     {
         label: 'Haushaltsgrösse',
         category: "Haushalte",
         table: average_household_size,
-        dataType: "amount",
+        dataType: "float",
         description: "Durchschnittliche Haushaltsgrösse in Personen"
     },
     {
@@ -70,22 +75,28 @@ const toAnalyseData = [
         label: 'Beschäftigte',
         category: "Wirtschaft",
         table: employee,
-        dataType: "amount",
+        dataType: "integer",
         description: "Beschäftigte total"
     },
     {
         label: 'Ausländer',
         category: "Bevölkerung",
         table: foreigner,
-        dataType: "percent",
+        dataType: "integer",
         description: "Ausländer in %"
     },
-    {label: 'Wald', category: "Fläche", table: forest, dataType: "%", description: "Wald und Gehölze in %"},
+    {
+        label: 'Wald',
+        category: "Fläche",
+        table: forest,
+        dataType: "percent",
+        description: "Wald und Gehölze in %"
+    },
     {
         label: 'Haushalte',
         category: "Haushalte",
         table: household,
-        dataType: "amount",
+        dataType: "integer",
         description: "Anzahl Privathaushalte"
     },
     {
@@ -99,7 +110,7 @@ const toAnalyseData = [
         label: 'Dichte',
         category: "Bevölkerung",
         table: population_density,
-        dataType: "amount",
+        dataType: "integer",
         description: "Bevölkerungsdichte pro km2"
     },
     {
@@ -113,21 +124,21 @@ const toAnalyseData = [
         label: 'Sektor1',
         category: "Wirtschaft",
         table: sektor_1,
-        dataType: "amount",
+        dataType: "integer",
         description: "Beschäftigte im 1. Sektor"
     },
     {
         label: 'Sektor2',
         category: "Wirtschaft",
         table: sektor_2,
-        dataType: "amount",
+        dataType: "integer",
         description: "Beschäftigte im 2. Sektor"
     },
     {
         label: 'Sektor3',
         category: "Wirtschaft",
         table: sektor_3,
-        dataType: "amount",
+        dataType: "integer",
         description: "Beschäftigte im 3. Sektor"
     },
     {
@@ -141,7 +152,7 @@ const toAnalyseData = [
         label: 'Solzialhilfe',
         category: "Soziales",
         table: socialcare,
-        dataType: "rate",
+        dataType: "float",
         description: "Sozialhilfequote"
     }
 ];
@@ -326,13 +337,19 @@ const initializeData = () => {
                                      </div>   `;
                 contentElement.insertAdjacentHTML("beforeend", propElement);
 
+
+                // set the Slider-Thumb to correct places
+                // setValue( document.getElementById(propElement) );
                 // contentElement.appendChild(dom(setDomSlider));
             }
         });
 //        addCollapse(categoryElement);
         dragfield.appendChild(categoryElement);
         dragfield.appendChild(contentElement);
-    })
+
+
+    });
+
 
     const svgTag = dom(`<svg id="svg" xmlns="http://www.w3.org/2000/svg" style="width: 100%" version="1.2" baseProfile="tiny" viewBox="0 0 800 507" stroke-linecap="round" stroke-linejoin="round">  
                                             ${gemeindenSVG} + ${cantonsSVG}
@@ -347,6 +364,9 @@ const initializeData = () => {
     cantonINIT();
     gemeindeINIT();
 
+
+    const allSliders = document.querySelectorAll(".range-slider");
+    allSliders.forEach(slider => setValue(slider.childNodes[5]))
 };
 
 initializeData();
