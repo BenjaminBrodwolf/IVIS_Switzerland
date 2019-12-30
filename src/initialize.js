@@ -46,21 +46,21 @@ const toAnalyseData = [
         description: "Durchschnittliche Haushaltsgrösse in Personen"
     },
     {
-        label: 'Geburtenziffer',
+        label: 'Geburten',
         category: "Bevölkerungsbewegung",
         table: birth,
         dataType: "percent",
         description: "Bevölkerungsbewegung in % - Rohe Geburtenziffer"
     },
     {
-        label: 'Sterbeziffer',
+        label: 'Tode',
         category: "Bevölkerungsbewegung",
         table: death,
         dataType: "percent",
         description: "Bevölkerungsbewegung in % - Rohe Sterbeziffer"
     },
     {
-        label: 'Scheidungsziffer',
+        label: 'Scheidungen',
         category: "Bevölkerungsbewegung",
         table: divorce,
         dataType: "percent",
@@ -89,21 +89,21 @@ const toAnalyseData = [
         description: "Anzahl Privathaushalte"
     },
     {
-        label: 'Heiratsziffer',
+        label: 'Heirat',
         category: "Bevölkerungsbewegung",
         table: marriage,
         dataType: "percent",
         description: "Bevölkerungsbewegung in % - Rohe Heiratsziffer"
     },
     {
-        label: 'Bevölkerungsdichte',
+        label: 'Dichte',
         category: "Bevölkerung",
         table: population_density,
         dataType: "amount",
         description: "Bevölkerungsdichte pro km2"
     },
     {
-        label: 'Bevölkerungsveränderungen',
+        label: 'Veränderung',
         category: "Bevölkerung",
         table: population_mutation,
         dataType: "percent",
@@ -205,10 +205,10 @@ const gemeindeINIT = () => {
     }));
 
     elementsG.forEach(e => e.addEventListener('click', event => {
-        if (selectedGemeinde){
+        if (selectedGemeinde) {
             selectedGemeinde.style.fill = 'rgb(0,0,0)';
         }
-        if (zoomstate){
+        if (zoomstate) {
             selectedGemeinde = e;
             selectedGemeinde.style.fill = '#ffd311';
         }
@@ -278,15 +278,13 @@ const getCategories = () => {
 }
 
 function addCollapse(element) {
-    element.addEventListener("click", function () {
-        this.classList.toggle("active");
-        let content = this.nextElementSibling;
-        if (content.style.maxHeight) {
-            content.style.maxHeight = null;
-        } else {
-            content.style.maxHeight = content.scrollHeight + "px";
-        }
-    })
+    element.classList.toggle("active");
+    let content = element.nextElementSibling;
+    if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+    } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+    }
 }
 
 const dom = innerString => {
@@ -307,30 +305,31 @@ const initializeData = () => {
     console.log(propsG)
 
     getCategories().forEach(c => {
-        const categoryElement = dom(`<button class="collapsible">${c}</button>`);
-        const contentElement = dom(`<div class="content" id="${c}"></div>`)
+        const categoryElement = dom(`<button onclick="addCollapse(this)" class="collapsible">${c}</button>`);
+        const contentElement = dom(`<div  class="content" id="${c}"></div>`);
 
         propsG.forEach(prop => {
             if (prop.category === c) {
                 const propElement = `
-                                                 <div style="display: flex; box-sizing: border-box;"> 
-                                                    <div style="flex: 20%;">
-                                                        <div class="segment" id="${prop.id}" title="${prop.description}" draggable="true" onclick="select(this)" ondragstart="drag(event)">
-                                                                <p class="propLabel">${prop.label}</p>
-                                                                
-                                                        </div>  
-                                                    </div>
-                                                    <div style="flex: 80%; align-content: flex-end">
-                                                        ${setDomSlider(prop.boundaries.max, prop.boundaries.min, prop.dataType, prop.id)}
-                                                    </div>
-                                                 </div>   
-                                        `;
+                                     <div class="row">
+                                            <div class="col-md-6">
+                                              <div class="segment" id="${prop.id}" title="${prop.description}" draggable="true" onclick="select(this)" ondragstart="drag(event)">
+                                                    <p class="propLabel">${prop.label}</p>
+                                              </div>  
+                                            </div>
+                                            <div class="col-md-6" style="padding: 0">                
+                                              <button id="slider-button" onclick="addCollapse(this)" class="collapsible-slider" style="margin-top: 1.5em">Werte setzen</button>
+                                              <div class="slider-content">
+                                                   ${setDomSlider(prop.boundaries.max, prop.boundaries.min, prop.dataType, prop.id)}
+                                              </div>
+                                            </div>       
+                                     </div>   `;
                 contentElement.insertAdjacentHTML("beforeend", propElement);
 
                 // contentElement.appendChild(dom(setDomSlider));
             }
         });
-        addCollapse(categoryElement);
+//        addCollapse(categoryElement);
         dragfield.appendChild(categoryElement);
         dragfield.appendChild(contentElement);
     })

@@ -81,6 +81,8 @@ const setValue = (input) => {
     setTooltipPosition(masterNode, fstTooltip, low, "--first");
     setTooltipPosition(masterNode, sndTooltip, high, "--second");
 
+    document.getElementById("slider-button").innerText= Math.round( prop.value.low ) + " bis " + Math.round( prop.value.high );
+
 };
 
 const setTooltipPosition = (masterNode, tooltip, level, propertyName) => {
