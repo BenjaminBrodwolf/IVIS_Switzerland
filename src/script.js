@@ -40,16 +40,15 @@ function select(element) {
 }
 
 function putItBack(node) {
-    const content = propsG.find(p => p.id === node);
     if (node) {
-        const contentField = document.getElementById(content.category);
+        const segmentField = document.getElementById("col" + node);
         const segment = document.getElementById(node);
 
         for (let i = 0; i < segment.children.length; i++) {
-            contentField.appendChild(segment.children[i]);
+            document.getElementById("col" + segment.children[i].id).appendChild(segment.children[i]);
         }
 
-        contentField.appendChild(segment);
+        segmentField.appendChild(segment);
         segment.style.height = "3em";
         segment.style.width = "3em";
         segment.style.backgroundColor = '#ffd311';
@@ -58,29 +57,8 @@ function putItBack(node) {
         const propLabel = dom(`<p class="propLabel">${segment.title}</p>`);
         segment.appendChild(propLabel)
 
-
         colorMapGemeinden();
     }
-
-
-    /*const dragfield = document.getElementById("dragfield");
-    const segment = document.getElementById(node);
-
-    for (let i = 0; i < segment.children.length; i++) {
-        dragfield.appendChild(segment.children[i]);
-    }
-
-    dragfield.appendChild(segment);
-    segment.style.height = "3em";
-    segment.style.width = "3em";
-    segment.style.backgroundColor = '#ffd311';
-    segment.style.borderColor = 'rgb(0, 0, 0)';
-    segment.innerHTML = "";
-    const propLabel = dom(`<p class="propLabel">${segment.title}</p>`);
-    segment.appendChild(propLabel)
-    //colorMapCanton();
-    colorMapGemeinden();
-    createHtmlList();*/
 }
 
 
@@ -153,15 +131,16 @@ function searchGemeindenWithPrecondition() {
 
     const gemeindenWithPrecondition = [];
     const preconditions = getPreconditions();
-    console.log(elementsG)
     elementsG.forEach(c => {
 
         if (checkGemeinde(c, preconditions)) {
-            gemeindenWithPrecondition.push(c);
+            if (!gemeindenWithPrecondition.find(g => g.id === c.id)) {
+                gemeindenWithPrecondition.push(c);
+            }
         }
+
     });
 
-    console.log(gemeindenWithPrecondition)
     return gemeindenWithPrecondition;
 }
 

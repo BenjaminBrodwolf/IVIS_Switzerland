@@ -310,17 +310,37 @@ const initializeData = () => {
 
         propsG.forEach(prop => {
             if (prop.category === c) {
+                /*
+                `
+                                     <div class="row">
+                                            <div id="col${prop.id}" class="col-md-6">
+                                              <div class="segment" id="${prop.id}" title="${prop.description}" draggable="true" onclick="select(this)" ondragstart="drag(event)">
+                                                    <p class="propLabel">${prop.label}</p>
+                                              </div>
+                                            </div>
+                                            <div class="col-md-6" style="padding: 0">
+                                            <div id="slider${prop.id}">
+                                              <button id="slider-button" onclick="addCollapse(this)" class="collapsible-slider" style="margin-top: 1.5em">Werte setzen</button>
+                                              <div class="slider-content">
+                                                   ${setDomSlider(prop.boundaries.max, prop.boundaries.min, prop.dataType, prop.id)}
+                                              </div>
+                                              </div>
+                                            </div>
+                                     </div>   `
+                 */
                 const propElement = `
                                      <div class="row">
-                                            <div class="col-md-6">        
+                                            <div id="col${prop.id}" class="col-md-6">       
                                               <div class="segment" id="${prop.id}" title="${prop.description}" draggable="true" onclick="select(this)" ondragstart="drag(event)">
                                                     <p><span class="propLabel">${prop.label}</span> <br><span class="propDescription">${prop.description}</span></p>
                                               </div>  
                                             </div>
-                                            <div class="col-md-6" style="padding: 0">                
+                                            <div class="col-md-6" style="padding: 0">
+                                             <div id="slider${prop.id}">                   
                                               <button id="slider-button" onclick="addCollapse(this)" class="collapsible-slider" style="margin-top: 1.5em">Werte setzen</button>
                                               <div class="slider-content">
                                                    ${setDomSlider(prop.boundaries.max, prop.boundaries.min, prop.dataType, prop.id)}
+                                              </div>
                                               </div>
                                             </div>       
                                      </div>   `;
