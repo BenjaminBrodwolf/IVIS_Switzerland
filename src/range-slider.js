@@ -1,27 +1,35 @@
-const percentSign = valuetype => (valuetype === "percent") ? "%" : "";
+const getValuetypeSign = valuetype => {
+    let valuesign = "";
+    switch (valuetype) {
+        case "percent":
+            valuesign = "%";
+            break;
+        case "km2":
+            valuesign = "km²";
+            break;
+    }
+    return valuesign;
+};
 
-const getCurrentValue = (valueType, low, high) => {
+const getDisplayValue = (valueType, lowValue, highValue) => {
 
-    console.log(typeof low)
-
+    const low = lowValue.toFixed(1);
+    const high = highValue.toFixed(1);
     let lowResult = "";
     let highResult = "";
 
     if (valueType === "float") {
-
         lowResult = low.split(".")[0];
         highResult = high.split(".")[0];
-
     } else {
-
         switch (valueType) {
             case "percent":
                 lowResult = low + "%";
                 highResult = high + "%";
                 break;
             case "km2":
-                lowResult = low + "km&#178;";
-                highResult = high + "km&#178;";
+                lowResult = low + "km²";
+                highResult = high + "km²";
                 break;
 
             default:
@@ -39,23 +47,24 @@ const getCurrentValue = (valueType, low, high) => {
 const setDomSlider = (max, min, valuetype, id) => `<div class='range-slider' propID='${id}' valuetype='${valuetype}' min='${min}' max='${max}' style="--width:250px; --low:0%; --high:100%">
                                                         <div class="range-bg"></div>
                                                         <span class="fst-value">${min}</span>
-                                                        <input type='range' step="0.1" value='0' level="low" oninput='setValue(this)'/>
+                                                        <input type='range' step="0.1" value='0' level="low" oninput='setValue(this)' />
                                                         <span class="snd-value">${max}</span>
                                                         <input type='range' step="0.1" value='100' level="high" oninput='setValue(this)'/>
                                                         <div class='min-max'>
-                                                            <span>${min}${percentSign(valuetype)}</span>
-                                                            <span>${max}${percentSign(valuetype)}</span>
+                                                            <span>${min}${getValuetypeSign(valuetype)}</span>
+                                                            <span>${max}${getValuetypeSign(valuetype)}</span>
                                                         </div>
                                                     </div>`;
 
 
 const setValue = (input) => {
+
     const masterNode = input.parentNode;
     const firstInput = masterNode.childNodes[5];
     const secondInput = masterNode.childNodes[9];
     let styleLow = parseInt(masterNode.style.getPropertyValue("--low").split("%")[0], 10);
     let styleHigh = parseInt(masterNode.style.getPropertyValue("--high").split("%")[0], 10);
-    console.log(styleLow + " -- " + styleHigh)
+    // console.log(styleLow + " -- " + styleHigh)
     if (styleHigh <= styleLow) {
         const temp = firstInput.getAttribute("level");
         firstInput.setAttribute("level", secondInput.getAttribute("level"));
@@ -71,15 +80,16 @@ const setValue = (input) => {
     const difference = parseFloat(masterNode.getAttribute("min"));
     const max = parseFloat(masterNode.getAttribute("max")) - difference;
 
-    console.log("test max : " + parseInt(masterNode.getAttribute("max"), 10))
-    console.log("difference: " + difference)
-    console.log("max: " + max)
+    // console.log("test max : " + parseInt(masterNode.getAttribute("max"), 10))
+    // console.log("difference: " + difference)
+    // console.log("max: " + max)
 
     styleLow = parseInt(masterNode.style.getPropertyValue("--low").split("%")[0], 10);
     styleHigh = parseInt(masterNode.style.getPropertyValue("--high").split("%")[0], 10);
-    let low = ((styleLow === 0) ? difference : (styleLow / 100 * max) + difference).toFixed(1);
-    let high = ((styleHigh / 100 * max) + difference).toFixed(1);
-
+    let low = ((styleLow === 0) ? difference : (styleLow / 100 * max) + difference);
+    let high = ((styleHigh / 100 * max) + difference);
+    prop.value.low = low;
+    prop.value.high = high;
     // console.log("name: " + prop.label)
     // console.log("low: " + low)
     // console.log("high: " + high)
@@ -91,10 +101,7 @@ const setValue = (input) => {
 
     const valueType = masterNode.getAttribute("valuetype");
 
-    const currentValue = getCurrentValue(valueType, low, high)
-
-    console.log(currentValue.low());
-    console.log(currentValue.high());
+    const currentValue = getDisplayValue(valueType, low, high)
 
     fstTooltip.innerText = currentValue.low();
     sndTooltip.innerText = currentValue.high();
@@ -102,11 +109,7 @@ const setValue = (input) => {
     setTooltipPosition(masterNode, fstTooltip, styleLow, "--first");
     setTooltipPosition(masterNode, sndTooltip, styleHigh, "--second");
 
-
     masterNode.parentElement.previousElementSibling.innerText = currentValue.low() + " bis " + currentValue.high();
-
-    prop.value.low = low;
-    prop.value.high = high;
 };
 
 const setTooltipPosition = (masterNode, tooltip, level, propertyName) => {

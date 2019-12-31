@@ -42,7 +42,8 @@ const toAnalyseData = [
         category: "Fläche",
         table: area,
         dataType: "km2",
-        description: "Gesamtfläche in km2"},
+        description: "Gesamtfläche in km2"
+    },
     {
         label: 'Haushaltsgrösse',
         category: "Haushalte",
@@ -110,7 +111,7 @@ const toAnalyseData = [
         label: 'Dichte',
         category: "Bevölkerung",
         table: population_density,
-        dataType: "integer",
+        dataType: "km2",
         description: "Bevölkerungsdichte pro km2"
     },
     {
@@ -156,18 +157,6 @@ const toAnalyseData = [
         description: "Sozialhilfequote"
     }
 ];
-
-const propsGemeindeObject = {
-    id: undefined,
-    active: false,
-    label: undefined,
-    table: undefined,
-    data: undefined,
-    amount: undefined,
-    gemeinde: {},
-    maxmin: {max: undefined, min: undefined},
-    value: {first: undefined, second: undefined}
-};
 
 const propsG = [];
 
@@ -323,9 +312,9 @@ const initializeData = () => {
             if (prop.category === c) {
                 const propElement = `
                                      <div class="row">
-                                            <div class="col-md-6">
+                                            <div class="col-md-6">        
                                               <div class="segment" id="${prop.id}" title="${prop.description}" draggable="true" onclick="select(this)" ondragstart="drag(event)">
-                                                    <p class="propLabel">${prop.label}</p>
+                                                    <p><span class="propLabel">${prop.label}</span> <br><span class="propDescription">${prop.description}</span></p>
                                               </div>  
                                             </div>
                                             <div class="col-md-6" style="padding: 0">                
@@ -367,6 +356,9 @@ const initializeData = () => {
 
     const allSliders = document.querySelectorAll(".range-slider");
     allSliders.forEach(slider => setValue(slider.childNodes[5]))
+
+
+
 };
 
 initializeData();

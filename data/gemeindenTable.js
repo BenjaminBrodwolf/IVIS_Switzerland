@@ -37,7 +37,7 @@ Silenen;4
 Mels;17
 S-chanf;18
 Rheinwald;18
-Medel (Lucmagn);18
+Medel;18
 Kandersteg;2
 Tujetsch;18
 Ilanz/Glion;18

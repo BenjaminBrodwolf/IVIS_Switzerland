@@ -41,9 +41,7 @@ function select(element) {
 
 function putItBack(node) {
     const content = propsG.find(p => p.id === node);
-    console.log(node)
     if (node) {
-        console.log(content.category);
         const contentField = document.getElementById(content.category);
         const segment = document.getElementById(node);
 
@@ -84,7 +82,6 @@ function putItBack(node) {
     colorMapGemeinden();
     createHtmlList();*/
 }
-
 
 
 /*
@@ -129,6 +126,7 @@ function colorMapGemeinden() {
 
     createHtmlList();
 }
+
 /*
 Sammelt die Objekte mit den Operatore und Elementen in einer Liste
 */
@@ -145,6 +143,7 @@ function getPreconditions() {
 
     return listWithPrecondition;
 }
+
 /*
 Gibt Liste zurück von Kantonen die eingefärbt werden
  */
@@ -154,13 +153,15 @@ function searchGemeindenWithPrecondition() {
 
     const gemeindenWithPrecondition = [];
     const preconditions = getPreconditions();
-
+    console.log(elementsG)
     elementsG.forEach(c => {
+
         if (checkGemeinde(c, preconditions)) {
             gemeindenWithPrecondition.push(c);
         }
     });
 
+    console.log(gemeindenWithPrecondition)
     return gemeindenWithPrecondition;
 }
 
@@ -215,7 +216,7 @@ function createHtmlList() {
 
     gemeindeWithPrecondition.forEach(c => {
         result += `<tr>
-                          <td> ${c.id} </td> 
+                          <td onclick="zoomToGemeinde(${c.id})"> ${c.id} </td> 
                        </tr>`;
     });
 

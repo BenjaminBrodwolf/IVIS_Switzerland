@@ -32,6 +32,12 @@ svg:hover{
     overflow-x: hidden;
 }
 
+#dragfield{
+    height: 50vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
 [draggable=true] {
     cursor: move;
 }
@@ -63,6 +69,7 @@ svg:hover{
 }
 
 .dropzone {
+    min-height: 7vw;
     border-color: #555;
     border-width: 5px;
     border-style: solid;
@@ -90,6 +97,12 @@ svg:hover{
 .propLabel{
     margin-top: 0.3em;
     margin-left: 3em;
+}
+.propDescription{
+    font-size: 0.6em;
+    white-space: nowrap;
+    margin-left: 3.5em;
+    position: absolute;
 }
 
 #cantons{
@@ -145,10 +158,6 @@ svg:hover{
 
 #resetSelButton{
     visibility: hidden;
-}
-
-#dragfield{
-    height: 45vh;
 }
 
 .lake{
@@ -235,6 +244,7 @@ svg:hover{
     margin-bottom: 0.2em;
     border-radius: 0.5em 0.5em 0 0;
 }
+
 
 
 ::-webkit-scrollbar {

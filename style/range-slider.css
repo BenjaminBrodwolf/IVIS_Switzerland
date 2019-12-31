@@ -69,7 +69,7 @@
     height: 30px;
     background: linear-gradient(to right,
     transparent var(--low),
-    red 0,
+    #507aff 0,
     red var(--high),
     transparent 0) no-repeat 0 15% / 100% 30%;
 }
@@ -101,8 +101,8 @@
     pointer-events: none;
     position: absolute;
     top: -20px;
-    background: #1c2126;
-    padding: .25em 1em;
+    background: #5386a8;
+    padding: .15em .6em;
     color: #fff;
     left: var(--first);
 }
@@ -112,8 +112,8 @@
     pointer-events: none;
     position: absolute;
     top: -20px;
-    background: #1c2126;
-    padding: .25em 1em;
+    background: #b84324;
+    padding: .15em .6em;
     color: #fff;
     left: var(--second);
 }
@@ -126,8 +126,8 @@
     width: 0;
     position: absolute;
     pointer-events: none;
-    border: 10px solid transparent;
-    border-top-color: #1c2126;
+    border: 3px solid transparent;
+    border-top-color: #9ba8a5;
     margin-left: -25px;
 }
 
