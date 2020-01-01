@@ -59,6 +59,7 @@ const setDomSlider = (max, min, valuetype, id) => `<div class='range-slider' pro
 
 const setValue = (input) => {
 
+
     const masterNode = input.parentNode;
     const firstInput = masterNode.childNodes[5];
     const secondInput = masterNode.childNodes[9];
@@ -79,7 +80,6 @@ const setValue = (input) => {
 
     const difference = parseFloat(masterNode.getAttribute("min"));
     const max = parseFloat(masterNode.getAttribute("max")) - difference;
-
     // console.log("test max : " + parseInt(masterNode.getAttribute("max"), 10))
     // console.log("difference: " + difference)
     // console.log("max: " + max)
@@ -109,7 +109,8 @@ const setValue = (input) => {
     setTooltipPosition(masterNode, fstTooltip, styleLow, "--first");
     setTooltipPosition(masterNode, sndTooltip, styleHigh, "--second");
 
-    masterNode.parentElement.previousElementSibling.innerText = currentValue.low() + " bis " + currentValue.high();
+
+    masterNode.parentElement.previousElementSibling.innerHTML = `<form class="valForm"> <input  class="valInput" oninput="setValue(this)" type="text" name="low" value="${currentValue.low()}">` + " - " + `<input class="valInput" oninput="setValue(this)" type="text" name="low" value="${currentValue.high()}"></form>`;
 };
 
 const setTooltipPosition = (masterNode, tooltip, level, propertyName) => {
@@ -123,3 +124,6 @@ const setTooltipPosition = (masterNode, tooltip, level, propertyName) => {
     const final_label_position = value_px_position - half_label_width - offset;
     tooltip.style.setProperty(propertyName, final_label_position + "px");
 }
+
+
+

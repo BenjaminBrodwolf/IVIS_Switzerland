@@ -262,3 +262,15 @@ svg:hover{
 ::-webkit-scrollbar-thumb:hover {
     background: #777;
 }
+
+.valInput{
+    width: 4.5em;
+    background: transparent;
+    color: white;
+    border: none;
+    border-bottom: 2px  #555 solid;
+}
+
+.valForm{
+    display: contents;
+}
