@@ -332,12 +332,18 @@ const initializeData = () => {
                                      <div class="row">
                                             <div id="col${prop.id}" class="col-md-6">       
                                               <div class="segment" id="${prop.id}" title="${prop.description}" draggable="true" onclick="select(this)" ondragstart="drag(event)">
-                                                    <p><span class="propLabel">${prop.label}</span> <br><span class="propDescription">${prop.description}</span></p>
+                                                    <p>
+                                                       <span class="propLabel">${prop.label}</span> 
+                                                       <br> 
+                                                       <span class="propDescription">${prop.description}</span>
+                                                     </p>
                                               </div>  
                                             </div>
                                             <div class="col-md-6" style="padding: 0">
                                              <div id="slider${prop.id}">                   
-                                              <button id="slider-button" onclick="addCollapse(this)" class="collapsible-slider" style="margin-top: 1.5em">Werte setzen</button>
+                                              <button id="slider-button" onclick="addCollapse(this)" class="collapsible-slider" style="margin-top: 1.5em">
+                                                    ${setDomInputfield(prop.boundaries.max, prop.boundaries.min, prop.dataType, prop.id)}
+                                                </button>
                                               <div class="slider-content">
                                                    ${setDomSlider(prop.boundaries.max, prop.boundaries.min, prop.dataType, prop.id)}
                                               </div>
@@ -348,7 +354,7 @@ const initializeData = () => {
 
 
                 // set the Slider-Thumb to correct places
-                // setValue( document.getElementById(propElement) );
+                // setSliderValue( document.getElementById(propElement) );
                 // contentElement.appendChild(dom(setDomSlider));
             }
         });
@@ -375,9 +381,7 @@ const initializeData = () => {
 
 
     const allSliders = document.querySelectorAll(".range-slider");
-    allSliders.forEach(slider => setValue(slider.childNodes[5]))
-
-
+    allSliders.forEach(slider => setSliderValue(slider.childNodes[5]))
 
 };
 

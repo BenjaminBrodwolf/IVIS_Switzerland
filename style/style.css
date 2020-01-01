@@ -264,6 +264,7 @@ svg:hover{
 }
 
 .valInput{
+    text-align: right;
     width: 4.5em;
     background: transparent;
     color: white;
