@@ -341,7 +341,7 @@ const initializeData = () => {
                                             </div>
                                             <div class="col-md-6" style="padding: 0">
                                              <div id="slider${prop.id}">                   
-                                              <button id="slider-button" onclick="addCollapse(this)" class="collapsible-slider" style="margin-top: 1.5em">
+                                              <button id="slider-button" ondblclick="addCollapse(this)" class="collapsible-slider" style="margin-top: 1.5em">
                                                     ${setDomInputfield(prop.boundaries.max, prop.boundaries.min, prop.dataType, prop.id)}
                                                 </button>
                                               <div class="slider-content">
