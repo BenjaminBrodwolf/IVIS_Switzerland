@@ -275,3 +275,24 @@ svg:hover{
 .valForm{
     display: contents;
 }
+
+#infoTable td{
+    padding: 0.3rem;
+    font-size: 0.8rem;
+}
+
+#infoTableHeader{
+    font-weight: bold;
+    background: #777;
+    color: white;
+
+}
+
+#infoTableHeader th{
+    padding: 0.3rem;
+}
+
+.gemeindenList{
+    cursor: pointer;
+}
+

@@ -132,13 +132,9 @@ function searchGemeindenWithPrecondition() {
     const gemeindenWithPrecondition = [];
     const preconditions = getPreconditions();
     elementsG.forEach(c => {
-
         if (checkGemeinde(c, preconditions)) {
-            if (!gemeindenWithPrecondition.find(g => g.id === c.id)) {
-                gemeindenWithPrecondition.push(c);
-            }
+            gemeindenWithPrecondition.push(c);
         }
-
     });
 
     return gemeindenWithPrecondition;
@@ -192,10 +188,16 @@ function createHtmlList() {
                                  </thead>
                              <tbody>`;
 
+    const distinctedGemeinden = [];
+    gemeindeWithPrecondition.forEach(g => {
+        if (!distinctedGemeinden.find(dg => dg === g.id)){
+            distinctedGemeinden.push(g.id);
+        }
+    })
 
-    gemeindeWithPrecondition.forEach(c => {
-        result += `<tr>
-                          <td onclick="zoomToGemeinde(${c.id})"> ${c.id} </td> 
+    distinctedGemeinden.forEach(c => {
+            result += `<tr>
+                          <td class="gemeindenList" onclick="zoomToGemeinde(${c}); displayInfobox(${c})">${c}</td> 
                        </tr>`;
     });
 

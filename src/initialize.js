@@ -201,19 +201,12 @@ const gemeindeINIT = () => {
 
     /* Add MouseOver-Listener to the Gemeinden */
     elementsG.forEach(e => e.addEventListener('mouseover', event => {
-        document.getElementById("infoBox").innerText = e.id;
+        if (!zoomstate) {
+            document.getElementById("infoBox").innerText = e.id;
+        }
     }));
 
-    elementsG.forEach(e => e.addEventListener('click', event => {
-        if (selectedGemeinde) {
-            selectedGemeinde.style.fill = 'rgb(0,0,0)';
-        }
-        if (zoomstate) {
-            selectedGemeinde = e;
-            selectedGemeinde.style.fill = '#ffd311';
-        }
 
-    }));
 };
 
 
@@ -385,4 +378,6 @@ const initializeData = () => {
 
 };
 
-initializeData();
+
+
+    initializeData();

@@ -20,9 +20,8 @@ const viewport = document.getElementById("cantons");
 const gemeindenViewport = document.getElementById("gemeinden");
 let selectedCantonID;
 
-const zoomToGemeinde = gemeindePaths =>{
+const zoomToGemeinde = gemeindePaths => {
 
-    console.log(gemeindePaths)
     let zoominGemeinde;
     if(gemeindePaths.length > 1){
         zoominGemeinde = gemeindePaths[0];
