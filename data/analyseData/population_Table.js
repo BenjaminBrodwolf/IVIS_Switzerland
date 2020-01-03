@@ -1239,7 +1239,7 @@ Medel (Lucmagn);384
 Sumvitg;1179
 Tujetsch;1256
 Trun;1172
-Obersa Mundaun;1160
+Obersaxen Mundaun;1160
 Aarau;21268
 Biberstein;1587
 Buchs (AG);7922
@@ -1536,7 +1536,7 @@ Bellinzona;43181
 Cadenazzo;2932
 Isone;378
 Lumino;1470
-SantAntonino;2513
+Sant'Antonino;2513
 Acquarossa;1850
 Blenio;1826
 Serravalle;2071
@@ -1619,7 +1619,7 @@ Torricella-Taverne;3053
 Vernate;583
 Vezia;1947
 Vico Morcote;382
-Collina dOro;4911
+Collina d'Oro;4911
 Alto Malcantone;1405
 Monteceneri;4502
 Balerna;3345
@@ -1696,7 +1696,7 @@ Eclépens;1093
 Ferreyres;321
 Gollion;917
 Grancy;403
-LIsle;1000
+L'Isle;1000
 Lussery-Villars;459
 Mauraz;60
 Mex (VD);720
@@ -1851,7 +1851,7 @@ Tannay;1595
 Trélex;1402
 Le Vaud;1274
 Vich;1022
-LAbergement;237
+L'Abergement;237
 Agiez;314
 Arnex-sur-Orbe;641
 Ballaigues;1092
@@ -1896,7 +1896,7 @@ Trey;270
 Treytorrens (Payerne);122
 Villarzel;416
 Valbroye;3025
-Château-dOex;3433
+Château-d'Oex;3433
 Rossinière;543
 Rougemont;889
 Allaman;438
@@ -1912,7 +1912,7 @@ Perroy;1508
 Rolle;6218
 Tartegnin;235
 Vinzel;370
-LAbbaye;1493
+L'Abbaye;1493
 Le Chenit;4597
 Le Lieu;868
 Blonay;6190
@@ -2016,7 +2016,7 @@ Monthey;17563
 Port-Valais;3995
 Saint-Gingolph;963
 Troistorrents;4602
-Val-dIlliez;1888
+Val-d'Illiez;1888
 Vionnaz;2646
 Vouvry;4138
 Bister;32

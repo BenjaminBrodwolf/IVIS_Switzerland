@@ -2,11 +2,15 @@ function displayInfobox(clickedGemeinde) {
 
     if (selectedGemeinde){
         selectedGemeinde.style.fillOpacity = '1';
+        document.getElementById("listElement" + selectedGemeinde.id).style.backgroundColor = '#fff';
+        document.getElementById("listElement" + selectedGemeinde.id).style.color = '#000';
     }
 
     selectedGemeinde = clickedGemeinde;
-
     selectedGemeinde.style.fillOpacity = '0.3';
+    document.getElementById("listElement" + selectedGemeinde.id).style.backgroundColor = '#777';
+    document.getElementById("listElement" + selectedGemeinde.id).style.color = '#fff';
+    onFocus = true;
 
     const area = propsG.find(p => p.label === "Gesamtfläche").data.find(g => g.gemeinde === selectedGemeinde.id);
     const population = propsG.find(p => p.label === "Einwohner").data.find(g => g.gemeinde === selectedGemeinde.id);

@@ -190,6 +190,7 @@ const gemeindeTableToObject = data => {
     }
 };
 
+let onFocus = false;
 let selectedGemeinde;
 const gemeindeINIT = () => {
     const table = [];
@@ -201,11 +202,16 @@ const gemeindeINIT = () => {
 
     /* Add MouseOver-Listener to the Gemeinden */
     elementsG.forEach(e => e.addEventListener('mouseover', event => {
-        if (!zoomstate) {
+        if (!onFocus) {
             document.getElementById("infoBox").innerText = e.id;
+            e.style.fillOpacity = '50%';
         }
     }));
-
+    elementsG.forEach(e => e.addEventListener('mouseout', event => {
+        if (!onFocus) {
+            e.style.fillOpacity = '100%';
+        }
+    }));
 
 };
 
@@ -379,5 +385,4 @@ const initializeData = () => {
 };
 
 
-
-    initializeData();
+initializeData();

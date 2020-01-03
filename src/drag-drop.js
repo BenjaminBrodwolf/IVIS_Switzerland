@@ -24,7 +24,6 @@ function drop(ev) {
         }
     });
 
-    //colorMapCanton();
     colorMapGemeinden();
 }
 

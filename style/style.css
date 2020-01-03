@@ -127,10 +127,6 @@ svg:hover{
     stroke-width: 0.5px;
 }
 
-#gemeinden > path:hover{
-    fill-opacity: 50%;
-}
-
 
 #header{
     background-color: #ffd311;

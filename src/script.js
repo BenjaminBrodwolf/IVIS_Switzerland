@@ -147,15 +147,14 @@ Testet einen einzelnen Kanton, ob er die Bedingung erfüllt
 function checkGemeinde(checkedGemeinde, preconditions) {
     let fulfillPrecondition = false;
 
-    console.log("checkGemeinde ---------------")
     preconditions.forEach(pc => {
         if (pc.filterOperator) {
 
 
             const prop1 = propsG.find(p => p.label === pc.filterProperty.firstElement);
-            if (prop1.data.find(p => p.gemeinde === checkedGemeinde.id && (prop1.value.low < p.value && prop1.value.high > p.value))) {
+            if (prop1.data.find(p => p.gemeinde === checkedGemeinde.id && (prop1.value.low <= p.value && prop1.value.high >= p.value))) {
                 const prop2 = propsG.find(p => p.label === pc.filterProperty.secondElement);
-                if (prop2.data.find(p => p.gemeinde === checkedGemeinde.id && (prop2.value.low < p.value && prop2.value.high > p.value))) {
+                if (prop2.data.find(p => p.gemeinde === checkedGemeinde.id && (prop2.value.low <= p.value && prop2.value.high >= p.value))) {
                     fulfillPrecondition = true;
                 }
 
@@ -179,14 +178,7 @@ function checkGemeinde(checkedGemeinde, preconditions) {
 
 function createHtmlList() {
 
-    let result = `         <div class="scrollable">
-                             <table class="table table-hover">
-                                 <thead>
-                                      <tr>
-                                         <th scope="col">Gefundene Orte: ${gemeindeWithPrecondition.length}</th> 
-                                     </tr>
-                                 </thead>
-                             <tbody>`;
+
 
     const distinctedGemeinden = [];
     gemeindeWithPrecondition.forEach(g => {
@@ -195,9 +187,20 @@ function createHtmlList() {
         }
     })
 
+    distinctedGemeinden.sort();
+
+    let result = `         <div class="scrollable">
+                             <table class="table table-hover">
+                                 <thead>
+                                      <tr>
+                                         <th scope="col">Gefundene Orte: ${distinctedGemeinden.length}</th> 
+                                     </tr>
+                                 </thead>
+                             <tbody>`;
+
     distinctedGemeinden.forEach(c => {
             result += `<tr>
-                          <td class="gemeindenList" onclick="zoomToGemeinde(${c}); displayInfobox(${c})">${c}</td> 
+                          <td id="listElement${c}" class="gemeindenList" onclick="zoomToGemeinde(${c}); displayInfobox(${c})">${c}</td> 
                        </tr>`;
     });
 
