@@ -6,7 +6,17 @@ function displayInfobox(clickedGemeinde) {
         document.getElementById("listElement" + selectedGemeinde.id).style.color = '#000';
     }
 
-    selectedGemeinde = clickedGemeinde;
+    console.log(clickedGemeinde.length);
+    if (clickedGemeinde.length > 1){
+        for (let i = 0; i < clickedGemeinde.length; i++) {
+            if (clickedGemeinde[i].parentNode.id === "gemeinden"){
+                selectedGemeinde = clickedGemeinde[i];
+            }
+        }
+    } else {
+        selectedGemeinde = clickedGemeinde;
+    }
+
     selectedGemeinde.style.fillOpacity = '0.3';
     document.getElementById("listElement" + selectedGemeinde.id).style.backgroundColor = '#777';
     document.getElementById("listElement" + selectedGemeinde.id).style.color = '#fff';
