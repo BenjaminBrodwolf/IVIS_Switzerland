@@ -100,7 +100,7 @@ function colorMapGemeinden() {
     elementsG.forEach(c => c.style.fill = 'rgb(0, 0, 0)');
     gemeindeWithPrecondition = searchGemeindenWithPrecondition();
     gemeindeWithPrecondition.forEach(c => {
-        c.style.fill = 'rgb(255,0,0)';
+        c.style.fill = '#FF5757';
     })
 
     createHtmlList();
@@ -188,8 +188,8 @@ function createHtmlList() {
     distinctedGemeinden.sort();
     console.log(distinctedGemeinden[0])
 
-    let gemeindeListTable = `<h4 scope="col">Gefundene Gemeinde: ${distinctedGemeinden.length}</h4> 
-                        <div class="scrollable">
+    let gemeindeListTable = `<div id="foundGemeinden"><h4 scope="col">Gefundene Gemeinde: ${distinctedGemeinden.length}</h4></div>
+                        <div id="foundGemeindenTable" class="scrollable">
                              <table>
                                 <tbody>`;
 

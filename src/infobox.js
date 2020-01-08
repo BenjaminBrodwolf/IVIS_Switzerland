@@ -8,12 +8,8 @@ function displayInfobox(gemeindeID) {
     gemeindeWithPrecondition.forEach(g => g.style.fillOpacity = '0.3')
 
     if (selectedGemeinde){
-        // document.getElementById("listElement" + selectedGemeinde.id).classList.remove("selected");
-
         selectedGemeinde.style.fillOpacity = '0.3';
-        document.getElementById("listElement" + selectedGemeinde.id).style.backgroundColor = 'rgba(201, 76, 76, 0.3)';
-
-        // document.getElementById("listElement" + selectedGemeinde.id).style.color = '#000';
+        document.getElementById("listElement" + selectedGemeinde.id).style.backgroundColor = ' rgba(230, 230, 230, 0.9)';
     }
 
     if (clickedGemeinde.length > 1){
@@ -27,17 +23,21 @@ function displayInfobox(gemeindeID) {
     }
 
     selectedGemeinde.style.fillOpacity = '1';
-    document.getElementById("listElement" + selectedGemeinde.id).style.backgroundColor = '#ff5417';
+    document.getElementById("listElement" + selectedGemeinde.id).style.backgroundColor = '#FF5757';
 
-    // document.getElementById("listElement" + selectedGemeinde.id).classList.remove("selected");
-    // document.getElementById("listElement" + selectedGemeinde.id).style.color = '#fff';
     onFocus = true;
 
+    //Area Infos
     const area = propsG.find(p => p.label === "Gesamtfläche").data.find(g => g.gemeinde === selectedGemeinde.id);
-    const population = propsG.find(p => p.label === "Einwohner").data.find(g => g.gemeinde === selectedGemeinde.id);
-    const household = propsG.find(p => p.label === "Haushalte").data.find(g => g.gemeinde === selectedGemeinde.id);
+    const agricultureArea = propsG.find(p => p.label === "Landwirtschaft").data.find(g => g.gemeinde === selectedGemeinde.id);
     const settlementArea = propsG.find(p => p.label === "Siedlungsfläche").data.find(g => g.gemeinde === selectedGemeinde.id);
     const forest = propsG.find(p => p.label === "Wald").data.find(g => g.gemeinde === selectedGemeinde.id);
+
+    //Population Infos
+    const population = propsG.find(p => p.label === "Einwohner").data.find(g => g.gemeinde === selectedGemeinde.id);
+    const populationMutation = propsG.find(p => p.label === "Veränderung").data.find(g => g.gemeinde === selectedGemeinde.id);
+    const foreigner = propsG.find(p => p.label === "Ausländer").data.find(g => g.gemeinde === selectedGemeinde.id);
+    const households = propsG.find(p => p.label === "Haushalte").data.find(g => g.gemeinde === selectedGemeinde.id);
 
     const infoBox = dom(`<div id="infoBox"></div>`)
 
@@ -45,26 +45,33 @@ function displayInfobox(gemeindeID) {
                         <table id="infoTable">
                             <thead>
                                 <tr id="infoTableHeader">
-                                    <th>${area.gemeinde}</th>
-                                    <th></th>
+                                    <th colspan="4">${area.gemeinde}</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
+                                    <td>Fläche:</td>
+                                    <td>${area.value} km²</td>
                                     <td>Einwohner:</td>
                                     <td>${population.value}</td>
                                 </tr>
                                 <tr>
-                                    <td>Fläche:</td>
-                                    <td>${area.value} km²</td>
+                                    <td>Landwirtschaftsfläche:</td>
+                                    <td>${agricultureArea.value} %</td>
+                                    <td>Bevölkerungsveränderung:</td>
+                                    <td>${populationMutation.value} %</td>
                                 </tr>
                                 <tr>
                                     <td>Siedlungsfläche:</td>
                                     <td>${settlementArea.value} %</td>
+                                    <td>Ausländeranteil:</td>
+                                    <td>${foreigner.value} %</td>
                                 </tr>
                                 <tr>
                                     <td>Waldfläche:</td>
                                     <td>${forest.value} %</td>
+                                    <td>Haushalte:</td>
+                                    <td>${households.value}</td>
                                 </tr>
                             </tbody>
                         </table>
