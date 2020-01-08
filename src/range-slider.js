@@ -58,10 +58,9 @@ const setDomInputfield = (max, min, valuetype, id) => {
 const setInputfieldValue = (input, min, max) => {
 
     const firstInputfield = input.parentNode.childNodes[1];
-    const secondInputfield = input.parentNode.childNodes[3];
-    console.log(firstInputfield.value)
+    const secondInputfield = input.parentNode.childNodes[5];
 
-    const masterSliderNode = input.parentNode.parentElement.parentNode.childNodes[3].childNodes[1]
+    const masterSliderNode = input.parentNode.parentElement.parentNode.childNodes[3].childNodes[1];
     const firstSlider = masterSliderNode.childNodes[5];
     const secondSlider = masterSliderNode.childNodes[9];
 
@@ -71,16 +70,15 @@ const setInputfieldValue = (input, min, max) => {
     // set the correct value for data-filtering
     const id = masterSliderNode.getAttribute("propID");
     const prop = propsG.find(prop => prop.id === id);
-    prop.value.low = lowInputValue;
-    prop.value.high = highInputValue;
+    prop.value.low = (isNaN(lowInputValue)) ? prop.boundaries.min : lowInputValue ;
+    prop.value.high = (isNaN(highInputValue)) ? prop.boundaries.max : highInputValue;
 
     // evaluate the correct Style-Value for the Sliders
     const low = (lowInputValue - min) / max * 100;
     const high = (highInputValue - min) / max * 100;
+
     firstSlider.value = low;
     secondSlider.value = high;
-
-
 
     // Tooltip
     const fstTooltip = masterSliderNode.childNodes[3];
@@ -95,7 +93,6 @@ const setInputfieldValue = (input, min, max) => {
 
     setTooltipPosition(masterSliderNode, fstTooltip, low, "--first");
     setTooltipPosition(masterSliderNode, sndTooltip, high, "--second");
-
 };
 
 const setDomSlider = (max, min, valuetype, id) => `<div  class='range-slider' propID='${id}' valuetype='${valuetype}' min='${min}' max='${max}' style="--width: 180px; --low:0%; --high:100%">
@@ -112,7 +109,6 @@ const setDomSlider = (max, min, valuetype, id) => `<div  class='range-slider' pr
 
 
 const setSliderValue = (input) => {
-
 
     const masterNode = input.parentNode;
     const firstInput = masterNode.childNodes[5];
@@ -150,7 +146,7 @@ const setSliderValue = (input) => {
     // console.log("low: " + low)
     // console.log("high: " + high)
 
-
+console.log( prop )
     // Tooltip
     const fstTooltip = masterNode.childNodes[3];
     const sndTooltip = masterNode.childNodes[7];
@@ -165,8 +161,10 @@ const setSliderValue = (input) => {
     setTooltipPosition(masterNode, fstTooltip, styleLow, "--first");
     setTooltipPosition(masterNode, sndTooltip, styleHigh, "--second");
 
-    masterNode.parentElement.previousElementSibling.childNodes[1].childNodes[1].value = (valueType === "integer") ? low.toFixed(0) : low.toFixed(1);
-    masterNode.parentElement.previousElementSibling.childNodes[1].childNodes[3].value = (valueType === "integer") ? high.toFixed(0) : high.toFixed(1);
+
+    // masterNode.parentElement.parentNode.childNodes[1].childNodes[1].childNodes[1].value
+    masterNode.parentElement.parentNode.childNodes[1].childNodes[1].childNodes[1].value = (valueType === "integer") ? low.toFixed(0) : low.toFixed(1);
+    masterNode.parentElement.parentNode.childNodes[1].childNodes[1].childNodes[5].value = (valueType === "integer") ? high.toFixed(0) : high.toFixed(1);
 
     // masterNode.parentElement.previousElementSibling.innerHTML = `<form class="valForm">
     //                                                                   <input  class="valInput" oninput="setSliderValue(${input})" type="text" min="${difference}" max="${max}" name="low" value="${currentValue.low()}">
