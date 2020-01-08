@@ -286,11 +286,13 @@ function addCollapse(element) {
     }
 }
 
-const openSlidePopup = element => {
-    const content = element.parentNode.parentNode.childNodes[3];
-    console.log(content.childNodes);
-    const inputTab = content.childNodes[1];
-    const sliderTab = content.childNodes[3];
+const openSlidePopup = sliderId => {
+    console.log("CLICKED")
+    const inputTab = document.getElementById("slider" + sliderId) // element.parentNode.parentNode.childNodes[3];
+    const sliderTab = inputTab.parentNode.childNodes[3];
+    console.log(inputTab);
+    console.log(sliderTab);
+
     if (inputTab.style.display === "none") {
         inputTab.style.display = "block";
         sliderTab.style.display = "none";
@@ -341,7 +343,7 @@ const initializeData = () => {
                                         
                                         <div class="column middle"> 
                                         
-                                             <div id="slider${prop.id}" class="tabcontent">     
+                                             <div id="slider${prop.id}" style="display: block" class="tabcontent">     
                                                    ${setDomInputfield(prop.boundaries.max, prop.boundaries.min, prop.dataType, prop.id)}
                                              </div>
                                              
@@ -350,11 +352,11 @@ const initializeData = () => {
                                              </div> 
                                         </div> 
                                         
-                                        <div class="column right">
-                                        <label  class="switch">
-                                          <input type="checkbox">
-                                          <span class="slider round"></span>
-                                        </label>
+                                        <div class="column right" >
+                                            <label  class="switch">
+                                              <input type="checkbox" onclick="openSlidePopup('${prop.id}')">
+                                              <span class="slider round"></span>
+                                            </label>
                                                                 
                                          </div>    
                                      </div>   `;
