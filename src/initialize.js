@@ -352,7 +352,7 @@ const initializeData = () => {
                                              </div> 
                                         </div> 
                                         
-                                        <div class="column right" >
+                                        <div id="toggle${prop.id}" class="column right" >
                                             <label  class="switch">
                                               <input type="checkbox" onclick="openSlidePopup('${prop.id}')">
                                               <span class="slider round"></span>

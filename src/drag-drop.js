@@ -16,7 +16,11 @@ function drop(ev) {
     segment.style.height = "8em";
     segment.style.width = "8em";
 
-    //document.getElementById("slider-button" + data).disabled = true;
+
+    console.log(data)
+    document.getElementById("slider" + data).parentElement.style.display = "none";
+    document.getElementById("toggle" + data).parentElement.style.display = "none";
+
 
     propsG.forEach(prop => {
         if (data === prop.id) {
