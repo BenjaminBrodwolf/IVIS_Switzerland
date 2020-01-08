@@ -1,0 +1,26 @@
+svg{
+    margin-top: 30px;
+}
+
+#cantons{
+    transition: 3s;
+    visibility: hidden;
+}
+
+#cantons > g{
+    stroke: #f6f6f6;
+}
+
+#cantons > g:hover{
+    fill-opacity: 50%;
+}
+
+#gemeinden{
+    transition: 3s;
+}
+
+#gemeinden > path{
+    stroke: #f6f6f6;
+    stroke-width: 0.5px;
+}
+

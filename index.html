@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Gemeinden der Schweiz</title>
-<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"-->
-<!--          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/paths.css">
+    <link rel="stylesheet" href="style/drag-drop.css">
     <link rel="stylesheet" href="style/range-slider.css">
 
     <script src="path/cantons.js"></script>
@@ -42,41 +43,40 @@
 
 <div id="header" class="row">
     <h1>Gemeinden der Schweiz</h1>
-    <h3 id="developer">Benjamin Brodwolf und Nadia Kramer</h3>
+    <h3 id="developer">Benjamin Brodwolf & Nadia Kramer</h3>
 </div>
-<main>
 
-    <div id="left">
-        <div id="propTitle">Filter wählen</div>
-        <div id="dragfield"></div>
 
-        <div class="dropzone" id="zone" ondragenter="enterDropzone(event)"
-             ondragleave="leaveDropzone(event)"
-             ondragover="allowDrop(event)" ondrop="drop(event)">
+<div id="left">
+    <div id="propTitle">Filter wählen</div>
+    <div id="dragfield"></div>
 
-        </div>
+    <div class="dropzone" id="zone" ondragenter="enterDropzone(event)"
+         ondragleave="leaveDropzone(event)"
+         ondragover="allowDrop(event)" ondrop="drop(event)">
 
-        <div>
-            <div id="resetAllButton" class="btn" onclick="resetAll()">
-                Reset All
-            </div>
-            <div id="resetSelButton" class="btn" onclick="resetSelected()">
-                Reset Selected
-            </div>
-        </div>
     </div>
 
-    <div id="infoRow">
-        <div id="infoBox"></div>
+    <div>
+        <div id="resetAllButton" class="btn" onclick="resetAll()">
+            Reset All
+        </div>
+        <div id="resetSelButton" class="btn" onclick="resetSelected()">
+            Reset Selected
+        </div>
     </div>
+</div>
 
-    <!--    <div id="filterZone">-->
-    <!--    </div>-->
+<div id="infoRow">
+    <div id="infoBox"></div>
+</div>
 
-    <div id="table"></div>
-    <div id="svg"></div>
+<!--    <div id="filterZone">-->
+<!--    </div>-->
 
-</main>
+<div id="table"></div>
+<div id="svg"></div>
+
 
 <script src="src/range-slider.js"></script>
 <script src="src/initialize.js"></script>

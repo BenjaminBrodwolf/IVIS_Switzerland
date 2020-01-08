@@ -16,11 +16,13 @@ const zooming = () => {
 let scale = 3;		// maximum size to zoom to canton
 const mapWidth = 900;  // map container width
 const mapHeight = 600; // map container height
-const viewport = document.getElementById("cantons");
+const viewport = document.getElementById("svg");
 const gemeindenViewport = document.getElementById("gemeinden");
-let selectedCantonID;
+let selectedGemeindeID;
+let zoominGemeinde;
 
-const zoomToGemeinde = gemeindePaths => {
+const zoomToGemeinde = (gemeindeID) => {
+    const gemeindePaths = document.getElementById(gemeindeID);
 
     if (gemeindePaths.length > 1){
         for (let i = 0; i < gemeindePaths.length; i++) {
@@ -32,27 +34,27 @@ const zoomToGemeinde = gemeindePaths => {
         zoominGemeinde = gemeindePaths;
     }
 
-    if (zoominGemeinde.id === selectedCantonID) {
-        const exFocus = document.getElementById(selectedCantonID);
+    if (zoominGemeinde.id === selectedGemeindeID) {
+        const exFocus = document.getElementById(selectedGemeindeID);
         if (exFocus) exFocus.parentElement.classList.remove("focused");
 
         viewport.setAttribute("transform", "scale(0.6) translate(340,0)" );
         gemeindenViewport.setAttribute("transform", "scale(0.6) translate(340,0)");
-        selectedCantonID = "";
+        selectedGemeindeID = "";
 
     } else {
 
-        const exFocus = document.getElementById(selectedCantonID);
+        const exFocus = document.getElementById(selectedGemeindeID);
         if (exFocus) exFocus.parentElement.classList.remove("focused");
 
-        selectedCantonID = zoominGemeinde.id;
+        selectedGemeindeID = zoominGemeinde.id;
 
         const xy = getBoundingBox(zoominGemeinde);
         scale = Math.min(mapWidth / xy[1], mapHeight / xy[3], 3);
         const tx = -xy[0] + (mapWidth - xy[1] * scale) / (2 * scale);
         const ty = -xy[2] + (mapHeight - xy[3] * scale) / (2 * scale);
 
-        document.getElementById(selectedCantonID).parentElement.classList.add("focused");
+        document.getElementById(selectedGemeindeID).parentElement.classList.add("focused");
 
         viewport.setAttribute("transform", "scale(" + scale + ")translate(" + tx + "," + ty + ")");
         gemeindenViewport.setAttribute("transform", "scale(" + scale + ")translate(" + tx + "," + ty + ")");
@@ -66,27 +68,27 @@ document.addEventListener('click', e => {
         const selected = e.target;
         console.log(selected)
 
-        if (selected.id === selectedCantonID) {
-            const exFocus = document.getElementById(selectedCantonID);
+        if (selected.id === selectedGemeindeID) {
+            const exFocus = document.getElementById(selectedGemeindeID);
             if (exFocus) exFocus.parentElement.classList.remove("focused");
 
             viewport.setAttribute("transform", "scale(0.6) translate(340,0)" );
             gemeindenViewport.setAttribute("transform", "scale(0.6) translate(340,0)");
-            selectedCantonID = "";
+            selectedGemeindeID = "";
 
         } else {
 
-            const exFocus = document.getElementById(selectedCantonID);
+            const exFocus = document.getElementById(selectedGemeindeID);
             if (exFocus) exFocus.parentElement.classList.remove("focused");
 
-            selectedCantonID = selected.id;
+            selectedGemeindeID = selected.id;
 
             const xy = getBoundingBox(selected);
             scale = Math.min(mapWidth / xy[1], mapHeight / xy[3], 3);
             const tx = -xy[0] + (mapWidth - xy[1] * scale) / (2 * scale);
             const ty = -xy[2] + (mapHeight - xy[3] * scale) / (2 * scale);
 
-            document.getElementById(selectedCantonID).parentElement.classList.add("focused");
+            document.getElementById(selectedGemeindeID).parentElement.classList.add("focused");
 
             viewport.setAttribute("transform", "scale(" + scale + ")translate(" + tx + "," + ty + ")");
             gemeindenViewport.setAttribute("transform", "scale(" + scale + ")translate(" + tx + "," + ty + ")");

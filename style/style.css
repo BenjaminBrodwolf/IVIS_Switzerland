@@ -1,29 +1,35 @@
-html, body{
+html, body, h1, h2, h3 {
     margin: 0;
     padding: 0;
     width: 100%;
 }
 
-main{
-    margin-top: 5%;
-    width: 100%;
-    padding-bottom: 2%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-
-}
-
-h1{
+h1 {
     font-size: 1.5rem;
 }
 
-h5{
+h5 {
     font-size: 1rem;
 }
 
-svg:hover{
-    cursor: pointer;
+#header {
+    background-color: #110e11;
+    padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    margin: 0;
+}
+
+#developer {
+    position: absolute;
+    font-size: 1rem;
+    left: 80%;
 }
 
 .row {
@@ -32,6 +38,7 @@ svg:hover{
     flex-wrap: wrap;
     width: 100%;
 }
+
 .column {
     display: flex;
     flex-direction: column;
@@ -40,59 +47,13 @@ svg:hover{
 }
 
 
-.scrollable{
+.scrollable {
     height: 70vh;
     overflow-y: scroll;
     overflow-x: hidden;
 }
 
-#dragfield{
-    height: 50vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-
-[draggable=true] {
-    cursor: move;
-}
-
-.segment {
-    float: left;
-    border-radius: 50%;
-    border: 5px solid #333;
-    width: 3em;
-    height: 3em;
-    text-align: center;
-    background: #ffd311;
-    mix-blend-mode: multiply;
-    margin: 1em 10em 1em 1em;
-}
-
-.segment > .segment {
-    position: relative;
-    top: -3em;
-    left: 4em;
-}
-
-.segment > .segment > .segment{
-    position: relative;
-    top: 1.6em;
-    left: -4em;
-    padding-top: 5em
-}
-
-.dropzone {
-    min-height: 7vw;
-    border-color: #555;
-    border-width: 5px;
-    border-style: solid;
-    width: 100%;
-    display: inline-block;
-    padding: 1em 1em 1em;
-    margin-top: 1em;
-}
-
-.properties{
+.properties {
     background-color: #33336a;
     color: white;
     margin: 1em;
@@ -100,67 +61,18 @@ svg:hover{
     visibility: hidden;
 }
 
-.propLabel{
+.propLabel {
     margin-top: 0.3em;
     margin-left: 3em;
 }
-.propDescription{
+
+.propDescription {
     font-size: 0.6em;
     white-space: nowrap;
     margin-left: 3.5em;
     position: relative;
 }
 
-#cantons{
-    transition: 3s;
-    visibility: hidden;
-}
-
-#cantons > g{
-    stroke: #f6f6f6;
-}
-
-#cantons > g:hover{
-    fill-opacity: 50%;
-}
-
-#gemeinden{
-    transition: 3s;
-}
-
-#gemeinden > path{
-    stroke: #f6f6f6;
-    stroke-width: 0.5px;
-}
-
-
-#header{
-    background-color: #110e11;
-    padding-left: 30px;
-    padding-top: 5px;
-    width: 100%;
-    color: white;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 10;
-
-}
-
-
-#developer{
-    position: absolute;
-    font-size: 1rem;
-    left: 80%;
-}
-
-#resetSelButton{
-    visibility: hidden;
-}
-
-.lake{
-    fill: #91c7ff;
-}
 
 .collapsible {
     background-color: #a9a9a9;
@@ -278,7 +190,7 @@ svg:hover{
     background: #777;
 }
 
-.valInput{
+.valInput {
     text-align: right;
     width: 4.2em;
     background: transparent;
@@ -292,50 +204,48 @@ svg:hover{
     font-size: 12px;
 }
 
-.valForm{
+.valForm {
     display: contents;
 }
 
-
-#infoTable td{
+#infoTable td {
     padding: 0.3rem;
     font-size: 0.8rem;
 }
 
-#infoTableHeader{
+#infoTableHeader {
     font-weight: bold;
     background: #777;
     color: white;
-
 }
 
-#infoTableHeader th{
+#infoTableHeader th {
     padding: 0.3rem;
 }
 
-.gemeindenList{
+.gemeindenList {
     cursor: pointer;
 }
-#table th{
-    border: 1px solid black;
+
+#table td {
+    border: 1px solid #656565;
 }
 
-#left{
+#table > tr:hover {
+    border-color: #b3bd37;
+}
+
+#left {
     position: fixed;
     top: 60px;
-    left:10px;
+    left: 10px;
     width: 24vw;
     background-color: whitesmoke;
     border-radius: 1em;
-    /*line-height: 200px;*/
-    /*height: 200px;*/
-    /*margin-left: -150px;*/
-    /*margin-top: -100px;*/
-    /*background-color: #f1c40f;*/
-    /*text-align: center;*/
-
 }
-#infoBox{
+
+#infoBox {
+    top: 50px;
     position: fixed;
     font-weight: bold;
     border-radius: 1em;
@@ -343,18 +253,18 @@ svg:hover{
     background-color: rgba(230, 230, 230, 0.9);
 }
 
-#table{
+#table {
     position: fixed;
     top: 40px;
-    right:10px;
+    right: 10px;
     width: 200px;
 }
 
-.btn{
+.btn {
     background-color: #ff4426;
     border: none;
     color: white;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -364,7 +274,7 @@ svg:hover{
     border-radius: 12px;
 }
 
-#infoRow{
+#infoRow {
     width: 100vw;
     display: flex;
     align-items: center;

@@ -186,19 +186,18 @@ function createHtmlList() {
     })
 
     distinctedGemeinden.sort();
+    console.log(distinctedGemeinden[0])
 
-    let result = `         <div class="scrollable">
+    let result = `<h3 scope="col">Gefundene Gemeinde: ${distinctedGemeinden.length}</h3> 
+                        <div class="scrollable">
                              <table class="table table-hover">
-                                 <thead>
-                                      <tr>
-                                         <th scope="col">Gefundene Orte: ${distinctedGemeinden.length}</th> 
-                                     </tr>
-                                 </thead>
                              <tbody>`;
 
     distinctedGemeinden.forEach(c => {
+
+
             result += `<tr>
-                          <td id="listElement${c}" class="gemeindenList" onclick="zoomToGemeinde(${c}); displayInfobox(${c})">${c}</td> 
+                          <td id="listElement${c}" class="gemeindenList" onclick="zoomToGemeinde('${c}'); displayInfobox( '${c}' )">${c}</td> 
                        </tr>`;
     });
 

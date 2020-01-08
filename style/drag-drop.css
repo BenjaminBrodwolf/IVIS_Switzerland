@@ -1,0 +1,49 @@
+
+#dragfield{
+    height: 50vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+[draggable=true] {
+    cursor: move;
+}
+
+.segment {
+    float: left;
+    border-radius: 50%;
+    border: 5px solid #333;
+    width: 3em;
+    height: 3em;
+    text-align: center;
+    background: #ffd311;
+    mix-blend-mode: multiply;
+    margin: 1em 10em 1em 1em;
+}
+
+.segment > .segment {
+    position: relative;
+    top: -3em;
+    left: 4em;
+}
+
+.segment > .segment > .segment{
+    position: relative;
+    top: 1.6em;
+    left: -4em;
+    padding-top: 5em
+}
+
+.dropzone {
+    min-height: 7vw;
+    border-color: #555;
+    border-width: 5px;
+    border-style: solid;
+    width: 100%;
+    display: inline-block;
+    padding: 1em 1em 1em;
+    margin-top: 1em;
+}
+#resetSelButton{
+    visibility: hidden;
+}

@@ -191,7 +191,8 @@ const gemeindeTableToObject = data => {
 };
 
 let onFocus = false;
-let selectedGemeinde;
+
+
 const gemeindeINIT = () => {
     const table = [];
     gemeinden.table.split("\n").forEach(e => table.push(gemeindeTableToObject(e)));
@@ -214,7 +215,6 @@ const gemeindeINIT = () => {
     }));
 
 };
-
 
 const dataINITCanton = props => {
     const table = [];

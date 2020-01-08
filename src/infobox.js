@@ -1,4 +1,9 @@
-function displayInfobox(clickedGemeinde) {
+let selectedGemeinde;
+
+
+function displayInfobox(gemeindeID) {
+
+    const clickedGemeinde = document.getElementById(gemeindeID);
 
     gemeindeWithPrecondition.forEach(g => g.style.fillOpacity = '0.3')
 
