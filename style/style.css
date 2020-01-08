@@ -25,9 +25,7 @@ h5{
 svg:hover{
     cursor: pointer;
 }
-svg{
 
-}
 
 
 
@@ -207,6 +205,24 @@ svg{
     margin: 0;
 }
 
+.collapsible-slider:disabled {
+    background-color: #dedede;
+    cursor: default;
+}
+
+.collapsible-slider:after:disabled {
+    content: "";
+}
+
+.collapsible-slider:hover:disabled {
+    background-color: #dedede;;
+}
+
+.collapsible-slider:disabled .valInput {
+    border-bottom: 2px #bdbdbd solid;
+    pointer-events: none;
+}
+
 .slider-content {
     height: 5em;
     padding: 0 18px;
@@ -243,7 +259,6 @@ svg{
 }
 
 
-
 ::-webkit-scrollbar {
     width: 0.6em;
 }
@@ -262,17 +277,21 @@ svg{
 
 .valInput{
     text-align: right;
-    width: 4.5em;
+    width: 4.2em;
     background: transparent;
     color: white;
     border: none;
-    border-bottom: 2px  #555 solid;
+    border-bottom: 2px #555 solid;
+    font-size: 14px;
+}
+
+.valueType {
+    font-size: 12px;
 }
 
 .valForm{
     display: contents;
 }
-
 
 
 #infoTable td{

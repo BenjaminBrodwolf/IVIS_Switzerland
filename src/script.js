@@ -14,7 +14,6 @@ let focusedSegment = null;
 
 function resetSelected() {
     putItBack(focusedSegment.id);
-    //putItBack(focusedSegment.id.firstChild);
     propsG.find(p => p.id === focusedSegment.id).active = false;
     focusedSegment = null;
     document.getElementById("resetSelButton").style.visibility = 'hidden';
@@ -56,6 +55,8 @@ function putItBack(node) {
         segment.innerHTML = "";
         const propLabel = dom(`<p class="propLabel">${segment.title}</p>`);
         segment.appendChild(propLabel)
+
+        document.getElementById("slider-button" + node).disabled = false;
 
         colorMapGemeinden();
     }
