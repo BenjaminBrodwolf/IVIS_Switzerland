@@ -34,19 +34,44 @@ h5 {
     left: 80%;
 }
 
-.row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
+/*.row {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    flex-wrap: wrap;*/
+/*    width: 100%;*/
+/*}*/
+
+/*.column {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    flex-basis: 100%;*/
+/*    flex: 1;*/
+/*}*/
+
+/* Create three unequal columns that floats next to each other */
+.column {
+    box-sizing: border-box;
+    float: left;
+    /*height: 300px; */
 }
 
-.column {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
+.left {
+    width: 55%;
 }
+.middle {
+    width: 35%;
+
+}
+.right {
+    width: 10%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 
 
 .scrollable {
@@ -64,17 +89,32 @@ h5 {
 }
 
 .propLabel {
-    margin-top: 0.3em;
-    margin-left: 3em;
+    position: relative;
+    bottom: 20px;
+    left: 50px;
 }
 
 .propDescription {
+    position: relative;
+    bottom: 20px;
+    left: 15px;
     font-size: 0.6em;
     white-space: nowrap;
     margin-left: 3.5em;
-    position: relative;
 }
 
+.arrow-right {
+    margin: 5px;
+    transition: 1s;
+    --arrow-size: 15px;
+    border-top: var(--arrow-size) solid transparent;
+    border-bottom: var(--arrow-size) solid transparent;
+    border-left: var(--arrow-size) solid green;
+}
+.right:hover > .arrow-right {
+    margin-left: 25px;
+    transition: 1s;
+}
 
 .collapsible {
     background-color: #a9a9a9;
@@ -137,15 +177,6 @@ h5 {
 .collapsible-slider:disabled .valInput {
     border-bottom: 2px #bdbdbd solid;
     pointer-events: none;
-}
-
-.slider-content {
-    height: 5em;
-    padding: 0 18px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    background-color: #f1f1f1;
 }
 
 .active, .collapsible-slider:hover {
@@ -294,3 +325,8 @@ h5 {
 /*}*/
 
 
+.hiddenSlider {
+    z-index: 100;
+    position: relative;
+    background-color: #b84324;
+}

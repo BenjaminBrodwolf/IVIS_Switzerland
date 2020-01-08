@@ -98,7 +98,7 @@ const setInputfieldValue = (input, min, max) => {
 
 };
 
-const setDomSlider = (max, min, valuetype, id) => `<div class='range-slider' propID='${id}' valuetype='${valuetype}' min='${min}' max='${max}' style="--width: 180px; --low:0%; --high:100%">
+const setDomSlider = (max, min, valuetype, id) => `<div  class='range-slider' propID='${id}' valuetype='${valuetype}' min='${min}' max='${max}' style="--width: 180px; --low:0%; --high:100%">
                                                         <div class="range-bg"></div>
                                                         <span class="fst-value">${min}</span>
                                                         <input type='range' step="0.1" value='0' level="low" oninput='setSliderValue(this)' />

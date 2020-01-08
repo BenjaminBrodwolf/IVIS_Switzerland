@@ -2,7 +2,7 @@
 #dragfield{
     height: 50vh;
     overflow-y: scroll;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
 }
 
 [draggable=true] {
@@ -10,11 +10,11 @@
 }
 
 .segment {
-    float: left;
+    /*float: left;*/
     border-radius: 50%;
     border: 5px solid #333;
-    width: 3em;
-    height: 3em;
+    width: 2em;
+    height: 2em;
     text-align: center;
     background: #ffd311;
     mix-blend-mode: multiply;
