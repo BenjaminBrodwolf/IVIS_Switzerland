@@ -127,10 +127,11 @@ svg:hover{
 
 
 #header{
-    background-color: #ffd311;
+    background-color: #110e11;
     padding-left: 30px;
     padding-top: 5px;
     width: 100%;
+    color: white;
     position: fixed;
     left: 0;
     top: 0;
@@ -138,17 +139,11 @@ svg:hover{
 
 }
 
-#footer {
-    background-color: #ffd311;
-    padding: 0.5% 2% 0.5% 2%;
-    text-align: right;
-    left: 0;
-    bottom: 0;
-    width: 100%;
 
-}
 #developer{
-    text-align: right;
+    position: absolute;
+    font-size: 1rem;
+    left: 80%;
 }
 
 #resetSelButton{
@@ -332,9 +327,10 @@ svg:hover{
 }
 #infoBox{
     position: fixed;
-    top: 40px;
-    left: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
+    font-weight: bold;
+    border-radius: 1em;
+    padding: 1em;
+    background-color: rgba(230, 230, 230, 0.9);
 }
 
 #table{
@@ -344,9 +340,18 @@ svg:hover{
     width: 300px;
 }
 
+#infoRow{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /*.filterZone {*/
 /*    height: 100%;*/
 /*    width: 100%;*/
 /*    background-color: #e6e9f0;*/
 /*    padding: 1em;*/
 /*}*/
+
+
