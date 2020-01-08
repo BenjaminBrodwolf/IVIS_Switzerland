@@ -287,13 +287,16 @@ function addCollapse(element) {
 }
 
 const openSlidePopup = element => {
-    const content = element.nextElementSibling;
-    console.log(content);
-    if (content.style.display === "none"){
-        content.style.display = "inline";
+    const content = element.parentNode.parentNode.childNodes[3];
+    console.log(content.childNodes);
+    const inputTab = content.childNodes[1];
+    const sliderTab = content.childNodes[3];
+    if (inputTab.style.display === "none"){
+        inputTab.style.display = "block";
+        sliderTab.style.display = "none";
     } else {
-        content.style.display = "none";
-
+        inputTab.style.display = "none";
+        sliderTab.style.display = "block";
     }
 
 };
@@ -337,17 +340,19 @@ const initializeData = () => {
                                         </div>
                                         
                                         <div class="column middle"> 
-                                             <div id="slider${prop.id}">     
+                                        
+                                             <div id="slider${prop.id}" class="tabcontent">     
                                                    ${setDomInputfield(prop.boundaries.max, prop.boundaries.min, prop.dataType, prop.id)}
                                              </div>
+                                             
+                                              <div style="display: none">
+                                                    ${setDomSlider(prop.boundaries.max, prop.boundaries.min, prop.dataType, prop.id)}
+                                             </div> 
                                         </div> 
                                         
                                         <div class="column right">
-                                                  <button id="slider-button${prop.id}" onclick="openSlidePopup(this)">S</button>
-                                                   <div class="hiddenSlider" style="display: none">
-                                                            ${setDomSlider(prop.boundaries.max, prop.boundaries.min, prop.dataType, prop.id)}
-                                                    </div> 
-                                       </div>    
+                                         <button id="slider-button${prop.id}" onclick="openSlidePopup(this)">S</button>                          
+                                         </div>    
                                      </div>   `;
                 contentElement.insertAdjacentHTML("beforeend", propElement);
 

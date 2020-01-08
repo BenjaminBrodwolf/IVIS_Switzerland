@@ -60,14 +60,18 @@ h5 {
 }
 
 .left {
-    width: 55%;
+    width: 50%;
+    background-color: #ffd311;
 }
 .middle {
-    width: 35%;
+    width: 45%;
+    background-color: #4eff55;
 
 }
 .right {
-    width: 10%;
+    width: 5%;
+    background-color: red;
+
 }
 
 .row:after {
@@ -349,9 +353,3 @@ h5 {
 /*    padding: 1em;*/
 /*}*/
 
-
-.hiddenSlider {
-    z-index: 100;
-    position: relative;
-    background-color: #b84324;
-}
