@@ -1,10 +1,10 @@
-html, body{
+html, body {
     margin: 0;
     padding: 0;
     width: 100%;
 }
 
-main{
+main {
     margin-top: 5%;
     width: 100%;
     padding-bottom: 2%;
@@ -14,25 +14,25 @@ main{
 
 }
 
-h1{
+h1 {
     font-size: 1.5rem;
 }
 
-h5{
+h5 {
     font-size: 1rem;
 }
 
-svg:hover{
+svg:hover {
     cursor: pointer;
 }
 
-.scrollable{
+.scrollable {
     height: 70vh;
     overflow-y: scroll;
     overflow-x: hidden;
 }
 
-#dragfield{
+#dragfield {
     height: 50vh;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -61,7 +61,7 @@ svg:hover{
     left: 4em;
 }
 
-.segment > .segment > .segment{
+.segment > .segment > .segment {
     position: relative;
     top: 1.6em;
     left: -4em;
@@ -86,7 +86,7 @@ svg:hover{
     padding: 1em;
 }
 
-.properties{
+.properties {
     background-color: #33336a;
     color: white;
     margin: 1em;
@@ -94,41 +94,42 @@ svg:hover{
     visibility: hidden;
 }
 
-.propLabel{
+.propLabel {
     margin-top: 0.3em;
     margin-left: 3em;
 }
-.propDescription{
+
+.propDescription {
     font-size: 0.6em;
     white-space: nowrap;
     margin-left: 3.5em;
     position: absolute;
 }
 
-#cantons{
+#cantons {
     transition: 3s;
     visibility: hidden;
 }
 
-#cantons > g{
+#cantons > g {
     stroke: #f6f6f6;
 }
 
-#cantons > g:hover{
+#cantons > g:hover {
     fill-opacity: 50%;
 }
 
-#gemeinden{
+#gemeinden {
     transition: 3s;
 }
 
-#gemeinden > path{
+#gemeinden > path {
     stroke: #f6f6f6;
     stroke-width: 0.5px;
 }
 
 
-#header{
+#header {
     background-color: #ffd311;
     padding: 0.5% 2% 0.5% 2%;
     width: 100%;
@@ -148,15 +149,16 @@ svg:hover{
     width: 100%;
 
 }
-#developer{
+
+#developer {
     text-align: right;
 }
 
-#resetSelButton{
+#resetSelButton {
     visibility: hidden;
 }
 
-.lake{
+.lake {
     fill: #91c7ff;
 }
 
@@ -206,6 +208,24 @@ svg:hover{
     margin: 0;
 }
 
+.collapsible-slider:disabled {
+    background-color: #dedede;
+    cursor: default;
+}
+
+.collapsible-slider:after:disabled {
+    content: "";
+}
+
+.collapsible-slider:hover:disabled {
+    background-color: #dedede;;
+}
+
+.collapsible-slider:disabled .valInput {
+    border-bottom: 2px #bdbdbd solid;
+    pointer-events: none;
+}
+
 .slider-content {
     height: 5em;
     padding: 0 18px;
@@ -242,7 +262,6 @@ svg:hover{
 }
 
 
-
 ::-webkit-scrollbar {
     width: 0.6em;
 }
@@ -259,42 +278,47 @@ svg:hover{
     background: #777;
 }
 
-.valInput{
+.valInput {
     text-align: right;
-    width: 4.5em;
+    width: 4.2em;
     background: transparent;
     color: white;
     border: none;
-    border-bottom: 2px  #555 solid;
+    border-bottom: 2px #555 solid;
+    font-size: 14px;
 }
 
-.valForm{
+.valueType {
+    font-size: 12px;
+}
+
+.valForm {
     display: contents;
 }
 
-#infoBox{
+#infoBox {
     position: absolute;
     width: 20em;
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-#infoTable td{
+#infoTable td {
     padding: 0.3rem;
     font-size: 0.8rem;
 }
 
-#infoTableHeader{
+#infoTableHeader {
     font-weight: bold;
     background: #777;
     color: white;
 
 }
 
-#infoTableHeader th{
+#infoTableHeader th {
     padding: 0.3rem;
 }
 
-.gemeindenList{
+.gemeindenList {
     cursor: pointer;
 }
 

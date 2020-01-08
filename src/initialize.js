@@ -83,7 +83,7 @@ const toAnalyseData = [
         label: 'Ausländer',
         category: "Bevölkerung",
         table: foreigner,
-        dataType: "integer",
+        dataType: "percent",
         description: "Ausländer in %"
     },
     {
@@ -309,24 +309,7 @@ const initializeData = () => {
 
         propsG.forEach(prop => {
             if (prop.category === c) {
-                /*
-                `
-                                     <div class="row">
-                                            <div id="col${prop.id}" class="col-md-6">
-                                              <div class="segment" id="${prop.id}" title="${prop.description}" draggable="true" onclick="select(this)" ondragstart="drag(event)">
-                                                    <p class="propLabel">${prop.label}</p>
-                                              </div>
-                                            </div>
-                                            <div class="col-md-6" style="padding: 0">
-                                            <div id="slider${prop.id}">
-                                              <button id="slider-button" onclick="addCollapse(this)" class="collapsible-slider" style="margin-top: 1.5em">Werte setzen</button>
-                                              <div class="slider-content">
-                                                   ${setDomSlider(prop.boundaries.max, prop.boundaries.min, prop.dataType, prop.id)}
-                                              </div>
-                                              </div>
-                                            </div>
-                                     </div>   `
-                 */
+
                 const propElement = `
                                      <div class="row">
                                             <div id="col${prop.id}" class="col-md-6">       
@@ -340,7 +323,7 @@ const initializeData = () => {
                                             </div>
                                             <div class="col-md-6" style="padding: 0">
                                              <div id="slider${prop.id}">                   
-                                              <button id="slider-button" ondblclick="addCollapse(this)" class="collapsible-slider" style="margin-top: 1.5em">
+                                              <button id="slider-button${prop.id}" ondblclick="addCollapse(this)" class="collapsible-slider" style="margin-top: 1.5em">
                                                     ${setDomInputfield(prop.boundaries.max, prop.boundaries.min, prop.dataType, prop.id)}
                                                 </button>
                                               <div class="slider-content">

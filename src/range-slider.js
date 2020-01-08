@@ -48,10 +48,10 @@ const setDomInputfield = (max, min, valuetype, id) => {
     const step = (valuetype === "integer") ? "1" : "0.1";
     return `<div class="valForm"> 
                <input  class="valInput" oninput="setInputfieldValue(this, ${min}, ${max})" type="number" min="${min}" max="${max}" value="${min}" step="${step}" pattern="\\d+"> 
-               ${getValuetypeSign(valuetype)}
+               <span class="valueType">${getValuetypeSign(valuetype)}</span>
                -
                <input class="valInput" oninput="setInputfieldValue(this, ${min}, ${max})" type="number" min="${min}" max="${max}" value="${max}" step="${step}" pattern="\\d+">
-               ${getValuetypeSign(valuetype)}
+               <span class="valueType">${getValuetypeSign(valuetype)}</span>
             </div>`;
 }
 

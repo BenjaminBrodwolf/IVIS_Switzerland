@@ -16,6 +16,8 @@ function drop(ev) {
     segment.style.height = "8em";
     segment.style.width = "8em";
 
+    document.getElementById("slider-button" + data).disabled = true;
+
     propsG.forEach(prop => {
         if (data === prop.id) {
             prop.active = true;
