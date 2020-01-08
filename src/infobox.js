@@ -6,7 +6,6 @@ function displayInfobox(clickedGemeinde) {
         document.getElementById("listElement" + selectedGemeinde.id).style.color = '#000';
     }
 
-    console.log(clickedGemeinde.length);
     if (clickedGemeinde.length > 1){
         for (let i = 0; i < clickedGemeinde.length; i++) {
             if (clickedGemeinde[i].parentNode.id === "gemeinden"){

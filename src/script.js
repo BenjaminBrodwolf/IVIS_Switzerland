@@ -150,7 +150,6 @@ function checkGemeinde(checkedGemeinde, preconditions) {
     preconditions.forEach(pc => {
         if (pc.filterOperator) {
 
-
             const prop1 = propsG.find(p => p.label === pc.filterProperty.firstElement);
             if (prop1.data.find(p => p.gemeinde === checkedGemeinde.id && (prop1.value.low <= p.value && prop1.value.high >= p.value))) {
                 const prop2 = propsG.find(p => p.label === pc.filterProperty.secondElement);

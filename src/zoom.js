@@ -22,9 +22,12 @@ let selectedCantonID;
 
 const zoomToGemeinde = gemeindePaths => {
 
-    let zoominGemeinde;
-    if(gemeindePaths.length > 1){
-        zoominGemeinde = gemeindePaths[0];
+    if (gemeindePaths.length > 1){
+        for (let i = 0; i < gemeindePaths.length; i++) {
+            if (gemeindePaths[i].parentNode.id === "gemeinden"){
+                zoominGemeinde = gemeindePaths[i];
+            }
+        }
     } else {
         zoominGemeinde = gemeindePaths;
     }
