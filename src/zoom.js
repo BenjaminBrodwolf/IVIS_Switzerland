@@ -70,8 +70,8 @@ document.addEventListener('click', e => {
             const exFocus = document.getElementById(selectedCantonID);
             if (exFocus) exFocus.parentElement.classList.remove("focused");
 
-            viewport.setAttribute("transform", "scale(1.0)");
-            gemeindenViewport.setAttribute("transform", "scale(1.0)");
+            viewport.setAttribute("transform", "scale(-1.0)");
+            gemeindenViewport.setAttribute("transform", "scale(-1.0)");
             selectedCantonID = "";
 
         } else {

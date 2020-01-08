@@ -44,50 +44,35 @@
     <h1>Gemeinden der Schweiz</h1>
 </div>
 <main>
-    <div class="container-fluid">
-        <div class="row">
 
-            <div class="col-lg-4">
-                <div id="propTitle">Filter wählen</div>
+    <div id="left">
+        <div id="propTitle">Filter wählen</div>
+        <div id="dragfield"></div>
 
-                <div id="dragfield">
-                </div>
-
-                <div class="dropzone" id="zone" ondragenter="enterDropzone(event)"
-                     ondragleave="leaveDropzone(event)"
-                     ondragover="allowDrop(event)" ondrop="drop(event)">
-
-                </div>
-
-                <div>
-                    <div id="resetAllButton" class="btn btn-danger" onclick="resetAll()">
-                        Reset All
-                    </div>
-                    <div id="resetSelButton" class="btn btn-danger" onclick="resetSelected()">
-                        Reset Selected
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="col-lg-6">
-
-                <div class="filterZone">
-
-                    <div id="infoBox"></div>
-
-                    <div id="svg" class="row">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-2">
-                <div id="table">
-                </div>
-            </div>
+        <div class="dropzone" id="zone" ondragenter="enterDropzone(event)"
+             ondragleave="leaveDropzone(event)"
+             ondragover="allowDrop(event)" ondrop="drop(event)">
 
         </div>
+
+        <div>
+            <div id="resetAllButton" class="btn btn-danger" onclick="resetAll()">
+                Reset All
+            </div>
+            <div id="resetSelButton" class="btn btn-danger" onclick="resetSelected()">
+                Reset Selected
+            </div>
+        </div>
     </div>
+
+    <div id="infoBox"></div>
+
+<!--    <div id="filterZone">-->
+<!--    </div>-->
+
+    <div id="table"></div>
+    <div id="svg"></div>
+
 </main>
 <div id="footer" class="row">
     <h5 id="developer">Benjamin Brodwolf und Nadia Kramer</h5>

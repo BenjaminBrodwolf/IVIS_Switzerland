@@ -57,16 +57,6 @@ const setDomInputfield = (max, min, valuetype, id) => {
 
 const setInputfieldValue = (input, min, max) => {
 
-    // if(input.validity.rangeOverflow){
-    //     input.value = input.max;
-    // }
-    // if(input.validity.rangeUnderflow){
-    //     console.error("Underflow" + input.value)
-    //     input.setVa = input.min;
-    // }
-
-
-
     const firstInputfield = input.parentNode.childNodes[1];
     const secondInputfield = input.parentNode.childNodes[3];
     console.log(firstInputfield.value)
