@@ -371,7 +371,7 @@ const initializeData = () => {
 
 
     const svgTag = dom(`<svg id="svg" xmlns="http://www.w3.org/2000/svg" style="width: 100%" version="1.2" baseProfile="tiny" viewBox="0 0 800 507" stroke-linecap="round" stroke-linejoin="round">  
-                                            ${gemeindenSVG} + ${cantonsSVG}
+                                            ${gemeindenSVG} 
                                    </svg>`);
 
     svg.appendChild(svgTag);
@@ -380,7 +380,7 @@ const initializeData = () => {
 
     document.getElementById("svg").replaceWith(svg);
 
-    cantonINIT();
+    // cantonINIT();
     gemeindeINIT();
 
 
