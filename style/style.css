@@ -1,9 +1,13 @@
 html, body, h1, h2, h3 {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-
     margin: 0;
     padding: 0;
     width: 100%;
+}
+
+h4{
+    font-size: .8em;
+    margin: 0;
 }
 
 h1 {
@@ -208,19 +212,24 @@ h5 {
     display: contents;
 }
 
+#infoTable{
+    margin: -1em;
+}
+
 #infoTable td {
-    padding: 0.3rem;
+    padding: 0.5em;
     font-size: 0.8rem;
 }
 
 #infoTableHeader {
     font-weight: bold;
-    background: #777;
+    background: #555;
     color: white;
 }
 
 #infoTableHeader th {
     padding: 0.3rem;
+    border-radius: 1em 1em 0 0;
 }
 
 .gemeindenList {
@@ -255,18 +264,21 @@ h5 {
 
 #table td {
     font-size: 1.1em;
-    border: 1px solid #656565;
-    background-color: rgba(201, 76, 76, 0.3);
-
+    background-color: rgba(230, 230, 230, 0.9);
+    padding: 0.4em;
+    border-radius: 0.2em;
 }
 
+
 #table td:hover {
-    background-color: #aeff96;
+    background-color: #777;
+    color: white;
+
 }
 
 
 .btn {
-    background-color: #ff4426;
+    background-color: #FF5757;
     border: none;
     color: white;
     padding: 10px;
@@ -284,6 +296,15 @@ h5 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#foundGemeinden{
+    margin-top: 1em;
+    margin-bottom: .2em;
+    background-color: #555;
+    color: white;
+    padding: .5em;
+    border-radius: 1em 1em 0 0;
 }
 
 /*.filterZone {*/
