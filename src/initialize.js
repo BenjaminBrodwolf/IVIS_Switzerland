@@ -291,7 +291,7 @@ const openSlidePopup = element => {
     console.log(content.childNodes);
     const inputTab = content.childNodes[1];
     const sliderTab = content.childNodes[3];
-    if (inputTab.style.display === "none"){
+    if (inputTab.style.display === "none") {
         inputTab.style.display = "block";
         sliderTab.style.display = "none";
     } else {
@@ -351,11 +351,17 @@ const initializeData = () => {
                                         </div> 
                                         
                                         <div class="column right">
-                                         <button id="slider-button${prop.id}" onclick="openSlidePopup(this)">S</button>                          
+                                        <label  class="switch">
+                                          <input type="checkbox">
+                                          <span class="slider round"></span>
+                                        </label>
+                                                                
                                          </div>    
                                      </div>   `;
                 contentElement.insertAdjacentHTML("beforeend", propElement);
 
+
+                // <button id="slider-button${prop.id}" onclick="openSlidePopup(this)">S</button>
 
                 // set the Slider-Thumb to correct places
                 // setSliderValue( document.getElementById(propElement) );
