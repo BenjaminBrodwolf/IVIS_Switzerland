@@ -188,24 +188,22 @@ function createHtmlList() {
     distinctedGemeinden.sort();
     console.log(distinctedGemeinden[0])
 
-    let result = `<h3 scope="col">Gefundene Gemeinde: ${distinctedGemeinden.length}</h3> 
+    let gemeindeListTable = `<h4 scope="col">Gefundene Gemeinde: ${distinctedGemeinden.length}</h4> 
                         <div class="scrollable">
-                             <table class="table table-hover">
-                             <tbody>`;
+                             <table>
+                                <tbody>`;
 
     distinctedGemeinden.forEach(c => {
-
-
-            result += `<tr>
-                          <td id="listElement${c}" class="gemeindenList" onclick="zoomToGemeinde('${c}'); displayInfobox( '${c}' )">${c}</td> 
-                       </tr>`;
+            gemeindeListTable += `<tr>
+                                     <td id="listElement${c}" class="gemeindenList" onclick="zoomToGemeinde('${c}'); displayInfobox( '${c}' )">${c}</td> 
+                                 </tr>`;
     });
 
-    result += `    </tbody>
+    gemeindeListTable += `    </tbody>
                       </table>
                    </div>`;
 
-    document.getElementById('table').innerHTML = result;
+    document.getElementById('table').innerHTML = gemeindeListTable;
 }
 
 

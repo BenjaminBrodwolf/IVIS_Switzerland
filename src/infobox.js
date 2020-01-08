@@ -8,9 +8,12 @@ function displayInfobox(gemeindeID) {
     gemeindeWithPrecondition.forEach(g => g.style.fillOpacity = '0.3')
 
     if (selectedGemeinde){
+        // document.getElementById("listElement" + selectedGemeinde.id).classList.remove("selected");
+
         selectedGemeinde.style.fillOpacity = '0.3';
-        document.getElementById("listElement" + selectedGemeinde.id).style.backgroundColor = '#fff';
-        document.getElementById("listElement" + selectedGemeinde.id).style.color = '#000';
+        document.getElementById("listElement" + selectedGemeinde.id).style.backgroundColor = 'rgba(201, 76, 76, 0.3)';
+
+        // document.getElementById("listElement" + selectedGemeinde.id).style.color = '#000';
     }
 
     if (clickedGemeinde.length > 1){
@@ -24,8 +27,10 @@ function displayInfobox(gemeindeID) {
     }
 
     selectedGemeinde.style.fillOpacity = '1';
-    document.getElementById("listElement" + selectedGemeinde.id).style.backgroundColor = '#777';
-    document.getElementById("listElement" + selectedGemeinde.id).style.color = '#fff';
+    document.getElementById("listElement" + selectedGemeinde.id).style.backgroundColor = '#ff5417';
+
+    // document.getElementById("listElement" + selectedGemeinde.id).classList.remove("selected");
+    // document.getElementById("listElement" + selectedGemeinde.id).style.color = '#fff';
     onFocus = true;
 
     const area = propsG.find(p => p.label === "Gesamtfläche").data.find(g => g.gemeinde === selectedGemeinde.id);

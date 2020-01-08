@@ -227,13 +227,7 @@ h5 {
     cursor: pointer;
 }
 
-#table td {
-    border: 1px solid #656565;
-}
 
-#table > tr:hover {
-    border-color: #b3bd37;
-}
 
 #left {
     position: fixed;
@@ -259,6 +253,20 @@ h5 {
     right: 10px;
     width: 200px;
 }
+
+#table td {
+    font-size: 1.1em;
+    border: 1px solid #656565;
+    background-color: rgba(201, 76, 76, 0.3);
+
+}
+#table td:hover {
+    background-color: #aeff96;
+}
+
+/*#table .selected{*/
+/*    background-color: red;*/
+/*}*/
 
 .btn {
     background-color: #ff4426;
