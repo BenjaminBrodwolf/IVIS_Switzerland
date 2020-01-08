@@ -281,7 +281,7 @@ h5 {
     position: fixed;
     top: 60px;
     left: 10px;
-    width: 24vw;
+    width: auto;
     background-color: whitesmoke;
     border-radius: 1em;
 }
