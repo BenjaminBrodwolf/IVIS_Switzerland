@@ -59,6 +59,10 @@ h5 {
     overflow-x: hidden;
 }
 
+#foundGemeindenTable{
+    height: 85vh;
+}
+
 .properties {
     background-color: #33336a;
     color: white;
@@ -219,6 +223,7 @@ h5 {
 #infoTable td {
     padding: 0.5em;
     font-size: 0.8rem;
+    font-weight: normal;
 }
 
 #infoTableHeader {
@@ -259,7 +264,6 @@ h5 {
     position: fixed;
     top: 40px;
     right: 10px;
-    width: 200px;
 }
 
 #table td {
