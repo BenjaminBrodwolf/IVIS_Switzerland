@@ -36,8 +36,8 @@ const zoomToGemeinde = gemeindePaths => {
         const exFocus = document.getElementById(selectedCantonID);
         if (exFocus) exFocus.parentElement.classList.remove("focused");
 
-        viewport.setAttribute("transform", "scale(1.0)");
-        gemeindenViewport.setAttribute("transform", "scale(1.0)");
+        viewport.setAttribute("transform", "scale(0.6) translate(340,0)" );
+        gemeindenViewport.setAttribute("transform", "scale(0.6) translate(340,0)");
         selectedCantonID = "";
 
     } else {

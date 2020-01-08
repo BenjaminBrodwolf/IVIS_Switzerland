@@ -32,7 +32,7 @@ function displayInfobox(clickedGemeinde) {
     const infoBox = dom(`<div id="infoBox"></div>`)
 
     const box = dom(`<div>
-                        <table class="table" id="infoTable">
+                        <table id="infoTable">
                             <thead>
                                 <tr id="infoTableHeader">
                                     <th>${area.gemeinde}</th>

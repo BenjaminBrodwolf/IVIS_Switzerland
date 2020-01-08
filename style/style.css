@@ -26,7 +26,18 @@ svg:hover{
     cursor: pointer;
 }
 
-
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
 
 
 .scrollable{
@@ -55,7 +66,6 @@ svg:hover{
     background: #ffd311;
     mix-blend-mode: multiply;
     margin: 1em 10em 1em 1em;
-
 }
 
 .segment > .segment {
@@ -82,8 +92,6 @@ svg:hover{
     margin-top: 1em;
 }
 
-
-
 .properties{
     background-color: #33336a;
     color: white;
@@ -100,7 +108,7 @@ svg:hover{
     font-size: 0.6em;
     white-space: nowrap;
     margin-left: 3.5em;
-    position: absolute;
+    position: relative;
 }
 
 #cantons{
@@ -313,7 +321,9 @@ svg:hover{
 .gemeindenList{
     cursor: pointer;
 }
-
+#table th{
+    border: 1px solid black;
+}
 
 #left{
     position: fixed;
@@ -341,7 +351,21 @@ svg:hover{
     position: fixed;
     top: 40px;
     right:10px;
-    width: 300px;
+    width: 200px;
+}
+
+.btn{
+    background-color: #ff4426;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
 }
 
 /*.filterZone {*/
