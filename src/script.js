@@ -178,8 +178,6 @@ function checkGemeinde(checkedGemeinde, preconditions) {
 
 function createHtmlList() {
 
-
-
     const distinctedGemeinden = [];
     gemeindeWithPrecondition.forEach(g => {
         if (!distinctedGemeinden.find(dg => dg === g.id)){

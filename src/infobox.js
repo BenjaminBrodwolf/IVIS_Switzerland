@@ -1,12 +1,13 @@
 function displayInfobox(clickedGemeinde) {
 
+    gemeindeWithPrecondition.forEach(g => g.style.fillOpacity = '0.3')
+
     if (selectedGemeinde){
-        selectedGemeinde.style.fillOpacity = '1';
+        selectedGemeinde.style.fillOpacity = '0.3';
         document.getElementById("listElement" + selectedGemeinde.id).style.backgroundColor = '#fff';
         document.getElementById("listElement" + selectedGemeinde.id).style.color = '#000';
     }
 
-    console.log(clickedGemeinde.length);
     if (clickedGemeinde.length > 1){
         for (let i = 0; i < clickedGemeinde.length; i++) {
             if (clickedGemeinde[i].parentNode.id === "gemeinden"){
@@ -17,7 +18,7 @@ function displayInfobox(clickedGemeinde) {
         selectedGemeinde = clickedGemeinde;
     }
 
-    selectedGemeinde.style.fillOpacity = '0.3';
+    selectedGemeinde.style.fillOpacity = '1';
     document.getElementById("listElement" + selectedGemeinde.id).style.backgroundColor = '#777';
     document.getElementById("listElement" + selectedGemeinde.id).style.color = '#fff';
     onFocus = true;

@@ -272,6 +272,12 @@ svg:hover{
     display: contents;
 }
 
+#infoBox{
+    position: absolute;
+    width: 20em;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
 #infoTable td{
     padding: 0.3rem;
     font-size: 0.8rem;
