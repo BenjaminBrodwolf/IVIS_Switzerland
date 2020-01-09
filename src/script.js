@@ -124,7 +124,7 @@ function checkGemeinde(checkedGemeinde, pc) {
         if (prop1.data.find(p => p.gemeinde === checkedGemeinde.id && (prop1.value.low <= p.value && prop1.value.high >= p.value))) {
             const prop2 = propsG.find(p => p.label === pc.filterProperty.secondElement);
             if (prop2.data.find(p => p.gemeinde === checkedGemeinde.id && (prop2.value.low <= p.value && prop2.value.high >= p.value))) {
-                const prop3 = propsG.find(p => p.label === pc.filterProperty.secondElement);
+                const prop3 = propsG.find(p => p.label === pc.filterProperty.thirdElement);
                 if (prop3.data.find(p => p.gemeinde === checkedGemeinde.id && (prop3.value.low <= p.value && prop3.value.high >= p.value))) {
                     fulfillPrecondition = true;
                 }
