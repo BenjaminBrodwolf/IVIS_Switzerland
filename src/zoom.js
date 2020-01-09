@@ -62,39 +62,55 @@ const zoomToGemeinde = (gemeindeID) => {
 
 };
 
-document.addEventListener('click', e => {
-    if (zoomstate) {
+// function mouseZoom(event) {
+//     event.preventDefault();
+//     console.log(event.deltaY * -0.01)
+//
+//     mouseZoomScale += event.deltaY * -0.01;
+//     console.log(mouseZoomScale)
+//     mouseZoomScale = Math.min(Math.max(.125, mouseZoomScale), 4);
+//     console.log(mouseZoomScale)
+//
+//     viewport.style.transform = `scale(${mouseZoomScale})`;
+// }
+//
+// let mouseZoomScale = 1;
+// viewport.onwheel = mouseZoom;
 
-        const selected = e.target;
-        console.log(selected)
 
-        if (selected.id === selectedGemeindeID) {
-            const exFocus = document.getElementById(selectedGemeindeID);
-            if (exFocus) exFocus.parentElement.classList.remove("focused");
-
-            viewport.setAttribute("transform", "scale(1) translate(0,0)" );
-            gemeindenViewport.setAttribute("transform", "scale(1) translate(0,0)");
-            selectedGemeindeID = "";
-
-        } else {
-
-            const exFocus = document.getElementById(selectedGemeindeID);
-            if (exFocus) exFocus.parentElement.classList.remove("focused");
-
-            selectedGemeindeID = selected.id;
-
-            const xy = getBoundingBox(selected);
-            scale = Math.min(mapWidth / xy[1], mapHeight / xy[3], 3);
-            const tx = -xy[0] + (mapWidth - xy[1] * scale) / (2 * scale);
-            const ty = -xy[2] + (mapHeight - xy[3] * scale) / (2 * scale);
-
-            document.getElementById(selectedGemeindeID).parentElement.classList.add("focused");
-
-            viewport.setAttribute("transform", "scale(" + scale + ")translate(" + tx + "," + ty + ")");
-            gemeindenViewport.setAttribute("transform", "scale(" + scale + ")translate(" + tx + "," + ty + ")");
-        }
-    }
-});
+// document.addEventListener('click', e => {
+//     if (zoomstate) {
+//
+//         const selected = e.target;
+//         console.log(selected)
+//
+//         if (selected.id === selectedGemeindeID) {
+//             const exFocus = document.getElementById(selectedGemeindeID);
+//             if (exFocus) exFocus.parentElement.classList.remove("focused");
+//
+//             viewport.setAttribute("transform", "scale(1) translate(0,0)" );
+//             gemeindenViewport.setAttribute("transform", "scale(1) translate(0,0)");
+//             selectedGemeindeID = "";
+//
+//         } else {
+//
+//             const exFocus = document.getElementById(selectedGemeindeID);
+//             if (exFocus) exFocus.parentElement.classList.remove("focused");
+//
+//             selectedGemeindeID = selected.id;
+//
+//             const xy = getBoundingBox(selected);
+//             scale = Math.min(mapWidth / xy[1], mapHeight / xy[3], 3);
+//             const tx = -xy[0] + (mapWidth - xy[1] * scale) / (2 * scale);
+//             const ty = -xy[2] + (mapHeight - xy[3] * scale) / (2 * scale);
+//
+//             document.getElementById(selectedGemeindeID).parentElement.classList.add("focused");
+//
+//             viewport.setAttribute("transform", "scale(" + scale + ")translate(" + tx + "," + ty + ")");
+//             gemeindenViewport.setAttribute("transform", "scale(" + scale + ")translate(" + tx + "," + ty + ")");
+//         }
+//     }
+// });
 
 const getBoundingBox = element => {
     // get x,y co-ordinates of top-left of bounding box and width and height

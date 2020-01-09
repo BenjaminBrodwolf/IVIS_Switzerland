@@ -371,6 +371,11 @@ h5 {
 /*    fill: #21669E;*/
 /*    cursor: pointer;*/
 /*}*/
+
+.activePath{
+        fill: #21669e;
+
+}
 #description {
     pointer-events: none;
     position: absolute;

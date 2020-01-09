@@ -205,9 +205,6 @@ const initGemeindeTooltip = () =>{
         });
 
         e.addEventListener('mousemove', event => {
-            console.log(e.id)
-            console.log(descriptionGemeinde)
-            console.log( event.pageX )
             descriptionGemeinde.style.left = event.pageX + "px";
             descriptionGemeinde.style.top = (event.pageY - 70).toString() + "px";
             descriptionGemeinde.innerHTML = e.id;
@@ -215,7 +212,18 @@ const initGemeindeTooltip = () =>{
         e.addEventListener('mouseout', event => {
             descriptionGemeinde.classList.remove("active");
         })
+
+
         e.addEventListener('click', event => {
+
+            elementsG.forEach(p => {
+                if (p.classList.contains("activePath")){
+                    console.log("CONTAINS")
+                    p.classList.remove("activePath");
+                }
+            });
+
+            e.setAttribute("class", "activePath");
             displayInfobox(e.id)
         })
 
@@ -229,12 +237,6 @@ const gemeindeINIT = () => {
 
 
     initGemeindeTooltip()
-    // const infoBox = dom(`<div id="infoBox"></div>`)
-    // document.getElementById("infoRow").appendChild(infoBox);
-
-
-
-
 };
 
 const dataINITCanton = props => {
