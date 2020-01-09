@@ -31,7 +31,6 @@ function drop(ev) {
     });
 
     if (segment.parentNode.parentNode.className === "segment"){
-        console.log("Tripple")
         segment.parentNode.parentNode.style.marginBottom = "5em";
     }
 
