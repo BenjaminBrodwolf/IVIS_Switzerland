@@ -128,7 +128,7 @@ function createHtmlList() {
 
     distinctedGemeinden.forEach(c => {
         gemeindeListTable += `<tr>
-                                     <td id="listElement${c}" class="gemeindenList" onclick="zoomToGemeinde('${c}'); displayInfobox( '${c}' )">${c}</td> 
+                                     <td id="listElement${c}" class="gemeindenList" onclick="zoomToGemeinde('${c}'); displayInfobox( '${c}' )"> <div> <p style="float: left">${c} </p>  <p id="goBack${c}" style="display: none" class="goBack">Zurück</p> </div></td> 
                                  </tr>`;
     });
 

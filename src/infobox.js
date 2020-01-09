@@ -5,11 +5,15 @@ function displayInfobox(gemeindeID) {
 
     const clickedGemeinde = document.getElementById(gemeindeID);
 
-    gemeindeWithPrecondition.forEach(g => g.style.fillOpacity = '0.3')
+    // const listElement = document.getElementById("listElement" + selectedGemeinde.id);
+
+    gemeindeWithPrecondition.forEach(g => g.style.fillOpacity = '0.3');
 
     if (selectedGemeinde){
         selectedGemeinde.style.fillOpacity = '0.3';
         document.getElementById("listElement" + selectedGemeinde.id).style.backgroundColor = ' rgba(230, 230, 230, 0.9)';
+        document.getElementById("goBack" + selectedGemeinde.id).style.display = "none";
+
     }
 
     if (clickedGemeinde.length > 1){
@@ -24,6 +28,8 @@ function displayInfobox(gemeindeID) {
 
     selectedGemeinde.style.fillOpacity = '1';
     document.getElementById("listElement" + selectedGemeinde.id).style.backgroundColor = '#FF5757';
+
+    document.getElementById("goBack" + selectedGemeinde.id).style.display = "inline";
 
     onFocus = true;
 
