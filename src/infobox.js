@@ -83,9 +83,7 @@ function displayInfobox(gemeindeID) {
                         </table>
                     </div>`);
 
-    infoBox.appendChild(box);
-    document.getElementById("infoBox").replaceWith(infoBox);
-
+    document.getElementById("infoBox").appendChild(box);
 
 }
 

@@ -281,7 +281,7 @@ h5 {
 }
 
 
-#left {
+#filterArea {
     position: fixed;
     top: 60px;
     left: 10px;
@@ -351,9 +351,7 @@ h5 {
     padding: .5em;
     border-radius: 1em 1em 0 0;
     user-select: none;
-
 }
-
 
 .goBack{
     font-size: 0.8em;

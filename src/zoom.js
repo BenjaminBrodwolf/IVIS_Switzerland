@@ -72,8 +72,8 @@ document.addEventListener('click', e => {
             const exFocus = document.getElementById(selectedGemeindeID);
             if (exFocus) exFocus.parentElement.classList.remove("focused");
 
-            viewport.setAttribute("transform", "scale(0.6) translate(340,0)" );
-            gemeindenViewport.setAttribute("transform", "scale(0.6) translate(340,0)");
+            viewport.setAttribute("transform", "scale(1) translate(0,0)" );
+            gemeindenViewport.setAttribute("transform", "scale(1) translate(0,0)");
             selectedGemeindeID = "";
 
         } else {

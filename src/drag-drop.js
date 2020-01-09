@@ -52,15 +52,19 @@ function enterDropzone(ev) {
 
 const leaveDropzone = ev => ev.target.style.borderStyle = 'solid';
 
-
-
 function resetAll() {
     propsG.forEach(p => {
         if (p.active) {
             putItBack(p.id);
             p.active = false;
         }
-    })
+    });
+    gemeindeWithPrecondition.forEach(g => g.style.fillOpacity = '1');
+    document.getElementById("svg").setAttribute("transform", "scale(1) translate(0,0)" );
+    document.getElementById("gemeinden").setAttribute("transform", "scale(1) translate(0,0)");
+
+
+    colorMapGemeinden();
 }
 
 function putItBack(node) {
@@ -83,6 +87,5 @@ function putItBack(node) {
         document.getElementById("slider" + segment.id).parentElement.style.display = "block";
         document.getElementById("toggle" + segment.id).parentElement.style.display = "block";
 
-        colorMapGemeinden();
     }
 }
