@@ -18,7 +18,7 @@ function drop(ev) {
     segment.style.backgroundColor = "rgba(255,87,87,0.66)";
 
 
-    console.log(data)
+    //console.log(data)
     document.getElementById("slider" + data).parentElement.style.display = "none";
     document.getElementById("toggle" + data).parentElement.style.display = "none";
 
@@ -31,11 +31,26 @@ function drop(ev) {
         }
     });
 
+    if (segment.parentNode.parentNode.className === "segment"){
+        console.log("Tripple")
+        segment.parentNode.parentNode.style.marginBottom = "5em";
+    }
+
     colorMapGemeinden();
 }
 
 function enterDropzone(ev) {
-    ev.target.style.borderStyle = 'dashed'
+    const segment = ev.target;
+    if (segment.parentNode.className === "dropzone" && segment.childNodes.length >= 2){
+        if (segment.childNodes[1].className === "segment"){
+            segment.removeEventListener("ondragover", allowDrop)
+        } else {
+            ev.target.style.borderStyle = 'dashed'
+        }
+    }
+    else {
+        ev.target.style.borderStyle = 'dashed'
+    }
 }
 
 function leaveDropzone(ev) {

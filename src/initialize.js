@@ -318,7 +318,7 @@ const initializeData = () => {
     const dragfield = dom(`<div id="dragfield" class="scrollable">`);
     const svg = dom(`<div id="svg">`);
 
-    console.log(propsG)
+    //console.log(propsG)
 
     getCategories().forEach(c => {
         const categoryElement = dom(`<button onclick="addCollapse(this)" class="collapsible">${c}</button>`);

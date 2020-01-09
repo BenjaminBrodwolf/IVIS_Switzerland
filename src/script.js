@@ -43,13 +43,16 @@ function putItBack(node) {
         const segmentField = document.getElementById("col" + node);
         const segment = document.getElementById(node);
 
+
         for (let i = 0; i < segment.children.length; i++) {
             document.getElementById("col" + segment.children[i].id).appendChild(segment.children[i]);
         }
 
+
         segmentField.appendChild(segment);
         segment.style.height = "2em";
         segment.style.width = "2em";
+        segment.style.marginBottom = "1em";
         segment.style.backgroundColor = '#fff';
         segment.style.borderColor = 'rgb(0, 0, 0)';
         segment.innerHTML = "";
@@ -186,7 +189,7 @@ function createHtmlList() {
     })
 
     distinctedGemeinden.sort();
-    console.log(distinctedGemeinden[0])
+    //console.log(distinctedGemeinden[0])
 
     let gemeindeListTable = `<div id="foundGemeinden"><h4 scope="col">Gefundene Gemeinde: ${distinctedGemeinden.length}</h4></div>
                         <div id="foundGemeindenTable" class="scrollable">
