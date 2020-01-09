@@ -48,15 +48,16 @@ function putItBack(node) {
         }
 
         segmentField.appendChild(segment);
-        segment.style.height = "3em";
-        segment.style.width = "3em";
+        segment.style.height = "2em";
+        segment.style.width = "2em";
         segment.style.backgroundColor = '#ffd311';
         segment.style.borderColor = 'rgb(0, 0, 0)';
         segment.innerHTML = "";
         const propLabel = dom(`<p class="propLabel">${segment.title}</p>`);
         segment.appendChild(propLabel)
 
-        document.getElementById("slider-button" + node).disabled = false;
+        document.getElementById("slider" + segment.id).parentElement.style.display = "block";
+        document.getElementById("toggle" + segment.id).parentElement.style.display = "block";
 
         colorMapGemeinden();
     }

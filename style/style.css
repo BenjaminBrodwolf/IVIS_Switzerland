@@ -35,7 +35,8 @@ h5 {
 #developer {
     position: absolute;
     font-size: 1rem;
-    left: 80%;
+    left: 75%;
+    margin-top: -1.5em;
 }
 
 /*.row {*/
@@ -61,17 +62,12 @@ h5 {
 
 .left {
     width: 50%;
-    background-color: #ffd311;
 }
 .middle {
     width: 45%;
-    background-color: #4eff55;
-
 }
 .right {
     width: 5%;
-    background-color: red;
-
 }
 
 .row:after {
@@ -237,10 +233,14 @@ h5 {
     text-align: right;
     width: 4.2em;
     background: transparent;
-    color: white;
+    color: #555;
     border: none;
     border-bottom: 2px #555 solid;
     font-size: 14px;
+}
+
+.tabcontent{
+    margin-top: 1em;
 }
 
 .valueType {
