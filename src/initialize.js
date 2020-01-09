@@ -330,18 +330,21 @@ const initializeData = () => {
                 const propElement = `
                                      <div class="row">
                                         <div class="column left"> 
-                                            <div id="col${prop.id}">       
-                                                <div class="segment" propname="${prop.label}" id="${prop.id}" title="${prop.description}" draggable="true" onclick="select(this)" ondragstart="drag(event)">
-                                                      <p>
-                                                         <span class="propLabel">${prop.label}</span> 
-                                                         <br> 
-                                                         <span class="propDescription">${prop.description}</span>
-                                                       </p>
-                                                </div>  
+                                            <div id="col${prop.id}">  
+                                                 
+                                                <div class="segment" propname="${prop.label}" id="${prop.id}" title="${prop.description}" draggable="true" onclick="select(this)" ondragstart="drag(event)">     
+                                                </div> 
+                                                
                                             </div>
                                         </div>
-                                        
-                                        <div class="column middle"> 
+                                          <div class="column middleleft"> 
+                                           <p class="segmentLabel">                                         
+                                               <span class="propLabel">${prop.label}</span> 
+                                               <br>
+                                               <div class="propDescription">${prop.description}</div>
+                                           </p> 
+                                        </div> 
+                                        <div class="column middleright"> 
                                              <div id="slider${prop.id}" style="display: block" class="tabcontent">     
                                                    ${setDomInputfield(prop.boundaries.max, prop.boundaries.min, prop.dataType, prop.id)}
                                              </div>

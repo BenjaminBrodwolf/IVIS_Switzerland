@@ -1,4 +1,4 @@
-html, body, h1, h2, h3 {
+html, body, h1, h2, h3, h5, h6 {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -39,20 +39,6 @@ h5 {
     margin-top: -1.5em;
 }
 
-/*.row {*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    flex-wrap: wrap;*/
-/*    width: 100%;*/
-/*}*/
-
-/*.column {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    flex-basis: 100%;*/
-/*    flex: 1;*/
-/*}*/
-
 /* Create three unequal columns that floats next to each other */
 .column {
     box-sizing: border-box;
@@ -61,13 +47,24 @@ h5 {
 }
 
 .left {
-    width: 50%;
+    width: 15%;
+    /*background-color: #b84324;*/
 }
-.middle {
-    width: 45%;
+.middleleft{
+    width: 30%;
+    /*background-color: green;*/
+}
+.middleright{
+    width: 50%;
+    padding-left: 5px;
+    padding-top: 15px;
+    /*background-color: yellow;*/
+
 }
 .right {
     width: 5%;
+    /*background-color: violet;*/
+
 }
 
 .row:after {
@@ -95,20 +92,17 @@ h5 {
     height: 10vh;
     visibility: hidden;
 }
-
+.segmentLabel {
+    padding-top: 10px;
+    margin: 0;
+    text-align: left;
+}
 .propLabel {
-    position: relative;
-    bottom: 20px;
-    left: 50px;
+    font-weight: bold;
 }
 
 .propDescription {
-    position: relative;
-    bottom: 20px;
-    left: 15px;
     font-size: 0.6em;
-    white-space: nowrap;
-    margin-left: 3.5em;
 }
 
 .arrow-right {
@@ -231,7 +225,7 @@ h5 {
 
 .valInput {
     text-align: right;
-    width: 4.2em;
+    max-width: 70px;
     background: transparent;
     color: #555;
     border: none;
