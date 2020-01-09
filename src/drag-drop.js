@@ -3,9 +3,8 @@ function drag(ev) {
     document.getElementById("zone").style.borderStyle = "dashed"
 }
 
-function allowDrop(ev) {
-    ev.preventDefault();
-}
+const allowDrop = ev => ev.preventDefault();
+
 
 function drop(ev) {
     ev.preventDefault();
@@ -47,15 +46,13 @@ function enterDropzone(ev) {
         } else {
             ev.target.style.borderStyle = 'dashed'
         }
-    }
-    else {
+    } else {
         ev.target.style.borderStyle = 'dashed'
     }
 }
 
-function leaveDropzone(ev) {
-    ev.target.style.borderStyle = 'solid'
-}
+const leaveDropzone = ev => ev.target.style.borderStyle = 'solid';
+
 
 
 function resetAll() {
@@ -82,10 +79,8 @@ function select(element) {
         propsG.forEach(p => {
             focusedSegment = element;
             if (focusedSegment.id === p.id) {
-                if (checkElementIntersection(focusedSegment).operator === false) {
-                    document.getElementById(p.id).style.borderColor = "rgb(255,0,0)";
-                } else {
-                    document.getElementById(p.id).style.borderColor = "rgb(255,0,0)";
+                document.getElementById(p.id).style.borderColor = "rgb(255,0,0)";
+                if (checkElementIntersection(focusedSegment).operator) {
                     document.getElementById(focusedSegment.firstElementChild.id).style.borderColor = "rgb(255,0,0)";
                 }
             } else {
