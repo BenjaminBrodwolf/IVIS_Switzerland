@@ -63,32 +63,6 @@ function resetAll() {
     })
 }
 
-let focusedSegment = null;
-
-function resetSelected() {
-    putItBack(focusedSegment.id);
-    propsG.find(p => p.id === focusedSegment.id).active = false;
-    focusedSegment = null;
-    document.getElementById("resetSelButton").style.visibility = 'hidden';
-}
-
-function select(element) {
-    if (propsG.find(p => p.id === element.id).active) {
-        document.getElementById("resetSelButton").style.visibility = 'visible';
-        propsG.forEach(p => {
-            focusedSegment = element;
-            if (focusedSegment.id === p.id) {
-                document.getElementById(p.id).style.borderColor = "rgb(255,0,0)";
-                if (checkElementIntersection(focusedSegment).operator) {
-                    document.getElementById(focusedSegment.firstElementChild.id).style.borderColor = "rgb(255,0,0)";
-                }
-            } else {
-                document.getElementById(p.id).style.borderColor = "rgb(0,0,0)";
-            }
-        })
-    }
-}
-
 function putItBack(node) {
     if (node) {
         const segmentField = document.getElementById("col" + node);
