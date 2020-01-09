@@ -43,7 +43,7 @@ function colorMapGemeinden() {
 }
 
 /*
-Sammelt die Objekte mit den Operatore und Elementen in einer Liste
+Sammelt die Objekte mit den Operatoren und Elementen in einer Liste
 */
 function getPreconditions() {
     const filterBox = document.getElementById("zone");
@@ -55,7 +55,6 @@ function getPreconditions() {
             filterProperty: checkElementIntersection(filterBox.children[i]).element,
         });
     }
-
     return listWithPrecondition;
 }
 
@@ -69,9 +68,11 @@ function searchGemeindenWithPrecondition() {
     const gemeindenWithPrecondition = [];
     const preconditions = getPreconditions();
     elementsG.forEach(c => {
-        if (checkGemeinde(c, preconditions)) {
-            gemeindenWithPrecondition.push(c);
-        }
+        preconditions.forEach(pc => {
+            if (checkGemeinde(c, pc)) {
+                gemeindenWithPrecondition.push(c);
+            }
+        })
     });
 
     return gemeindenWithPrecondition;
@@ -81,33 +82,29 @@ function searchGemeindenWithPrecondition() {
 /*
 Testet einen einzelnen Kanton, ob er die Bedingung erfüllt
  */
-function checkGemeinde(checkedGemeinde, preconditions) {
+function checkGemeinde(checkedGemeinde, pc) {
     let fulfillPrecondition = false;
 
-    preconditions.forEach(pc => {
-        if (pc.filterOperator) {
-
-            const prop1 = propsG.find(p => p.label === pc.filterProperty.firstElement);
-            if (prop1.data.find(p => p.gemeinde === checkedGemeinde.id && (prop1.value.low <= p.value && prop1.value.high >= p.value))) {
-                const prop2 = propsG.find(p => p.label === pc.filterProperty.secondElement);
-                if (prop2.data.find(p => p.gemeinde === checkedGemeinde.id && (prop2.value.low <= p.value && prop2.value.high >= p.value))) {
-                    fulfillPrecondition = true;
-                }
-
-            } else {
-                fulfillPrecondition = false
+    if (pc.filterOperator) { //when its a and-operator
+        const prop1 = propsG.find(p => p.label === pc.filterProperty.firstElement);
+        if (prop1.data.find(p => p.gemeinde === checkedGemeinde.id && (prop1.value.low <= p.value && prop1.value.high >= p.value))) {
+            const prop2 = propsG.find(p => p.label === pc.filterProperty.secondElement);
+            if (prop2.data.find(p => p.gemeinde === checkedGemeinde.id && (prop2.value.low <= p.value && prop2.value.high >= p.value))) {
+                fulfillPrecondition = true;
             }
         } else {
-            const prop = propsG.find(p => p.label === pc.filterProperty);
-
-            if (prop.data.find(p => p.gemeinde === checkedGemeinde.id && (prop.value.low <= p.value && prop.value.high >= p.value))) {
-                fulfillPrecondition = true;
-            } else {
-                fulfillPrecondition = false
-            }
-
+            fulfillPrecondition = false
         }
-    });
+
+    } else { //when its a or-operator
+        const prop = propsG.find(p => p.label === pc.filterProperty);
+
+        if (prop.data.find(p => p.gemeinde === checkedGemeinde.id && (prop.value.low <= p.value && prop.value.high >= p.value))) {
+            fulfillPrecondition = true;
+        } else {
+            fulfillPrecondition = false
+        }
+    }
     return fulfillPrecondition;
 }
 
@@ -116,7 +113,7 @@ function createHtmlList() {
 
     const distinctedGemeinden = [];
     gemeindeWithPrecondition.forEach(g => {
-        if (!distinctedGemeinden.find(dg => dg === g.id)){
+        if (!distinctedGemeinden.find(dg => dg === g.id)) {
             distinctedGemeinden.push(g.id);
         }
     })
@@ -130,7 +127,7 @@ function createHtmlList() {
                                 <tbody>`;
 
     distinctedGemeinden.forEach(c => {
-            gemeindeListTable += `<tr>
+        gemeindeListTable += `<tr>
                                      <td id="listElement${c}" class="gemeindenList" onclick="zoomToGemeinde('${c}'); displayInfobox( '${c}' )">${c}</td> 
                                  </tr>`;
     });
