@@ -59,12 +59,10 @@ h5 {
     padding-left: 5px;
     padding-top: 15px;
     /*background-color: yellow;*/
-
 }
 .right {
     width: 5%;
     /*background-color: violet;*/
-
 }
 
 .row:after {
@@ -105,19 +103,6 @@ h5 {
     font-size: 0.6em;
 }
 
-.arrow-right {
-    margin: 5px;
-    transition: 1s;
-    --arrow-size: 15px;
-    border-top: var(--arrow-size) solid transparent;
-    border-bottom: var(--arrow-size) solid transparent;
-    border-left: var(--arrow-size) solid green;
-}
-.right:hover > .arrow-right {
-    margin-left: 25px;
-    transition: 1s;
-}
-
 .collapsible {
     background-color: #a9a9a9;
     color: white;
@@ -135,10 +120,17 @@ h5 {
     background-color: #777;
 }
 
-.collapsible:after {
+.collapsible::after {
     content: '\002B';
     color: white;
     font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+.collapsible.active::after {
+    content: "-";
+    color: white;
+    font-weight: bolder;
     float: right;
     margin-left: 5px;
 }
