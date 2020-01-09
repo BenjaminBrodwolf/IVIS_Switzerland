@@ -315,7 +315,7 @@ const initializeData = () => {
 
     toAnalyseData.forEach(e => dataINITGemeinden(e))
 
-    const dragfield = dom(`<div id="dragfield" class="scrollable">`);
+    const dragfield = dom(`<div id="dragfield">`);
     const svg = dom(`<div id="svg">`);
 
     //console.log(propsG)
@@ -372,7 +372,7 @@ const initializeData = () => {
     });
 
 
-    const svgTag = dom(`<svg id="svg" xmlns="http://www.w3.org/2000/svg" style="width: 100%" version="1.2" baseProfile="tiny" viewBox="0 0 800 507" stroke-linecap="round" stroke-linejoin="round">  
+    const svgTag = dom(`<svg id="svg" xmlns="http://www.w3.org/2000/svg" style="width: 100%" version="1.2" baseProfile="tiny" viewBox="-340 -50 1350 700" stroke-linecap="round" stroke-linejoin="round">  
                                             ${gemeindenSVG} 
                                    </svg>`);
 

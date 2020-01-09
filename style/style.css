@@ -77,11 +77,13 @@ h5 {
 
 
 
-.scrollable {
+.gemeindeScrollable {
     height: 70vh;
     overflow-y: scroll;
     overflow-x: hidden;
 }
+
+
 
 #foundGemeindenTable{
     height: 85vh;
@@ -101,10 +103,14 @@ h5 {
 }
 .propLabel {
     font-weight: bold;
+    user-select: none;
+
 }
 
 .propDescription {
     font-size: 0.6em;
+    user-select: none;
+
 }
 
 .collapsible {
@@ -200,6 +206,8 @@ h5 {
     padding: 0.2em 0.2em 0.2em 1em;
     margin-bottom: 0.2em;
     border-radius: 0.5em 0.5em 0 0;
+    user-select: none;
+
 }
 
 
@@ -255,15 +263,21 @@ h5 {
     font-weight: bold;
     background: #555;
     color: white;
+    user-select: none;
+
 }
 
 #infoTableHeader th {
     padding: 0.3rem;
     border-radius: 1em 1em 0 0;
+    user-select: none;
+
 }
 
 .gemeindenList {
     cursor: pointer;
+    user-select: none;
+
 }
 
 
@@ -283,6 +297,8 @@ h5 {
     border-radius: 1em;
     padding: 1em;
     background-color: rgba(230, 230, 230, 0.9);
+    user-select: none;
+
 }
 
 #table {
@@ -334,14 +350,9 @@ h5 {
     color: white;
     padding: .5em;
     border-radius: 1em 1em 0 0;
-}
+    user-select: none;
 
-/*.filterZone {*/
-/*    height: 100%;*/
-/*    width: 100%;*/
-/*    background-color: #e6e9f0;*/
-/*    padding: 1em;*/
-/*}*/
+}
 
 
 .goBack{
