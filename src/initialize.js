@@ -198,15 +198,12 @@ const initGemeindeTooltip = () =>{
     /* Add MouseOver-Listener to the Gemeinden */
     const descriptionGemeinde = document.getElementById("description");
     elementsG.forEach(e => {
+
         e.addEventListener('mouseover', event => {
             e.setAttribute("class", "enabled heyo");
             descriptionGemeinde.classList.add("active");
-            displayInfobox(e.id)
-            // if (!onFocus) {
-            //     document.getElementById("infoBox").innerText = e.id;
-            //     e.style.fillOpacity = '50%';
-            // }
         });
+
         e.addEventListener('mousemove', event => {
             console.log(e.id)
             console.log(descriptionGemeinde)
@@ -217,11 +214,11 @@ const initGemeindeTooltip = () =>{
         });
         e.addEventListener('mouseout', event => {
             descriptionGemeinde.classList.remove("active");
-
-            // if (!onFocus) {
-            //     e.style.fillOpacity = '100%';
-            // }
         })
+        e.addEventListener('click', event => {
+            displayInfobox(e.id)
+        })
+
     });
 }
 

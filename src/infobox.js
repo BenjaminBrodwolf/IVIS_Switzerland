@@ -9,7 +9,7 @@ function displayInfobox(gemeindeID) {
 
     gemeindeWithPrecondition.forEach(g => g.style.fillOpacity = '0.3');
 
-    if (selectedGemeinde){
+    if (selectedGemeinde && document.getElementById("listElement" + selectedGemeinde.id)){
         selectedGemeinde.style.fillOpacity = '0.3';
         document.getElementById("listElement" + selectedGemeinde.id).style.backgroundColor = ' rgba(230, 230, 230, 0.9)';
         document.getElementById("goBack" + selectedGemeinde.id).style.display = "none";
@@ -29,10 +29,12 @@ function displayInfobox(gemeindeID) {
 
 
     selectedGemeinde.style.fillOpacity = '1';
+
+
+if ( document.getElementById("listElement" + selectedGemeinde.id) ) {
     document.getElementById("listElement" + selectedGemeinde.id).style.backgroundColor = '#FF5757';
-
     document.getElementById("goBack" + selectedGemeinde.id).style.display = "inline";
-
+}
 
 
     //Area Infos

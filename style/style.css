@@ -314,6 +314,9 @@ h5 {
     border-radius: 0.2em;
 }
 
+#table tbody, #table td, #table tr{
+    min-width: 130px;
+}
 
 #table td:hover {
     background-color: #777;
