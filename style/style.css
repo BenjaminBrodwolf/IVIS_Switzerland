@@ -60,10 +60,11 @@ h5 {
 .middleright{
     width: 50%;
     padding-left: 5px;
-    padding-top: 15px;
+    /*padding-top: 15px;*/
     /*background-color: yellow;*/
 }
 .right {
+    padding-top: 22px;
     width: 5%;
     /*background-color: violet;*/
 }
