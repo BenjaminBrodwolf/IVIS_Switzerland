@@ -146,7 +146,7 @@ const setSliderValue = (input) => {
     // console.log("low: " + low)
     // console.log("high: " + high)
 
-console.log( prop )
+//console.log( prop )
     // Tooltip
     const fstTooltip = masterNode.childNodes[3];
     const sndTooltip = masterNode.childNodes[7];
