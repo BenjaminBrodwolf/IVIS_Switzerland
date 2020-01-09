@@ -331,7 +331,7 @@ const initializeData = () => {
                                      <div class="row">
                                         <div class="column left"> 
                                             <div id="col${prop.id}">       
-                                                <div class="segment" id="${prop.id}" title="${prop.description}" draggable="true" onclick="select(this)" ondragstart="drag(event)">
+                                                <div class="segment" propname="${prop.label}" id="${prop.id}" title="${prop.description}" draggable="true" onclick="select(this)" ondragstart="drag(event)">
                                                       <p>
                                                          <span class="propLabel">${prop.label}</span> 
                                                          <br> 
@@ -342,7 +342,6 @@ const initializeData = () => {
                                         </div>
                                         
                                         <div class="column middle"> 
-                                        
                                              <div id="slider${prop.id}" style="display: block" class="tabcontent">     
                                                    ${setDomInputfield(prop.boundaries.max, prop.boundaries.min, prop.dataType, prop.id)}
                                              </div>
@@ -362,19 +361,11 @@ const initializeData = () => {
                                      </div>   `;
                 contentElement.insertAdjacentHTML("beforeend", propElement);
 
-
-                // <button id="slider-button${prop.id}" onclick="openSlidePopup(this)">S</button>
-
-                // set the Slider-Thumb to correct places
-                // setSliderValue( document.getElementById(propElement) );
-                // contentElement.appendChild(dom(setDomSlider));
             }
         });
 //        addCollapse(categoryElement);
         dragfield.appendChild(categoryElement);
         dragfield.appendChild(contentElement);
-
-
     });
 
 
