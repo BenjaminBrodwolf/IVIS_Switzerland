@@ -15,6 +15,7 @@ function drop(ev) {
     ev.target.style.borderStyle = 'solid';
     segment.style.height = "8em";
     segment.style.width = "8em";
+    segment.style.backgroundColor = "rgba(255,87,87,0.66)";
 
 
     console.log(data)

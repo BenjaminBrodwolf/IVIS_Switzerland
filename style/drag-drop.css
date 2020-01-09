@@ -16,14 +16,14 @@
     width: 2em;
     height: 2em;
     text-align: center;
-    background: #ffd311;
+    background: #fff;
     mix-blend-mode: multiply;
     margin: 1em 10em 1em 1em;
 }
 
 .segment > .segment {
     position: relative;
-    top: -3em;
+    top: -2.7em;
     left: 4em;
 }
 

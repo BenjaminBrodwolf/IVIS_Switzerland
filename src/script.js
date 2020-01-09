@@ -50,7 +50,7 @@ function putItBack(node) {
         segmentField.appendChild(segment);
         segment.style.height = "2em";
         segment.style.width = "2em";
-        segment.style.backgroundColor = '#ffd311';
+        segment.style.backgroundColor = '#fff';
         segment.style.borderColor = 'rgb(0, 0, 0)';
         segment.innerHTML = "";
         const propLabel = dom(`<p class="propLabel">${segment.title}</p>`);

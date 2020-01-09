@@ -179,7 +179,7 @@ h5 {
 }
 
 .collapsible-slider:hover:disabled {
-    background-color: #dedede;;
+    background-color: #dedede;
 }
 
 .collapsible-slider:disabled .valInput {
