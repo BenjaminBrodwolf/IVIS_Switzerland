@@ -63,7 +63,6 @@ function resetAll() {
     document.getElementById("svg").setAttribute("transform", "scale(1) translate(0,0)" );
     document.getElementById("gemeinden").setAttribute("transform", "scale(1) translate(0,0)");
 
-
     colorMapGemeinden();
 }
 

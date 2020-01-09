@@ -192,27 +192,51 @@ const gemeindeTableToObject = data => {
 
 let onFocus = false;
 
+const initGemeindeTooltip = () =>{
+    const selectElements = document.querySelector(`#gemeinden`);
+    const elementsG = selectElements.querySelectorAll('path');
+    /* Add MouseOver-Listener to the Gemeinden */
+    const descriptionGemeinde = document.getElementById("description");
+    elementsG.forEach(e => {
+        e.addEventListener('mouseover', event => {
+            e.setAttribute("class", "enabled heyo");
+            descriptionGemeinde.classList.add("active");
+            displayInfobox(e.id)
+            // if (!onFocus) {
+            //     document.getElementById("infoBox").innerText = e.id;
+            //     e.style.fillOpacity = '50%';
+            // }
+        });
+        e.addEventListener('mousemove', event => {
+            console.log(e.id)
+            console.log(descriptionGemeinde)
+            console.log( event.pageX )
+            descriptionGemeinde.style.left = event.pageX + "px";
+            descriptionGemeinde.style.top = (event.pageY - 70).toString() + "px";
+            descriptionGemeinde.innerHTML = e.id;
+        });
+        e.addEventListener('mouseout', event => {
+            descriptionGemeinde.classList.remove("active");
+
+            // if (!onFocus) {
+            //     e.style.fillOpacity = '100%';
+            // }
+        })
+    });
+}
 
 const gemeindeINIT = () => {
     const table = [];
     gemeinden.table.split("\n").forEach(e => table.push(gemeindeTableToObject(e)));
     gemeinden.data = table;
 
-    const selectElements = document.querySelector(`#gemeinden`);
-    const elementsG = selectElements.querySelectorAll('path');
 
-    /* Add MouseOver-Listener to the Gemeinden */
-    elementsG.forEach(e => e.addEventListener('mouseover', event => {
-        if (!onFocus) {
-            document.getElementById("infoBox").innerText = e.id;
-            e.style.fillOpacity = '50%';
-        }
-    }));
-    elementsG.forEach(e => e.addEventListener('mouseout', event => {
-        if (!onFocus) {
-            e.style.fillOpacity = '100%';
-        }
-    }));
+    initGemeindeTooltip()
+    // const infoBox = dom(`<div id="infoBox"></div>`)
+    // document.getElementById("infoRow").appendChild(infoBox);
+
+
+
 
 };
 

@@ -25,13 +25,15 @@ function displayInfobox(gemeindeID) {
     } else {
         selectedGemeinde = clickedGemeinde;
     }
+    onFocus = true;
+
 
     selectedGemeinde.style.fillOpacity = '1';
     document.getElementById("listElement" + selectedGemeinde.id).style.backgroundColor = '#FF5757';
 
     document.getElementById("goBack" + selectedGemeinde.id).style.display = "inline";
 
-    onFocus = true;
+
 
     //Area Infos
     const area = propsG.find(p => p.label === "Gesamtfläche").data.find(g => g.gemeinde === selectedGemeinde.id);
@@ -83,9 +85,8 @@ function displayInfobox(gemeindeID) {
                         </table>
                     </div>`);
 
-    document.getElementById("infoBox").appendChild(box);
-
+    infoBox.appendChild(box);
+    document.getElementById("infoBox").replaceWith(infoBox);
 }
-
 
 
