@@ -50,16 +50,17 @@
 
 <div id="left">
     <div id="propTitle">Filter wählen</div>
-
     <div id="dragfield"></div>
 
-    <div class="dropzone" id="zone" ondragenter="enterDropzone(event)"
-         ondragleave="leaveDropzone(event)"
-         ondragover="allowDrop(event)" ondrop="drop(event)">
-
-    </div>
-
-    <div>
+    <div style="
+        height: 40vh;
+        overflow-y: scroll;
+        /*overflow-x: hidden*/
+        ">
+        <div class="dropzone" id="zone" ondragenter="enterDropzone(event)"
+             ondragleave="leaveDropzone(event)"
+             ondragover="allowDrop(event)" ondrop="drop(event)">
+        </div>
         <div id="resetAllButton" class="btn" onclick="resetAll()">
             Reset All
         </div>

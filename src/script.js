@@ -86,14 +86,13 @@ Getter Methoden
  */
 function andOperation(firstElement, secondElement) {
     return {
-        firstElement: firstElement.title,
-        secondElement: secondElement.title,
+        firstElement: firstElement.getAttribute("propname"),
+        secondElement: secondElement.getAttribute("propname"),
     };
 }
 
-function orOperation(element) {
-    return element.title
-}
+const orOperation = (element) => element.getAttribute("propname")
+
 
 function colorMapGemeinden() {
     const selectElements = document.querySelector(`#gemeinden`);
