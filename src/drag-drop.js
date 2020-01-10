@@ -26,7 +26,18 @@ function drop(ev) {
         if (data === prop.id) {
             prop.active = true;
             segment.innerHTML = prop.label;
-            segment.title = prop.label;
+            let low = prop.value.low, high = prop.value.high;
+            if ( prop.dataType === "integer"){
+                low = parseInt( prop.value.low, 10 );
+                high = parseInt( prop.value.high, 10 );
+            }
+            if ( prop.dataType === "float"){
+                low = parseFloat( prop.value.low).toFixed(1);
+                high = parseFloat( prop.value.high).toFixed(1);
+            }
+            low += getValuetypeSign(prop.dataType);
+            high += getValuetypeSign(prop.dataType);
+            segment.title = low + " - " + high;
         }
     });
 

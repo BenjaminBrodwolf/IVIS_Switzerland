@@ -111,7 +111,7 @@ const toAnalyseData = [
         label: 'Dichte',
         category: "Bevölkerung",
         table: population_density,
-        dataType: "km2",
+        dataType: "integer",
         description: "Bevölkerungsdichte pro km2"
     },
     {
@@ -126,21 +126,21 @@ const toAnalyseData = [
         category: "Wirtschaft",
         table: sektor_1,
         dataType: "integer",
-        description: "Beschäftigte im 1. Sektor"
+        description: "Beschäftigte im Agrarsektor"
     },
     {
         label: 'Sektor2',
         category: "Wirtschaft",
         table: sektor_2,
         dataType: "integer",
-        description: "Beschäftigte im 2. Sektor"
+        description: "Beschäftigte im Industriesektor"
     },
     {
         label: 'Sektor3',
         category: "Wirtschaft",
         table: sektor_3,
         dataType: "integer",
-        description: "Beschäftigte im 3. Sektor"
+        description: "Beschäftigte im Dienstleistungssektor"
     },
     {
         label: 'Siedlungsfläche',
@@ -192,7 +192,7 @@ const gemeindeTableToObject = data => {
 
 let onFocus = false;
 
-const initGemeindeTooltip = () =>{
+const initGemeindeTooltip = () => {
     const selectElements = document.querySelector(`#gemeinden`);
     const elementsG = selectElements.querySelectorAll('path');
     /* Add MouseOver-Listener to the Gemeinden */
@@ -211,13 +211,11 @@ const initGemeindeTooltip = () =>{
         });
         e.addEventListener('mouseout', event => {
             descriptionGemeinde.classList.remove("active");
-        })
-
-
+        });
         e.addEventListener('click', event => {
 
             elementsG.forEach(p => {
-                if (p.classList.contains("activePath")){
+                if (p.classList.contains("activePath")) {
                     console.log("CONTAINS")
                     p.classList.remove("activePath");
                 }
@@ -234,7 +232,6 @@ const gemeindeINIT = () => {
     const table = [];
     gemeinden.table.split("\n").forEach(e => table.push(gemeindeTableToObject(e)));
     gemeinden.data = table;
-
 
     initGemeindeTooltip()
 };
@@ -332,6 +329,20 @@ const dom = innerString => {
     return tmpl.firstChild;
 };
 
+const lakeBlue = () => {
+    const selectElements = document.querySelector(`#gemeinden`);
+    const elementsG = selectElements.querySelectorAll('path');
+
+    console.log( propsG[0].data)
+    const lakes = [];
+    elementsG.forEach(c => {
+           if( !propsG[0].data.find(p => p.gemeinde === c.id ) ){
+               console.log( c.id)
+               c.style.fill = "rgba(43,158,222,0.4)";
+           }
+    });
+};
+
 const initializeData = () => {
 
     /* Initialize every Data */
@@ -395,19 +406,19 @@ const initializeData = () => {
     });
 
 
-    const svgTag = dom(`<svg id="svg" xmlns="http://www.w3.org/2000/svg" style="width: 100%" version="1.2" baseProfile="tiny" viewBox="-340 -50 1350 700" stroke-linecap="round" stroke-linejoin="round">  
+    const svgTag = dom(`<svg id="svg" xmlns="http://www.w3.org/2000/svg" style="width: 100%" version="1.2" baseProfile="tiny" viewBox="-340 -150 1350 700" stroke-linecap="round" stroke-linejoin="round">  
                                             ${gemeindenSVG} 
                                    </svg>`);
 
     svg.appendChild(svgTag);
 
     document.getElementById("dragfield").replaceWith(dragfield);
-
     document.getElementById("svg").replaceWith(svg);
 
     // cantonINIT();
     gemeindeINIT();
 
+    lakeBlue();
 
     const allSliders = document.querySelectorAll(".range-slider");
     allSliders.forEach(slider => setSliderValue(slider.childNodes[5]))

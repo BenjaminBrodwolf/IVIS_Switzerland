@@ -61,7 +61,7 @@ function colorMapGemeinden() {
     gemeindeWithPrecondition.forEach(c => {
         c.style.fill = '#FF5757';
     })
-
+    lakeBlue();
     createHtmlList();
 }
 
