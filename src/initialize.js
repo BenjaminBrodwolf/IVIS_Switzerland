@@ -333,7 +333,6 @@ const lakeBlue = () => {
     const selectElements = document.querySelector(`#gemeinden`);
     const elementsG = selectElements.querySelectorAll('path');
 
-    console.log( propsG[0].data)
     const lakes = [];
     elementsG.forEach(c => {
            if( !propsG[0].data.find(p => p.gemeinde === c.id ) ){

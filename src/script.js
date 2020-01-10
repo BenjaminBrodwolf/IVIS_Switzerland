@@ -6,7 +6,6 @@ boolean mit dem Element zusammen in ein Objekt
  */
 function checkElementIntersection(element) {
     if (element.firstElementChild === null) {
-        console.log("or-operation")
         return {
             operator: "orOperation",
             element: orOperation(element)
@@ -15,7 +14,6 @@ function checkElementIntersection(element) {
 
     if (element.firstElementChild.hasChildNodes()) {
         if (element.firstElementChild.firstElementChild === null) {
-            console.log("and-operation")
             return {
                 operator: "andOperator",
                 element: andOperation(element, element.firstElementChild)
