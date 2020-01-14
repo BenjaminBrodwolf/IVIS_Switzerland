@@ -1,23 +1,24 @@
-function drag(ev) {
-    ev.dataTransfer.setData('text', ev.target.id);
+/** @param {Event} event */
+const drag = event => {
+    event.dataTransfer.setData('text', event.target.id);
     document.getElementById("zone").style.borderStyle = "dashed"
 }
 
-const allowDrop = ev => ev.preventDefault();
+/** @param {Event} event */
+const allowDrop = event => event.preventDefault();
 
 
-function drop(ev) {
-    ev.preventDefault();
-    const data = ev.dataTransfer.getData('text');
+/** @param {Event} event */
+const drop = event => {
+    event.preventDefault();
+    const data = event.dataTransfer.getData('text');
     const segment = document.getElementById(data);
-    ev.target.appendChild(segment);
-    ev.target.style.borderStyle = 'solid';
+    event.target.appendChild(segment);
+    event.target.style.borderStyle = 'solid';
     segment.style.height = "8em";
     segment.style.width = "8em";
     segment.style.backgroundColor = "rgba(255,87,87,0.66)";
 
-
-    //console.log(data)
     document.getElementById("slider" + data).parentElement.style.display = "none";
     document.getElementById("toggle" + data).parentElement.style.display = "none";
 
@@ -45,25 +46,35 @@ function drop(ev) {
         segment.parentNode.parentNode.style.marginBottom = "5em";
     }
 
+    gemeindeWithPrecondition.forEach(g => g.style.fillOpacity = '1');
+    document.getElementById("svg").setAttribute("transform", "scale(1) translate(0,0)" );
+    document.getElementById("gemeinden").setAttribute("transform", "scale(1) translate(0,0)");
+
     colorMapGemeinden();
 }
 
-function enterDropzone(ev) {
-    const segment = ev.target;
+
+/** @param {Event} event */
+const enterDropzone = event => {
+    const segment = event.target;
     if (segment.parentNode.className === "dropzone" && segment.childNodes.length >= 2){
         if (segment.childNodes[1].className === "segment"){
             segment.removeEventListener("ondragover", allowDrop)
         } else {
-            ev.target.style.borderStyle = 'dashed'
+            event.target.style.borderStyle = 'dashed'
         }
     } else {
-        ev.target.style.borderStyle = 'dashed'
+        event.target.style.borderStyle = 'dashed'
     }
 }
 
-const leaveDropzone = ev => ev.target.style.borderStyle = 'solid';
 
-function resetAll() {
+/** @param {Event} event */
+const leaveDropzone = event => event.target.style.borderStyle = 'solid';
+
+
+/** */
+const resetAll = () => {
     propsG.forEach(p => {
         if (p.active) {
             putItBack(p.id);
@@ -77,7 +88,9 @@ function resetAll() {
     colorMapGemeinden();
 }
 
-function putItBack(node) {
+
+/** @param {Node} node */
+const putItBack = node => {
     if (node) {
         const segmentField = document.getElementById("col" + node);
         const segment = document.getElementById(node);

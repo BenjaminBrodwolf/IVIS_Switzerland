@@ -1,11 +1,9 @@
 let selectedGemeinde;
 
-
-function displayInfobox(gemeindeID) {
+/** @param {Gemeinde} gemeindeID */
+const displayInfobox = gemeindeID => {
 
     const clickedGemeinde = document.getElementById(gemeindeID);
-
-    // const listElement = document.getElementById("listElement" + selectedGemeinde.id);
 
     gemeindeWithPrecondition.forEach(g => g.style.fillOpacity = '0.3');
 
@@ -26,7 +24,6 @@ function displayInfobox(gemeindeID) {
         selectedGemeinde = clickedGemeinde;
     }
     onFocus = true;
-
 
     selectedGemeinde.style.fillOpacity = '1';
 

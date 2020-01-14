@@ -46,27 +46,21 @@ h5 {
 .column {
     box-sizing: border-box;
     float: left;
-    /*height: 300px; */
 }
 
 .left {
     width: 15%;
-    /*background-color: #b84324;*/
 }
 .middleleft{
     width: 30%;
-    /*background-color: green;*/
 }
 .middleright{
     width: 50%;
     padding-left: 5px;
-    /*padding-top: 15px;*/
-    /*background-color: yellow;*/
 }
 .right {
     padding-top: 22px;
     width: 5%;
-    /*background-color: violet;*/
 }
 
 .row:after {

@@ -1,3 +1,7 @@
+/**
+ * @author Benjamin Brodwolf <benjamin.brodwolf@students.fhnw.ch>
+ */
+
 const getValuetypeSign = valuetype => {
     let valuesign = "";
     switch (valuetype) {
@@ -115,7 +119,6 @@ const setSliderValue = (input) => {
     const secondInput = masterNode.childNodes[9];
     let styleLow = parseInt(masterNode.style.getPropertyValue("--low").split("%")[0], 10);
     let styleHigh = parseInt(masterNode.style.getPropertyValue("--high").split("%")[0], 10);
-    // console.log(styleLow + " -- " + styleHigh)
 
     // change the Thumb-Slider level when crossing each other
     if (styleHigh <= styleLow) {
@@ -132,9 +135,7 @@ const setSliderValue = (input) => {
 
     const difference = parseFloat(masterNode.getAttribute("min"));
     const max = parseFloat(masterNode.getAttribute("max")) - difference;
-    // console.log("test max : " + parseInt(masterNode.getAttribute("max"), 10))
-    // console.log("difference: " + difference)
-    // console.log("max: " + max)
+
 
     styleLow = parseInt(masterNode.style.getPropertyValue("--low").split("%")[0], 10);
     styleHigh = parseInt(masterNode.style.getPropertyValue("--high").split("%")[0], 10);
@@ -142,11 +143,8 @@ const setSliderValue = (input) => {
     let high = ((styleHigh / 100 * max) + difference);
     prop.value.low = low;
     prop.value.high = high;
-    // console.log("name: " + prop.label)
-    // console.log("low: " + low)
-    // console.log("high: " + high)
 
-//console.log( prop )
+
     // Tooltip
     const fstTooltip = masterNode.childNodes[3];
     const sndTooltip = masterNode.childNodes[7];
@@ -161,16 +159,9 @@ const setSliderValue = (input) => {
     setTooltipPosition(masterNode, fstTooltip, styleLow, "--first");
     setTooltipPosition(masterNode, sndTooltip, styleHigh, "--second");
 
-
-    // masterNode.parentElement.parentNode.childNodes[1].childNodes[1].childNodes[1].value
     masterNode.parentElement.parentNode.childNodes[1].childNodes[1].childNodes[1].value = (valueType === "integer") ? low.toFixed(0) : low.toFixed(1);
     masterNode.parentElement.parentNode.childNodes[1].childNodes[1].childNodes[5].value = (valueType === "integer") ? high.toFixed(0) : high.toFixed(1);
 
-    // masterNode.parentElement.previousElementSibling.innerHTML = `<form class="valForm">
-    //                                                                   <input  class="valInput" oninput="setSliderValue(${input})" type="text" min="${difference}" max="${max}" name="low" value="${currentValue.low()}">
-    //                                                                   -
-    //                                                                   <input class="valInput" oninput="setSliderValue(${input})" type="text" min="${difference}" max="${max}" name="low" value="${currentValue.high()}">
-    //                                                              </form>`;
 };
 
 const setTooltipPosition = (masterNode, tooltip, level, propertyName) => {

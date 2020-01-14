@@ -1,4 +1,3 @@
-const canton = {path: cantonsSVG, table: cantonTable, data: undefined};
 const gemeinden = {path: gemeindenSVG, table: gemeindenTable, data: undefined};
 
 const toAnalyseData = [
@@ -160,27 +159,6 @@ const toAnalyseData = [
 
 const propsG = [];
 
-const cantonTableToObject = data => {
-    const [canton, name, nr] = data.split(";");
-    return {
-        canton,
-        name,
-        nr,
-    }
-};
-const cantonINIT = () => {
-    const table = [];
-    canton.table.split("\n").forEach(e => table.push(cantonTableToObject(e)));
-    canton.data = table;
-
-    const selectElements = document.querySelector(`#cantons`);
-    const elementsG = selectElements.querySelectorAll('g');
-
-    /* Add MouseClick-Listener to the Cantons */
-    elementsG.forEach(e => e.addEventListener('click', event => {
-        const cantonName = table.filter(e => e.name === event.target.id);
-    }));
-};
 
 const gemeindeTableToObject = data => {
     const [name, cantonNr] = data.split(";");
@@ -195,6 +173,7 @@ let onFocus = false;
 const initGemeindeTooltip = () => {
     const selectElements = document.querySelector(`#gemeinden`);
     const elementsG = selectElements.querySelectorAll('path');
+
     /* Add MouseOver-Listener to the Gemeinden */
     const descriptionGemeinde = document.getElementById("description");
     elementsG.forEach(e => {
@@ -212,11 +191,11 @@ const initGemeindeTooltip = () => {
         e.addEventListener('mouseout', event => {
             descriptionGemeinde.classList.remove("active");
         });
+
         e.addEventListener('click', event => {
 
             elementsG.forEach(p => {
                 if (p.classList.contains("activePath")) {
-                    console.log("CONTAINS")
                     p.classList.remove("activePath");
                 }
             });
@@ -236,29 +215,12 @@ const gemeindeINIT = () => {
     initGemeindeTooltip()
 };
 
-const dataINITCanton = props => {
-    const table = [];
-    props.table.split("\n").forEach(data => {
-        const [id, name] = data.split(";");
-        table.push({
-            id,
-            canton: id.substring(0, 2),
-            name,
-        })
-    });
-    props.data = table;
-
-    for (const canton in props.canton) {
-        props.canton[canton] = props.data.filter(e => e.canton === canton).length;
-    }
-    props.amount = props.data.length;
-};
-
 let propID = 1;
 const dataINITGemeinden = prop => {
+
     const table = [];
     const values = [];
-    // let max = 0, min = Number.MAX_VALUE;
+
     prop.table.split("\n").forEach(data => {
         const [gemeinde, value] = data.split(";");
         table.push({
@@ -287,7 +249,6 @@ const dataINITGemeinden = prop => {
         value: {low: min, high: max}
     });
 
-    //console.log(propsG)
 };
 
 const getCategories = () => {
@@ -296,7 +257,7 @@ const getCategories = () => {
     return [...new Set(categories)];
 }
 
-function addCollapse(element) {
+const addCollapse = element => {
     element.classList.toggle("active");
     let content = element.nextElementSibling;
     if (content.style.maxHeight) {
@@ -307,11 +268,8 @@ function addCollapse(element) {
 }
 
 const openSlidePopup = sliderId => {
-    console.log("CLICKED")
     const inputTab = document.getElementById("slider" + sliderId) // element.parentNode.parentNode.childNodes[3];
     const sliderTab = inputTab.parentNode.childNodes[3];
-    console.log(inputTab);
-    console.log(sliderTab);
 
     if (inputTab.style.display === "none") {
         inputTab.style.display = "block";
@@ -333,11 +291,8 @@ const lakeBlue = () => {
     const selectElements = document.querySelector(`#gemeinden`);
     const elementsG = selectElements.querySelectorAll('path');
 
-    console.log( propsG[0].data)
-    const lakes = [];
     elementsG.forEach(c => {
            if( !propsG[0].data.find(p => p.gemeinde === c.id ) ){
-               console.log( c.id)
                c.style.fill = "rgba(43,158,222,0.4)";
            }
     });
@@ -352,7 +307,6 @@ const initializeData = () => {
     const dragfield = dom(`<div id="dragfield">`);
     const svg = dom(`<div id="svg">`);
 
-    //console.log(propsG)
 
     getCategories().forEach(c => {
         const categoryElement = dom(`<button onclick="addCollapse(this)" class="collapsible">${c}</button>`);
@@ -400,7 +354,7 @@ const initializeData = () => {
 
             }
         });
-//        addCollapse(categoryElement);
+
         dragfield.appendChild(categoryElement);
         dragfield.appendChild(contentElement);
     });
@@ -415,7 +369,6 @@ const initializeData = () => {
     document.getElementById("dragfield").replaceWith(dragfield);
     document.getElementById("svg").replaceWith(svg);
 
-    // cantonINIT();
     gemeindeINIT();
 
     lakeBlue();

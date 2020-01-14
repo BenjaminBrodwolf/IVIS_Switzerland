@@ -1,12 +1,8 @@
 let gemeindeWithPrecondition = [];
 
-/*
-Es wird getestet ob es ein UND-Operator (true) oder ODER-Operator ist (false) und speichert dieser
-boolean mit dem Element zusammen in ein Objekt
- */
-function checkElementIntersection(element) {
+
+const checkElementIntersection = element => {
     if (element.firstElementChild === null) {
-        console.log("or-operation")
         return {
             operator: "orOperation",
             element: orOperation(element)
@@ -15,13 +11,11 @@ function checkElementIntersection(element) {
 
     if (element.firstElementChild.hasChildNodes()) {
         if (element.firstElementChild.firstElementChild === null) {
-            console.log("and-operation")
             return {
                 operator: "andOperator",
                 element: andOperation(element, element.firstElementChild)
             }
         } else if (element.firstElementChild.firstElementChild.className === "segment") {
-            console.log("triple-and-operation")
             return {
                 operator: "tripleAndOperator",
                 element: tripleAndOperation(element, element.firstElementChild, element.firstElementChild.firstElementChild)
@@ -31,20 +25,17 @@ function checkElementIntersection(element) {
 
 }
 
-/*
-Getter Methoden
- */
 
 const orOperation = (element) => element.getAttribute("propname")
 
-function andOperation(firstElement, secondElement) {
+const andOperation = (firstElement, secondElement) => {
     return {
         firstElement: firstElement.getAttribute("propname"),
         secondElement: secondElement.getAttribute("propname"),
     };
 }
 
-function tripleAndOperation(firstElement, secondElement, thirdElement) {
+const tripleAndOperation = (firstElement, secondElement, thirdElement) => {
     return {
         firstElement: firstElement.getAttribute("propname"),
         secondElement: secondElement.getAttribute("propname"),
@@ -53,7 +44,7 @@ function tripleAndOperation(firstElement, secondElement, thirdElement) {
 }
 
 
-function colorMapGemeinden() {
+const colorMapGemeinden = () => {
     const selectElements = document.querySelector(`#gemeinden`);
     const elementsG = selectElements.querySelectorAll('path');
     elementsG.forEach(c => c.style.fill = 'rgb(0, 0, 0)');
@@ -65,10 +56,8 @@ function colorMapGemeinden() {
     createHtmlList();
 }
 
-/*
-Sammelt die Objekte mit den Operatoren und Elementen in einer Liste
-*/
-function getPreconditions() {
+
+const getPreconditions = () => {
     const filterBox = document.getElementById("zone");
     let listWithPrecondition = []
 
@@ -81,10 +70,8 @@ function getPreconditions() {
     return listWithPrecondition;
 }
 
-/*
-Gibt Liste zurück von Kantonen die eingefärbt werden
- */
-function searchGemeindenWithPrecondition() {
+
+const searchGemeindenWithPrecondition = () => {
     const selectElements = document.querySelector(`#gemeinden`);
     const elementsG = selectElements.querySelectorAll('path');
 
@@ -102,10 +89,8 @@ function searchGemeindenWithPrecondition() {
 }
 
 
-/*
-Testet einen einzelnen Kanton, ob er die Bedingung erfüllt
- */
-function checkGemeinde(checkedGemeinde, pc) {
+
+const checkGemeinde = (checkedGemeinde, pc) => {
     let fulfillPrecondition = false;
 
     if (pc.filterOperator === "andOperator") { //when its a and-operator
@@ -147,7 +132,7 @@ function checkGemeinde(checkedGemeinde, pc) {
 }
 
 
-function createHtmlList() {
+const createHtmlList = () => {
 
     const distinctedGemeinden = [];
     gemeindeWithPrecondition.forEach(g => {
@@ -157,7 +142,6 @@ function createHtmlList() {
     })
 
     distinctedGemeinden.sort();
-    //console.log(distinctedGemeinden[0])
 
     let gemeindeListTable = `<div id="foundGemeinden"><h4 scope="col">Gefundene Gemeinde: ${distinctedGemeinden.length}</h4></div>
                         <div id="foundGemeindenTable" class="gemeindeScrollable">
