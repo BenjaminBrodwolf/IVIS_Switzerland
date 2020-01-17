@@ -1,5 +1,8 @@
 let zoomstate = false;
 
+/**
+ * @description tbd
+ * */
 const zooming = () => {
     zoomstate = !zoomstate;
 
@@ -7,7 +10,7 @@ const zooming = () => {
         document.getElementById("svg").classList.add("zooming")
     } else {
         document.getElementById("svg").classList.remove("zooming")
-        selectedGemeinde.style.fill = 'rgb(0,0,0)'
+        selectedMunicipality.style.fill = 'rgb(0,0,0)'
     }
 };
 
@@ -16,52 +19,61 @@ let scale = 3;		// maximum size to zoom to canton
 const mapWidth = 900;  // map container width
 const mapHeight = 600; // map container height
 const viewport = document.getElementById("svg");
-const gemeindenViewport = document.getElementById("gemeinden");
-let selectedGemeindeID;
-let zoominGemeinde;
+const municipalityViewport = document.getElementById("municipalities");
+let selectedMunicipalityID;
+let zoomingMunicipality;
 
-const zoomToGemeinde = (gemeindeID) => {
-    const gemeindePaths = document.getElementById(gemeindeID);
+/**
+ * @param {String} municipalityD
+ * @description tbd
+ * */
+const zoomToMunicipality = (municipalityD) => {
+    const municipalityPath = document.getElementById(municipalityD);
 
-    if (gemeindePaths.length > 1){
-        for (let i = 0; i < gemeindePaths.length; i++) {
-            if (gemeindePaths[i].parentNode.id === "gemeinden"){
-                zoominGemeinde = gemeindePaths[i];
+    if (municipalityPath.length > 1){
+        for (let i = 0; i < municipalityPath.length; i++) {
+            if (municipalityPath[i].parentNode.id === "municipalities"){
+                zoomingMunicipality = municipalityPath[i];
             }
         }
     } else {
-        zoominGemeinde = gemeindePaths;
+        zoomingMunicipality = municipalityPath;
     }
 
-    if (zoominGemeinde.id === selectedGemeindeID) {
-        const exFocus = document.getElementById(selectedGemeindeID);
+    if (zoomingMunicipality.id === selectedMunicipalityID) {
+        const exFocus = document.getElementById(selectedMunicipalityID);
         if (exFocus) exFocus.parentElement.classList.remove("focused");
 
         viewport.setAttribute("transform", "scale(1) translate(0,0)" );
-        gemeindenViewport.setAttribute("transform", "scale(1) translate(0,0)");
-        selectedGemeindeID = "";
+        municipalityViewport.setAttribute("transform", "scale(1) translate(0,0)");
+        selectedMunicipalityID = "";
 
     } else {
 
-        const exFocus = document.getElementById(selectedGemeindeID);
+        const exFocus = document.getElementById(selectedMunicipalityID);
         if (exFocus) exFocus.parentElement.classList.remove("focused");
 
-        selectedGemeindeID = zoominGemeinde.id;
+        selectedMunicipalityID = zoomingMunicipality.id;
 
-        const xy = getBoundingBox(zoominGemeinde);
+        const xy = getBoundingBox(zoomingMunicipality);
         scale = Math.min(mapWidth / xy[1], mapHeight / xy[3], 3);
         const tx = -xy[0] + (mapWidth - xy[1] * scale) / (2 * scale);
         const ty = -xy[2] + (mapHeight - xy[3] * scale) / (2 * scale);
 
-        document.getElementById(selectedGemeindeID).parentElement.classList.add("focused");
+        document.getElementById(selectedMunicipalityID).parentElement.classList.add("focused");
 
         viewport.setAttribute("transform", "scale(" + scale + ")translate(" + tx + "," + ty + ")");
-        gemeindenViewport.setAttribute("transform", "scale(" + scale + ")translate(" + tx + "," + ty + ")");
+        municipalityViewport.setAttribute("transform", "scale(" + scale + ")translate(" + tx + "," + ty + ")");
     }
 
 };
 
 
+/**
+ * @param {Element} element
+ * @return {Array}
+ * @description tbd
+ * */
 const getBoundingBox = element => {
     // get x,y co-ordinates of top-left of bounding box and width and height
     const bbox = element.getBBox();

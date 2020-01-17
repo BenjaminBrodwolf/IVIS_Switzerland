@@ -1,5 +1,6 @@
-const gemeinden = {path: gemeindenSVG, table: gemeindenTable, data: undefined};
+const municipalities = {path: municipalitiesSVG, table: municipalitiesTable, data: undefined}; // municipality path
 
+// data
 const toAnalyseData = [
     {
         label: 'Einwohner',
@@ -157,74 +158,81 @@ const toAnalyseData = [
     }
 ];
 
-const propsG = [];
+
+const propsG = []; //Properties of the municipalities
 
 
-const gemeindeTableToObject = data => {
-    const [name, cantonNr] = data.split(";");
+/**
+ * @param {String} data
+ * @return {Object}
+ * @description Turns a string into an object that contains the name and number of the municipality
+ * */
+const municipalityTableToObject = data => {
+    const [name, municipalityNr] = data.split(";");
     return {
         name,
-        cantonNr,
+        municipalityNr,
     }
 };
 
-let onFocus = false;
+let onFocus = false; // no municipality is focused
 
-const initGemeindeTooltip = () => {
-    const selectElements = document.querySelector(`#gemeinden`);
+
+/**
+ * @description tbd
+ * */
+const initMunicipalityTooltip = () => {
+    const selectElements = document.querySelector(`#municipalities`);
     const elementsG = selectElements.querySelectorAll('path');
 
-    /* Add MouseOver-Listener to the Gemeinden */
-    const descriptionGemeinde = document.getElementById("description");
+    /* Add MouseOver-Listener to the Municipalities */
+    const descriptionMunicipality = document.getElementById("description");
     elementsG.forEach(e => {
 
         e.addEventListener('mouseover', event => {
             e.setAttribute("class", "enabled heyo");
-            descriptionGemeinde.classList.add("active");
+            descriptionMunicipality.classList.add("active");
         });
 
         e.addEventListener('mousemove', event => {
-            descriptionGemeinde.style.left = event.pageX + "px";
-            descriptionGemeinde.style.top = (event.pageY - 70).toString() + "px";
-            descriptionGemeinde.innerHTML = e.id;
+            descriptionMunicipality.style.left = event.pageX + "px";
+            descriptionMunicipality.style.top = (event.pageY - 70).toString() + "px";
+            descriptionMunicipality.innerHTML = e.id;
         });
         e.addEventListener('mouseout', event => {
-            descriptionGemeinde.classList.remove("active");
+            descriptionMunicipality.classList.remove("active");
         });
-
-        e.addEventListener('click', event => {
-
-            elementsG.forEach(p => {
-                if (p.classList.contains("activePath")) {
-                    p.classList.remove("activePath");
-                }
-            });
-
-            e.setAttribute("class", "activePath");
-            displayInfobox(e.id)
-        })
 
     });
 }
 
-const gemeindeINIT = () => {
-    const table = [];
-    gemeinden.table.split("\n").forEach(e => table.push(gemeindeTableToObject(e)));
-    gemeinden.data = table;
 
-    initGemeindeTooltip()
+/**
+ * @description Adds a table with municipality-objects to the municipality
+ * */
+const municipalityINIT = () => {
+    const table = [];
+    municipalities.table.split("\n").forEach(e => table.push(municipalityTableToObject(e)));
+    municipalities.data = table;
+
+    initMunicipalityTooltip()
 };
 
-let propID = 1;
-const dataINITGemeinden = prop => {
+let propID = 1; //Every Propery has an ID, starts at 1
+
+/**
+ * @param {String} prop
+ * @description creates a property object with all the municipalities and the associated values
+ * */
+const dataINIT = prop => {
 
     const table = [];
     const values = [];
 
     prop.table.split("\n").forEach(data => {
-        const [gemeinde, value] = data.split(";");
+        const [municipality, value] = data.split(";");
         table.push({
-            gemeinde,
+            municipality,
             value,
         });
         if (!isNaN(parseFloat(value))) {
@@ -243,7 +251,7 @@ const dataINITGemeinden = prop => {
         description: prop.description,
         data: table,
         amount: table.length,
-        gemeinde: {},
+        municipality: {},
         dataType: prop.dataType,
         boundaries: {min: min, max: max},
         value: {low: min, high: max}
@@ -251,12 +259,22 @@ const dataINITGemeinden = prop => {
 
 };
 
+
+/**
+ * @return {Array} categories
+ * @description returns a list with all categories that exist
+ * */
 const getCategories = () => {
     const categories = [];
     toAnalyseData.forEach(p => categories.push(p.category))
     return [...new Set(categories)];
 }
 
+
+/**
+ * @param {Element} element
+ * @description tbd
+ * */
 const addCollapse = element => {
     element.classList.toggle("active");
     let content = element.nextElementSibling;
@@ -267,6 +285,11 @@ const addCollapse = element => {
     }
 }
 
+
+/**
+ * @return {String} sliderId
+ * @description tbd
+ * */
 const openSlidePopup = sliderId => {
     const inputTab = document.getElementById("slider" + sliderId) // element.parentNode.parentNode.childNodes[3];
     const sliderTab = inputTab.parentNode.childNodes[3];
@@ -287,24 +310,29 @@ const dom = innerString => {
     return tmpl.firstChild;
 };
 
+
+/**
+ * @description tbd
+ * */
 const lakeBlue = () => {
-    const selectElements = document.querySelector(`#gemeinden`);
+    const selectElements = document.querySelector(`#municipalities`);
     const elementsG = selectElements.querySelectorAll('path');
 
     elementsG.forEach(c => {
-           if( !propsG[0].data.find(p => p.gemeinde === c.id ) ){
-               c.style.fill = "rgba(43,158,222,0.4)";
-           }
+        if (!propsG[0].data.find(p => p.municipality === c.id)) {
+            c.style.fill = "rgba(43,158,222,0.4)";
+        }
     });
 };
 
+/**
+ * @description tbd
+ * */
 const initializeData = () => {
 
-    /* Initialize every Data */
+    toAnalyseData.forEach(e => dataINIT(e))
 
-    toAnalyseData.forEach(e => dataINITGemeinden(e))
-
-    const dragfield = dom(`<div id="dragfield">`);
+    const dragField = dom(`<div id="dragField">`);
     const svg = dom(`<div id="svg">`);
 
 
@@ -320,7 +348,7 @@ const initializeData = () => {
                                         <div class="column left"> 
                                             <div id="col${prop.id}">  
                                                  
-                                                <div class="segment" propname="${prop.label}" id="${prop.id}" title="${prop.description}" draggable="true" onclick="select(this)" ondragstart="drag(event)">     
+                                                <div class="segment top-segment" propname="${prop.label}" id="${prop.id}" title="${prop.description}" draggable="true" onclick="select(this)" ondragstart="drag(event)">     
                                                 </div> 
                                                 
                                             </div>
@@ -355,21 +383,21 @@ const initializeData = () => {
             }
         });
 
-        dragfield.appendChild(categoryElement);
-        dragfield.appendChild(contentElement);
+        dragField.appendChild(categoryElement);
+        dragField.appendChild(contentElement);
     });
 
 
     const svgTag = dom(`<svg id="svg" xmlns="http://www.w3.org/2000/svg" style="width: 100%" version="1.2" baseProfile="tiny" viewBox="-340 -150 1350 700" stroke-linecap="round" stroke-linejoin="round">  
-                                            ${gemeindenSVG} 
+                                            ${municipalitiesSVG} 
                                    </svg>`);
 
     svg.appendChild(svgTag);
 
-    document.getElementById("dragfield").replaceWith(dragfield);
+    document.getElementById("dragField").replaceWith(dragField);
     document.getElementById("svg").replaceWith(svg);
 
-    gemeindeINIT();
+    municipalityINIT();
 
     lakeBlue();
 

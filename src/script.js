@@ -1,6 +1,10 @@
-let gemeindeWithPrecondition = [];
+let municipalitiesWithPrecondition = [];
 
 
+/**
+ * @param {Element} element
+ * @description tbd
+ * */
 const checkElementIntersection = element => {
     if (element.firstElementChild === null) {
         return {
@@ -15,7 +19,7 @@ const checkElementIntersection = element => {
                 operator: "andOperator",
                 element: andOperation(element, element.firstElementChild)
             }
-        } else if (element.firstElementChild.firstElementChild.className === "segment") {
+        } else if (element.firstElementChild.firstElementChild.className === "dropped-segment") {
             return {
                 operator: "tripleAndOperator",
                 element: tripleAndOperation(element, element.firstElementChild, element.firstElementChild.firstElementChild)
@@ -25,9 +29,19 @@ const checkElementIntersection = element => {
 
 }
 
-
+/**
+ * @param {Element} element
+ * @return {String}
+ * @description tbd
+ * */
 const orOperation = (element) => element.getAttribute("propname")
 
+/**
+ * @param {Element} firstElement
+ * @param {Element} secondElement
+ * @return {String}
+ * @description tbd
+ * */
 const andOperation = (firstElement, secondElement) => {
     return {
         firstElement: firstElement.getAttribute("propname"),
@@ -35,6 +49,13 @@ const andOperation = (firstElement, secondElement) => {
     };
 }
 
+/**
+ * @param {Element} firstElement
+ * @param {Element} secondElement
+ * @param {Element} thirdElement
+ * @return {String}
+ * @description tbd
+ * */
 const tripleAndOperation = (firstElement, secondElement, thirdElement) => {
     return {
         firstElement: firstElement.getAttribute("propname"),
@@ -44,85 +65,97 @@ const tripleAndOperation = (firstElement, secondElement, thirdElement) => {
 }
 
 
-const colorMapGemeinden = () => {
-    const selectElements = document.querySelector(`#gemeinden`);
+/**
+ * @description tbd
+ * */
+const colorMap = () => {
+    const selectElements = document.querySelector(`#municipalities`);
     const elementsG = selectElements.querySelectorAll('path');
     elementsG.forEach(c => c.style.fill = 'rgb(0, 0, 0)');
-    gemeindeWithPrecondition = searchGemeindenWithPrecondition();
-    gemeindeWithPrecondition.forEach(c => {
+    municipalitiesWithPrecondition = searchMunicipalitiesWithPrecondition();
+    municipalitiesWithPrecondition.forEach(c => {
         c.style.fill = '#FF5757';
     })
     lakeBlue();
     createHtmlList();
 }
 
-
+/**
+ * @return {Array}
+ * @description tbd
+ * */
 const getPreconditions = () => {
     const filterBox = document.getElementById("zone");
     let listWithPrecondition = []
 
     for (let i = 0; i < filterBox.children.length; i++) {
+        const filterObject = checkElementIntersection(filterBox.children[i]);
         listWithPrecondition.push({
-            filterOperator: checkElementIntersection(filterBox.children[i]).operator,
-            filterProperty: checkElementIntersection(filterBox.children[i]).element,
+            filterOperator: filterObject.operator,
+            filterProperty: filterObject.element,
         });
     }
     return listWithPrecondition;
 }
 
-
-const searchGemeindenWithPrecondition = () => {
-    const selectElements = document.querySelector(`#gemeinden`);
+/**
+ * @return {Array}
+ * @description tbd
+ * */
+const searchMunicipalitiesWithPrecondition = () => {
+    const selectElements = document.querySelector(`#municipalities`);
     const elementsG = selectElements.querySelectorAll('path');
 
-    const gemeindenWithPrecondition = [];
+    const conditionFulfilledMunicipalities = [];
     const preconditions = getPreconditions();
     elementsG.forEach(c => {
         preconditions.forEach(pc => {
-            if (checkGemeinde(c, pc)) {
-                gemeindenWithPrecondition.push(c);
+            if (checkMunicipality(c, pc)) {
+                conditionFulfilledMunicipalities.push(c);
             }
         })
     });
 
-    return gemeindenWithPrecondition;
+    return conditionFulfilledMunicipalities;
 }
 
-
-
-const checkGemeinde = (checkedGemeinde, pc) => {
+/**
+ * @param {Element} checkedMunicipality
+ * @param {Object} precondition
+ * @return {boolean}
+ * @description tbd
+ * */
+const checkMunicipality = (checkedMunicipality, precondition) => {
     let fulfillPrecondition = false;
 
-    if (pc.filterOperator === "andOperator") { //when its a and-operator
-        const prop1 = propsG.find(p => p.label === pc.filterProperty.firstElement);
-        if (prop1.data.find(p => p.gemeinde === checkedGemeinde.id && (prop1.value.low <= p.value && prop1.value.high >= p.value))) {
-            const prop2 = propsG.find(p => p.label === pc.filterProperty.secondElement);
-            if (prop2.data.find(p => p.gemeinde === checkedGemeinde.id && (prop2.value.low <= p.value && prop2.value.high >= p.value))) {
+    if (precondition.filterOperator === "andOperator") { //when its a and-operator
+        const prop1 = propsG.find(p => p.label === precondition.filterProperty.firstElement);
+        if (prop1.data.find(p => p.municipality === checkedMunicipality.id && (prop1.value.low <= p.value && prop1.value.high >= p.value))) {
+            const prop2 = propsG.find(p => p.label === precondition.filterProperty.secondElement);
+            if (prop2.data.find(p => p.municipality === checkedMunicipality.id && (prop2.value.low <= p.value && prop2.value.high >= p.value))) {
                 fulfillPrecondition = true;
             }
         } else {
             fulfillPrecondition = false
         }
 
-    } else if(pc.filterOperator === "tripleAndOperator") { //when its a triple-and-operation
-        const prop1 = propsG.find(p => p.label === pc.filterProperty.firstElement);
-        if (prop1.data.find(p => p.gemeinde === checkedGemeinde.id && (prop1.value.low <= p.value && prop1.value.high >= p.value))) {
-            const prop2 = propsG.find(p => p.label === pc.filterProperty.secondElement);
-            if (prop2.data.find(p => p.gemeinde === checkedGemeinde.id && (prop2.value.low <= p.value && prop2.value.high >= p.value))) {
-                const prop3 = propsG.find(p => p.label === pc.filterProperty.thirdElement);
-                if (prop3.data.find(p => p.gemeinde === checkedGemeinde.id && (prop3.value.low <= p.value && prop3.value.high >= p.value))) {
+    } else if (precondition.filterOperator === "tripleAndOperator") { //when its a triple-and-operation
+        const prop1 = propsG.find(p => p.label === precondition.filterProperty.firstElement);
+        if (prop1.data.find(p => p.municipality === checkedMunicipality.id && (prop1.value.low <= p.value && prop1.value.high >= p.value))) {
+            const prop2 = propsG.find(p => p.label === precondition.filterProperty.secondElement);
+            if (prop2.data.find(p => p.municipality === checkedMunicipality.id && (prop2.value.low <= p.value && prop2.value.high >= p.value))) {
+                const prop3 = propsG.find(p => p.label === precondition.filterProperty.thirdElement);
+                if (prop3.data.find(p => p.municipality === checkedMunicipality.id && (prop3.value.low <= p.value && prop3.value.high >= p.value))) {
                     fulfillPrecondition = true;
                 }
             }
         } else {
             fulfillPrecondition = false
         }
-    }
+    } else { //when its a or-operator
+        const prop = propsG.find(p => p.label === precondition.filterProperty);
 
-    else{ //when its a or-operator
-        const prop = propsG.find(p => p.label === pc.filterProperty);
-
-        if (prop.data.find(p => p.gemeinde === checkedGemeinde.id && (prop.value.low <= p.value && prop.value.high >= p.value))) {
+        if (prop.data.find(p => p.municipality === checkedMunicipality.id && (prop.value.low <= p.value && prop.value.high >= p.value))) {
             fulfillPrecondition = true;
         } else {
             fulfillPrecondition = false
@@ -132,37 +165,37 @@ const checkGemeinde = (checkedGemeinde, pc) => {
 }
 
 
+/**
+ * @description tbd
+ * */
 const createHtmlList = () => {
 
-    const distinctedGemeinden = [];
-    gemeindeWithPrecondition.forEach(g => {
-        if (!distinctedGemeinden.find(dg => dg === g.id)) {
-            distinctedGemeinden.push(g.id);
+    const distinctedMunicipalities = [];
+    municipalitiesWithPrecondition.forEach(g => {
+        if (!distinctedMunicipalities.find(dg => dg === g.id)) {
+            distinctedMunicipalities.push(g.id);
         }
     })
 
-    distinctedGemeinden.sort();
+    distinctedMunicipalities.sort();
 
-    let gemeindeListTable = `<div id="foundGemeinden"><h4 scope="col">Gefundene Gemeinde: ${distinctedGemeinden.length}</h4></div>
-                        <div id="foundGemeindenTable" class="gemeindeScrollable">
+    let municipalityListTable = `<div id="foundMunicipalities"><h4 scope="col">Gefundene Gemeinde: ${distinctedMunicipalities.length}</h4></div>
+                        <div id="foundMunicipalitiesTable" class="municipalityScrollable">
                              <table>
                                 <tbody>`;
 
-    distinctedGemeinden.forEach(c => {
-        gemeindeListTable += `<tr>
-                                     <td id="listElement${c}" class="gemeindenList" onclick="zoomToGemeinde('${c}'); displayInfobox( '${c}' )"> <div> <p style="float: left">${c} </p>  <p id="goBack${c}" style="display: none" class="goBack">Zurück</p> </div></td> 
+    distinctedMunicipalities.forEach(c => {
+        municipalityListTable += `<tr>
+                                     <td id="listElement${c}" class="municipalityList" onclick="zoomToMunicipality('${c}'); displayInfobox( '${c}' )"> <div> <p style="float: left">${c} </p>  <p id="goBack${c}" style="display: none" class="goBack">Zurück</p> </div></td> 
                                  </tr>`;
     });
 
-    gemeindeListTable += `    </tbody>
+    municipalityListTable += `    </tbody>
                       </table>
                    </div>`;
 
-    document.getElementById('table').innerHTML = gemeindeListTable;
+    document.getElementById('table').innerHTML = municipalityListTable;
 }
-
-
-
 
 
 

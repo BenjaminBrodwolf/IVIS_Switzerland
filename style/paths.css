@@ -2,76 +2,13 @@ svg{
     margin-top: 30px;
 }
 
-#cantons{
-    transition: 3s;
-    visibility: hidden;
-}
-
-#cantons > g{
-    stroke: #f6f6f6;
-}
-
-#cantons > g:hover{
-    fill-opacity: 50%;
-}
-
-#gemeinden{
+#municipalities{
     transition: 3s;
 }
 
-#gemeinden > path{
+#municipalities > path{
     stroke: #f6f6f6;
     stroke-width: 0.5px;
 }
 
-/*#gemeinden > path:hover{*/
-/*    fill: #b84324;*/
-/*    content: attr(id);*/
-/*        !*position: absolute;*!*/
-/*        !*bottom: 130%;*!*/
-/*        !*left: 20%;*!*/
-/*}*/
-/*path {*/
-/*    position: relative;*/
-/*    text-decoration: none;*/
-/*}*/
-/*#gemeinden > path:hover{*/
-/*    !*content: attr(id);*!*/
-/*    content: "TESSST";*/
-/*    position: absolute;*/
-/*    bottom: 130%;*/
-/*    left: 20%;*/
-/*    background: #ffcb66;*/
-/*    padding: 5px 15px;*/
-/*    color: black;*/
-/*    -webkit-border-radius: 10px;*/
-/*    -moz-border-radius : 10px;*/
-/*    border-radius : 10px;*/
-/*    white-space: nowrap;*/
-/*    opacity: 0;*/
-/*    -webkit-transition: all 0.4s ease;*/
-/*    -moz-transition : all 0.4s ease;*/
-/*    transition : all 0.4s ease;*/
-/*}*/
-/*#gemeinden > path:before{*/
-/*    content: "";*/
-/*    position: absolute;*/
-/*    width: 0;*/
-/*    height: 0;*/
-/*    border-top: 20px solid #ffcb66;*/
-/*    border-left: 20px solid transparent;*/
-/*    border-right: 20px solid transparent;*/
-/*    -webkit-transition: all 0.4s ease;*/
-/*    -moz-transition : all 0.4s ease;*/
-/*    transition : all 0.4s ease;*/
-/*    opacity: 0;*/
-/*    left: 30%;*/
-/*    bottom: 90%;*/
-/*}*/
 
-/*path:hover:before {*/
-/*    bottom: 70%;*/
-/*}*/
-/*path:hover:after, a:hover:before {*/
-/*    opacity: 1;*/
-/*}*/

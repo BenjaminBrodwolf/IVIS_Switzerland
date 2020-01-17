@@ -1,5 +1,4 @@
-
-#dragfield{
+#dragField{
     height: 50vh;
     overflow-y: scroll;
     /*overflow-x: hidden;*/
@@ -9,25 +8,40 @@
     cursor: move;
 }
 
+
 .segment {
-    /*float: left;*/
     border-radius: 50%;
     border: 5px solid #333;
+    background-color: #333;
     width: 2em;
     height: 2em;
     text-align: center;
-    background: #fff;
+    margin: 1em 1em 1em 1em;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.segment:hover {
+    opacity: 0.7;
+}
+
+.dropped-segment{
+    height: 8em;
+    width: 8em;
+    box-shadow: none;
+    background-color: rgba(255,87,87,0.66);
+    border-radius: 50%;
+    border: 5px solid #333;
+    text-align: center;
     mix-blend-mode: multiply;
     margin: 1em 1em 1em 1em;
 }
 
-.segment > .segment {
+.dropped-segment > .dropped-segment {
     position: relative;
     top: -2.7em;
     left: 4em;
 }
 
-.segment > .segment > .segment{
+.dropped-segment > .dropped-segment > .dropped-segment{
     position: relative;
     top: 1.6em;
     left: -4em;

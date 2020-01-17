@@ -1,50 +1,55 @@
-let selectedGemeinde;
+let selectedMunicipality;
 
-/** @param {Gemeinde} gemeindeID */
-const displayInfobox = gemeindeID => {
+/**
+ * @param {String} municipalityID
+ * @description Generates an info box with a table which contains information about the area (size, agricultural area,
+ * settlement area and forest area) and the population (number, mutations, foreigners and households).
+ * */
+const displayInfobox = municipalityID => {
 
-    const clickedGemeinde = document.getElementById(gemeindeID);
+    const clickedMunicipality = document.getElementById(municipalityID);
 
-    gemeindeWithPrecondition.forEach(g => g.style.fillOpacity = '0.3');
+    municipalitiesWithPrecondition.forEach(g => g.style.fillOpacity = '0.3');
 
-    if (selectedGemeinde && document.getElementById("listElement" + selectedGemeinde.id)){
-        selectedGemeinde.style.fillOpacity = '0.3';
-        document.getElementById("listElement" + selectedGemeinde.id).style.backgroundColor = ' rgba(230, 230, 230, 0.9)';
-        document.getElementById("goBack" + selectedGemeinde.id).style.display = "none";
+    if (selectedMunicipality && document.getElementById("listElement" + selectedMunicipality.id)) {
+        selectedMunicipality.style.fillOpacity = '0.3';
+        document.getElementById("listElement" + selectedMunicipality.id).style.backgroundColor = ' rgba(230, 230, 230, 0.9)';
+        document.getElementById("goBack" + selectedMunicipality.id).style.display = "none";
 
     }
 
-    if (clickedGemeinde.length > 1){
-        for (let i = 0; i < clickedGemeinde.length; i++) {
-            if (clickedGemeinde[i].parentNode.id === "gemeinden"){
-                selectedGemeinde = clickedGemeinde[i];
+    // is done because some municipalities have multiple paths
+    if (clickedMunicipality.length > 1) {
+        for (let i = 0; i < clickedMunicipality.length; i++) {
+            if (clickedMunicipality[i].parentNode.id === "municipalities") {
+                selectedMunicipality = clickedMunicipality[i];
             }
         }
     } else {
-        selectedGemeinde = clickedGemeinde;
+        selectedMunicipality = clickedMunicipality;
     }
-    onFocus = true;
 
-    selectedGemeinde.style.fillOpacity = '1';
+    onFocus = true; // a municipality is focused
 
+    selectedMunicipality.style.fillOpacity = '1';
 
-if ( document.getElementById("listElement" + selectedGemeinde.id) ) {
-    document.getElementById("listElement" + selectedGemeinde.id).style.backgroundColor = '#FF5757';
-    document.getElementById("goBack" + selectedGemeinde.id).style.display = "inline";
-}
+    if (document.getElementById("listElement" + selectedMunicipality.id)) {
+        document.getElementById("listElement" + selectedMunicipality.id).style.backgroundColor = '#FF5757';
+        document.getElementById("goBack" + selectedMunicipality.id).style.display = "inline";
+    }
 
 
     //Area Infos
-    const area = propsG.find(p => p.label === "Gesamtfläche").data.find(g => g.gemeinde === selectedGemeinde.id);
-    const agricultureArea = propsG.find(p => p.label === "Landwirtschaft").data.find(g => g.gemeinde === selectedGemeinde.id);
-    const settlementArea = propsG.find(p => p.label === "Siedlungsfläche").data.find(g => g.gemeinde === selectedGemeinde.id);
-    const forest = propsG.find(p => p.label === "Wald").data.find(g => g.gemeinde === selectedGemeinde.id);
+    const area = propsG.find(p => p.label === "Gesamtfläche").data.find(g => g.municipality === selectedMunicipality.id);
+    const agricultureArea = propsG.find(p => p.label === "Landwirtschaft").data.find(g => g.municipality === selectedMunicipality.id);
+    const settlementArea = propsG.find(p => p.label === "Siedlungsfläche").data.find(g => g.municipality === selectedMunicipality.id);
+    const forest = propsG.find(p => p.label === "Wald").data.find(g => g.municipality === selectedMunicipality.id);
 
     //Population Infos
-    const population = propsG.find(p => p.label === "Einwohner").data.find(g => g.gemeinde === selectedGemeinde.id);
-    const populationMutation = propsG.find(p => p.label === "Veränderung").data.find(g => g.gemeinde === selectedGemeinde.id);
-    const foreigner = propsG.find(p => p.label === "Ausländer").data.find(g => g.gemeinde === selectedGemeinde.id);
-    const households = propsG.find(p => p.label === "Haushalte").data.find(g => g.gemeinde === selectedGemeinde.id);
+    const population = propsG.find(p => p.label === "Einwohner").data.find(g => g.municipality === selectedMunicipality.id);
+    const populationMutation = propsG.find(p => p.label === "Veränderung").data.find(g => g.municipality === selectedMunicipality.id);
+    const foreigner = propsG.find(p => p.label === "Ausländer").data.find(g => g.municipality === selectedMunicipality.id);
+    const households = propsG.find(p => p.label === "Haushalte").data.find(g => g.municipality === selectedMunicipality.id);
 
     const infoBox = dom(`<div id="infoBox"></div>`)
 
@@ -52,7 +57,7 @@ if ( document.getElementById("listElement" + selectedGemeinde.id) ) {
                         <table id="infoTable">
                             <thead>
                                 <tr id="infoTableHeader">
-                                    <th colspan="4">${area.gemeinde}</th>
+                                    <th colspan="4">${area.municipality}</th>
                                 </tr>
                             </thead>
                             <tbody>

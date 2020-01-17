@@ -71,7 +71,7 @@ h5 {
 
 
 
-.gemeindeScrollable {
+.municipalityScrollable {
     height: 70vh;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -79,7 +79,7 @@ h5 {
 
 
 
-#foundGemeindenTable{
+#foundMunicipalitiesTable{
     height: 85vh;
 }
 
@@ -268,7 +268,7 @@ h5 {
 
 }
 
-.gemeindenList {
+.municipalityList {
     cursor: pointer;
     user-select: none;
 
@@ -340,7 +340,7 @@ h5 {
     justify-content: center;
 }
 
-#foundGemeinden{
+#foundMunicipalities{
     margin-top: 1em;
     margin-bottom: .2em;
     background-color: #555;
@@ -401,4 +401,61 @@ h5 {
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-top: 10px solid white;
+}
+
+#onboarding-background{
+    visibility: hidden;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+
+}
+
+#onboarding{
+    visibility: hidden;
+    padding: 2em;
+    border-radius: 2em;
+    background-color: white;
+    position: absolute;
+    top: 25vh;
+    left: 25vw;
+    height: 50vh;
+    width: 50vw;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    z-index: -10;
+}
+
+#next{
+    background-color: black;
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+}
+
+#close{
+    position: absolute;
+    right: 1em;
+    top: 1em;
+
+}
+
+#description-gif{
+    width: 60%;
+
+}
+
+#description-txt{
+    width: 40%;
+}
+
+.gif{
+    max-width: 100%;
+}
+
+.txt{
+    padding: .3em;
+    font-size: 1.3em;
 }
