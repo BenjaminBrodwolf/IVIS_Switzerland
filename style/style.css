@@ -420,9 +420,9 @@ h5 {
     border-radius: 2em;
     background-color: white;
     position: absolute;
-    top: 25vh;
+    top: 15vh;
     left: 25vw;
-    height: 50vh;
+    height: 70vh;
     width: 50vw;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     z-index: -10;
@@ -444,7 +444,6 @@ h5 {
 
 #description-gif{
     width: 60%;
-
 }
 
 #description-txt{
