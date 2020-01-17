@@ -32,7 +32,7 @@
     border: 5px solid #333;
     text-align: center;
     mix-blend-mode: multiply;
-    margin: 1em 1em 1em 1em;
+    margin: 1em 1em 5em 1em;
 }
 
 .dropped-segment > .dropped-segment {

@@ -1,6 +1,5 @@
 /**
  * @param {Event} event
- * @description tbd
  * */
 const drag = event => {
     event.dataTransfer.setData('text', event.target.id);
@@ -9,14 +8,13 @@ const drag = event => {
 
 /**
  * @param {Event} event
- * @description tbd
  * */
 const allowDrop = event => event.preventDefault();
 
 
 /**
  * @param {Event} event
- * @description tbd
+ * @description Drops the data into the filter-zone and changes the style of the dropped segment
  * */
 const drop = event => {
     event.preventDefault();
@@ -26,6 +24,8 @@ const drop = event => {
     event.target.style.borderStyle = 'solid';
     segment.classList.add("dropped-segment");
     segment.classList.remove("segment");
+    segment.classList.remove("top-segment");
+
 
     document.getElementById("slider" + data).parentElement.style.display = "none";
     document.getElementById("toggle" + data).parentElement.style.display = "none";
@@ -58,13 +58,13 @@ const drop = event => {
     document.getElementById("svg").setAttribute("transform", "scale(1) translate(0,0)" );
     document.getElementById("municipalities").setAttribute("transform", "scale(1) translate(0,0)");
 
+    //After every drop, the map is colored again
     colorMap();
 }
 
 
 /**
  * @param {Event} event
- * @description tbd
  * */
 const enterDropzone = event => {
     const segment = event.target;
@@ -82,13 +82,12 @@ const enterDropzone = event => {
 
 /**
  * @param {Event} event
- * @description tbd
  * */
 const leaveDropzone = event => event.target.style.borderStyle = 'solid';
 
 
 /**
- * @description tbd
+ * @description resets all data which is in the drop-zone
  * */
 const resetAll = () => {
     propsG.forEach(p => {
@@ -107,7 +106,7 @@ const resetAll = () => {
 
 /**
  * @param {String} nodeID
- * @description tbd
+ * @description Puts the segment back to the list
  * */
 const putItBack = nodeID => {
     if (nodeID) {
