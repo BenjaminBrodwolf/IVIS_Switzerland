@@ -67,12 +67,12 @@
     top: 0;
     left: 2px;
     width: calc( var(--width) - 5px);
-    background-color: blue;
+    background-color: #FF5757;
     height: 30px;
     background: linear-gradient(to right,
     transparent var(--low),
-    #507aff 0,
-    red var(--high),
+    #FF5757 0,
+    #FF5757 var(--high),
     transparent 0) no-repeat 0 15% / 100% 30%;
 }
 
@@ -103,7 +103,7 @@
     pointer-events: none;
     position: absolute;
     top: -20px;
-    background: #5386a8;
+    background: #333;
     padding: .15em .6em;
     color: #fff;
     left: var(--first);
@@ -114,7 +114,7 @@
     pointer-events: none;
     position: absolute;
     top: -20px;
-    background: #b84324;
+    background: #333;
     padding: .15em .6em;
     color: #fff;
     left: var(--second);

@@ -1,23 +1,32 @@
-function drag(ev) {
-    ev.dataTransfer.setData('text', ev.target.id);
+/**
+ * @param {Event} event
+ * */
+const drag = event => {
+    event.dataTransfer.setData('text', event.target.id);
     document.getElementById("zone").style.borderStyle = "dashed"
 }
 
-const allowDrop = ev => ev.preventDefault();
+/**
+ * @param {Event} event
+ * */
+const allowDrop = event => event.preventDefault();
 
 
-function drop(ev) {
-    ev.preventDefault();
-    const data = ev.dataTransfer.getData('text');
+/**
+ * @param {Event} event
+ * @description Drops the data into the filter-zone and changes the style of the dropped segment
+ * */
+const drop = event => {
+    event.preventDefault();
+    const data = event.dataTransfer.getData('text');
     const segment = document.getElementById(data);
-    ev.target.appendChild(segment);
-    ev.target.style.borderStyle = 'solid';
-    segment.style.height = "8em";
-    segment.style.width = "8em";
-    segment.style.backgroundColor = "rgba(255,87,87,0.66)";
+    event.target.appendChild(segment);
+    event.target.style.borderStyle = 'solid';
+    segment.classList.add("dropped-segment");
+    segment.classList.remove("segment");
+    segment.classList.remove("top-segment");
 
 
-    //console.log(data)
     document.getElementById("slider" + data).parentElement.style.display = "none";
     document.getElementById("toggle" + data).parentElement.style.display = "none";
 
@@ -45,54 +54,73 @@ function drop(ev) {
         segment.parentNode.parentNode.style.marginBottom = "5em";
     }
 
-    colorMapGemeinden();
+    municipalitiesWithPrecondition.forEach(g => g.style.fillOpacity = '1');
+    document.getElementById("svg").setAttribute("transform", "scale(1) translate(0,0)" );
+    document.getElementById("municipalities").setAttribute("transform", "scale(1) translate(0,0)");
+
+    //After every drop, the map is colored again
+    colorMap();
 }
 
-function enterDropzone(ev) {
-    const segment = ev.target;
+
+/**
+ * @param {Event} event
+ * */
+const enterDropzone = event => {
+    const segment = event.target;
     if (segment.parentNode.className === "dropzone" && segment.childNodes.length >= 2){
         if (segment.childNodes[1].className === "segment"){
             segment.removeEventListener("ondragover", allowDrop)
         } else {
-            ev.target.style.borderStyle = 'dashed'
+            event.target.style.borderStyle = 'dashed'
         }
     } else {
-        ev.target.style.borderStyle = 'dashed'
+        event.target.style.borderStyle = 'dashed'
     }
 }
 
-const leaveDropzone = ev => ev.target.style.borderStyle = 'solid';
 
-function resetAll() {
+/**
+ * @param {Event} event
+ * */
+const leaveDropzone = event => event.target.style.borderStyle = 'solid';
+
+
+/**
+ * @description resets all data which is in the drop-zone
+ * */
+const resetAll = () => {
     propsG.forEach(p => {
         if (p.active) {
             putItBack(p.id);
             p.active = false;
         }
     });
-    gemeindeWithPrecondition.forEach(g => g.style.fillOpacity = '1');
+    municipalitiesWithPrecondition.forEach(g => g.style.fillOpacity = '1');
     document.getElementById("svg").setAttribute("transform", "scale(1) translate(0,0)" );
-    document.getElementById("gemeinden").setAttribute("transform", "scale(1) translate(0,0)");
+    document.getElementById("municipalities").setAttribute("transform", "scale(1) translate(0,0)");
 
-    colorMapGemeinden();
+    colorMap();
 }
 
-function putItBack(node) {
-    if (node) {
-        const segmentField = document.getElementById("col" + node);
-        const segment = document.getElementById(node);
+
+/**
+ * @param {String} nodeID
+ * @description Puts the segment back to the list
+ * */
+const putItBack = nodeID => {
+    if (nodeID) {
+        const segmentField = document.getElementById("col" + nodeID);
+        const segment = document.getElementById(nodeID);
 
         for (let i = 0; i < segment.children.length; i++) {
             document.getElementById("col" + segment.children[i].id).appendChild(segment.children[i]);
         }
 
         segmentField.appendChild(segment);
-        segment.style.height = "2em";
-        segment.style.width = "2em";
-        segment.style.marginBottom = "1em";
-        segment.style.backgroundColor = '#fff';
-        segment.style.borderColor = 'rgb(0, 0, 0)';
+        segment.classList.add("segment");
         segment.innerHTML = "";
+        segment.classList.remove("dropped-segment");
 
         document.getElementById("slider" + segment.id).parentElement.style.display = "block";
         document.getElementById("toggle" + segment.id).parentElement.style.display = "block";
