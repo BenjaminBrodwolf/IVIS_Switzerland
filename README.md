@@ -17,3 +17,12 @@ Geschichte erzählen. Mithilfe der facettierten Suche, können die Daten nun noc
 
 Unsere Visualisierung beruht auf Geodaten. Der Output einer Filterung ist eine Liste von Gemeinden, welche
 die gesetzten Bedingungen erfüllen. Diese werden wiederum auf der Karte rot markiert.
+
+### Technolgie
+
+Nur HTML5, CSS und vanille JavaScript. Kein gebrauch von Bibliotheken oder Frameworks wie jQuery, Bootstrap oder D3.js. 
+
+### Zusätzlich implementierte Features
+
+* Zoom-Funktion 
+* 2-Point Rangeslider
