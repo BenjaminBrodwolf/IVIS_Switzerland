@@ -2,6 +2,8 @@
 
 ## Gemeinden der Schweiz
 
+Applikation Starten: [Klick!](https://benjaminbrodwolf.github.io/IVIS_Switzerland/index.html)
+
 ### Benutzerhandbuch
 
 Beim laden der Seite startet automatisch das Onboarding, wo erklärt wird, wie die WebApp zu benutzen ist.
