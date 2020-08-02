@@ -2,7 +2,9 @@
 
 ## Gemeinden der Schweiz
 
-Applikation Starten: [Klick!](https://benjaminbrodwolf.github.io/IVIS_Switzerland/index.html)
+![Applikation Screenshot](https://github.com/BenjaminBrodwolf/IVIS_Switzerland/blob/master/ivis.png)
+
+Applikation Starten: [Klick hier!](https://benjaminbrodwolf.github.io/IVIS_Switzerland/index.html)
 
 ### Benutzerhandbuch
 
