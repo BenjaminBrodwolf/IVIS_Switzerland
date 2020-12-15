@@ -1,6 +1,6 @@
 # IVIS Pro HS2019 - Benjamin Brodwolf & Nadia Kramer
 
-## Gemeinden der Schweiz
+## Informations-Visualisierung: Gemeinden der Schweiz
 
 ![Applikation Screenshot](https://github.com/BenjaminBrodwolf/IVIS_Switzerland/blob/master/ivis.png)
 
@@ -20,11 +20,16 @@ Geschichte erzählen. Mithilfe der facettierten Suche, können die Daten nun noc
 Unsere Visualisierung beruht auf Geodaten. Der Output einer Filterung ist eine Liste von Gemeinden, welche
 die gesetzten Bedingungen erfüllen. Diese werden wiederum auf der Karte rot markiert.
 
-### Technolgie
+### Simple Technolgie
 
-Nur HTML5, CSS und vanille JavaScript. Kein gebrauch von Bibliotheken oder Frameworks wie jQuery, Bootstrap oder D3.js. 
+Nur HTML5, CSS und vanille JavaScript. 
+Keine Bibliotheken. Keine Frameworks. Kein jQuery, kein Bootstrap oder D3.js. 
 
 ### Zusätzlich implementierte Features
 
 * Zoom-Funktion 
 * 2-Point Rangeslider
+
+### Projekt-Arbeit
+Zusammenarbeit mit [Nadia Kramer](https://github.com/nadiakramer).
+Im Auftrag der [FHNW](https://fhnw.ch) des Modul IVIS (Informations-Visualisierung)
